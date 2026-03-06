@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const themeToggle = document.getElementById("themeToggle");
   const body = document.body;
 
-  // Check for saved theme preference
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
   const savedTheme = localStorage.getItem("poak-theme");
 
@@ -28,30 +27,77 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ===== HAMBURGER MENU =====
+  // ===== HAMBURGER MENU - CRITICAL FIX =====
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.getElementById("navMenu");
   const bodyEl = document.body;
 
   if (hamburger && navMenu) {
-    hamburger.addEventListener("click", function () {
+    // Toggle menu on hamburger click
+    hamburger.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
       this.classList.toggle("active");
       navMenu.classList.toggle("active");
 
+      // Prevent body scrolling when menu is open
       if (navMenu.classList.contains("active")) {
         bodyEl.style.overflow = "hidden";
       } else {
         bodyEl.style.overflow = "";
       }
+
+      console.log(
+        "Hamburger clicked - Menu active:",
+        navMenu.classList.contains("active"),
+      );
     });
 
-    document.querySelectorAll(".nav-menu a").forEach((link) => {
-      link.addEventListener("click", () => {
+    // Close menu when clicking on any nav link
+    const navLinks = navMenu.querySelectorAll("a");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function () {
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
         bodyEl.style.overflow = "";
       });
     });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (window.innerWidth <= 991) {
+        if (
+          !navMenu.contains(e.target) &&
+          !hamburger.contains(e.target) &&
+          navMenu.classList.contains("active")
+        ) {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+          bodyEl.style.overflow = "";
+        }
+      }
+    });
+
+    // Close menu on escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && navMenu.classList.contains("active")) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+        bodyEl.style.overflow = "";
+      }
+    });
+
+    // Handle window resize
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 991 && navMenu.classList.contains("active")) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+        bodyEl.style.overflow = "";
+      }
+    });
+  } else {
+    console.log("Hamburger or navMenu not found");
   }
 
   // ===== MOBILE DROPDOWNS =====
@@ -144,55 +190,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ===== ANIMATED COUNTERS =====
-  const stats = document.querySelectorAll(".impact-number");
-  let animated = false;
-
-  function animateCounter(element, target) {
-    let current = 0;
-    const increment = Math.ceil(target / 100);
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= target) {
-        element.textContent = target;
-        clearInterval(timer);
-      } else {
-        element.textContent = current;
-      }
-    }, 20);
-  }
-
-  function checkStats() {
-    const statsSection = document.querySelector(".impact-grid");
-    if (!statsSection || animated) return;
-
-    const position = statsSection.getBoundingClientRect().top;
-    const screen = window.innerHeight / 1.3;
-
-    if (position < screen) {
-      stats.forEach((stat) => {
-        const text = stat.textContent.replace(/[^0-9]/g, "");
-        const target = parseInt(text);
-        if (!isNaN(target)) {
-          animateCounter(stat, target);
-        }
-      });
-      animated = true;
-    }
-  }
-
-  window.addEventListener("scroll", checkStats);
-  checkStats();
-
-  // ===== CATEGORY FILTERS =====
-  const categoryBtns = document.querySelectorAll(".category-btn");
-
-  categoryBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      categoryBtns.forEach((b) => b.classList.remove("active"));
-      this.classList.add("active");
-    });
-  });
-
-  console.log("POAK website loaded - Dark theme enabled!");
+  console.log("POAK website loaded - Hamburger menu should work!");
 });

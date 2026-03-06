@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Primary Meta Tags -->
     <title>
       From Street Vendor to Business Owner: Mary's Story - POAK Blog
     </title>
@@ -12,38 +10,7 @@
       name="description"
       content="Read how Mary Wanjiku transformed her life with a small loan from her VSLA group, starting a tailoring business that now employs two other women in Kibera."
     />
-    <meta
-      name="keywords"
-      content="success story Kenya, women empowerment story, VSLA success"
-    />
-
-    <!-- Canonical URL -->
-    <link
-      rel="canonical"
-      href="https://www.povertyafricakenya.co.ke/blog-post.html?id=1"
-    />
-
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="From Street Vendor to Business Owner: Mary's Story"
-    />
-    <meta
-      property="og:description"
-      content="How a small loan transformed Mary's life."
-    />
-    <meta
-      property="og:url"
-      content="https://www.povertyafricakenya.co.ke/blog-post.html?id=1"
-    />
-
-    <!-- Favicon & CSS -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicon/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" href="images/logo_POAK.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -55,92 +22,56 @@
     />
   </head>
   <body>
-    <!-- Navigation -->
     <nav class="navbar">
-      <div class="container nav-container">
+      <div class="nav-container">
         <a href="index.html" class="logo">
           <img src="images/logo_POAK.png" alt="POAK Logo" class="logo-img" />
-          <div class="logo-text-wrapper">
+          <div class="logo-text">
             <span class="logo-main">POAK</span>
             <span class="logo-sub">Poverty Africa - Kenya</span>
           </div>
         </a>
-        <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
           <li class="dropdown">
-            <a href="programs.html" class="nav-link dropdown-toggle"
+            <a href="programs.html"
               >Programs <i class="fas fa-chevron-down"></i
             ></a>
             <ul class="dropdown-menu">
-              <li>
-                <a href="youth-program.html"
-                  ><i class="fas fa-laptop-code"></i> Youth Digital Skills</a
-                >
-              </li>
-              <li>
-                <a href="women-program.html"
-                  ><i class="fas fa-female"></i> Women's Empowerment</a
-                >
-              </li>
-              <li>
-                <a href="health-program.html"
-                  ><i class="fas fa-heartbeat"></i> Maternal & Child Health</a
-                >
-              </li>
+              <li><a href="youth-program.html">Youth Digital Skills</a></li>
+              <li><a href="women-program.html">Women's Empowerment</a></li>
+              <li><a href="health-program.html">Maternal & Child Health</a></li>
               <li>
                 <a href="mental-health-program.html"
-                  ><i class="fas fa-brain"></i> Mental Health & Wellness</a
+                  >Mental Health & Wellness</a
                 >
               </li>
             </ul>
           </li>
-          <li><a href="impact.html" class="nav-link">Impact</a></li>
-          <li><a href="blog.html" class="nav-link active">Blog</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li>
-            <a href="donate.html" class="nav-donate-btn"
-              ><i class="fas fa-heart"></i> Donate</a
-            >
-          </li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="donate.html" class="donate-btn">Donate</a></li>
           <li class="theme-toggle-container">
-            <button
-              class="theme-toggle"
-              id="themeToggle"
-              aria-label="Toggle dark mode"
-            >
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-            </button>
-          </li>
-          <li class="theme-toggle-container">
-            <button
-              class="theme-toggle"
-              id="themeToggle"
-              aria-label="Toggle dark mode"
-            >
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
+            <button class="theme-toggle" id="themeToggle">
+              <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
             </button>
           </li>
         </ul>
-        <button class="hamburger">
-          <span class="bar"></span><span class="bar"></span
-          ><span class="bar"></span>
-        </button>
       </div>
     </nav>
 
-    <!-- Blog Post Content -->
     <section class="blog-post-section">
       <div class="container">
         <div class="blog-post-container">
-          <!-- Back to Blog -->
-          <a href="blog.html" class="back-to-blog"
-            ><i class="fas fa-arrow-left"></i> Back to Blog</a
-          >
+          <a href="blog.html" class="back-to-blog">
+            <i class="fas fa-arrow-left"></i> Back to Blog
+          </a>
 
-          <!-- Blog Header -->
           <div class="blog-post-header">
             <span class="blog-post-category">Women Empowerment</span>
             <h1 class="blog-post-title">
@@ -153,15 +84,17 @@
             </div>
           </div>
 
-          <!-- Featured Image -->
           <div class="blog-post-image">
             <img
               src="images/women-program.jpg"
               alt="Mary in her tailoring shop"
+              onerror="
+                this.src =
+                  'https://via.placeholder.com/800x400?text=Mary%27s+Tailoring+Shop'
+              "
             />
           </div>
 
-          <!-- Blog Content -->
           <div class="blog-post-content">
             <p class="blog-intro">
               Mary Wanjiku, 42, used to wake up at 4 AM every day to sell
@@ -182,7 +115,9 @@
             <p>
               In 2023, Mary joined a POAK Village Savings and Loan Association
               (VSLA) in her community. The group of 25 women meets weekly, each
-              contributing 100 KES to a shared fund.
+              contributing 100 KES to a shared fund. Members can take small
+              loans from the group and repay with interest, building both
+              savings and credit history.
             </p>
 
             <div class="blog-quote">
@@ -235,14 +170,13 @@
               <h3>Support More Women Like Mary</h3>
               <p>
                 Your donation helps women access capital, training, and
-                mentorship.
+                mentorship through our VSLA programs.
               </p>
-              <a href="donate.html" class="btn btn-primary"
-                >Donate via M-PESA</a
-              >
+              <a href="donate.html" class="btn btn-primary">
+                <i class="fas fa-heart"></i> Donate via M-PESA
+              </a>
             </div>
 
-            <!-- Share Post -->
             <div class="share-post">
               <h4>Share this story:</h4>
               <div class="share-icons">
@@ -263,22 +197,41 @@
           </div>
         </div>
 
-        <!-- Related Posts -->
         <div class="related-posts">
           <h3>You May Also Like</h3>
           <div class="related-grid">
             <div class="related-card">
-              <img src="images/women-program.jpg" alt="Related post" />
+              <img
+                src="images/women-program.jpg"
+                alt="Related post"
+                onerror="
+                  this.src = 'https://via.placeholder.com/300x200?text=10+Women'
+                "
+              />
               <h4>10 Women, 10 Businesses: A VSLA Success Story</h4>
               <a href="blog-post.html?id=5">Read More →</a>
             </div>
             <div class="related-card">
-              <img src="images/youth-program.jpg" alt="Related post" />
+              <img
+                src="images/youth-program.jpg"
+                alt="Related post"
+                onerror="
+                  this.src =
+                    'https://via.placeholder.com/300x200?text=Tech+Career'
+                "
+              />
               <h4>From Unemployment to Tech Career</h4>
               <a href="blog-post.html?id=2">Read More →</a>
             </div>
             <div class="related-card">
-              <img src="images/mental-health.jpg" alt="Related post" />
+              <img
+                src="images/mental-health.jpg"
+                alt="Related post"
+                onerror="
+                  this.src =
+                    'https://via.placeholder.com/300x200?text=Mental+Health'
+                "
+              />
               <h4>Breaking the Silence: Mental Health Support</h4>
               <a href="blog-post.html?id=3">Read More →</a>
             </div>
@@ -287,15 +240,52 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <section class="blog-newsletter">
+      <div class="container">
+        <div class="newsletter-box">
+          <div class="newsletter-icon-wrapper">
+            <i class="fas fa-envelope-open-text newsletter-icon"></i>
+          </div>
+          <h3>Get More Stories Like This</h3>
+          <p>
+            Subscribe to receive our latest blog posts, success stories, and
+            impact updates directly in your email.
+          </p>
+          <form id="newsletterForm" class="blog-subscribe-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="newsletterName"
+                placeholder="Your Full Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Your Email Address"
+                required
+              />
+            </div>
+            <button type="submit" class="btn-subscribe">
+              <i class="fas fa-paper-plane"></i> Subscribe Now
+            </button>
+          </form>
+          <div class="privacy-note">
+            <i class="fas fa-lock"></i>
+            <span>We respect your privacy. Unsubscribe anytime.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="container">
         <div class="footer-grid">
           <div class="footer-about">
             <img src="images/logo_POAK.png" alt="POAK" class="footer-logo" />
-            <p class="footer-mission">
-              Fighting poverty across Kenya since 1997.
-            </p>
+            <p>Fighting poverty across Kenya since 1997.</p>
           </div>
           <div class="footer-links">
             <h4>Quick Links</h4>
@@ -303,6 +293,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="programs.html">Programs</a></li>
+              <li><a href="blog.html">Blog</a></li>
             </ul>
           </div>
           <div class="footer-contact">
@@ -311,6 +302,23 @@
             <p><i class="fas fa-phone"></i> +254 708 270 533</p>
           </div>
         </div>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/profile.php?id=61588395929911"
+            target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/povertyafricakenya/"
+            target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/poverty-africa-kenya-poak/"
+            target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
         <div class="footer-bottom">
           <p>
             &copy; <span id="currentYear"></span> POAK - All rights reserved.
@@ -318,12 +326,9 @@
         </div>
       </div>
     </footer>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <button class="scroll-top" id="scrollTop">
       <i class="fas fa-arrow-up"></i>
     </button>
-
     <script src="js/script.js"></script>
   </body>
 </html>
