@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Mental Health & Wellness Program - POAK Kenya | Healing Minds, Transforming Lives</title>
+    <meta name="description" content="POAK's Mental Health & Wellness program provides workshops, support groups, counseling, and group therapy for individuals and communities across Kenya. Breaking the stigma, restoring hope.">
+    <meta name="keywords" content="mental health Kenya, counseling services Kenya, support groups Kenya, therapy Kenya, mental health workshops, group therapy Kenya">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.povertyafricakenya.co.ke/mental-health-program.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mental Health & Wellness Program - POAK Kenya">
+    <meta property="og:description" content="Healing minds, transforming lives through workshops, support groups, counseling, and group therapy.">
+    <meta property="og:url" content="https://www.povertyafricakenya.co.ke/mental-health-program.html">
+    <meta property="og:image" content="https://www.povertyafricakenya.co.ke/images/mental-health.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo_POAK.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+/* ========================================
+   MENTAL HEALTH PAGE – OVERRIDE STYLES
+   ======================================== */
+
+/* Ensure header is below fixed navbar */
+.mental-health-header {
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%) !important;
+    margin-top: 70px !important;
+    padding: 3rem 1rem !important;
+    text-align: center !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.mental-health-header h1 {
+    font-size: 2.2rem !important;
+    margin-bottom: 0.5rem !important;
+    color: #fff !important;
+}
+
+.mental-health-header p {
+    font-size: 1rem !important;
+    color: rgba(255,255,255,0.9) !important;
+}
+
+/* Services grid – compact */
+.services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+    margin: 2rem 0 !important;
+}
+
+.service-card {
+    background: var(--card-bg, #fff) !important;
+    padding: 1.2rem !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 8px var(--shadow, rgba(0,0,0,0.08)) !important;
+    transition: all 0.2s !important;
+    text-align: center !important;
+    border: 1px solid var(--border, #e0e0e0) !important;
+}
+
+.service-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 16px var(--shadow-hover, rgba(0,0,0,0.12)) !important;
+    border-color: #9b59b6 !important;
+}
+
+.service-icon {
+    width: 50px !important;
+    height: 50px !important;
+    background: linear-gradient(135deg, rgba(155,89,182,0.1), rgba(142,68,173,0.1)) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 12px !important;
+}
+
+.service-icon i {
+    font-size: 1.5rem !important;
+    color: #9b59b6 !important;
+}
+
+.service-card h4 {
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+    font-weight: 600 !important;
+    color: var(--text, #2c3e50) !important;
+}
+
+.service-card p {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    color: var(--text-light, #555) !important;
+    margin: 0 !important;
+}
+
+/* Approach steps */
+.approach-steps {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    margin: 2rem 0 !important;
+}
+
+.approach-step {
+    display: flex !important;
+    gap: 1rem !important;
+    align-items: flex-start !important;
+    background: var(--bg-light, #f8f9fa) !important;
+    padding: 1rem !important;
+    border-radius: 12px !important;
+    transition: all 0.2s !important;
+}
+
+.approach-step:hover {
+    transform: translateX(5px) !important;
+    background: var(--card-bg, #fff) !important;
+    box-shadow: 0 2px 8px var(--shadow, rgba(0,0,0,0.08)) !important;
+}
+
+.step-number {
+    width: 40px !important;
+    height: 40px !important;
+    background: #9b59b6 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    flex-shrink: 0 !important;
+}
+
+.step-content h4 {
+    font-size: 1rem !important;
+    margin-bottom: 4px !important;
+    color: var(--text, #2c3e50) !important;
+}
+
+.step-content p {
+    color: var(--text-light, #555) !important;
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+}
+
+/* Program stats */
+.program-stats {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1rem !important;
+    margin: 2rem 0 !important;
+    text-align: center !important;
+}
+
+.stat-item {
+    background: var(--bg-light, #f8f9fa) !important;
+    padding: 1rem !important;
+    border-radius: 12px !important;
+}
+
+.stat-number {
+    display: block !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    color: #9b59b6 !important;
+    line-height: 1.2 !important;
+}
+
+.stat-item span:last-child {
+    font-size: 0.8rem !important;
+    color: var(--text-light, #555) !important;
+}
+
+/* Testimonial large */
+.testimonial-large {
+    background: linear-gradient(135deg, rgba(155,89,182,0.05), rgba(142,68,173,0.05)) !important;
+    padding: 1.5rem !important;
+    border-radius: 20px !important;
+    margin: 2rem 0 !important;
+    text-align: center !important;
+    border-left: 4px solid #9b59b6 !important;
+}
+
+.testimonial-quote i {
+    font-size: 2rem !important;
+    color: #9b59b6 !important;
+    opacity: 0.3 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.testimonial-text {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    font-style: italic !important;
+    color: var(--text-light, #555) !important;
+    margin-bottom: 0.8rem !important;
+}
+
+.testimonial-author {
+    color: #9b59b6 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+/* Location list */
+.location-list {
+    list-style: none !important;
+    margin: 1rem 0 !important;
+}
+
+.location-list li {
+    margin-bottom: 0.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    color: var(--text-light, #555) !important;
+    font-size: 0.9rem !important;
+}
+
+.location-list i {
+    color: #9b59b6 !important;
+    width: 18px !important;
+}
+
+/* Sidebar cards */
+.info-card {
+    background: var(--card-bg, #fff) !important;
+    border-radius: 16px !important;
+    padding: 1.2rem !important;
+    margin-bottom: 1.5rem !important;
+    box-shadow: 0 2px 8px var(--shadow, rgba(0,0,0,0.08)) !important;
+    border: 1px solid var(--border, #e0e0e0) !important;
+}
+
+.info-card h4 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.8rem !important;
+    padding-bottom: 0.5rem !important;
+    border-bottom: 1px solid var(--border, #e0e0e0) !important;
+}
+
+/* Emergency card */
+.emergency-card {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad) !important;
+    color: white !important;
+    border: none !important;
+}
+
+.emergency-card h4 {
+    color: white !important;
+    border-bottom-color: rgba(255,255,255,0.2) !important;
+}
+
+.emergency-number {
+    text-align: center !important;
+    padding: 0.8rem !important;
+    background: rgba(255,255,255,0.1) !important;
+    border-radius: 12px !important;
+    margin: 1rem 0 !important;
+}
+
+.emergency-number i {
+    font-size: 1.2rem !important;
+    display: block !important;
+    margin-bottom: 0.3rem !important;
+}
+
+.emergency-number span {
+    display: block !important;
+    font-size: 0.75rem !important;
+    opacity: 0.9 !important;
+}
+
+.emergency-number strong {
+    font-size: 1.5rem !important;
+    display: block !important;
+    margin-top: 0.3rem !important;
+}
+
+.poak-contact {
+    margin: 1rem 0 !important;
+    padding: 0.8rem !important;
+    background: rgba(255,255,255,0.1) !important;
+    border-radius: 12px !important;
+}
+
+.poak-contact p {
+    margin-bottom: 0.3rem !important;
+    font-size: 0.85rem !important;
+}
+
+.emergency-note {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    background: rgba(255,255,255,0.1) !important;
+    padding: 0.8rem !important;
+    border-radius: 10px !important;
+    font-size: 0.75rem !important;
+}
+
+/* Resources grid */
+.resources-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1rem !important;
+    margin-top: 2rem !important;
+}
+
+.resource-card {
+    background: var(--card-bg, #fff) !important;
+    padding: 1.2rem !important;
+    border-radius: 16px !important;
+    text-align: center !important;
+    box-shadow: 0 2px 8px var(--shadow, rgba(0,0,0,0.08)) !important;
+    transition: all 0.2s !important;
+    border: 1px solid var(--border, #e0e0e0) !important;
+}
+
+.resource-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 12px var(--shadow-hover, rgba(0,0,0,0.12)) !important;
+    border-color: #9b59b6 !important;
+}
+
+.resource-card i {
+    font-size: 2rem !important;
+    color: #9b59b6 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.resource-card h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+    color: var(--text, #2c3e50) !important;
+}
+
+.resource-card p {
+    color: var(--text-light, #555) !important;
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.8rem !important;
+}
+
+.resource-link {
+    display: inline-block !important;
+    color: #9b59b6 !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+.resource-link:hover {
+    text-decoration: underline !important;
+}
+
+/* Partner CTA */
+.partner-cta {
+    max-width: 600px !important;
+    margin: 2rem auto !important;
+    text-align: center !important;
+    background: var(--bg-light, #f8f9fa) !important;
+    padding: 2rem !important;
+    border-radius: 24px !important;
+    border: 1px solid var(--border, #e0e0e0) !important;
+}
+
+.partner-cta-content i {
+    font-size: 2.5rem !important;
+    color: #9b59b6 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.partner-cta-content h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.partner-cta-content p {
+    font-size: 0.9rem !important;
+    color: var(--text-light, #555) !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Purple buttons */
+.btn-primary {
+    background: #9b59b6 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-primary:hover {
+    background: #8e44ad !important;
+    transform: translateY(-2px) !important;
+}
+
+.btn-secondary {
+    background: transparent !important;
+    color: #9b59b6 !important;
+    border: 1px solid #9b59b6 !important;
+}
+
+.btn-secondary:hover {
+    background: #9b59b6 !important;
+    color: white !important;
+}
+
+/* Newsletter compact */
+.newsletter-box {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 2rem !important;
+    background: var(--card-bg, #fff) !important;
+    border-radius: 24px !important;
+}
+
+.newsletter-box h3 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.newsletter-box p {
+    font-size: 0.85rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.form-group {
+    margin-bottom: 0.8rem !important;
+}
+
+.form-group input {
+    width: 100% !important;
+    padding: 0.6rem 0.8rem !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--border, #e0e0e0) !important;
+    background: var(--bg-input, #fff) !important;
+    font-size: 0.85rem !important;
+}
+
+.btn-subscribe {
+    background: #9b59b6 !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background 0.2s !important;
+    font-size: 0.85rem !important;
+}
+
+.btn-subscribe:hover {
+    background: #8e44ad !important;
+}
+
+/* Section titles */
+.section-title {
+    font-size: 1.8rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.section-line {
+    width: 50px !important;
+    height: 3px !important;
+    background: #9b59b6 !important;
+    margin: 0.5rem auto 1rem !important;
+}
+
+.section-subtitle {
+    font-size: 1rem !important;
+    color: var(--text-light, #555) !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+    .program-stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .approach-step {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+    .step-number {
+        margin: 0 auto 0.5rem !important;
+    }
+    .resources-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .program-stats {
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important;
+    }
+    .testimonial-large {
+        padding: 1rem !important;
+    }
+    .partner-cta {
+        padding: 1.5rem !important;
+    }
+}
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W0DNL1PP07');
+</script>
+</head>
+<body class="mental-health-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo_POAK.png" alt="POAK Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">POAK</span>
+                    <span class="logo-sub">Poverty Africa - Kenya</span>
+                </div>
+            </a>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="programs.html" class="active">Programs <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="youth-program.html">Youth Digital Skills</a></li>
+                        <li><a href="women-program.html">Women's Empowerment</a></li>
+                        <li><a href="girls-program.html">Girls for Girls</a></li>
+                        <li><a href="mental-health-program.html" class="active">Mental Health & Wellness</a></li>
+                    </ul>
+                </li>
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="donate-btn">Donate</a></li>
+                <li class="theme-toggle-container">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Program Header -->
+    <section class="program-header mental-health-header">
+        <div class="container">
+            <h1>Mental Health & Wellness</h1>
+            <p>Healing minds, transforming lives through community-based care</p>
+        </div>
+    </section>
+
+    <!-- Program Content -->
+    <section class="section">
+        <div class="container">
+            <div class="program-detail">
+                <div class="program-main">
+                    <h2>About the Program</h2>
+                    <p>In Kenya, mental health challenges affect 1 in 4 people, yet only 1 in 10 receive the care they need. Stigma, lack of awareness, and limited access to services prevent many from seeking help. POAK's Mental Health & Wellness program provides community-based mental health support through trained counselors, peer support groups, and therapeutic interventions.</p>
+                    <p>We believe that mental health is fundamental to overall well-being and poverty alleviation. Our holistic approach combines professional counseling with community support systems to create safe spaces for healing and growth.</p>
+                    
+                    <h3>What We Offer</h3>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-chalkboard-user"></i>
+                            </div>
+                            <h4>Mental Health Workshops</h4>
+                            <p>Interactive workshops in schools, workplaces, and communities to raise awareness, reduce stigma, and teach coping skills. Topics include stress management, anxiety, depression, and emotional resilience.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Support Groups</h4>
+                            <p>Safe, confidential spaces where individuals can share experiences, find solidarity, and support each other through challenges. Groups include women's circles, youth groups, and caregivers support.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h4>Professional Counseling</h4>
+                            <p>Individual and family counseling sessions with trained counselors. We address issues including anxiety, depression, trauma, grief, and relationship challenges.</p>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <h4>Group Therapy</h4>
+                            <p>Facilitated therapeutic sessions where participants learn coping strategies, build social connections, and work through shared experiences in a supportive environment.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Our Approach</h3>
+                    <div class="approach-steps">
+                        <div class="approach-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Raise Awareness</h4>
+                                <p>Community workshops to educate about mental health, reduce stigma, and encourage help-seeking behavior.</p>
+                            </div>
+                        </div>
+                        <div class="approach-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Train Facilitators</h4>
+                                <p>Train community members as peer supporters and group facilitators to ensure sustainable, locally-led support.</p>
+                            </div>
+                        </div>
+                        <div class="approach-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Create Safe Spaces</h4>
+                                <p>Establish regular support groups and therapy sessions in accessible community locations.</p>
+                            </div>
+                        </div>
+                        <div class="approach-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Connect to Care</h4>
+                                <p>Provide referrals to professional counselors and healthcare providers for specialized support.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Program Impact</h3>
+                    <div class="program-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">20</span>
+                            <span>Counseling Sessions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15</span>
+                            <span>Active Support Groups</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span>Workshops Held</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">25</span>
+                            <span>Trained Peer Counselors</span>
+                        </div>
+                    </div>
+                    
+                    <h3>Success Story</h3>
+                    <div class="testimonial-large">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"I had been struggling with depression for years but didn't know where to turn. Through POAK's support group, I found people who understood what I was going through. The counseling sessions helped me develop coping strategies, and today I'm living a life I once thought was impossible. I now volunteer as a peer supporter to help others."</p>
+                        <p class="testimonial-author">- Anonymous, Nairobi</p>
+                    </div>
+                    
+                    <h3>Program Locations</h3>
+                    <ul class="location-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Nairobi - Kibera, Mathare, Kawangware</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kisumu - Manyatta</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mombasa - Likoni</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Makueni - Wote, Kibwezi</li>
+                    </ul>
+                </div>
+                
+                <div class="program-sidebar">
+                    <div class="info-card emergency-card">
+                        <h4>Need Help Now?</h4>
+                        <div class="emergency-number">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Kenya Mental Health Helpline</span>
+                            <strong>1199</strong>
+                        </div>
+                        <div class="poak-contact">
+                            <p><strong>POAK Counseling:</strong></p>
+                            <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
+                            <p><i class="fas fa-envelope"></i> mentalhealth@povertyafricakenya.co.ke</p>
+                        </div>
+                        <div class="emergency-note">
+                            <i class="fas fa-info-circle"></i>
+                            <p>All services are confidential. Your privacy is respected.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Program Details</h4>
+                        <p><strong>Workshops:</strong> Monthly community sessions</p>
+                        <p><strong>Support Groups:</strong> Weekly meetings</p>
+                        <p><strong>Counseling:</strong> By appointment</p>
+                        <p><strong>Group Therapy:</strong> weekly/monthly group sessions</p>
+                        <p><strong>Cost:</strong> Free for all participants</p>
+                        <!-- Hide for now -->
+                        <!-- <a href="#" class="btn btn-primary">Join a Support Group</a> -->
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Support This Program</h4>
+                        <p class="mpesa-highlight">PayBill: 600100</p>
+                        <p>Account: 0100011857657</p>
+                        <p class="small-text">Account Name: "Broad Experiential Limited"</p>
+                        <a href="donate.html" class="btn btn-secondary">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Mental Health Resources</h2>
+            <div class="section-line"></div>
+            <p class="section-subtitle">Helpful information and tools for mental wellness</p>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Self-Help Guides</h3>
+                    <p>Downloadable resources on stress management, anxiety, and building resilience.</p>
+                    <a href="#" class="resource-link">Download PDF →</a>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-video"></i>
+                    <h3>Wellness Videos</h3>
+                    <p>Guided meditation, breathing exercises, and relaxation techniques.</p>
+                    <a href="#" class="resource-link">Watch Videos →</a>
+                </div>
+                <div class="resource-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Crisis Support</h3>
+                    <p>24/7 helplines and emergency resources for immediate assistance.</p>
+                    <a href="#" class="resource-link">Get Help →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner CTA -->
+    <section class="section">
+        <div class="container">
+            <div class="partner-cta">
+                <div class="partner-cta-content">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Partner With Us</h3>
+                    <p>Are you a counselor, therapist, or organization interested in supporting our mental health work?</p>
+                    <a href="contact.html" class="btn btn-primary">Become a Partner</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="newsletter-box">
+                <div class="newsletter-icon-wrapper">
+                    <i class="fas fa-envelope-open-text newsletter-icon"></i>
+                </div>
+                <h3>Stay Connected</h3>
+                <p>Subscribe to receive mental health resources and program updates.</p>
+                <form class="blog-subscribe-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" required>
+                    </div>
+                    <button type="submit" class="btn-subscribe">
+                        <i class="fas fa-paper-plane"></i> Subscribe
+                    </button>
+                </form>
+                <div class="privacy-note">
+                    <i class="fas fa-lock"></i>
+                    <span>We respect your privacy. Unsubscribe anytime.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
+                    <p>Fighting poverty across Kenya since 1997.</p>
+                    <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
+                    <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
+                    <p><i class="fas fa-mobile-alt"></i> PayBill: 600100</p>
+                    <p>Account: 0100011857657</p>
+                    <p>Account Name: "Broad Experiential Limited"</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/povertyafricakenya/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+    <script src="js/script.js"></script>
+</body>
+</html>
