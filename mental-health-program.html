@@ -782,72 +782,60 @@
             </div>
         </div>
     </section>
-
-    <!-- Newsletter -->
-    <section class="section bg-light">
-        <div class="container">
-            <div class="newsletter-box">
-                <div class="newsletter-icon-wrapper">
-                    <i class="fas fa-envelope-open-text newsletter-icon"></i>
+  <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+         <!-- PARTNER LOGOS SECTION -->
+        <div class="footer-partners">
+            <h4>Our Partners</h4>
+            <div class="partner-logos">
+                <div class="partner-logo-item">
+                    <img src="images/Broad Experiential logo.png" alt="Broad Experiential Limited" class="partner-logo">
+                    <span>Broad Experiential Limited</span>
                 </div>
-                <h3>Stay Connected</h3>
-                <p>Subscribe to receive mental health resources and program updates.</p>
-                <form class="blog-subscribe-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email Address" required>
-                    </div>
-                    <button type="submit" class="btn-subscribe">
-                        <i class="fas fa-paper-plane"></i> Subscribe
-                    </button>
+            </div>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
+                <p>Fighting poverty across Kenya since 1997.</p>
+                <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
+            </div>
+            
+            <div class="footer-programs">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="youth-program.html">Youth Digital Skills</a></li>
+                    <li><a href="women-program.html">Women's Empowerment</a></li>
+                    <li><a href="girls-program.html">Girls for Girls</a></li>
+                    <li><a href="mental-health-program.html">Mental Health</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
+                <p><i class="fas fa-phone"></i> 0202-2636674 / 0777636674</p>
+               
+            </div>
+            <!-- NEWSLETTER COLUMN (compact) -->
+            <div class="footer-newsletter-column">
+                <h4>Stay Updated</h4>
+                <p>Get our monthly impact stories and news.</p>
+                <form class="newsletter-compact" id="newsletterForm">
+                    <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+                    <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
                 </form>
-                <div class="privacy-note">
-                    <i class="fas fa-lock"></i>
-                    <span>We respect your privacy. Unsubscribe anytime.</span>
-                </div>
+                <p class="form-message" id="newsletterMessage"></p>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
-                    <p>Fighting poverty across Kenya since 1997.</p>
-                    <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="donate.html">Donate</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                    <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
-                    <p><i class="fas fa-mobile-alt"></i> PayBill: 600100</p>
-                    <p>Account: 0100011857657</p>
-                    <p>Account Name: "Broad Experiential Limited"</p>
-                </div>
-            </div>
-            <div class="social-links">
-                <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/povertyafricakenya/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
+            <p class="registration">Registered Nonprofit in Kenya</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
     <script src="js/script.js"></script>

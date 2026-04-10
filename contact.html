@@ -2,12 +2,12 @@
 <html lang="en">
   <head> 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W0DNL1PP07');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W0DNL1PP07');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact POAK - Poverty Africa Kenya | Get in Touch</title>
@@ -25,7 +25,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-   
   </head>
   <body>
     <nav class="navbar">
@@ -83,11 +82,22 @@
         <div class="contact-grid">
           <div class="contact-form">
             <h2>Send a Message</h2>
-            <form id="contactForm">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea rows="5" placeholder="Your Message" required></textarea>
+            <!-- Standard FormSubmit form - works without AJAX, emails will arrive after verification -->
+            <form 
+              action="https://formsubmit.co/info@povertyafricakenya.co.ke" 
+              method="POST"
+              id="contactForm"
+            >
+              <!-- These hidden fields improve deliverability -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="New contact form submission from POAK website">
+              
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
               <button type="submit" class="btn btn-primary">Send</button>
+              <div id="formStatus" style="margin-top: 15px; font-size: 0.9rem;"></div>
             </form>
           </div>
           <div class="contact-info">
@@ -104,69 +114,64 @@
       </div>
     </section>
 
-    <!-- PARTNER LOGOS SECTION -->
-    <div class="footer-partners">
-      <h4>Our Partners</h4>
-      <div class="partner-logos">
-        <div class="partner-logo-item">
-          <img
-            src="images/Broad Experiential logo.png"
-            alt="Broad Experiential Limited"
-            class="partner-logo"
-          />
-          <span>Broad Experiential Limited</span>
+  <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+         <!-- PARTNER LOGOS SECTION -->
+        <div class="footer-partners">
+            <h4>Our Partners</h4>
+            <div class="partner-logos">
+                <div class="partner-logo-item">
+                    <img src="images/Broad Experiential logo.png" alt="Broad Experiential Limited" class="partner-logo">
+                    <span>Broad Experiential Limited</span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <div class="container">
         <div class="footer-grid">
-          <div class="footer-about">
-            <img src="images/logo_POAK.png" alt="POAK" class="footer-logo" />
-            <p>Fighting poverty across Kenya since 1997.</p>
-          </div>
-          <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="programs.html">Programs</a></li>
-            </ul>
-          </div>
-          <div class="footer-contact">
-            <h4>Contact</h4>
-            <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-            <p><i class="fas fa-phone"></i> +254 777636674 / 020-2636674</p>
-          </div>
+            <div class="footer-about">
+                <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
+                <p>Fighting poverty across Kenya since 1997.</p>
+                <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
+            </div>
+            
+            <div class="footer-programs">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="youth-program.html">Youth Digital Skills</a></li>
+                    <li><a href="women-program.html">Women's Empowerment</a></li>
+                    <li><a href="girls-program.html">Girls for Girls</a></li>
+                    <li><a href="mental-health-program.html">Mental Health</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
+                <p><i class="fas fa-phone"></i> 0202-2636674 / 0777636674</p>
+               
+            </div>
+            <!-- NEWSLETTER COLUMN (compact) -->
+            <div class="footer-newsletter-column">
+                <h4>Stay Updated</h4>
+                <p>Get our monthly impact stories and news.</p>
+                <form class="newsletter-compact" id="newsletterForm">
+                    <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+                    <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
+                </form>
+                <p class="form-message" id="newsletterMessage"></p>
+            </div>
         </div>
-        <div class="social-links">
-          <a
-            href="https://www.facebook.com/profile.php?id=61588395929911"
-            target="_blank"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/povertyafricakenya/"
-            target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/company/poverty-africa-kenya-poak/"
-            target="_blank"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </div>
+
         <div class="footer-bottom">
-          <p>
-            &copy; <span id="currentYear"></span> POAK - All rights reserved.
-          </p>
+            <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
+            <p class="registration">Registered Nonprofit in Kenya</p>
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
     <button class="scroll-top" id="scrollTop">
       <i class="fas fa-arrow-up"></i>
     </button>
     <script src="js/script.js"></script>
+  
   </body>
 </html>

@@ -78,7 +78,7 @@
       </div>
     </section>
 
-    <section class="blog-categories">
+    <!-- <section class="blog-categories">
       <div class="container">
         <div class="category-filters">
           <button class="category-btn active">All Posts</button>
@@ -88,7 +88,7 @@
           <button class="category-btn">Mental Health</button>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="blog-posts">
       <div class="container">
@@ -121,226 +121,85 @@
 
           <article class="blog-card">
             <img
-              src="images/youth-program.jpg"
-              alt="David's story"
+              src="images/blog/stress awareness month.png"
+              alt="Self-awareness Month"
               onerror="
                 this.src =
                   'https://via.placeholder.com/400x300?text=David%27s+Story'
               "
             />
             <div class="blog-content">
-              <span class="blog-category">Youth Program</span>
+              <span class="blog-category">Self Awareness Month</span>
               <h3>
-                <a href="blog-post.html?id=2"
-                  >From Unemployment to Tech Career: David's Story</a
+                <a href="self-awarenessblog.html"
+                  >Self Awareness Month: Managing Stress & Mental Wellness</a
                 >
               </h3>
               <p class="blog-excerpt">
-                After completing our digital skills program, David now works as
-                a freelance web developer.
+                Learn practical tips to stay stress-free and build emotional resilience.
               </p>
               <div class="blog-meta">
-                <span><i class="far fa-calendar"></i> Feb 10, 2026</span>
-                <a href="blog-post.html?id=2">Read More →</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="blog-card">
-            <img
-              src="images/mental-health.jpg"
-              alt="Grace's story"
-              onerror="
-                this.src =
-                  'https://via.placeholder.com/400x300?text=Grace%27s+Story'
-              "
-            />
-            <div class="blog-content">
-              <span class="blog-category">Mental Health</span>
-              <h3>
-                <a href="blog-post.html?id=3"
-                  >Breaking the Silence: One Mother's Journey</a
-                >
-              </h3>
-              <p class="blog-excerpt">
-                Through our perinatal mental health program, Grace found support
-                and healing.
-              </p>
-              <div class="blog-meta">
-                <span><i class="far fa-calendar"></i> Feb 5, 2026</span>
-                <a href="blog-post.html?id=3">Read More →</a>
+                <span><i class="far fa-calendar"></i> April 5, 2026</span>
+                <a href="self-awarenessblog.html">Read More →</a>
               </div>
             </div>
           </article>
         </div>
 
-        <div class="pagination">
-          <a href="#" class="pagination-btn active">1</a>
-          <a href="#" class="pagination-btn">2</a>
-          <a href="#" class="pagination-btn">3</a>
-          <a href="#" class="pagination-btn">Next →</a>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+         <!-- PARTNER LOGOS SECTION -->
+        <div class="footer-partners">
+            <h4>Our Partners</h4>
+            <div class="partner-logos">
+                <div class="partner-logo-item">
+                    <img src="images/Broad Experiential logo.png" alt="Broad Experiential Limited" class="partner-logo">
+                    <span>Broad Experiential Limited</span>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <section class="blog-newsletter">
-      <div class="container">
-        <div class="newsletter-box">
-          <div class="newsletter-icon-wrapper">
-            <i class="fas fa-envelope-open-text newsletter-icon"></i>
-          </div>
-          <h3>Get Stories Delivered to Your Inbox</h3>
-          <p>
-            Subscribe to receive our latest blog posts, success stories, and
-            impact updates directly in your email.
-          </p>
-         <form id="newsletterForm" class="blog-subscribe-form">
-  <div class="form-group">
-    <input type="text" id="newsletterName" placeholder="Your Full Name" required />
-  </div>
-  <div class="form-group">
-    <input type="email" id="newsletterEmail" placeholder="Your Email Address" required />
-  </div>
-  <button type="submit" class="btn-subscribe">
-    <i class="fas fa-paper-plane"></i> Subscribe Now
-  </button>
-  <div id="formMessage" style="margin-top: 15px; font-size: 14px;"></div>
-</form>
-
-<script>
-// REPLACE WITH YOUR ACTUAL WEB APP URL
-const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxeDRSc9JF8mBAZl0DRtj0YquCTS_dar4nNGH7AzFli6hvKQOHuZqhoVbPIPE7soe_6zg/exec';
-
-const form = document.getElementById('newsletterForm');
-const messageDiv = document.getElementById('formMessage');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  
-  const name = document.getElementById('newsletterName').value.trim();
-  const email = document.getElementById('newsletterEmail').value.trim();
-  
-  if (!name || !email) {
-    showMessage('Please fill in both fields.', 'error');
-    return;
-  }
-  
-  // Disable button to prevent double submission
-  const submitBtn = form.querySelector('button[type="submit"]');
-  submitBtn.disabled = true;
-  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Subscribing...';
-  
-  showMessage('Subscribing...', 'info');
-  
-  try {
-    // Use URL-encoded format (works reliably with no-cors)
-    const formData = new URLSearchParams();
-    formData.append('name', name);
-    formData.append('email', email);
-    formData.append('source', 'blog sidebar');
-    
-    const response = await fetch(WEB_APP_URL, {
-      method: 'POST',
-      mode: 'no-cors', // Required for cross-origin requests to Google Scripts
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: formData
-    });
-    
-    // With 'no-cors', we cannot read the response body.
-    // So we assume success if no network error occurred.
-    showMessage('Thanks for subscribing!', 'success');
-    form.reset();
-    
-  } catch (error) {
-    console.error('Submission error:', error);
-    showMessage('Something went wrong. Please try again later.', 'error');
-  } finally {
-    submitBtn.disabled = false;
-    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Subscribe Now';
-  }
-});
-
-function showMessage(msg, type) {
-  messageDiv.innerHTML = msg;
-  messageDiv.style.color = type === 'error' ? '#dc3545' : (type === 'success' ? '#28a745' : '#007bff');
-  if (type !== 'error') {
-    setTimeout(() => {
-      if (messageDiv.innerHTML === msg) messageDiv.innerHTML = '';
-    }, 5000);
-  }
-}
-</script>
-          <div class="privacy-note">
-            <i class="fas fa-lock"></i>
-            <span>We respect your privacy. Unsubscribe anytime.</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PARTNER LOGOS SECTION -->
-    <div class="footer-partners">
-      <h4>Our Partners</h4>
-      <div class="partner-logos">
-        <div class="partner-logo-item">
-          <img
-            src="images/Broad Experiential logo.png"
-            alt="Broad Experiential Limited"
-            class="partner-logo"
-          />
-          <span>Broad Experiential Limited</span>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <div class="container">
         <div class="footer-grid">
-          <div class="footer-about">
-            <img src="images/logo_POAK.png" alt="POAK" class="footer-logo" />
-            <p>Fighting poverty across Kenya since 1997.</p>
-          </div>
-          <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="programs.html">Programs</a></li>
-              <li><a href="blog.html">Blog</a></li>
-            </ul>
-          </div>
-          <div class="footer-contact">
-            <h4>Contact</h4>
-            <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-            <p><i class="fas fa-phone"></i>+254 777636674 / 020-2636674</p>
-          </div>
+            <div class="footer-about">
+                <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
+                <p>Fighting poverty across Kenya since 1997.</p>
+                <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
+            </div>
+            
+            <div class="footer-programs">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="youth-program.html">Youth Digital Skills</a></li>
+                    <li><a href="women-program.html">Women's Empowerment</a></li>
+                    <li><a href="girls-program.html">Girls for Girls</a></li>
+                    <li><a href="mental-health-program.html">Mental Health</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
+                <p><i class="fas fa-phone"></i> 0202-2636674 / 0777636674</p>
+               
+            </div>
+            <!-- NEWSLETTER COLUMN (compact) -->
+            <div class="footer-newsletter-column">
+                <h4>Stay Updated</h4>
+                <p>Get our monthly impact stories and news.</p>
+                <form class="newsletter-compact" id="newsletterForm">
+                    <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
+                    <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
+                </form>
+                <p class="form-message" id="newsletterMessage"></p>
+            </div>
         </div>
-        <div class="social-links">
-          <a
-            href="https://www.facebook.com/profile.php?id=61588395929911"
-            target="_blank"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/povertyafricakenya/"
-            target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/company/poverty-africa-kenya-poak/"
-            target="_blank"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-        </div>
+
         <div class="footer-bottom">
-          <p>
-            &copy; <span id="currentYear"></span> POAK - All rights reserved.
-          </p>
+            <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
+            <p class="registration">Registered Nonprofit in Kenya</p>
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
     <button class="scroll-top" id="scrollTop">
       <i class="fas fa-arrow-up"></i>
     </button>
