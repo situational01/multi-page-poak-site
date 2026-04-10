@@ -166,17 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ===== NEWSLETTER FORM =====
-  const newsletterForm = document.getElementById("newsletterForm");
-
-  if (newsletterForm) {
-    newsletterForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thank you for subscribing! You will receive updates from POAK.");
-      this.reset();
-    });
-  }
-
   // ===== TEAM MODAL FUNCTIONALITY =====
   const teamMembers = {
     luke: {
@@ -255,4 +244,64 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   console.log("POAK website loaded successfully!");
+});
+
+// ===== NEWSLETTER SUBSCRIPTION (Google Sheets Integration) =====
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('newsletterForm');
+    const messageEl = document.getElementById('newsletterMessage');
+    
+    // Replace with your Google Apps Script Web App URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkTC3rruLZFcHGEW0lP7KP3QcMLgLA4CVM3ufmyYJXHrIwXqp_h3yBMI-qeu00zDRaaw/exec';
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const emailInput = form.querySelector('input[type="email"]');
+            const email = emailInput.value.trim();
+            
+            if (!email) {
+                showMessage('Please enter your email address.', 'error');
+                return;
+            }
+            if (!isValidEmail(email)) {
+                showMessage('Please enter a valid email address.', 'error');
+                return;
+            }
+            
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.textContent = 'Subscribing...';
+            submitBtn.disabled = true;
+            
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email })
+            })
+            .then(() => {
+                showMessage('Thank you! You are now subscribed.', 'success');
+                emailInput.value = '';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showMessage('Something went wrong. Please try again.', 'error');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalBtnText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
+    
+    function showMessage(text, type) {
+        messageEl.textContent = text;
+        messageEl.className = 'form-message ' + type;
+    }
+    
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
 });
