@@ -22,40 +22,63 @@ document.addEventListener("DOMContentLoaded", function () {
       body.classList.toggle("dark-theme");
       localStorage.setItem(
         "poak-theme",
-        body.classList.contains("dark-theme") ? "dark" : "light",
+        body.classList.contains("dark-theme") ? "dark" : "light"
       );
     });
   }
 
-  // ===== HAMBURGER MENU =====
+  // ===== HAMBURGER MENU & MOBILE DROPDOWNS (FIXED) =====
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.getElementById("navMenu");
   const bodyEl = document.body;
 
   if (hamburger && navMenu) {
+    // Toggle menu open/close
     hamburger.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
-
       this.classList.toggle("active");
       navMenu.classList.toggle("active");
-
-      if (navMenu.classList.contains("active")) {
-        bodyEl.style.overflow = "hidden";
-      } else {
-        bodyEl.style.overflow = "";
-      }
+      bodyEl.style.overflow = navMenu.classList.contains("active") ? "hidden" : "";
     });
 
+    // Handle clicks on all nav links
     const navLinks = navMenu.querySelectorAll("a");
     navLinks.forEach((link) => {
-      link.addEventListener("click", function () {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-        bodyEl.style.overflow = "";
+      link.addEventListener("click", function (e) {
+        const parentLi = this.closest("li");
+        const isDropdownToggle = parentLi && parentLi.classList.contains("dropdown");
+
+        // If it's a dropdown toggle (e.g., "Programs"), do NOT close the menu
+        if (isDropdownToggle) {
+          if (window.innerWidth <= 991) {
+            e.preventDefault(); // prevent navigation
+
+            // Toggle the clicked dropdown
+            parentLi.classList.toggle("active");
+
+            // Optional: close other dropdowns for cleaner UX
+            const allDropdowns = navMenu.querySelectorAll(".dropdown");
+            allDropdowns.forEach((dd) => {
+              if (dd !== parentLi) {
+                dd.classList.remove("active");
+              }
+            });
+          }
+          // On desktop, allow normal hover behavior
+          return;
+        }
+
+        // For regular links (Home, About, etc.), close the mobile menu
+        if (window.innerWidth <= 991) {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+          bodyEl.style.overflow = "";
+        }
       });
     });
 
+    // Close menu when clicking outside
     document.addEventListener("click", function (e) {
       if (window.innerWidth <= 991) {
         if (
@@ -70,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+    // Close with Escape key
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && navMenu.classList.contains("active")) {
         hamburger.classList.remove("active");
@@ -78,40 +102,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+    // Reset on window resize (when crossing breakpoint)
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 991 && navMenu.classList.contains("active")) {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-        bodyEl.style.overflow = "";
+      if (window.innerWidth > 991) {
+        if (navMenu.classList.contains("active")) {
+          hamburger.classList.remove("active");
+          navMenu.classList.remove("active");
+          bodyEl.style.overflow = "";
+        }
+        // Remove any active dropdown classes
+        document.querySelectorAll(".dropdown.active").forEach((dd) => {
+          dd.classList.remove("active");
+        });
       }
     });
   }
 
-  // ===== MOBILE DROPDOWNS =====
-  const dropdowns = document.querySelectorAll(".dropdown");
-
-  dropdowns.forEach((dropdown) => {
-    const link = dropdown.querySelector("a");
-
-    link.addEventListener("click", function (e) {
-      if (window.innerWidth <= 991) {
-        e.preventDefault();
-
-        dropdowns.forEach((d) => {
-          if (d !== dropdown) {
-            d.classList.remove("active");
-          }
-        });
-
-        dropdown.classList.toggle("active");
-      }
-    });
-  });
-
   // ===== ACTIVE NAV LINK =====
   function setActiveNavLink() {
-    const currentPage =
-      window.location.pathname.split("/").pop() || "index.html";
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll(".nav-menu a");
 
     navLinks.forEach((link) => {
@@ -122,9 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    const activeDropdownLink = document.querySelector(
-      ".dropdown-menu a.active",
-    );
+    const activeDropdownLink = document.querySelector(".dropdown-menu a.active");
     if (activeDropdownLink) {
       const parentDropdown = activeDropdownLink.closest(".dropdown");
       if (parentDropdown) {
@@ -171,12 +178,12 @@ document.addEventListener("DOMContentLoaded", function () {
     luke: {
       name: "Luke Alela",
       title: "Executive Director",
-      bio: "Horus Alela Ambasu is an Executive Director  with a strong background in project design, planning, fundraising, and proposal writing, as well as data analysis and impact assessment. He brings over seven years of experience working on community-based sustainable development projects, supporting impactful and evidence-driven programs. Passionate about sustainable development and community empowerment, Horus is committed to leveraging data and innovation to improve program impact and strengthen organizational performance.",
+      bio: "Horus Alela Ambasu is an Executive Director with a strong background in project design, planning, fundraising, and proposal writing, as well as data analysis and impact assessment. He brings over seven years of experience working on community-based sustainable development projects, supporting impactful and evidence-driven programs. Passionate about sustainable development and community empowerment, Horus is committed to leveraging data and innovation to improve program impact and strengthen organizational performance.",
     },
     sheilla: {
       name: "Sheilla Muhindi",
       title: "Programs Director",
-      bio: "Dedicated and impact-driven professional with a strong background in counselling psychology,  youth-focused programming, and psychosocial support, experienced in designing and implementing initiatives that improve well-being, including mental health programs, school-based interventions, and health outreach activities. Skilled in project coordination, stakeholder engagement, and facilitation, with a proven ability to lead teams and deliver results in resource-limited settings, while remaining passionate about empowering adolescents and vulnerable populations through counseling support, program monitoring, and community mobilization, and committed to creating sustainable, high-impact solutions within NGO and community-based environments.",
+      bio: "Dedicated and impact-driven professional with a strong background in counselling psychology, youth-focused programming, and psychosocial support, experienced in designing and implementing initiatives that improve well-being, including mental health programs, school-based interventions, and health outreach activities. Skilled in project coordination, stakeholder engagement, and facilitation, with a proven ability to lead teams and deliver results in resource-limited settings, while remaining passionate about empowering adolescents and vulnerable populations through counseling support, program monitoring, and community mobilization, and committed to creating sustainable, high-impact solutions within NGO and community-based environments.",
     },
     fidel: {
       name: "Fidel Maina",
@@ -251,7 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('newsletterForm');
     const messageEl = document.getElementById('newsletterMessage');
     
-    // Replace with your Google Apps Script Web App URL
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkTC3rruLZFcHGEW0lP7KP3QcMLgLA4CVM3ufmyYJXHrIwXqp_h3yBMI-qeu00zDRaaw/exec';
     
     if (form) {
