@@ -3013,3 +3013,88 @@ h1, h2, h3, h4, h5, h6 {
         display: none;
     }
 }
+
+/* floating icons */
+/* ----------------------------------------
+   FLOATING SOCIAL LINKS (Right Center - Transparent)
+   ---------------------------------------- */
+.floating-social {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 998;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    backdrop-filter: none;
+}
+
+.floating-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    font-size: 1.3rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+}
+
+.floating-social a:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.1);
+    border-color: var(--primary);
+    backdrop-filter: blur(8px);
+}
+
+.dark-theme .floating-social a {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+}
+.dark-theme .floating-social a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Mobile: show smaller, adjusted position */
+/* Mobile: even smaller */
+@media (max-width: 768px) {
+    .floating-social {
+        display: flex !important;
+        right: 6px;
+        padding: 5px 3px;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .floating-social a {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+        background: transparent;
+        border: none;
+        backdrop-filter: none;
+    }
+    .dark-theme .floating-social {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: rgba(255, 255, 255, 0.05);
+    }
+    .dark-theme .floating-social a {
+        background: transparent;
+    }
+}
