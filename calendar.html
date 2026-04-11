@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W0DNL1PP07');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Calendar - POAK Kenya | Activities & World Days</title>
+  <meta name="description" content="Stay updated with POAK's upcoming events, workshops, and important international observances. View our interactive calendar.">
+  <link rel="icon" type="image/png" href="images/logo_POAK.png">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+
+  </style>
+</head>
+<body>
+  <!-- Floating Social Links -->
+  <div class="floating-social">
+    <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo_POAK.png" alt="POAK Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-main">POAK</span>
+          <span class="logo-sub">Poverty Africa - Kenya</span>
+        </div>
+      </a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+          <a href="programs.html">Programs <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="education-program.html">Education</a></li>
+            <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
+            <li><a href="peer-program.html">Peer Program</a></li>
+            <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
+          </ul>
+        </li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="calendar.html" class="active">Calendar</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="donate-btn">Donate</a></li>
+        <li class="theme-toggle-container">
+          <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i><i class="fas fa-sun"></i></button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Calendar Header -->
+  <div class="calendar-header">
+    <div class="container">
+      <h1>📅 Our Calendar</h1>
+      <p>Workshops, outreach days, awareness campaigns & global observances</p>
+    </div>
+  </div>
+
+  <!-- Calendar Section -->
+  <section class="section">
+    <div class="container">
+      <div class="calendar-wrapper">
+        <div id="calendar"></div>
+      </div>
+
+      <!-- Legend -->
+      <div class="legend">
+        <div class="legend-item"><div class="legend-color worldday"></div> <span>🌍 World Observance</span></div>
+        <div class="legend-item"><div class="legend-color poak"></div> <span>📌 POAK Activity / Workshop</span></div>
+        <div class="legend-item"><div class="legend-color mental"></div> <span>🧠 Mental Health & Wellness</span></div>
+      </div>
+
+      <div class="text-center" style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+        <i class="fas fa-mouse-pointer"></i> Click on any event to see full details. Dates may be updated – follow us for changes.
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Modal Popup -->
+  <div id="eventModal" class="event-modal">
+    <div class="event-modal-content">
+      <span class="event-modal-close">&times;</span>
+      <h3 id="modalTitle">Event Title</h3>
+      <div class="event-modal-description" id="modalDesc">
+        Event description will appear here.
+      </div>
+      <button class="event-modal-btn" id="modalCloseBtn">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-partners">
+        <h4>Our Partners</h4>
+        <div class="partner-logos">
+          <div class="partner-logo-item">
+            <img src="images/Broad Experiential logo.png" alt="Broad Experiential Limited" class="partner-logo">
+            <span>Broad Experiential Limited</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
+          <p>Fighting poverty across Kenya since 1997.</p>
+          <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
+        </div>
+        <div class="footer-programs">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="education-program.html">Education</a></li>
+            <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
+            <li><a href="peer-program.html">Peer Program</a></li>
+            <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+          <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
+          <p><i class="fas fa-phone"></i> 0202-2636674 / 0777636674</p>
+        </div>
+        <div class="footer-newsletter-column">
+          <h4>Stay Updated</h4>
+          <p>Get our monthly impact stories and news.</p>
+          <form class="newsletter-compact" id="newsletterForm">
+            <input type="email" name="email" placeholder="Your email" required>
+            <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
+          </form>
+          <p class="form-message" id="newsletterMessage"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
+        <p class="registration">Registered Nonprofit in Kenya</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- External JS -->
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Modal elements
+      var modal = document.getElementById('eventModal');
+      var modalTitle = document.getElementById('modalTitle');
+      var modalDesc = document.getElementById('modalDesc');
+      var closeSpan = document.querySelector('.event-modal-close');
+      var closeBtn = document.getElementById('modalCloseBtn');
+
+      function showModal(title, description) {
+        modalTitle.textContent = title;
+        modalDesc.textContent = description || 'No additional details available.';
+        modal.style.display = 'flex';
+      }
+      function hideModal() {
+        modal.style.display = 'none';
+      }
+      closeSpan.onclick = hideModal;
+      closeBtn.onclick = hideModal;
+      window.onclick = function(event) {
+        if (event.target == modal) hideModal();
+      };
+
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,listMonth'
+        },
+        firstDay: 1,
+        height: 'auto',
+        navLinks: true,
+        eventDisplay: 'block',
+        eventTimeFormat: { hour: '2-digit', minute: '2-digit', meridiem: false },
+        eventClick: function(info) {
+          showModal(info.event.title, info.event.extendedProps.description);
+        },
+        events: [
+          // ----- FIXED WORLD OBSERVANCES 2026 -----
+          { title: '🌍 International Day of Education', start: '2026-01-24', className: 'event-worldday', description: 'Promoting inclusive and quality education for all. POAK advocates for digital skills and scholarships.' },
+          { title: '🌍 World Day of Social Justice', start: '2026-02-20', className: 'event-worldday', description: 'Fair opportunities for all – aligning with our Community Empowerment program.' },
+          { title: '🌍 International Women\'s Day', start: '2026-03-08', className: 'event-worldday', description: 'Celebrating women’s economic empowerment and leadership.' },
+          { title: '🌍 International Day of Happiness', start: '2026-03-20', className: 'event-worldday', description: 'Focus on mental well‑being and community joy.' },
+          { title: '🧠 Stress Awareness Month', start: '2026-04-01', end: '2026-04-30', display: 'background', color: '#9b59b680', description: 'Month-long campaign on stress management and mental health.' },
+          { title: '🌍 World Health Day', start: '2026-04-07', className: 'event-worldday', description: 'Theme: mental and physical health integration.' },
+          { title: '🌍 Day of Action for Women’s Health', start: '2026-05-28', className: 'event-worldday', description: 'Menstrual health and reproductive rights – pad distribution.' },
+          { title: '🌍 World Environment Day', start: '2026-06-05', className: 'event-worldday', description: 'Sustainable practices in low‑income communities.' },
+          { title: '🌍 Day of the African Child', start: '2026-06-16', className: 'event-worldday', description: 'Children’s rights and access to education.' },
+          { title: '🌍 World Day for International Justice', start: '2026-07-17', className: 'event-worldday', description: 'Legal literacy and social justice.' },
+          { title: '🌍 International Youth Day', start: '2026-08-12', className: 'event-worldday', description: 'Youth empowerment and digital skills.' },
+          { title: '🌍 International Literacy Day', start: '2026-09-08', className: 'event-worldday', description: 'Digital and financial literacy campaigns.' },
+          { title: '🧠 World Mental Health Day', start: '2026-10-10', className: 'event-mentalhealth', description: 'Free counseling, community dialogues, and peer support.' },
+          { title: '🌍 International Day for Eradication of Poverty', start: '2026-10-17', className: 'event-worldday', description: 'Highlighting POAK’s impact and calling for action.' },
+          { title: '🌍 16 Days of Activism Against GBV', start: '2026-11-25', end: '2026-12-10', display: 'background', color: '#e8439380', description: 'Awareness, support groups, and referrals for survivors.' },
+          { title: '🌍 Day of Persons with Disabilities', start: '2026-12-03', className: 'event-worldday', description: 'Inclusion of persons with disabilities in all programs.' },
+          { title: '🌍 Human Rights Day', start: '2026-12-10', className: 'event-worldday', description: 'Right to education, health, and freedom from poverty.' },
+
+          // ----- POAK ACTIVITIES 2026 -----
+          { title: '📌 Community Empowerment Planning', start: '2026-04-15', className: 'event-poak', description: 'Stakeholder meeting to finalise VSLA groups and financial literacy curriculum. Venue: POAK Office, 9am.' },
+          { title: '📌 Peer Counselor Training – Cohort 2', start: '2026-05-10', end: '2026-05-14', className: 'event-poak', description: 'Training 15 new peer counselors for Boys for Boys and Girls for Girls groups. Kibera Community Hall, 8am-4pm daily.' },
+          { title: '📌 Nutrition & Mental Health Workshop', start: '2026-06-05', className: 'event-poak', description: 'Community workshop on affordable nutrition and stress management. Mathare, 10am.' },
+          { title: '📌 Girls for Girls Pad Distribution', start: '2026-07-20', className: 'event-poak', description: 'Monthly sanitary pad distribution + menstrual health talk. Kawangware Primary School, 9am.' },
+          { title: '📌 Boys for Boys Mentorship Circle', start: '2026-08-15', className: 'event-poak', description: 'Discussion on mental health, responsibility, and future planning. Mathare Youth Centre, 2pm.' },
+          { title: '📌 Digital Skills Info Session', start: '2026-09-05', className: 'event-poak', description: 'For youth interested in our Education program partnerships. Online (Zoom link upon registration).' },
+          { title: '🧠 World Mental Health Day – Community Dialogue', start: '2026-10-10', className: 'event-mentalhealth', description: 'Panel discussion + one‑on‑one counseling. Kibera Community Hall, 9am-4pm.' },
+          { title: '📌 VSLA Group Launch – Kiambiu', start: '2026-11-07', className: 'event-poak', description: 'First Village Savings & Loan Association group formation. Kiambiu, 10am.' },
+          { title: '📌 End of Year Empowerment Celebration', start: '2026-12-12', className: 'event-poak', description: 'Celebrating achievements of all four programs. Nairobi, venue TBA.' }
+        ]
+      });
+      calendar.render();
+    });
+  </script>
+</body>
+</html>

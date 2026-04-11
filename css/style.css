@@ -3098,3 +3098,405 @@ h1, h2, h3, h4, h5, h6 {
         background: transparent;
     }
 }
+      /* ----- Calendar Page Specific Styles ----- */
+    .calendar-header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: white;
+      padding: 80px 0 40px;
+      text-align: center;
+    }
+    .calendar-header h1 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .calendar-header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .calendar-wrapper {
+      background: var(--card-bg);
+      border-radius: 24px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px var(--shadow);
+      margin: 2rem auto;
+      transition: all 0.3s;
+    }
+    /* FullCalendar customisation */
+    .fc {
+      background: var(--card-bg);
+      color: var(--text);
+      font-family: 'Open Sans', sans-serif;
+    }
+    .fc-toolbar-title {
+      font-size: 1.6rem !important;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .fc-button {
+      background: var(--bg-light) !important;
+      border: 1px solid var(--border) !important;
+      color: var(--text) !important;
+      box-shadow: none !important;
+      transition: all 0.2s;
+    }
+    .fc-button:hover {
+      background: var(--primary) !important;
+      color: white !important;
+      border-color: var(--primary) !important;
+    }
+    .fc-button-active {
+      background: var(--primary) !important;
+      color: white !important;
+      border-color: var(--primary) !important;
+    }
+    .fc-daygrid-day {
+      background: var(--card-bg);
+      border-color: var(--border);
+    }
+    .fc-daygrid-day-number {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.5rem;
+    }
+    .fc-day-today {
+      background: rgba(46, 204, 113, 0.08) !important;
+    }
+    .fc-day-today .fc-daygrid-day-number {
+      background: var(--secondary);
+      color: white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.2rem;
+    }
+    /* Event styling – clear and readable */
+    .fc-daygrid-day-events {
+      margin-top: 4px;
+    }
+    .fc-daygrid-event {
+      background: none;
+      border: none;
+      margin: 2px 4px;
+      padding: 2px 6px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .fc-daygrid-event:hover {
+      transform: scale(1.02);
+      filter: brightness(0.95);
+    }
+    /* Event type colours */
+    .event-worldday {
+      background: #3498db !important;
+      color: white !important;
+      border-left: 3px solid #1f618d;
+    }
+    .event-poak {
+      background: #e67e22 !important;
+      color: white !important;
+      border-left: 3px solid #b45f1b;
+    }
+    .event-mentalhealth {
+      background: #9b59b6 !important;
+      color: white !important;
+      border-left: 3px solid #6c3483;
+    }
+    /* More events link */
+    .fc-daygrid-more-link {
+      background: var(--bg-light);
+      color: var(--primary);
+      font-size: 0.7rem;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 2px 8px;
+      margin: 2px 4px;
+    }
+    /* Legend */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0 1rem;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      background: var(--bg-light);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+    }
+    .legend-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+    .legend-color.worldday { background: #3498db; }
+    .legend-color.poak { background: #e67e22; }
+    .legend-color.mental { background: #9b59b6; }
+
+    /* ----- Custom Modal Popup ----- */
+    .event-modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      align-items: center;
+      justify-content: center;
+    }
+    .event-modal-content {
+      background: var(--card-bg);
+      color: var(--text);
+      max-width: 500px;
+      width: 90%;
+      border-radius: 20px;
+      padding: 1.5rem;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      animation: modalFadeIn 0.2s;
+    }
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .event-modal-close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var(--text-light);
+      transition: color 0.2s;
+    }
+    .event-modal-close:hover {
+      color: var(--primary);
+    }
+    .event-modal h3 {
+      font-size: 1.5rem;
+      margin-right: 25px;
+      margin-bottom: 0.5rem;
+    }
+    .event-modal-description {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 1rem 0;
+      color: var(--text-light);
+    }
+    .event-modal-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+    .event-modal-btn:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .fc-toolbar {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .fc-daygrid-event {
+        font-size: 0.6rem;
+        padding: 1px 4px;
+      }
+    }
+    @media (max-width: 768px) {
+      .calendar-wrapper { padding: 0.8rem; }
+      .fc-toolbar-title { font-size: 1.2rem !important; }
+      .event-modal-content { width: 95%; padding: 1.2rem; }
+      .event-modal h3 { font-size: 1.2rem; }
+    }
+
+    /* ========================================
+   EXTRA SMALL SCREEN OPTIMISATIONS
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Calendar toolbar – stack buttons and reduce spacing */
+  .fc-toolbar {
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+  }
+  .fc-toolbar-title {
+    font-size: 1.2rem !important;
+  }
+  .fc-button {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  /* Day cells – make them taller so events are visible */
+  .fc-daygrid-day-frame {
+    min-height: 80px !important;
+  }
+  .fc-daygrid-day-number {
+    font-size: 0.8rem !important;
+    padding: 0.2rem !important;
+  }
+
+  /* Event labels – wrap text and increase font slightly */
+  .fc-daygrid-event {
+    white-space: normal !important;
+    word-break: break-word !important;
+    font-size: 0.65rem !important;
+    line-height: 1.2 !important;
+    padding: 3px 5px !important;
+    margin: 2px !important;
+  }
+
+  /* “more” link (when events overflow) */
+  .fc-daygrid-more-link {
+    font-size: 0.65rem !important;
+    padding: 2px 5px !important;
+  }
+
+  /* Legend – wrap and compact */
+  .legend {
+    gap: 0.8rem !important;
+  }
+  .legend-item {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.6rem !important;
+  }
+  .legend-color {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Very small phones – further adjustments */
+  .fc-daygrid-day-frame {
+    min-height: 70px !important;
+  }
+  .fc-daygrid-event {
+    font-size: 0.6rem !important;
+    padding: 2px 3px !important;
+  }
+  .fc-daygrid-day-number {
+    font-size: 0.7rem !important;
+  }
+  .fc-toolbar-title {
+    font-size: 1rem !important;
+  }
+  .calendar-wrapper {
+    padding: 0.5rem !important;
+  }
+  .calendar-header h1 {
+    font-size: 1.8rem !important;
+  }
+  .calendar-header p {
+    font-size: 0.9rem !important;
+  }
+
+  /* Modal adjustments for small screens */
+  .event-modal-content {
+    width: 95% !important;
+    padding: 1rem !important;
+  }
+  .event-modal h3 {
+    font-size: 1.2rem !important;
+    margin-right: 20px !important;
+  }
+  .event-modal-description {
+    font-size: 0.85rem !important;
+  }
+  .event-modal-btn {
+    padding: 0.4rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ========================================
+   IMPROVED DAY CELL EVENT DISPLAY
+   ======================================== */
+
+/* Make day cells tall enough for wrapped events */
+.fc-daygrid-day-frame {
+  min-height: 100px !important;
+}
+
+/* Event labels – always wrap, never truncate */
+.fc-daygrid-event {
+  white-space: normal !important;
+  word-break: break-word !important;
+  line-height: 1.3 !important;
+  font-size: 0.7rem !important;
+  padding: 4px 6px !important;
+  margin: 2px 3px !important;
+  border-radius: 12px !important;
+  display: block !important;
+}
+
+/* Ensure multiple events stack vertically */
+.fc-daygrid-day-events {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+}
+
+/* “more” link styling */
+.fc-daygrid-more-link {
+  font-size: 0.7rem !important;
+  padding: 2px 6px !important;
+  margin: 2px 3px !important;
+  background: var(--bg-light) !important;
+  border-radius: 12px !important;
+  display: inline-block !important;
+}
+
+/* Day number stays visible */
+.fc-daygrid-day-number {
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  padding: 0.3rem !important;
+}
+
+/* Responsive: slightly smaller on phones, but still wrapping */
+@media (max-width: 768px) {
+  .fc-daygrid-day-frame {
+    min-height: 85px !important;
+  }
+  .fc-daygrid-event {
+    font-size: 0.65rem !important;
+    padding: 3px 5px !important;
+  }
+  .fc-daygrid-more-link {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .fc-daygrid-day-frame {
+    min-height: 75px !important;
+  }
+  .fc-daygrid-event {
+    font-size: 0.6rem !important;
+    padding: 2px 4px !important;
+  }
+}
