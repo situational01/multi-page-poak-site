@@ -2083,3 +2083,287 @@ h1, h2, h3, h4, h5, h6 {
   .fc-daygrid-event { font-size: 0.6rem !important; padding: 2px 3px !important; }
   .calendar-header h1 { font-size: 1.8rem !important; }
 }
+
+/* ========================================
+   ENHANCED PODCAST SECTION STYLES
+   ======================================== */
+.podcast-section {
+  padding: 60px 0;
+  background: var(--bg-light);
+}
+.podcast-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.podcast-wave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+.podcast-wave span {
+  width: 6px;
+  height: 30px;
+  background: var(--primary);
+  border-radius: 10px;
+  animation: wave 1.2s ease-in-out infinite;
+}
+.podcast-wave span:nth-child(1) { animation-delay: 0s; height: 20px; }
+.podcast-wave span:nth-child(2) { animation-delay: 0.1s; height: 35px; }
+.podcast-wave span:nth-child(3) { animation-delay: 0.2s; height: 25px; }
+.podcast-wave span:nth-child(4) { animation-delay: 0.3s; height: 40px; }
+.podcast-wave span:nth-child(5) { animation-delay: 0.4s; height: 20px; }
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.5); }
+}
+.podcast-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 800px);
+  justify-content: center;
+  gap: 2rem;
+}
+.podcast-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  border: 1px solid var(--border);
+}
+.podcast-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+.podcast-card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+.podcast-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.podcast-card:hover .podcast-card-image img {
+  transform: scale(1.05);
+}
+.podcast-card-content {
+  padding: 1.8rem;
+}
+.podcast-episode-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.9rem;
+  border-radius: 30px;
+  margin-bottom: 0.8rem;
+}
+.podcast-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+.podcast-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+/* Player controls container */
+.podcast-player {
+  margin-top: 1rem;
+}
+.player-controls {
+  background: var(--bg-alt);
+  border-radius: 40px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.2s;
+}
+/* Primary buttons: play, skip */
+.controls-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.skip-back-btn, .skip-forward-btn {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 40px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.skip-back-btn:hover, .skip-forward-btn:hover {
+  background: rgba(0,0,0,0.05);
+  color: var(--primary);
+}
+.play-pause-btn {
+  background: var(--primary);
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.play-pause-btn:hover {
+  transform: scale(1.05);
+  background: var(--primary-dark);
+}
+/* Progress bar row */
+.controls-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.time-current, .time-duration {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 40px;
+}
+.progress-bar-container {
+  flex: 1;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 6px;
+  transition: width 0.1s linear;
+}
+/* Secondary controls: volume, speed, download */
+.controls-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.volume-icon {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+.volume-slider {
+  width: 80px;
+  height: 4px;
+  -webkit-appearance: none;
+  background: rgba(0,0,0,0.2);
+  border-radius: 5px;
+  outline: none;
+}
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  cursor: pointer;
+}
+.playback-speed {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+}
+.download-episode {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 30px;
+  transition: all 0.2s;
+}
+.download-episode:hover {
+  background: rgba(0,0,0,0.05);
+  color: var(--primary-dark);
+}
+/* Dark theme overrides */
+.dark-theme .progress-bar-container {
+  background: rgba(255, 255, 255, 0.2);
+}
+.dark-theme .skip-back-btn:hover, 
+.dark-theme .skip-forward-btn:hover,
+.dark-theme .download-episode:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.dark-theme .volume-slider {
+  background: rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 640px) {
+  .podcast-card-content {
+    padding: 1.2rem;
+  }
+  .player-controls {
+    padding: 0.8rem;
+  }
+  .controls-primary {
+    gap: 0.8rem;
+  }
+  .play-pause-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .skip-back-btn, .skip-forward-btn {
+    font-size: 0.8rem;
+  }
+  .controls-secondary {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .volume-control {
+    justify-content: space-between;
+  }
+  .volume-slider {
+    flex: 1;
+  }
+  .playback-speed, .download-episode {
+    text-align: center;
+  }
+}
