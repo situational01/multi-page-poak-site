@@ -3381,3 +3381,300 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 }
+
+/* ===== Community Empowerment Page - Responsive Enhancements ===== */
+
+/* Program detail layout */
+.program-detail {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+/* Responsive program stats container */
+.program-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.stat-item {
+  flex: 1 1 150px;
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e67e22;
+  margin-bottom: 0.3rem;
+}
+
+/* Steps grid (VSLA steps) - responsive */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.step {
+  background: var(--bg-light);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #e67e22;
+  color: white;
+  border-radius: 50%;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.step h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.step p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Business tags */
+.business-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem;
+}
+
+.tag {
+  background: var(--bg-light);
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Partner highlight area */
+.partner-highlight {
+  margin-bottom: 2rem;
+}
+
+.partner-badge {
+  display: inline-block;
+  background: #e67e22;
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+/* Program sidebar cards */
+.info-card {
+  background: var(--bg-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.info-card h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.mpesa-highlight {
+  background: #28a745;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.mpesa-highlight strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.small {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Testimonial block */
+.testimonial {
+  background: var(--bg-light);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.testimonial i {
+  font-size: 2rem;
+  color: #e67e22;
+  opacity: 0.3;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-left: 2.5rem;
+}
+
+.testimonial .author {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-style: normal;
+  text-align: right;
+}
+
+/* ===== Mobile Responsiveness (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  .program-detail {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .step {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .stat-item {
+    flex: 1 1 120px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .program-stats {
+    justify-content: center;
+  }
+
+  .testimonial i {
+    font-size: 1.5rem;
+  }
+
+  .testimonial p {
+    margin-left: 2rem;
+  }
+
+  .tag {
+    white-space: normal;
+    word-break: keep-all;
+  }
+}
+
+/* ===== Small Mobile (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .step {
+    max-width: 100%;
+  }
+
+  .program-stats {
+    flex-direction: column;
+  }
+
+  .stat-item {
+    width: 100%;
+  }
+
+  .business-tags {
+    justify-content: center;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .info-card {
+    padding: 1.2rem;
+  }
+
+  .partner-badge {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===== Tablet Adjustments (769px - 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .program-detail {
+    gap: 1.5rem;
+  }
+
+  .steps-grid {
+    gap: 0.8rem;
+  }
+
+  .step {
+    padding: 1.2rem 0.5rem;
+  }
+
+  .step p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ensure consistent with dark/light theme variables */
+:root {
+  --bg-light: #f8f9fa;
+}
+
+[data-theme="dark"] {
+  --bg-light: #2d3748;
+}
+
+/* Fix for any potential overflow issues */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.program-header {
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+}
+
+.program-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .program-header h1 {
+    font-size: 2.2rem;
+  }
+}
