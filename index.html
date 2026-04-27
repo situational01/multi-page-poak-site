@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W0DNL1PP07');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W0DNL1PP07');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     
@@ -36,15 +36,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
+    <!-- Hover tooltip for floating social icons: displays platform name on hover -->
+    <style>
+        /* Floating social icons container - ensure relative positioning context for tooltips */
+        .floating-social a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        
+        /* Custom tooltip (label) that appears on hover */
+        .floating-social a:hover::after {
+            content: attr(aria-label);
+            position: absolute;
+            right: 100%;          /* Position to the left of the icon */
+            margin-right: 12px;   /* Spacing between tooltip and icon */
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1e2a3a;  /* Deep navy, matches brand */
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 32px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+            z-index: 1000;
+            pointer-events: none;  /* Prevents tooltip from interfering with clicks */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.2;
+        }
+        
+        /* Optional: tiny caret/triangle pointing toward the icon */
+        .floating-social a:hover::before {
+            content: '';
+            position: absolute;
+            right: 100%;
+            margin-right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #1e2a3a;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        
+        /* Slight hover scaling effect for better interactivity */
+        .floating-social a:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Ensure tooltip doesn't overflow on very small screens (if needed, but social bar is fixed) */
+        @media (max-width: 640px) {
+            .floating-social a:hover::after {
+                font-size: 0.7rem;
+                padding: 4px 8px;
+                margin-right: 8px;
+                white-space: nowrap;
+            }
+            .floating-social a:hover::before {
+                margin-right: 2px;
+                border-width: 4px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Floating Social Links (Right Center) -->
-<div class="floating-social">
-    <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-</div>
+    <!-- Floating Social Links (Right Center) with enhanced hover tooltips -->
+    <div class="floating-social">
+        <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -193,7 +265,7 @@
         </div>
     </section>
 
-    <!-- Impact Preview (unchanged) -->
+    <!-- Impact Preview -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Our Impact</h2>
@@ -295,5 +367,42 @@
 
     <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
     <script src="js/script.js"></script>
+    <!-- Additional inline script to handle dynamic year and newsletter (non-intrusive) -->
+    <script>
+        (function() {
+            // Set current year in footer
+            const yearSpan = document.getElementById('currentYear');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+            
+            // Simple newsletter subscription handler (prevents page reload & shows message)
+            const newsletterForm = document.getElementById('newsletterForm');
+            const newsletterMsg = document.getElementById('newsletterMessage');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const emailInput = newsletterForm.querySelector('input[type="email"]');
+                    const email = emailInput.value.trim();
+                    if (email && email.includes('@')) {
+                        newsletterMsg.textContent = '📧 Thanks for subscribing! You’ll hear from us soon.';
+                        newsletterMsg.style.color = '#2e7d32';
+                        newsletterMsg.style.fontSize = '0.8rem';
+                        newsletterMsg.style.marginTop = '8px';
+                        emailInput.value = '';
+                        setTimeout(() => {
+                            newsletterMsg.textContent = '';
+                        }, 4000);
+                    } else {
+                        newsletterMsg.textContent = 'Please enter a valid email address.';
+                        newsletterMsg.style.color = '#c62828';
+                        setTimeout(() => {
+                            newsletterMsg.textContent = '';
+                        }, 3000);
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
