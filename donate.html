@@ -27,6 +27,16 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Responsive & smaller M‑PESA image */
+      .mpesa-image {
+        max-width: 400px;   /* adjust this to make it larger or smaller */
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
    
   </head>
   <body>
@@ -37,11 +47,7 @@
         <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
-<div class="floating-social">
-    <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-</div>
+
     <nav class="navbar">
       <div class="nav-container">
         <a href="index.html" class="logo">
@@ -100,16 +106,13 @@
       <div class="container">
         <div class="donate-card">
           <h2>Donate via M-PESA</h2>
+          <!-- M-PESA details image, now smaller -->
           <div class="mpesa-details">
-            <p>
-              <strong>PayBill Number:</strong>
-              <span class="highlight">600100</span>
-            </p>
-            <p>
-              <strong>Account Number:</strong>
-              <span class="highlight">0100011857657</span>
-            </p>
-            <p><strong>Account Name:</strong> BROAD EXPERIENTIAL LIMITED</p>
+            <img 
+              src="images/mpesa_paybill.png" 
+              alt="M-PESA PayBill Number 600100, Account Number 0100011857657, Account Name BROAD EXPERIENTIAL LIMITED" 
+              class="mpesa-image"
+            />
           </div>
           <div class="instructions">
             <h4>How to Donate:</h4>
@@ -129,21 +132,81 @@
             </p>
           </div>
         </div>
+
+        <!-- NEW: M‑Changa Fundraiser Card -->
+        <div class="donate-card" style="margin-top: 2rem;">
+          <h2>Donate via M‑Changa</h2>
+          <div class="mpesa-details">
+            <img 
+              src="images/mchanga.jpeg" 
+              alt="M‑Changa Fundraiser Poster – Support POAK" 
+              class="mpesa-image"
+            />
+          </div>
+          <p style="max-width:600px; margin:1rem auto;">
+            You can also support our work through our secure M‑Changa fundraiser.  
+            Every contribution, no matter the size, makes a real difference.
+          </p>
+          <a 
+            href="https://www.mchanga.africa/fundraiser/137500" 
+            target="_blank" 
+            rel="noopener" 
+            class="btn btn-primary" 
+            style="display: inline-block; margin-top: 1rem;"
+          >
+            Donate on M‑Changa
+          </a>
+        </div>
+        <!-- END M‑Changa card -->
+
       </div>
     </section>
+
+        <!-- Partners Section - Full Width with Scroll -->
+<section class="partners-section">
+    <div class="container">
+        <h2 class="section-title">Our Partners</h2>
+    </div>
+    <div class="partners-scroll">
+        <div class="partners-track" id="partnersTrack">
+            <!-- Partner 1 -->
+            <div class="partner-item">
+                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
+                <span>Broad Experiential</span>
+            </div>
+            <!-- Partner 2 -->
+            <div class="partner-item">
+                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
+                <span>Solar Panda</span>
+            </div>
+            <!-- Partner 3 -->
+            <div class="partner-item">
+                <img src="images/partners/world_vision.png" alt="World Vision">
+                <span>World Vision</span>
+            </div>
+            <!-- Partner 4 -->
+            <div class="partner-item">
+                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
+                <span>Fresh Life</span>
+            </div>
+            <!-- Partner 5 -->
+            <div class="partner-item">
+                <img src="images/partners/logo.png" alt="AA Kenya">
+                <span>AA Kenya</span>
+            </div>
+            <!-- Partner 6 -->
+            <!-- <div class="partner-item">
+                <img src="images/partner6.png" alt="Partner 6">
+                <span>Partner 6</span>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+
    <!-- Footer -->
 <footer class="footer">
     <div class="container">
-         <!-- PARTNER LOGOS SECTION -->
-        <div class="footer-partners">
-            <h4>Our Partners</h4>
-            <div class="partner-logos">
-                <div class="partner-logo-item">
-                    <img src="images/Broad Experiential logo.png" alt="Broad Experiential Limited" class="partner-logo">
-                    <span>Broad Experiential Limited</span>
-                </div>
-            </div>
-        </div>
         <div class="footer-grid">
             <div class="footer-about">
                 <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
@@ -164,7 +227,7 @@
                 <h4>Contact</h4>
                 <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
                 <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                <p><i class="fas fa-phone"></i> 0202-2636674 / 0777636674</p>
+                <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
                
             </div>
             <!-- NEWSLETTER COLUMN (compact) -->

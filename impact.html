@@ -13,7 +13,7 @@
     <title>Our Impact - POAK Kenya | Fighting Poverty Since 1997</title>
     <meta
       name="description"
-      content="See the impact of POAK's work in Kenya: 5,000+ Kenyans empowered, 120+ communities reached, 8 counties served, 80% of women report increased income."
+      content="See the impact of POAK's work in Kenya: 1,500+ Kenyans empowered, 13 communities reached, 5 counties served, founded in 1997."
     />
     <link rel="icon" type="image/png" href="images/logo_POAK.png" />
     <link rel="stylesheet" href="css/style.css" />
@@ -25,7 +25,189 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-   
+    <style>
+      /* Floating social tooltips (same as other pages) */
+      .floating-social a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+      .floating-social a:hover::after {
+        content: attr(aria-label);
+        position: absolute;
+        right: 100%;
+        margin-right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #1e2a3a;
+        color: #ffffff;
+        padding: 6px 12px;
+        border-radius: 32px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+        z-index: 1000;
+        pointer-events: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        line-height: 1.2;
+      }
+      .floating-social a:hover::before {
+        content: '';
+        position: absolute;
+        right: 100%;
+        margin-right: 4px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent #1e2a3a;
+        z-index: 1000;
+        pointer-events: none;
+      }
+      .floating-social a:hover {
+        transform: scale(1.05);
+      }
+      @media (max-width: 640px) {
+        .floating-social a:hover::after {
+          font-size: 0.7rem;
+          padding: 4px 8px;
+          margin-right: 8px;
+        }
+        .floating-social a:hover::before {
+          margin-right: 2px;
+          border-width: 4px;
+        }
+      }
+
+      /* WhatsApp Chat Button */
+      .whatsapp-chat-btn {
+        position: fixed;
+        bottom: 25px;
+        right: 30px;
+        z-index: 999;
+        background-color: #25D366;
+        color: #ffffff;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-size: 28px;
+        text-decoration: none;
+      }
+      .whatsapp-chat-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      }
+      .whatsapp-chat-btn:hover::after {
+        content: attr(aria-label);
+        position: absolute;
+        right: 70px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #1e2a3a;
+        color: #ffffff;
+        padding: 6px 12px;
+        border-radius: 32px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+        z-index: 1000;
+        pointer-events: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        line-height: 1.2;
+      }
+      .whatsapp-chat-btn:hover::before {
+        content: '';
+        position: absolute;
+        right: 62px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent #1e2a3a;
+        z-index: 1000;
+        pointer-events: none;
+      }
+      @media (max-width: 640px) {
+        .whatsapp-chat-btn {
+          width: 50px;
+          height: 50px;
+          bottom: 20px;
+          right: 20px;
+          font-size: 24px;
+        }
+        .whatsapp-chat-btn:hover::after {
+          font-size: 0.7rem;
+          padding: 4px 8px;
+          right: 60px;
+        }
+        .whatsapp-chat-btn:hover::before {
+          right: 52px;
+          border-width: 4px;
+        }
+      }
+
+      /* Responsive tweaks for impact page */
+      @media (max-width: 768px) {
+        .impact-hero-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+        .program-impact-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .stories-grid {
+          grid-template-columns: 1fr;
+        }
+        .counties-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .target-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .impact-hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .program-impact-grid {
+          grid-template-columns: 1fr;
+        }
+        .counties-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .target-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .impact-hero-card {
+          padding: 1.2rem;
+        }
+        .impact-hero-number {
+          font-size: 2.5rem;
+        }
+        .program-impact-card h3 {
+          font-size: 1.3rem;
+        }
+        .stat-number-large {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
   </head>
   <body>
   <!-- Floating Social Links (Right Center) with enhanced hover tooltips -->
@@ -74,36 +256,49 @@
       </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-      <div class="container">
+    <!-- Header with full-cover image, no cropping -->
+    <section class="page-header" style="
+    background-color: #1a1a1a;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('images/new-images/programs_hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+">
+    <div class="container">
         <h1>Our Impact</h1>
         <p>28+ years of fighting poverty in Kenya</p>
-      </div>
-    </section>
+    </div>
+</section>
 
     <!-- Key Impact Numbers -->
     <section class="section">
       <div class="container">
         <div class="impact-hero-grid">
           <div class="impact-hero-card">
-            <div class="impact-hero-number">5,000+</div>
+            <div class="impact-hero-number">1,500+</div>
             <p class="impact-hero-label">Kenyans Empowered</p>
             <span class="impact-hero-desc"
               >Directly supported through our programs</span
             >
           </div>
           <div class="impact-hero-card">
-            <div class="impact-hero-number">120+</div>
+            <div class="impact-hero-number">13</div>
             <p class="impact-hero-label">Communities Reached</p>
-            <span class="impact-hero-desc">Across 8 counties in Kenya</span>
+            <span class="impact-hero-desc">Across 5 counties in Kenya</span>
           </div>
           <div class="impact-hero-card">
-            <div class="impact-hero-number">8</div>
+            <div class="impact-hero-number">5</div>
             <p class="impact-hero-label">Counties Served</p>
             <span class="impact-hero-desc"
-              >Nairobi, Kisumu, Mombasa, Makueni, Kiambu, Nakuru, Uasin Gishu,
-              Kilifi</span
+              >Nairobi, Kisumu, Busia, Makueni, Kiambu</span
             >
           </div>
           <div class="impact-hero-card">
@@ -136,7 +331,7 @@
                 <h3>Education</h3>
                 <div class="program-stats-container">
                     <div class="stat-item">
-                        <span class="stat-number-large">1,200+</span>
+                        <span class="stat-number-large">400+</span>
                         <span class="stat-label-small">Students Supported</span>
                     </div>
                     <div class="stat-item">
@@ -144,7 +339,7 @@
                         <span class="stat-label-small">School Retention</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number-large">15</span>
+                        <span class="stat-number-large">8</span>
                         <span class="stat-label-small">Partner Schools</span>
                     </div>
                 </div>
@@ -220,15 +415,15 @@
                 <h3>Mental Health & Nutrition</h3>
                 <div class="program-stats-container">
                     <div class="stat-item">
-                        <span class="stat-number-large">1,800+</span>
+                        <span class="stat-number-large">3+</span>
                         <span class="stat-label-small">Counseling Sessions</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number-large">40</span>
+                        <span class="stat-number-large">7+</span>
                         <span class="stat-label-small">Support Groups</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number-large">650+</span>
+                        <span class="stat-number-large">50+</span>
                         <span class="stat-label-small">Nutrition Packages Distributed</span>
                     </div>
                 </div>
@@ -303,18 +498,15 @@
         <h2 class="section-title">Where We Work</h2>
         <div class="section-line"></div>
         <p class="section-subtitle">
-          Serving communities across 8 counties in Kenya
+          Serving communities across 5 counties in Kenya
         </p>
 
         <div class="counties-grid">
           <div class="county-item">Nairobi</div>
           <div class="county-item">Kisumu</div>
-          <div class="county-item">Mombasa</div>
+          <div class="county-item">Busia</div>
           <div class="county-item">Makueni</div>
           <div class="county-item">Kiambu</div>
-          <div class="county-item">Nakuru</div>
-          <div class="county-item">Uasin Gishu</div>
-          <div class="county-item">Kilifi</div>
         </div>
       </div>
     </section>
@@ -385,19 +577,51 @@
       </div>
     </section>
 
+        <!-- Partners Section - Full Width with Scroll -->
+<section class="partners-section">
+    <div class="container">
+        <h2 class="section-title">Our Partners</h2>
+    </div>
+    <div class="partners-scroll">
+        <div class="partners-track" id="partnersTrack">
+            <!-- Partner 1 -->
+            <div class="partner-item">
+                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
+                <span>Broad Experiential</span>
+            </div>
+            <!-- Partner 2 -->
+            <div class="partner-item">
+                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
+                <span>Solar Panda</span>
+            </div>
+            <!-- Partner 3 -->
+            <div class="partner-item">
+                <img src="images/partners/world_vision.png" alt="World Vision">
+                <span>World Vision</span>
+            </div>
+            <!-- Partner 4 -->
+            <div class="partner-item">
+                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
+                <span>Fresh Life</span>
+            </div>
+            <!-- Partner 5 -->
+            <div class="partner-item">
+                <img src="images/partners/logo.png" alt="AA Kenya">
+                <span>AA Kenya</span>
+            </div>
+            <!-- Partner 6 -->
+            <!-- <div class="partner-item">
+                <img src="images/partner6.png" alt="Partner 6">
+                <span>Partner 6</span>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+
   <!-- Footer -->
 <footer class="footer">
     <div class="container">
-         <!-- PARTNER LOGOS SECTION -->
-        <div class="footer-partners">
-            <h4>Our Partners</h4>
-            <div class="partner-logos">
-                <div class="partner-logo-item">
-                    <img src="images/Broad Experiential logo.png" alt="Broad Experiential Limited" class="partner-logo">
-                    <span>Broad Experiential Limited</span>
-                </div>
-            </div>
-        </div>
         <div class="footer-grid">
             <div class="footer-about">
                 <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
@@ -418,7 +642,7 @@
                 <h4>Contact</h4>
                 <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
                 <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                <p><i class="fas fa-phone"></i> 0202-2636674 / 0777636674</p>
+                <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
                
             </div>
             <!-- NEWSLETTER COLUMN (compact) -->
@@ -443,6 +667,12 @@
     <button class="scroll-top" id="scrollTop">
       <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/254777636674" class="whatsapp-chat-btn" target="_blank" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="js/script.js"></script>
   </body>
 </html>

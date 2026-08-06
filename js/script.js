@@ -1,3 +1,61 @@
+// ===== Animated Number Counter =====
+function initCountUp() {
+  // Select all elements that contain numeric stats (extend as needed)
+  const statElements = document.querySelectorAll(
+    '.impact-number, .impact-hero-number, .stat-number, .stat-number-large, .program-stats .stat-number, .blog-stats .stat-value, .stat-number-highlight'
+  );
+
+  if (!statElements.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          // Prevent multiple animations
+          if (el.dataset.counted === 'true') return;
+          el.dataset.counted = 'true';
+
+          // Extract target number and suffix
+          const originalText = el.textContent.trim();
+          const match = originalText.match(/^([\d,]+)(.*)/); // captures number (with commas) and the rest
+          if (!match) return;
+
+          const numberStr = match[1].replace(/,/g, '');
+          const suffix = match[2]; // e.g., "+", "%", " KSh", etc.
+          const target = parseInt(numberStr, 10);
+
+          if (isNaN(target)) return;
+
+          animateValue(el, 0, target, 1500, suffix);
+        }
+      });
+    },
+    { threshold: 0.3 } // trigger when 30% of element is visible
+  );
+
+  statElements.forEach(el => observer.observe(el));
+}
+
+function animateValue(element, start, end, duration, suffix = '') {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    const current = Math.floor(progress * (end - start) + start);
+    element.textContent = current.toLocaleString() + suffix;
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+// Start the counter observer after DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  initCountUp();
+});
+
 // DOM Content Loaded
 document.addEventListener("DOMContentLoaded", function () {
   // ===== SET CURRENT YEAR =====
@@ -106,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", function () {
       if (window.innerWidth > 991) {
         if (navMenu.classList.contains("active")) {
-          hamburger.classList.remove("active");
+          hamburger.classList.remove("active");''
           navMenu.classList.remove("active");
           bodyEl.style.overflow = "";
         }
@@ -390,3 +448,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// ========================================
+// PARTNERS SCROLL - Duplicate items for seamless loop
+// ========================================
+
+(function() {
+    const track = document.getElementById('partnersTrack');
+    if (!track) return;
+    
+    // Clone all partner items and add them to the track
+    const items = track.querySelectorAll('.partner-item');
+    
+    items.forEach(item => {
+        const clone = item.cloneNode(true);
+        clone.className = 'partner-item-duplicate';
+        track.appendChild(clone);
+    });
+    
+    // Optional: Adjust animation duration based on number of items
+    const totalItems = track.children.length;
+    if (totalItems > 0) {
+        // Speed up or slow down based on number of partners
+        const duration = Math.max(15, totalItems * 3);
+        track.style.animationDuration = duration + 's';
+    }
+})();

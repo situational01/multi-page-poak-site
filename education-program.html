@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Override header color for this page */
+    /* Override header color for this page (fallback gradient) */
     .program-header {
       background: linear-gradient(135deg, #2980b9 0%, #1f618d 100%);
     }
@@ -37,6 +37,143 @@
     }
     .partner-badge {
       background: #2980b9;
+    }
+
+    /* Zoom animation for hero background */
+    .hero-zoom {
+      position: relative;
+      overflow: hidden;
+      background: none !important;
+    }
+    .hero-zoom::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                  url('images/new-images/education_program.jpg') center/cover no-repeat;
+      z-index: 0;
+      animation: zoomInOut 8s ease-in-out infinite;
+    }
+    .hero-zoom .container {
+      position: relative;
+      z-index: 1;
+    }
+    @keyframes zoomInOut {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    /* Responsive Stats Grid */
+    .program-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .stat-item {
+      background: var(--bg-light);
+      padding: 1.2rem 1rem;
+      border-radius: 12px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #2980b9;
+      line-height: 1.2;
+      word-break: break-word;
+    }
+    .stat-item span:last-child {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* Ensure program detail stacks on small screens */
+    .program-detail {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .program-main {
+      flex: 2;
+      min-width: 280px;
+    }
+    .program-sidebar {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    /* Make sidebar headings visible */
+    .info-card h4 {
+      
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    /* Responsive typography & spacing */
+    @media (max-width: 768px) {
+      .hero-zoom h1 {
+        font-size: 2.5rem !important;
+      }
+      .hero-zoom p {
+        font-size: 1.2rem !important;
+      }
+      .program-detail h2 {
+        font-size: 1.6rem;
+      }
+      .program-detail h3 {
+        font-size: 1.3rem;
+      }
+      .program-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .stat-number {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-zoom h1 {
+        font-size: 1.8rem !important;
+      }
+      .hero-zoom p {
+        font-size: 1rem !important;
+      }
+      .program-stats {
+        grid-template-columns: 1fr !important;
+      }
+      .stat-number {
+        font-size: 1.4rem;
+      }
+      .program-detail h2 {
+        font-size: 1.4rem;
+      }
+      .program-detail h3 {
+        font-size: 1.2rem;
+      }
+      .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+      .info-card {
+        padding: 1.2rem;
+      }
+      .testimonial {
+        padding: 1.2rem;
+      }
+      .program-main, .program-sidebar {
+        min-width: 100%;
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
@@ -82,11 +219,18 @@
     </div>
   </nav>
 
-  <!-- Program Header -->
-  <section class="program-header">
+  <!-- Program Header with zooming background image -->
+  <section class="program-header hero-zoom" style="
+    color: white;
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.9);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+  ">
     <div class="container">
-      <h1>Education</h1>
-      <p>Digital skills & scholarship support – unlocking opportunities for Kenyan youth</p>
+      <h1 style="font-weight: 800; font-size: 3.5rem; line-height: 1.2;">Education</h1>
+      <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95;">Digital skills & scholarship support – unlocking opportunities for Kenyan youth</p>
     </div>
   </section>
 
@@ -127,9 +271,9 @@
 
           <h3>Program Status</h3>
           <div class="program-stats">
-            <div class="stat-item"><span class="stat-number">Seeking</span> Partners</div>
-            <div class="stat-item"><span class="stat-number">Register</span> Interest</div>
-            <div class="stat-item"><span class="stat-number">Coming</span> Soon</div>
+            <div class="stat-item"><span class="stat-number">Seeking</span><span>Partners</span></div>
+            <div class="stat-item"><span class="stat-number">Register</span><span>Interest</span></div>
+            <div class="stat-item"><span class="stat-number">Coming</span><span>Soon</span></div>
           </div>
         </div>
 
@@ -159,29 +303,51 @@
     </div>
   </section>
 
-  <!-- Footer Partners Section -->
-  <div class="footer-partners">
-    <h4>Our Partners</h4>
-    <div class="partner-logos">
-      <div class="partner-logo-item">
-        <i class="fas fa-handshake" style="font-size: 2.5rem; color: var(--primary);"></i>
-        <p>We are actively seeking partners. <a href="contact.html">Join our network →</a></p>
-      </div>
+      <!-- Partners Section - Full Width with Scroll -->
+<section class="partners-section">
+    <div class="container">
+        <h2 class="section-title">Our Partners</h2>
     </div>
-  </div>
+    <div class="partners-scroll">
+        <div class="partners-track" id="partnersTrack">
+            <!-- Partner 1 -->
+            <div class="partner-item">
+                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
+                <span>Broad Experiential</span>
+            </div>
+            <!-- Partner 2 -->
+            <div class="partner-item">
+                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
+                <span>Solar Panda</span>
+            </div>
+            <!-- Partner 3 -->
+            <div class="partner-item">
+                <img src="images/partners/world_vision.png" alt="World Vision">
+                <span>World Vision</span>
+            </div>
+            <!-- Partner 4 -->
+            <div class="partner-item">
+                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
+                <span>Fresh Life</span>
+            </div>
+            <!-- Partner 5 -->
+            <div class="partner-item">
+                <img src="images/partners/logo.png" alt="AA Kenya">
+                <span>AA Kenya</span>
+            </div>
+            <!-- Partner 6 -->
+            <!-- <div class="partner-item">
+                <img src="images/partner6.png" alt="Partner 6">
+                <span>Partner 6</span>
+            </div> -->
+        </div>
+    </div>
+</section>
 
+  <!-- Footer Partners Section (removed duplicate, footer already has it) -->
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-partners">
-        <h4>Our Partners</h4>
-        <div class="partner-logos">
-          <div class="partner-logo-item">
-            <img src="images/Broad Experiential logo.png" alt="Broad Experiential Limited" class="partner-logo">
-            <span>Broad Experiential Limited</span>
-          </div>
-        </div>
-      </div>
       <div class="footer-grid">
         <div class="footer-about">
           <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
@@ -201,7 +367,7 @@
           <h4>Contact</h4>
           <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
           <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-          <p><i class="fas fa-phone"></i> 0202-2636674 / 0777636674</p>
+          <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
         </div>
         <div class="footer-newsletter-column">
           <h4>Stay Updated</h4>

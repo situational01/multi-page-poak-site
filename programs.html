@@ -18,11 +18,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Floating Social Links (Right Center) -->
+    <!-- Floating Social Links (Right Center) with enhanced hover tooltips -->
     <div class="floating-social">
         <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
     </div>
 
     <!-- Navigation -->
@@ -64,13 +65,27 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Our Programs</h1>
-            <p>Four core initiatives driving community transformation</p>
-        </div>
-    </section>
+<!-- Header with width 100% auto to cover the whole section and show everyone -->
+<section class="page-header" style="
+    background-color: #1a1a1a; /* dark fallback */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('images/new-images/programs_hero.jpg');
+    background-size: 100% auto;      /* full width, no cropping */
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+">
+    <div class="container">
+        <h1>Our Programs</h1>
+        <p>Explore the ways we are addressing poverty in Kenya</p>
+    </div>
+</section>
 
     <!-- Programs Overview -->
     <section class="section">
@@ -213,19 +228,51 @@
         </div>
     </section>
 
+        <!-- Partners Section - Full Width with Scroll -->
+<section class="partners-section">
+    <div class="container">
+        <h2 class="section-title">Our Partners</h2>
+    </div>
+    <div class="partners-scroll">
+        <div class="partners-track" id="partnersTrack">
+            <!-- Partner 1 -->
+            <div class="partner-item">
+                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
+                <span>Broad Experiential</span>
+            </div>
+            <!-- Partner 2 -->
+            <div class="partner-item">
+                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
+                <span>Solar Panda</span>
+            </div>
+            <!-- Partner 3 -->
+            <div class="partner-item">
+                <img src="images/partners/world_vision.png" alt="World Vision">
+                <span>World Vision</span>
+            </div>
+            <!-- Partner 4 -->
+            <div class="partner-item">
+                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
+                <span>Fresh Life</span>
+            </div>
+            <!-- Partner 5 -->
+            <div class="partner-item">
+                <img src="images/partners/logo.png" alt="AA Kenya">
+                <span>AA Kenya</span>
+            </div>
+            <!-- Partner 6 -->
+            <!-- <div class="partner-item">
+                <img src="images/partner6.png" alt="Partner 6">
+                <span>Partner 6</span>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <!-- PARTNER LOGOS SECTION -->
-            <div class="footer-partners">
-                <h4>Our Partners</h4>
-                <div class="partner-logos">
-                    <div class="partner-logo-item">
-                        <img src="images/Broad Experiential logo.png" alt="Broad Experiential Limited" class="partner-logo">
-                        <span>Broad Experiential Limited</span>
-                    </div>
-                </div>
-            </div>
             <div class="footer-grid">
                 <div class="footer-about">
                     <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
@@ -246,7 +293,7 @@
                     <h4>Contact</h4>
                     <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
                     <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                    <p><i class="fas fa-phone"></i> 0202-2636674 / 0777636674</p>
+                    <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
                 </div>
                 <!-- NEWSLETTER COLUMN (compact) -->
                 <div class="footer-newsletter-column">

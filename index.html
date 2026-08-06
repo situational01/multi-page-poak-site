@@ -36,9 +36,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
-    <!-- Hover tooltip for floating social icons: displays platform name on hover -->
     <style>
-        /* Floating social icons container - ensure relative positioning context for tooltips */
+        /* ---------- Floating Social Icons Tooltips ---------- */
         .floating-social a {
             position: relative;
             display: flex;
@@ -47,15 +46,14 @@
             transition: transform 0.2s ease, background 0.2s ease;
         }
         
-        /* Custom tooltip (label) that appears on hover */
         .floating-social a:hover::after {
             content: attr(aria-label);
             position: absolute;
-            right: 100%;          /* Position to the left of the icon */
-            margin-right: 12px;   /* Spacing between tooltip and icon */
+            right: 100%;
+            margin-right: 12px;
             top: 50%;
             transform: translateY(-50%);
-            background: #1e2a3a;  /* Deep navy, matches brand */
+            background: #1e2a3a;
             color: #ffffff;
             padding: 6px 12px;
             border-radius: 32px;
@@ -65,14 +63,13 @@
             letter-spacing: 0.3px;
             white-space: nowrap;
             z-index: 1000;
-            pointer-events: none;  /* Prevents tooltip from interfering with clicks */
+            pointer-events: none;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(2px);
             border: 1px solid rgba(255, 255, 255, 0.15);
             line-height: 1.2;
         }
         
-        /* Optional: tiny caret/triangle pointing toward the icon */
         .floating-social a:hover::before {
             content: '';
             position: absolute;
@@ -87,29 +84,416 @@
             pointer-events: none;
         }
         
-        /* Slight hover scaling effect for better interactivity */
         .floating-social a:hover {
             transform: scale(1.05);
         }
         
-        /* Ensure tooltip doesn't overflow on very small screens (if needed, but social bar is fixed) */
         @media (max-width: 640px) {
             .floating-social a:hover::after {
                 font-size: 0.7rem;
                 padding: 4px 8px;
                 margin-right: 8px;
-                white-space: nowrap;
             }
             .floating-social a:hover::before {
                 margin-right: 2px;
                 border-width: 4px;
             }
         }
+
+        /* ---------- WhatsApp Chat Button ---------- */
+        .whatsapp-chat-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 30px;
+            z-index: 999;
+            background-color: #25D366;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 28px;
+            text-decoration: none;
+        }
+
+        .whatsapp-chat-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-chat-btn:hover::after {
+            content: attr(aria-label);
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1e2a3a;
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 32px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+            z-index: 1000;
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            line-height: 1.2;
+        }
+
+        .whatsapp-chat-btn:hover::before {
+            content: '';
+            position: absolute;
+            right: 62px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #1e2a3a;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        @media (max-width: 640px) {
+            .whatsapp-chat-btn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+            .whatsapp-chat-btn:hover::after {
+                font-size: 0.7rem;
+                padding: 4px 8px;
+                right: 60px;
+            }
+            .whatsapp-chat-btn:hover::before {
+                right: 52px;
+                border-width: 4px;
+            }
+        }
+
+        /* ---------- Impact Section with Background Image ---------- */
+        .impact-bg-section {
+            position: relative;
+            background: url('images/new-images/impact_home.jpg') center/cover no-repeat;
+            color: #ffffff;
+            padding: 5rem 0;
+            z-index: 1;
+        }
+
+        .impact-bg-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: -1;
+        }
+
+        .impact-bg-section .section-title,
+        .impact-bg-section .section-line,
+        .impact-bg-section .impact-number,
+        .impact-bg-section .impact-item p,
+        .impact-bg-section .testimonial,
+        .impact-bg-section .testimonial .author,
+        .impact-bg-section .btn-secondary {
+            color: #ffffff;
+        }
+
+        .impact-bg-section .impact-number {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            color: #ffcd3c;
+        }
+
+        .impact-bg-section .impact-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s;
+        }
+        .impact-bg-section .impact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .impact-bg-section .testimonial {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .impact-bg-section .btn-secondary {
+            border-color: #ffffff;
+            color: #ffffff;
+            background: rgba(255,255,255,0.1);
+        }
+        .impact-bg-section .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* ========== REFRESHED "OUR PROGRAMS" SECTION - NATURAL, SMALLER, WITH BACKGROUND IMAGE ========== */
+        .programs-natural-section {
+            position: relative;
+            background: url('images/new-images/programs_hero.jpg') center/cover fixed;
+            padding: 2.5rem 0 3rem 0;
+            z-index: 1;
+        }
+        
+        .programs-natural-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 35, 30, 0.55);
+            z-index: -1;
+        }
+        
+        .programs-natural-section .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            color: #ffffff;
+        }
+        
+        .programs-natural-section .section-line {
+            width: 60px;
+            height: 3px;
+            background: #db2323;
+            margin: 0.75rem auto 1rem auto;
+            border-radius: 4px;
+        }
+        
+        .programs-natural-section .section-subtitle {
+            font-size: 1rem;
+            color: #f0f0f0;
+            max-width: 550px;
+            margin: 0 auto 2rem auto;
+            font-weight: 400;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .programs-natural-section .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .programs-natural-section .program-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(2px);
+            border-radius: 20px;
+            padding: 1.25rem 1.2rem 1.4rem 1.2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.25s ease;
+            border: 1px solid rgba(255,255,245,0.5);
+            text-align: left;
+        }
+        
+        .programs-natural-section .program-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 14px 26px rgba(0, 0, 0, 0.15);
+            border-color: #ffcd3c;
+        }
+        
+        .programs-natural-section .program-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            background: #2c7a4d20;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .programs-natural-section .program-icon {
+            font-size: 1.6rem;
+            color: #2c7a4d;
+        }
+        
+        .programs-natural-section .program-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+            color: #1e2a2f;
+            letter-spacing: -0.2px;
+        }
+        
+        .programs-natural-section .program-card p {
+            font-size: 0.85rem;
+            line-height: 1.45;
+            color: #2c3e3f;
+            margin-bottom: 0.9rem;
+        }
+        
+        .programs-natural-section .program-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem 0;
+        }
+        
+        .programs-natural-section .program-card ul li {
+            font-size: 0.8rem;
+            margin-bottom: 0.4rem;
+            color: #1f4d3a;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .programs-natural-section .program-card ul li i {
+            color: #2c7a4d;
+            font-size: 0.7rem;
+            width: 16px;
+        }
+        
+        .programs-natural-section .read-more {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2c7a4d;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: gap 0.2s;
+        }
+        
+        .programs-natural-section .read-more:hover {
+            gap: 8px;
+            color: #1c5a38;
+        }
+        
+        .programs-natural-section .btn-primary {
+            background: #2c7a4d;
+            border: none;
+            padding: 0.65rem 1.4rem;
+            font-size: 0.85rem;
+            border-radius: 40px;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-block;
+            color: white;
+        }
+        
+        .programs-natural-section .btn-primary:hover {
+            background: #1f6140;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .programs-natural-section .text-center {
+            margin-top: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .programs-natural-section {
+                padding: 2rem 0 2.2rem 0;
+                background-attachment: scroll;
+            }
+            .programs-natural-section .programs-grid {
+                gap: 1rem;
+            }
+            .programs-natural-section .program-card {
+                padding: 1rem;
+            }
+        }
+
+        /* ========== REFINED "SUPPORT OUR MISSION" (CTA) SECTION ========== */
+        .cta-refined-section {
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #000000 0%, #979797 100%);
+        }
+        
+        .cta-refined-section .cta-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 2.2rem 2rem;
+            text-align: center;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(44, 122, 77, 0.15);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .cta-refined-section .cta-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 32px rgba(0, 0, 0, 0.08);
+            border-color: rgba(44, 122, 77, 0.3);
+        }
+        
+        .cta-refined-section .cta-box h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1e2a2f;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.3px;
+        }
+        
+        .cta-refined-section .cta-box p {
+            font-size: 1rem;
+            color: #4b5b5f;
+            line-height: 1.5;
+            margin-bottom: 1.8rem;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-refined-section .btn-primary {
+            background: #2c7a4d;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 48px;
+            color: white;
+            transition: all 0.25s ease;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        
+        .cta-refined-section .btn-primary:hover {
+            background: #1f6140;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(44, 122, 77, 0.2);
+        }
+        
+        @media (max-width: 640px) {
+            .cta-refined-section .cta-box {
+                padding: 1.6rem 1.2rem;
+            }
+            .cta-refined-section .cta-box h2 {
+                font-size: 1.5rem;
+            }
+            .cta-refined-section .cta-box p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <!-- Floating Social Links (Right Center) with enhanced hover tooltips -->
+    <!-- Floating Social Links -->
     <div class="floating-social">
         <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -148,7 +532,6 @@
                 </li>
                 <li><a href="impact.html">Impact</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <!-- <li><a href="calendar.html" class="active">Calendar</a></li> -->
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="donate.html" class="donate-btn">Donate</a></li>
                 <li class="theme-toggle-container">
@@ -201,62 +584,66 @@
                 </div>
                 <div class="about-image">
                     <img src="images/about_page.jpg" alt="Kenyan community">
-                    <span class="image-caption">Kiambiu Pad Initiative, 27th Mar 2026</span>
+                    <span class="image-caption">Board of Directors + Team</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Programs Preview (Updated) -->
-    <section class="section bg-light">
+    <!-- Programs Preview - redesigned: natural, smaller, with background image overlay -->
+    <section class="programs-natural-section">
         <div class="container">
             <h2 class="section-title">Our Programs</h2>
             <div class="section-line"></div>
             <p class="section-subtitle">Four core initiatives driving community transformation</p>
             <div class="programs-grid">
-                <!-- Education (Digital Skills + Scholarships) -->
                 <div class="program-card">
-                    <i class="fas fa-graduation-cap program-icon"></i>
+                    <div class="program-icon-wrapper">
+                        <i class="fas fa-graduation-cap program-icon"></i>
+                    </div>
                     <h3>Education</h3>
                     <p>Digital skills training and scholarship support to unlock learning and career opportunities.</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> Digital literacy & coding</li>
-                        <li><i class="fas fa-check"></i> Scholarship connections</li>
+                        <li><i class="fas fa-check-circle"></i> Digital literacy & coding</li>
+                        <li><i class="fas fa-check-circle"></i> Scholarship connections</li>
                     </ul>
-                    <a href="education-program.html" class="read-more">Learn More →</a>
+                    <a href="education-program.html" class="read-more">Learn more →</a>
                 </div>
-                <!-- Community Empowerment (Financial Literacy for Men & Women) -->
                 <div class="program-card">
-                    <i class="fas fa-chalkboard-user program-icon"></i>
+                    <div class="program-icon-wrapper">
+                        <i class="fas fa-chalkboard-user program-icon"></i>
+                    </div>
                     <h3>Community Empowerment</h3>
                     <p>Financial literacy and economic empowerment for both men and women.</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> Savings & loan groups</li>
-                        <li><i class="fas fa-check"></i> Small business training</li>
+                        <li><i class="fas fa-check-circle"></i> Savings & loan groups</li>
+                        <li><i class="fas fa-check-circle"></i> Small business training</li>
                     </ul>
-                    <a href="community-empowerment-program.html" class="read-more">Learn More →</a>
+                    <a href="community-empowerment-program.html" class="read-more">Learn more →</a>
                 </div>
-                <!-- Peer Program (Boys for Boys & Girls for Girls) -->
                 <div class="program-card">
-                    <i class="fas fa-hand-holding-heart program-icon" style="color: #e84393;"></i>
+                    <div class="program-icon-wrapper">
+                        <i class="fas fa-hand-holding-heart program-icon"></i>
+                    </div>
                     <h3>Peer Program</h3>
                     <p>Boys for Boys & Girls for Girls – mentorship, safe spaces, and life skills.</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> Gender-specific peer groups</li>
-                        <li><i class="fas fa-check"></i> Leadership & self‑esteem</li>
+                        <li><i class="fas fa-check-circle"></i> Gender-specific peer groups</li>
+                        <li><i class="fas fa-check-circle"></i> Leadership & self‑esteem</li>
                     </ul>
-                    <a href="peer-program.html" class="read-more">Learn More →</a>
+                    <a href="peer-program.html" class="read-more">Learn more →</a>
                 </div>
-                <!-- Mental Health & Nutrition Wellness -->
                 <div class="program-card">
-                    <i class="fas fa-brain program-icon"></i>
+                    <div class="program-icon-wrapper">
+                        <i class="fas fa-brain program-icon"></i>
+                    </div>
                     <h3>Mental Health & Nutrition</h3>
                     <p>Holistic wellness combining mental health support and nutrition education.</p>
                     <ul>
-                        <li><i class="fas fa-check"></i> Counseling & peer support</li>
-                        <li><i class="fas fa-check"></i> Nutrition workshops</li>
+                        <li><i class="fas fa-check-circle"></i> Counseling & peer support</li>
+                        <li><i class="fas fa-check-circle"></i> Nutrition workshops</li>
                     </ul>
-                    <a href="mental-health-nutrition-program.html" class="read-more">Learn More →</a>
+                    <a href="mental-health-nutrition-program.html" class="read-more">Learn more →</a>
                 </div>
             </div>
             <div class="text-center">
@@ -265,27 +652,27 @@
         </div>
     </section>
 
-    <!-- Impact Preview -->
-    <section class="section">
+    <!-- Impact Preview (with authentic background image) -->
+    <section class="section impact-bg-section">
         <div class="container">
             <h2 class="section-title">Our Impact</h2>
             <div class="section-line"></div>
             <div class="impact-grid">
                 <div class="impact-item">
-                    <div class="impact-number">5,000+</div>
+                    <div class="impact-number">1,500+</div>
                     <p>Kenyans Empowered</p>
                 </div>
                 <div class="impact-item">
-                    <div class="impact-number">120+</div>
+                    <div class="impact-number">13</div>
                     <p>Communities Reached</p>
                 </div>
                 <div class="impact-item">
-                    <div class="impact-number">8</div>
+                    <div class="impact-number">5</div>
                     <p>Counties Served</p>
                 </div>
                 <div class="impact-item">
-                    <div class="impact-number">150+</div>
-                    <p>Girls Supported</p>
+                    <div class="impact-number">15</div>
+                    <p>Schools Reached</p>
                 </div>
             </div>
             
@@ -300,30 +687,61 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section cta-section">
+    <!-- Support Our Mission Section - Refined & Natural -->
+    <section class="cta-refined-section">
         <div class="container">
             <div class="cta-box">
                 <h2>Support Our Mission</h2>
                 <p>Your donation helps us fight poverty across Kenya. 100% of funds support our programs.</p>
-                <a href="donate.html" class="btn btn-primary">Donate via M-PESA</a>
+                <a href="donate.html" class="btn-primary">Donate via M-PESA</a>
             </div>
         </div>
     </section>
 
+    <!-- Partners Section - Full Width with Scroll -->
+<section class="partners-section">
+    <div class="container">
+        <h2 class="section-title">Our Partners</h2>
+    </div>
+    <div class="partners-scroll">
+        <div class="partners-track" id="partnersTrack">
+            <!-- Partner 1 -->
+            <div class="partner-item">
+                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
+                <span>Broad Experiential</span>
+            </div>
+            <!-- Partner 2 -->
+            <div class="partner-item">
+                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
+                <span>Solar Panda</span>
+            </div>
+            <!-- Partner 3 -->
+            <div class="partner-item">
+                <img src="images/partners/world_vision.png" alt="World Vision">
+                <span>World Vision</span>
+            </div>
+            <!-- Partner 4 -->
+            <div class="partner-item">
+                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
+                <span>Fresh Life</span>
+            </div>
+            <!-- Partner 5 -->
+            <div class="partner-item">
+                <img src="images/partners/logo.png" alt="AA Kenya">
+                <span>AA Kenya</span>
+            </div>
+            <!-- Partner 6 -->
+            <!-- <div class="partner-item">
+                <img src="images/partner6.png" alt="Partner 6">
+                <span>Partner 6</span>
+            </div> -->
+        </div>
+    </div>
+</section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <!-- PARTNER LOGOS SECTION -->
-            <div class="footer-partners">
-                <h4>Our Partners</h4>
-                <div class="partner-logos">
-                    <div class="partner-logo-item">
-                        <img src="images/Broad Experiential logo.png" alt="Broad Experiential Limited" class="partner-logo">
-                        <span>Broad Experiential Limited</span>
-                    </div>
-                </div>
-            </div>
             <div class="footer-grid">
                 <div class="footer-about">
                     <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
@@ -344,9 +762,8 @@
                     <h4>Contact</h4>
                     <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
                     <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                    <p><i class="fas fa-phone"></i> 0202-2636674 / 0777636674</p>
+                    <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
                 </div>
-                <!-- NEWSLETTER COLUMN (compact) -->
                 <div class="footer-newsletter-column">
                     <h4>Stay Updated</h4>
                     <p>Get our monthly impact stories and news.</p>
@@ -366,17 +783,18 @@
     </footer>
 
     <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/254777636674" class="whatsapp-chat-btn" target="_blank" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <script src="js/script.js"></script>
-    <!-- Additional inline script to handle dynamic year and newsletter (non-intrusive) -->
     <script>
         (function() {
-            // Set current year in footer
             const yearSpan = document.getElementById('currentYear');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
             
-            // Simple newsletter subscription handler (prevents page reload & shows message)
             const newsletterForm = document.getElementById('newsletterForm');
             const newsletterMsg = document.getElementById('newsletterMessage');
             if (newsletterForm) {
@@ -390,15 +808,11 @@
                         newsletterMsg.style.fontSize = '0.8rem';
                         newsletterMsg.style.marginTop = '8px';
                         emailInput.value = '';
-                        setTimeout(() => {
-                            newsletterMsg.textContent = '';
-                        }, 4000);
+                        setTimeout(() => { newsletterMsg.textContent = ''; }, 4000);
                     } else {
                         newsletterMsg.textContent = 'Please enter a valid email address.';
                         newsletterMsg.style.color = '#c62828';
-                        setTimeout(() => {
-                            newsletterMsg.textContent = '';
-                        }, 3000);
+                        setTimeout(() => { newsletterMsg.textContent = ''; }, 3000);
                     }
                 });
             }
