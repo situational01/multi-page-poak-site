@@ -474,3 +474,46 @@ document.addEventListener('DOMContentLoaded', function() {
         track.style.animationDuration = duration + 's';
     }
 })();
+
+// ========================================
+// POPUP MODAL - VIATU DRIVE
+// ========================================
+
+(function() {
+    const overlay = document.getElementById('popupOverlay');
+    const closeBtn = document.getElementById('popupClose');
+    
+    // Check if user has already seen the popup in this session
+    const hasSeenPopup = sessionStorage.getItem('viatuPopupSeen');
+    
+    // Show popup after 1 second (only if not seen this session)
+    if (!hasSeenPopup) {
+        setTimeout(function() {
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }, 1000);
+    }
+    
+    function closePopup() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        sessionStorage.setItem('viatuPopupSeen', 'true');
+    }
+    
+    // Close on X button
+    closeBtn.addEventListener('click', closePopup);
+    
+    // Close on clicking outside the poster
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            closePopup();
+        }
+    });
+    
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closePopup();
+        }
+    });
+})();

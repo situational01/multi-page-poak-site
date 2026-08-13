@@ -493,6 +493,15 @@
 </head>
 
 <body>
+
+    <!-- Popup Modal - Viatu Drive Poster -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-modal">
+        <button class="popup-close" id="popupClose" aria-label="Close popup">×</button>
+        <img src="images/e-shot - Viatu Drive-01.jpg" alt="Viatu Drive - Donate Shoes">
+    </div>
+</div>
+
     <!-- Floating Social Links -->
     <div class="floating-social">
         <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -731,10 +740,10 @@
                 <span>AA Kenya</span>
             </div>
             <!-- Partner 6 -->
-            <!-- <div class="partner-item">
-                <img src="images/partner6.png" alt="Partner 6">
-                <span>Partner 6</span>
-            </div> -->
+            <div class="partner-item">
+                <img src="images/partners/wisdom_medical_services.png" alt="Wisdom Medical Services">
+                <span>Wisdom Medical Services</span>
+            </div>
         </div>
     </div>
 </section>
@@ -762,7 +771,7 @@
                     <h4>Contact</h4>
                     <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
                     <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                    <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
+                    <p><i class="fas fa-phone"></i> 0143709759 / 0777636674</p>
                 </div>
                 <div class="footer-newsletter-column">
                     <h4>Stay Updated</h4>
@@ -803,7 +812,7 @@
                     const emailInput = newsletterForm.querySelector('input[type="email"]');
                     const email = emailInput.value.trim();
                     if (email && email.includes('@')) {
-                        newsletterMsg.textContent = '📧 Thanks for subscribing! You’ll hear from us soon.';
+                        newsletterMsg.textContent = ' Thanks for subscribing! You’ll hear from us soon.';
                         newsletterMsg.style.color = '#2e7d32';
                         newsletterMsg.style.fontSize = '0.8rem';
                         newsletterMsg.style.marginTop = '8px';
