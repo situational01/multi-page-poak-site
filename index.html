@@ -31,8 +31,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logo_POAK.png">
     
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS with cache-busting version -->
+    <link rel="stylesheet" href="css/style.css?v=20260814">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
@@ -244,177 +244,6 @@
             background: rgba(255,255,255,0.2);
         }
 
-        /* ========== REFRESHED "OUR PROGRAMS" SECTION - NATURAL, SMALLER, WITH BACKGROUND IMAGE ========== */
-        .programs-natural-section {
-            position: relative;
-            background: url('images/new-images/programs_hero.jpg') center/cover fixed;
-            padding: 2.5rem 0 3rem 0;
-            z-index: 1;
-        }
-        
-        .programs-natural-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(30, 35, 30, 0.55);
-            z-index: -1;
-        }
-        
-        .programs-natural-section .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            letter-spacing: -0.3px;
-            color: #ffffff;
-        }
-        
-        .programs-natural-section .section-line {
-            width: 60px;
-            height: 3px;
-            background: #db2323;
-            margin: 0.75rem auto 1rem auto;
-            border-radius: 4px;
-        }
-        
-        .programs-natural-section .section-subtitle {
-            font-size: 1rem;
-            color: #f0f0f0;
-            max-width: 550px;
-            margin: 0 auto 2rem auto;
-            font-weight: 400;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-        }
-        
-        .programs-natural-section .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .programs-natural-section .program-card {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(2px);
-            border-radius: 20px;
-            padding: 1.25rem 1.2rem 1.4rem 1.2rem;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.25s ease;
-            border: 1px solid rgba(255,255,245,0.5);
-            text-align: left;
-        }
-        
-        .programs-natural-section .program-card:hover {
-            transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 14px 26px rgba(0, 0, 0, 0.15);
-            border-color: #ffcd3c;
-        }
-        
-        .programs-natural-section .program-icon-wrapper {
-            width: 48px;
-            height: 48px;
-            background: #2c7a4d20;
-            border-radius: 28px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .programs-natural-section .program-icon {
-            font-size: 1.6rem;
-            color: #2c7a4d;
-        }
-        
-        .programs-natural-section .program-card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin: 0 0 0.5rem 0;
-            color: #1e2a2f;
-            letter-spacing: -0.2px;
-        }
-        
-        .programs-natural-section .program-card p {
-            font-size: 0.85rem;
-            line-height: 1.45;
-            color: #2c3e3f;
-            margin-bottom: 0.9rem;
-        }
-        
-        .programs-natural-section .program-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 1rem 0;
-        }
-        
-        .programs-natural-section .program-card ul li {
-            font-size: 0.8rem;
-            margin-bottom: 0.4rem;
-            color: #1f4d3a;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        
-        .programs-natural-section .program-card ul li i {
-            color: #2c7a4d;
-            font-size: 0.7rem;
-            width: 16px;
-        }
-        
-        .programs-natural-section .read-more {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #2c7a4d;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            transition: gap 0.2s;
-        }
-        
-        .programs-natural-section .read-more:hover {
-            gap: 8px;
-            color: #1c5a38;
-        }
-        
-        .programs-natural-section .btn-primary {
-            background: #2c7a4d;
-            border: none;
-            padding: 0.65rem 1.4rem;
-            font-size: 0.85rem;
-            border-radius: 40px;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-block;
-            color: white;
-        }
-        
-        .programs-natural-section .btn-primary:hover {
-            background: #1f6140;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .programs-natural-section .text-center {
-            margin-top: 0.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            .programs-natural-section {
-                padding: 2rem 0 2.2rem 0;
-                background-attachment: scroll;
-            }
-            .programs-natural-section .programs-grid {
-                gap: 1rem;
-            }
-            .programs-natural-section .program-card {
-                padding: 1rem;
-            }
-        }
 
         /* ========== REFINED "SUPPORT OUR MISSION" (CTA) SECTION ========== */
         .cta-refined-section {
@@ -599,67 +428,116 @@
         </div>
     </section>
 
-    <!-- Programs Preview - redesigned: natural, smaller, with background image overlay -->
-    <section class="programs-natural-section">
-        <div class="container">
-            <h2 class="section-title">Our Programs</h2>
-            <div class="section-line"></div>
-            <p class="section-subtitle">Four core initiatives driving community transformation</p>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-icon-wrapper">
-                        <i class="fas fa-graduation-cap program-icon"></i>
-                    </div>
+    <!-- Programs Section - Clean Minimal Cards -->
+<section class="programs-natural-section">
+    <div class="container">
+        <h2 class="section-title">Our Programs</h2>
+        <div class="section-line"></div>
+        <p class="section-subtitle">Empowering communities through sustainable initiatives</p>
+        
+        <div class="programs-grid">
+            <!-- Program 1: Education -->
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="images/programs/education.jpg" alt="Education Program">
+                </div>
+                <div class="program-card-content">
                     <h3>Education</h3>
                     <p>Digital skills training and scholarship support to unlock learning and career opportunities.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Digital literacy & coding</li>
-                        <li><i class="fas fa-check-circle"></i> Scholarship connections</li>
-                    </ul>
-                    <a href="education-program.html" class="read-more">Learn more →</a>
+                    <a href="education-program.html" class="btn-learn">Learn More</a>
                 </div>
-                <div class="program-card">
-                    <div class="program-icon-wrapper">
-                        <i class="fas fa-chalkboard-user program-icon"></i>
-                    </div>
+            </div>
+
+            <!-- Program 2: Community Empowerment -->
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="images/programs/community empowerment.jpeg" alt="Community Empowerment">
+                </div>
+                <div class="program-card-content">
                     <h3>Community Empowerment</h3>
-                    <p>Financial literacy and economic empowerment for both men and women.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Savings & loan groups</li>
-                        <li><i class="fas fa-check-circle"></i> Small business training</li>
-                    </ul>
-                    <a href="community-empowerment-program.html" class="read-more">Learn more →</a>
+                    <p>Financial literacy and economic empowerment for sustainable livelihoods.</p>
+                    <a href="community-empowerment-program.html" class="btn-learn">Learn More</a>
                 </div>
-                <div class="program-card">
-                    <div class="program-icon-wrapper">
-                        <i class="fas fa-hand-holding-heart program-icon"></i>
-                    </div>
+            </div>
+
+            <!-- Program 3: Peer Program -->
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="images/programs/youth leadership.jpg" alt="Peer Program">
+                </div>
+                <div class="program-card-content">
                     <h3>Peer Program</h3>
-                    <p>Boys for Boys & Girls for Girls – mentorship, safe spaces, and life skills.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Gender-specific peer groups</li>
-                        <li><i class="fas fa-check-circle"></i> Leadership & self‑esteem</li>
-                    </ul>
-                    <a href="peer-program.html" class="read-more">Learn more →</a>
+                    <p>Mentorship, safe spaces, and life skills development for youth.</p>
+                    <a href="peer-program.html" class="btn-learn">Learn More</a>
                 </div>
-                <div class="program-card">
-                    <div class="program-icon-wrapper">
-                        <i class="fas fa-brain program-icon"></i>
-                    </div>
+            </div>
+
+            <!-- Program 4: Mental Health & Nutrition -->
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="images/programs/mental_health.jpg" alt="Mental Health & Nutrition">
+                </div>
+                <div class="program-card-content">
                     <h3>Mental Health & Nutrition</h3>
                     <p>Holistic wellness combining mental health support and nutrition education.</p>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Counseling & peer support</li>
-                        <li><i class="fas fa-check-circle"></i> Nutrition workshops</li>
-                    </ul>
-                    <a href="mental-health-nutrition-program.html" class="read-more">Learn more →</a>
+                    <a href="mental-health-nutrition-program.html" class="btn-learn">Learn More</a>
                 </div>
             </div>
-            <div class="text-center">
-                <a href="programs.html" class="btn btn-primary">View All Programs</a>
+
+            <!-- Program 5: 4K Club for Schools -->
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="images/programs/4k for schools.png" alt="4K Club for Schools">
+                </div>
+                <div class="program-card-content">
+                    <h3>4K Club for Schools</h3>
+                    <p>Agriculture, entrepreneurship, environmental stewardship, and climate resilience.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Program 6: 4K Smart Farming -->
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="images/programs/4k smart farming.png" alt="4K Smart Farming">
+                </div>
+                <div class="program-card-content">
+                    <h3>4K Smart Farming</h3>
+                    <p>Food security through practical and environmentally responsible farming.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Program 7: Livestock Development -->
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="images/programs/livestock.jpg" alt="Livestock Development">
+                </div>
+                <div class="program-card-content">
+                    <h3>Livestock Development</h3>
+                    <p>Sustainable livestock enterprises that contribute to household resilience.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Program 8: Climate Resilience -->
+            <div class="program-card">
+                <div class="program-card-image">
+                    <img src="images/programs/climate resilience.jpg" alt="Climate Resilience">
+                </div>
+                <div class="program-card-content">
+                    <h3>Climate Resilience</h3>
+                    <p>Climate adaptation, environmental conservation, and disaster risk reduction.</p>
+                    <a href="#" class="btn-learn">Learn More</a>
+                </div>
             </div>
         </div>
-    </section>
+
+        <div class="text-center">
+            <a href="programs.html" class="btn-primary">View All Programs</a>
+        </div>
+    </div>
+</section>
 
     <!-- Impact Preview (with authentic background image) -->
     <section class="section impact-bg-section">
@@ -702,7 +580,7 @@
             <div class="cta-box">
                 <h2>Support Our Mission</h2>
                 <p>Your donation helps us fight poverty across Kenya. 100% of funds support our programs.</p>
-                <a href="donate.html" class="btn-primary">Donate via M-PESA</a>
+                <a href="donate.html" class="btn-primary">Donate to POAK</a>
             </div>
         </div>
     </section>
@@ -798,12 +676,56 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="js/script.js"></script>
+    <!-- Cache-busting script: forces browser to load fresh JS -->
+    <script src="js/script.js?v=20260814"></script>
+    
+    <!-- Additional cache-clearing mechanism using service worker and meta tags -->
     <script>
         (function() {
+            // 1. Set a version in localStorage to track updates
+            const VERSION = '20260814';
+            const storedVersion = localStorage.getItem('poak_version');
+            
+            if (storedVersion !== VERSION) {
+                // Clear any cached resources by reloading with a cache-busting param
+                localStorage.setItem('poak_version', VERSION);
+                
+                // 2. Clear service worker caches if any (future-proof)
+                if ('caches' in window) {
+                    caches.keys().then(function(names) {
+                        for (let name of names) {
+                            if (name.includes('poak') || name.includes('poverty')) {
+                                caches.delete(name);
+                            }
+                        }
+                    });
+                }
+                
+                // 3. Force reload of images and assets by appending timestamp to them
+                // We'll do this by adding a timestamp to all image URLs
+                const images = document.querySelectorAll('img');
+                const timestamp = Date.now();
+                images.forEach(function(img) {
+                    // Only add to our own images, not external ones
+                    if (img.src && img.src.includes('images/') && !img.src.includes('?')) {
+                        img.src = img.src + '?v=' + timestamp;
+                    }
+                });
+                
+                // 4. Also refresh CSS links if they were loaded without version
+                const links = document.querySelectorAll('link[rel="stylesheet"]');
+                links.forEach(function(link) {
+                    if (link.href && link.href.includes('style.css') && !link.href.includes('v=')) {
+                        link.href = link.href + '?v=' + VERSION;
+                    }
+                });
+            }
+            
+            // 5. Update year in footer
             const yearSpan = document.getElementById('currentYear');
             if (yearSpan) yearSpan.textContent = new Date().getFullYear();
             
+            // 6. Newsletter form handler
             const newsletterForm = document.getElementById('newsletterForm');
             const newsletterMsg = document.getElementById('newsletterMessage');
             if (newsletterForm) {
@@ -812,7 +734,7 @@
                     const emailInput = newsletterForm.querySelector('input[type="email"]');
                     const email = emailInput.value.trim();
                     if (email && email.includes('@')) {
-                        newsletterMsg.textContent = ' Thanks for subscribing! You’ll hear from us soon.';
+                        newsletterMsg.textContent = ' Thanks for subscribing! You\'ll hear from us soon.';
                         newsletterMsg.style.color = '#2e7d32';
                         newsletterMsg.style.fontSize = '0.8rem';
                         newsletterMsg.style.marginTop = '8px';
@@ -827,5 +749,12 @@
             }
         })();
     </script>
+    
+    <!-- Fallback: if the page is loaded from cache, force reload -->
+    <noscript>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+    </noscript>
 </body>
 </html>

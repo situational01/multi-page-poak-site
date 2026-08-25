@@ -27,6 +27,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <!-- PayPal SDK -->
+   <script 
+  src="https://www.paypal.com/sdk/js?client-id=BAAb3Rs4TSkTgPpYcLL-tgaonRCvkjmsu8nDyZZDShgJUSoko1Nlci7SvnvBijPSGLl65Nw8xjCkkBDgLc&components=hosted-buttons&disable-funding=venmo&currency=USD">
+</script>
     <style>
       /* Responsive & smaller M‑PESA image */
       .mpesa-image {
@@ -104,10 +108,17 @@
 
     <section class="section">
       <div class="container">
-        <div class="donate-card">
-          <h2>Donate via M-PESA</h2>
+         <!-- paypal -->
+<div id="paypal-container-JLQ4GMLZ526C4"></div>
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "JLQ4GMLZ526C4",
+  }).render("#paypal-container-JLQ4GMLZ526C4")
+</script>
+        <!-- <div class="donate-card"> -->
+          <!-- <h2>Donate via M-PESA</h2> -->
           <!-- M-PESA details image, now smaller -->
-          <div class="mpesa-details">
+          <!-- <div class="mpesa-details">
             <img 
               src="images/mpesa_paybill.png" 
               alt="M-PESA PayBill Number 600100, Account Number 0100011857657, Account Name BROAD EXPERIENTIAL LIMITED" 
@@ -131,7 +142,7 @@
               support our programs in Kenya.
             </p>
           </div>
-        </div>
+        </div> -->
 
         <!-- NEW: M‑Changa Fundraiser Card -->
         <div class="donate-card" style="margin-top: 2rem;">
@@ -161,6 +172,7 @@
 
       </div>
     </section>
+   
 
         <!-- Partners Section - Full Width with Scroll -->
 <section class="partners-section">
