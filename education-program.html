@@ -1,392 +1,1943 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-W0DNL1PP07');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Education Program - POAK Kenya | Digital Skills & Scholarships</title>
-  <meta name="description" content="POAK's Education program connects youth to digital skills training and scholarship opportunities through a network of trusted partners. Register your interest today." />
-  <link rel="icon" type="image/png" href="images/logo_POAK.png" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    /* Override header color for this page (fallback gradient) */
-    .program-header {
-      background: linear-gradient(135deg, #2980b9 0%, #1f618d 100%);
-    }
-    .btn-primary {
-      background: #2980b9 !important;
-    }
-    .btn-primary:hover {
-      background: #1f618d !important;
-    }
-    .btn-secondary {
-      color: #2980b9 !important;
-      border-color: #2980b9 !important;
-    }
-    .btn-secondary:hover {
-      background: #2980b9 !important;
-      color: white !important;
-    }
-    .partner-badge {
-      background: #2980b9;
-    }
 
-    /* Zoom animation for hero background */
-    .hero-zoom {
-      position: relative;
-      overflow: hidden;
-      background: none !important;
-    }
-    .hero-zoom::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                  url('images/new-images/education_program.jpg') center/cover no-repeat;
-      z-index: 0;
-      animation: zoomInOut 8s ease-in-out infinite;
-    }
-    .hero-zoom .container {
-      position: relative;
-      z-index: 1;
-    }
-    @keyframes zoomInOut {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
 
-    /* Responsive Stats Grid */
-    .program-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    .stat-item {
-      background: var(--bg-light);
-      padding: 1.2rem 1rem;
-      border-radius: 12px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .stat-number {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #2980b9;
-      line-height: 1.2;
-      word-break: break-word;
-    }
-    .stat-item span:last-child {
-      font-size: 0.9rem;
-      color: var(--text-light);
-    }
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    /* Ensure program detail stacks on small screens */
-    .program-detail {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    .program-main {
-      flex: 2;
-      min-width: 280px;
-    }
-    .program-sidebar {
-      flex: 1;
-      min-width: 250px;
-    }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-    /* Make sidebar headings visible */
-    .info-card h4 {
-      
-      font-size: 1.2rem;
-      margin-bottom: 0.8rem;
-      font-weight: 700;
-      line-height: 1.3;
-    }
+        gtag('js', new Date());
+        gtag('config', 'G-W0DNL1PP07');
+    </script>
 
-    /* Responsive typography & spacing */
-    @media (max-width: 768px) {
-      .hero-zoom h1 {
-        font-size: 2.5rem !important;
-      }
-      .hero-zoom p {
-        font-size: 1.2rem !important;
-      }
-      .program-detail h2 {
-        font-size: 1.6rem;
-      }
-      .program-detail h3 {
-        font-size: 1.3rem;
-      }
-      .program-stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .stat-number {
-        font-size: 1.6rem;
-      }
-    }
+    <meta charset="UTF-8">
 
-    @media (max-width: 480px) {
-      .hero-zoom h1 {
-        font-size: 1.8rem !important;
-      }
-      .hero-zoom p {
-        font-size: 1rem !important;
-      }
-      .program-stats {
-        grid-template-columns: 1fr !important;
-      }
-      .stat-number {
-        font-size: 1.4rem;
-      }
-      .program-detail h2 {
-        font-size: 1.4rem;
-      }
-      .program-detail h3 {
-        font-size: 1.2rem;
-      }
-      .btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-      }
-      .info-card {
-        padding: 1.2rem;
-      }
-      .testimonial {
-        padding: 1.2rem;
-      }
-      .program-main, .program-sidebar {
-        min-width: 100%;
-        flex: 1 1 100%;
-      }
-    }
-  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Education Programme | Poverty Africa - Kenya</title>
+
+    <meta
+        name="description"
+        content="POAK connects young people in Kenya to digital skills, scholarships, mentorship and education opportunities through trusted partners."
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/logo_POAK.png"
+    >
+
+    <!-- Main Website Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <style>
+
+        /* =====================================================
+           EDUCATION PAGE
+        ===================================================== */
+
+        .education-page {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .education-page .navbar {
+            background: var(--bg);
+            border-bottom: none;
+        }
+
+        .education-page .nav-menu > li > a {
+            color: var(--text);
+        }
+
+        .education-page .nav-menu > li > a:hover,
+        .education-page .nav-menu > li > a.active {
+            color: var(--primary);
+        }
+
+        .education-page .donate-btn {
+            background: var(--primary) !important;
+            color: #fff !important;
+        }
+
+        .education-page .donate-btn:hover {
+            background: var(--primary-dark) !important;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .education-hero {
+            position: relative;
+            min-height: 500px;
+
+            display: flex;
+            align-items: center;
+
+            overflow: hidden;
+
+            color: #fff;
+            background: var(--footer-bg);
+        }
+
+        .education-hero::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.82) 0%,
+                    rgba(0, 0, 0, 0.62) 55%,
+                    rgba(0, 0, 0, 0.28) 100%
+                ),
+                url("images/programs/education.jpg")
+                center center / cover no-repeat;
+
+            transform: scale(1.02);
+        }
+
+        .education-hero-content {
+            position: relative;
+            z-index: 2;
+
+            max-width: 720px;
+
+            padding: 75px 0;
+        }
+
+        .hero-label {
+            display: inline-block;
+
+            margin-bottom: 18px;
+            padding: 7px 12px;
+
+            border: 1px solid rgba(255,255,255,0.45);
+            border-radius: 3px;
+
+            color: #fff;
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .education-hero h1 {
+            margin: 0 0 18px;
+
+            color: #fff;
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.4rem, 5vw, 4.1rem);
+            font-weight: 800;
+
+            line-height: 1.08;
+            letter-spacing: -0.03em;
+        }
+
+        .education-hero p {
+            max-width: 670px;
+
+            margin: 0;
+
+            color: rgba(255,255,255,0.92);
+
+            font-size: 1.08rem;
+            line-height: 1.75;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 28px;
+        }
+
+        .hero-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-height: 44px;
+
+            padding: 0 21px;
+
+            border-radius: 4px;
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.81rem;
+            font-weight: 700;
+
+            text-decoration: none;
+
+            transition: 0.25s ease;
+        }
+
+        .hero-button.primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .hero-button.primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .hero-button.secondary {
+            background: rgba(255,255,255,0.10);
+            color: #fff;
+        }
+
+        .hero-button.secondary:hover {
+            background: rgba(255,255,255,0.18);
+        }
+
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        .eyebrow {
+            margin-bottom: 10px;
+
+            color: var(--primary);
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.73rem;
+            font-weight: 700;
+
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+        }
+
+        .education-page h2,
+        .education-page h3 {
+            color: var(--text);
+
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .education-page p {
+            color: var(--text-light);
+        }
+
+
+        /* =====================================================
+           INTRODUCTION
+        ===================================================== */
+
+        .intro-section {
+            padding: 75px 0;
+
+            background: var(--bg);
+        }
+
+        .intro-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.45fr
+                0.55fr;
+
+            gap: 65px;
+
+            align-items: start;
+        }
+
+        .intro-section h2 {
+            margin: 0 0 20px;
+
+            font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+            line-height: 1.2;
+        }
+
+        .intro-section p {
+            margin: 0 0 15px;
+
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .intro-note {
+            padding: 28px;
+
+            background: var(--bg-light);
+
+            border: none;
+            border-radius: 5px;
+
+            box-shadow: 0 6px 20px var(--shadow);
+        }
+
+        .intro-note strong {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: var(--text);
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.98rem;
+        }
+
+        .intro-note p {
+            margin: 0;
+
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           HOW IT WORKS
+        ===================================================== */
+
+        .model-section {
+            padding: 75px 0;
+
+            background: var(--bg-light);
+        }
+
+        .section-heading {
+            max-width: 700px;
+
+            margin-bottom: 38px;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 13px;
+
+            font-size: clamp(1.9rem, 3vw, 2.6rem);
+            line-height: 1.2;
+        }
+
+        .section-heading p {
+            margin: 0;
+
+            line-height: 1.75;
+        }
+
+        .model-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .model-card {
+            padding: 28px 24px;
+
+            background: var(--card-bg);
+
+            border: none;
+            border-radius: 5px;
+
+            box-shadow: 0 5px 18px var(--shadow);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .model-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 10px 28px var(--shadow-hover);
+        }
+
+        .model-number {
+            display: block;
+
+            margin-bottom: 18px;
+
+            color: var(--primary);
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 800;
+
+            letter-spacing: 0.08em;
+        }
+
+        .model-card h3 {
+            margin: 0 0 10px;
+
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .model-card p {
+            margin: 0;
+
+            font-size: 0.88rem;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           OPPORTUNITIES
+        ===================================================== */
+
+        .opportunities-section {
+            padding: 80px 0;
+
+            background: var(--bg);
+        }
+
+        .opportunities-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 65px;
+
+            align-items: start;
+        }
+
+        .opportunities-section h2 {
+            margin: 0 0 16px;
+
+            font-size: 2.2rem;
+            line-height: 1.25;
+        }
+
+        .opportunities-grid > div > p {
+            margin: 0;
+
+            line-height: 1.8;
+        }
+
+        .opportunity-list {
+            margin: 25px 0 0;
+
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .opportunity-list li {
+            position: relative;
+
+            margin-bottom: 15px;
+
+            padding-left: 18px;
+
+            color: var(--text);
+
+            line-height: 1.6;
+        }
+
+        .opportunity-list li::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0.72em;
+            left: 0;
+
+            width: 6px;
+            height: 6px;
+
+            background: var(--primary);
+
+            border-radius: 50%;
+
+            transform: translateY(-50%);
+        }
+
+        .opportunity-list strong {
+            color: var(--text);
+
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .learner-box {
+            padding: 32px;
+
+            background: var(--card-bg);
+
+            border: none;
+            border-radius: 5px;
+
+            box-shadow: 0 6px 22px var(--shadow);
+        }
+
+        .learner-box h3 {
+            margin: 0 0 18px;
+
+            font-size: 1.25rem;
+        }
+
+        .learner-box ul {
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .learner-box li {
+            padding: 9px 0;
+
+            color: var(--text-light);
+
+            line-height: 1.55;
+        }
+
+
+        /* =====================================================
+           OUR PARTNERS
+        ===================================================== */
+
+        .partners-section {
+            padding: 75px 0;
+
+            background: var(--bg-light);
+
+            overflow: hidden;
+        }
+
+        .partners-header {
+            max-width: 800px;
+
+            margin: 0 auto 38px;
+
+            text-align: center;
+        }
+
+        .partners-header h2 {
+            margin: 0;
+
+            color: var(--text);
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: clamp(
+                1.7rem,
+                3vw,
+                2.2rem
+            );
+
+            font-weight: 800;
+
+            letter-spacing: 0.04em;
+
+            line-height: 1.2;
+        }
+
+
+        /* =====================================================
+           CONTINUOUS PARTNER LOGO LOOP
+        ===================================================== */
+
+        .partners-scroll {
+            position: relative;
+
+            width: 100%;
+
+            overflow: hidden;
+        }
+
+        .partners-track {
+            display: flex;
+
+            width: max-content;
+
+            gap: 18px;
+
+            animation:
+                partnerLoop
+                30s
+                linear
+                infinite;
+
+            will-change: transform;
+        }
+
+        .partners-track:hover {
+            animation-play-state: paused;
+        }
+
+        .partner-item {
+            flex: 0 0 190px;
+
+            min-height: 145px;
+
+            padding: 24px 18px;
+
+            background: var(--card-bg);
+
+            border: none;
+
+            border-radius: 5px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            box-shadow:
+                0 4px 16px var(--shadow);
+        }
+
+        .partner-item img {
+            width: 105px;
+            height: 65px;
+
+            object-fit: contain;
+
+            margin-bottom: 13px;
+        }
+
+        .partner-item span {
+            color: var(--text);
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: 0.76rem;
+            font-weight: 600;
+        }
+
+        /*
+            The second set of logos is identical to
+            the first set. The animation therefore loops
+            seamlessly without a visible jump.
+        */
+
+        @keyframes partnerLoop {
+
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform:
+                    translateX(
+                        calc(-50% - 9px)
+                    );
+            }
+
+        }
+
+
+        /* =====================================================
+           CALL TO ACTION
+        ===================================================== */
+
+        .cta-section {
+            padding: 75px 0;
+
+            background: var(--footer-bg);
+
+            color: var(--footer-text);
+        }
+
+        .cta-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.4fr
+                0.6fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .cta-section h2 {
+            margin: 0 0 16px;
+
+            color: #fff;
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: clamp(
+                1.9rem,
+                3.4vw,
+                2.8rem
+            );
+
+            line-height: 1.2;
+        }
+
+        .cta-section p {
+            max-width: 680px;
+
+            margin: 0;
+
+            color: var(--footer-text);
+
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        .cta-button {
+            display: block;
+
+            padding: 13px 20px;
+
+            border-radius: 4px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: 0.81rem;
+            font-weight: 700;
+
+            transition: 0.25s ease;
+        }
+
+        .cta-button.primary {
+            background: var(--primary);
+
+            color: #fff;
+        }
+
+        .cta-button.primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .cta-button.secondary {
+            background: rgba(255,255,255,0.08);
+
+            color: #fff;
+        }
+
+        .cta-button.secondary:hover {
+            background: rgba(255,255,255,0.14);
+        }
+
+
+        /* =====================================================
+           REMOVE UNNATURAL BORDERS
+        ===================================================== */
+
+        .education-page .intro-note,
+        .education-page .model-card,
+        .education-page .learner-box,
+        .education-page .partner-item,
+        .education-page .hero-button.secondary,
+        .education-page .cta-button.secondary {
+            border: none !important;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .model-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .intro-grid,
+            .opportunities-grid,
+            .cta-grid {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .education-hero {
+                min-height: 500px;
+            }
+
+            .education-hero-content {
+                padding: 60px 20px;
+            }
+
+            .intro-section,
+            .model-section,
+            .opportunities-section,
+            .partners-section,
+            .cta-section {
+                padding: 60px 0;
+            }
+
+            .model-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .hero-button {
+                width: 100%;
+            }
+
+            .partners-track {
+                animation-duration: 24s;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .education-hero {
+                min-height: 480px;
+            }
+
+            .education-hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .education-hero-content {
+                padding: 50px 16px;
+            }
+
+            .intro-section h2,
+            .section-heading h2,
+            .opportunities-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .learner-box {
+                padding: 27px 22px;
+            }
+
+            .partner-item {
+                flex-basis: 170px;
+            }
+
+            .partners-header {
+                margin-bottom: 30px;
+            }
+
+            .partners-header h2 {
+                font-size: 1.65rem;
+            }
+
+        }
+
+
+        /* =====================================================
+           ACCESSIBILITY
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .partners-track {
+                animation: none;
+            }
+
+            .model-card {
+                transition: none;
+            }
+
+        }
+
+    </style>
+
 </head>
-<body>
-  <!-- Floating Social Links (Right Center) with enhanced hover tooltips -->
-    <div class="floating-social">
-        <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
 
-  <!-- Navigation -->
-  <nav class="navbar">
+
+<body class="education-page">
+
+
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
+
+<nav class="navbar">
+
     <div class="nav-container">
-      <a href="index.html" class="logo">
-        <img src="images/logo_POAK.png" alt="POAK Logo" class="logo-img" />
-        <div class="logo-text">
-          <span class="logo-main">POAK</span>
-          <span class="logo-sub">Poverty Africa - Kenya</span>
-        </div>
-      </a>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown">
-          <a href="programs.html" class="active">Programs <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="education-program.html" class="active">Education</a></li>
-            <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-            <li><a href="peer-program.html">Peer Program</a></li>
-            <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-          </ul>
-        </li>
-        <li><a href="impact.html">Impact</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <!-- <li><a href="calendar.html" class="active">Calendar</a></li> -->
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="donate-btn">Donate</a></li>
-        <li class="theme-toggle-container"><button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i><i class="fas fa-sun"></i></button></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Program Header with zooming background image -->
-  <section class="program-header hero-zoom" style="
-    color: white;
-    text-shadow: 2px 2px 12px rgba(0,0,0,0.9);
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    padding: 4rem 0;
-  ">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="images/logo_POAK.png"
+                alt="POAK Logo"
+                class="logo-img"
+            >
+
+            <div class="logo-text">
+
+                <span class="logo-main">
+                    POAK
+                </span>
+
+                <span class="logo-sub">
+                    Poverty Africa - Kenya
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open navigation menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <ul
+            class="nav-menu"
+            id="navMenu"
+        >
+
+
+            <li>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </li>
+
+
+            <li class="dropdown">
+
+                <a
+                    href="programs.html"
+                    class="active"
+                >
+
+                    Programs
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </a>
+
+ <ul class="dropdown-menu">
+                        <li><a href="education-program.html">Education</a></li>
+                        <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
+                        <li><a href="peer-program.html">Peer Program</a></li>
+                        <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
+                        <li><a href="4k-clubs.html">4K Clubs for Schools</a></li>
+                        <li><a href="4k-smart-farming.html">4K Smart Farming</a></li>
+                        <li><a href="livestock-development.html">Livestock Development</a></li>
+                        <li><a href="climate-resilience.html">Climate Resilience in Agriculture</a></li>
+                    </ul>
+
+            </li>
+
+
+            <li>
+
+                <a href="impact.html">
+                    Impact
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a
+                    href="donate.html"
+                    class="donate-btn"
+                >
+                    Donate
+                </a>
+
+            </li>
+
+
+            <li class="theme-toggle-container">
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark and light theme"
+                >
+
+                    <i class="fas fa-moon"></i>
+
+                    <i class="fas fa-sun"></i>
+
+                </button>
+
+            </li>
+
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="education-hero">
+
     <div class="container">
-      <h1 style="font-weight: 800; font-size: 3.5rem; line-height: 1.2;">Education</h1>
-      <p style="font-size: 1.5rem; font-weight: 400; opacity: 0.95;">Digital skills & scholarship support – unlocking opportunities for Kenyan youth</p>
-    </div>
-  </section>
 
-  <!-- Program Content -->
-  <section class="section">
-    <div class="container">
-      <div class="program-detail">
-        <div class="program-main">
-          <div class="partner-highlight">
-            <span class="partner-badge"><i class="fas fa-handshake"></i> Our Model</span>
-            <h2>We connect, we don't train directly</h2>
-            <p>POAK Kenya does not offer in‑house training. Instead, we are actively building a network of <strong>trusted institutions, coding bootcamps, universities, colleges, and experienced facilitators</strong> who will deliver high‑quality, market‑ready digital skills programs. Once partnerships are established, our role will be to identify opportunities, vet partners for quality, and connect youth to the right training paths – often with scholarships or subsidized slots.</p>
-            <p>In addition, we will help eligible learners access <strong>scholarships</strong> and financial aid to remove barriers to education.</p>
-          </div>
+        <div class="education-hero-content">
 
-          <h3>How It Will Work</h3>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> <strong>Curated partner network</strong> – We work only with trusted training providers who have proven track records.</li>
-            <li><i class="fas fa-check-circle"></i> <strong>Scholarship & sponsorship links</strong> – We help eligible youth access funded programs, including full and partial scholarships.</li>
-            <li><i class="fas fa-check-circle"></i> <strong>Career support</strong> – Many partners offer internships, job placement, and industry connections.</li>
-            <li><i class="fas fa-check-circle"></i> <strong>Mentorship & guidance</strong> – POAK provides pre‑enrollment counseling, application help, and follow‑up mentoring.</li>
-          </ul>
 
-          <h3>Partner Network – In Development</h3>
-          <div class="partner-highlight" style="background: var(--bg-light);">
-            <p>We are currently <strong>actively seeking partners</strong> – universities, technical colleges, bootcamps, and independent facilitators – who share our mission of empowering youth through digital skills and education.</p>
-            <p style="margin-top: 1rem;"><strong>If you represent a training institution or are a skilled facilitator, we’d love to hear from you.</strong> <a href="contact.html">Reach out to us</a> to explore partnership opportunities.</p>
-          </div>
+            <span class="hero-label">
+                Education Programme
+            </span>
 
-          <h3>What Learners Will Gain (Through Future Partners)</h3>
-          <ul>
-            <li><i class="fas fa-certificate"></i> Industry‑recognized certifications</li>
-            <li><i class="fas fa-briefcase"></i> Internship and job placement assistance</li>
-            <li><i class="fas fa-users"></i> Access to hiring partners and alumni networks</li>
-            <li><i class="fas fa-chart-line"></i> Career mentorship and portfolio building</li>
-            <li><i class="fas fa-graduation-cap"></i> Scholarship opportunities for eligible candidates</li>
-          </ul>
 
-          <h3>Program Status</h3>
-          <div class="program-stats">
-            <div class="stat-item"><span class="stat-number">Seeking</span><span>Partners</span></div>
-            <div class="stat-item"><span class="stat-number">Register</span><span>Interest</span></div>
-            <div class="stat-item"><span class="stat-number">Coming</span><span>Soon</span></div>
-          </div>
+            <h1>
+                Connecting young people to opportunity.
+            </h1>
+
+
+            <p>
+                POAK connects young people to digital skills,
+                scholarships, mentorship and education opportunities
+                through trusted partners.
+            </p>
+
+
+            <div class="hero-actions">
+
+
+                <a
+                    href="#opportunities"
+                    class="hero-button primary"
+                >
+                    Explore the programme
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="hero-button secondary"
+                >
+                    Partner with POAK
+                </a>
+
+
+            </div>
+
+
         </div>
 
-        <div class="program-sidebar">
-          <div class="info-card">
-            <h4>Be the first to know</h4>
-            <p><strong>Program status:</strong> Partnerships are being established. No active training slots yet.</p>
-            <p><strong>Next steps:</strong> Register your interest below to receive updates when opportunities become available.</p>
-            <p><strong>Eligibility:</strong> Ages 18–35, Kenyan resident, basic digital literacy preferred</p>
-            <a href="#" class="btn btn-primary">Register Interest</a>
-            <p style="font-size: 0.8rem; margin-top: 0.8rem;">We'll notify you about partner programs and scholarships as they are secured.</p>
-          </div>
-          <div class="info-card">
-            <h4>Partner With Us</h4>
-            <p>Are you a training institution, bootcamp, or tech facilitator? Partner with POAK to reach talented youth across Kenya and help shape the future of digital skills.</p>
-            <a href="contact.html" class="btn btn-secondary">Become a Partner</a>
-          </div>
-          <div class="info-card">
-            <h4>Support This Initiative</h4>
-            <p class="mpesa-highlight">PayBill: 600100</p>
-            <p>Account: 0100011857657</p>
-            <p>Account Name: "Broad Experiential Limited"</p>
-            <a href="donate.html" class="btn btn-secondary">Donate to fund future scholarships</a>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
 
-      <!-- Partners Section - Full Width with Scroll -->
-<section class="partners-section">
-    <div class="container">
-        <h2 class="section-title">Our Partners</h2>
-    </div>
-    <div class="partners-scroll">
-        <div class="partners-track" id="partnersTrack">
-            <!-- Partner 1 -->
-            <div class="partner-item">
-                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
-                <span>Broad Experiential</span>
-            </div>
-            <!-- Partner 2 -->
-            <div class="partner-item">
-                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
-                <span>Solar Panda</span>
-            </div>
-            <!-- Partner 3 -->
-            <div class="partner-item">
-                <img src="images/partners/world_vision.png" alt="World Vision">
-                <span>World Vision</span>
-            </div>
-            <!-- Partner 4 -->
-            <div class="partner-item">
-                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
-                <span>Fresh Life</span>
-            </div>
-            <!-- Partner 5 -->
-            <div class="partner-item">
-                <img src="images/partners/logo.png" alt="AA Kenya">
-                <span>AA Kenya</span>
-            </div>
-            <!-- Partner 6 -->
-            <div class="partner-item">
-                <img src="images/partners/wisdom_medical_services.png" alt="Wisdom Medical Services">
-                <span>Wisdom Medical Services</span>
-            </div>
-        </div>
-    </div>
 </section>
 
-  <!-- Footer Partners Section (removed duplicate, footer already has it) -->
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about">
-          <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
-          <p>Fighting poverty across Kenya since 1997.</p>
-          <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
-        </div>
-        <div class="footer-programs">
-          <h4>Programs</h4>
-          <ul>
-            <li><a href="education-program.html">Education</a></li>
-            <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-            <li><a href="peer-program.html">Peer Program</a></li>
-            <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-          <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-          <p><i class="fas fa-phone"></i> 0143709759 / 0777636674</p>
-        </div>
-        <div class="footer-newsletter-column">
-          <h4>Stay Updated</h4>
-          <p>Get our monthly impact stories and news.</p>
-          <form class="newsletter-compact" id="newsletterForm">
-            <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-            <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
-          </form>
-          <p class="form-message" id="newsletterMessage"></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
-        <p class="registration">Registered Nonprofit in Kenya</p>
-      </div>
-    </div>
-  </footer>
 
-  <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
-  <script src="js/script.js"></script>
+<!-- =====================================================
+     INTRODUCTION
+====================================================== -->
+
+<section class="intro-section">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+
+            <div>
+
+                <div class="eyebrow">
+                    Our approach
+                </div>
+
+
+                <h2>
+                    Connecting learners to the right opportunities.
+                </h2>
+
+
+                <p>
+                    POAK is developing a network of universities,
+                    colleges, coding bootcamps, training institutions
+                    and facilitators.
+                </p>
+
+
+                <p>
+                    Through these partnerships, young people can
+                    access relevant learning, digital skills,
+                    scholarships and career pathways based on
+                    their interests and goals.
+                </p>
+
+            </div>
+
+
+            <div class="intro-note">
+
+                <strong>
+                    Programme status
+                </strong>
+
+
+                <p>
+                    Our education partner network is currently
+                    being developed. Opportunities will be shared
+                    as partnerships are formally established.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW IT WORKS
+====================================================== -->
+
+<section class="model-section">
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                How it works
+            </div>
+
+
+            <h2>
+                From opportunity to action.
+            </h2>
+
+
+            <p>
+                We make it easier for young people to find,
+                understand and access credible opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="model-grid">
+
+
+            <article class="model-card">
+
+                <span class="model-number">
+                    01
+                </span>
+
+
+                <h3>
+                    Find opportunities
+                </h3>
+
+
+                <p>
+                    Identify relevant education, skills and
+                    scholarship opportunities.
+                </p>
+
+            </article>
+
+
+            <article class="model-card">
+
+                <span class="model-number">
+                    02
+                </span>
+
+
+                <h3>
+                    Vet partners
+                </h3>
+
+
+                <p>
+                    Work with credible institutions and
+                    experienced facilitators.
+                </p>
+
+            </article>
+
+
+            <article class="model-card">
+
+                <span class="model-number">
+                    03
+                </span>
+
+
+                <h3>
+                    Connect learners
+                </h3>
+
+
+                <p>
+                    Match young people with opportunities
+                    aligned with their goals.
+                </p>
+
+            </article>
+
+
+            <article class="model-card">
+
+                <span class="model-number">
+                    04
+                </span>
+
+
+                <h3>
+                    Follow up
+                </h3>
+
+
+                <p>
+                    Provide guidance and support throughout
+                    the learner's journey.
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OPPORTUNITIES
+====================================================== -->
+
+<section
+    class="opportunities-section"
+    id="opportunities"
+>
+
+    <div class="container">
+
+
+        <div class="opportunities-grid">
+
+
+            <div>
+
+                <div class="eyebrow">
+                    Opportunities
+                </div>
+
+
+                <h2>
+                    What young people can gain
+                </h2>
+
+
+                <p>
+                    As the network grows, learners will be
+                    connected to opportunities that strengthen
+                    their skills, confidence and career prospects.
+                </p>
+
+
+                <ul class="opportunity-list">
+
+
+                    <li>
+
+                        <strong>
+                            Digital skills training
+                        </strong>
+
+                        through selected partners.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Scholarships and sponsorships
+                        </strong>
+
+                        for eligible learners.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Career guidance
+                        </strong>
+
+                        for education and career decisions.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Internship pathways
+                        </strong>
+
+                        where opportunities are available.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Mentorship and application support
+                        </strong>
+
+                        throughout the process.
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+            <div class="learner-box">
+
+
+                <h3>
+                    Areas of opportunity
+                </h3>
+
+
+                <ul>
+
+
+                    <li>
+                        Industry-relevant digital skills
+                    </li>
+
+
+                    <li>
+                        Coding and technology
+                    </li>
+
+
+                    <li>
+                        Professional and technical education
+                    </li>
+
+
+                    <li>
+                        Scholarships and funded learning
+                    </li>
+
+
+                    <li>
+                        Internships and workplace exposure
+                    </li>
+
+
+                    <li>
+                        Career mentorship
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OUR PARTNERS
+====================================================== -->
+
+<section class="partners-section">
+
+
+    <div class="container">
+
+
+        <div class="partners-header">
+
+            <h2>
+                OUR PARTNERS
+            </h2>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Continuous Partner Logo Animation -->
+
+    <div class="partners-scroll">
+
+
+        <div class="partners-track">
+
+
+            <!-- ================= SET ONE ================= -->
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/Broad Experiential logo.png"
+                    alt="Broad Experiential"
+                >
+
+                <span>
+                    Broad Experiential
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/solarpanda.webp"
+                    alt="Solar Panda"
+                >
+
+                <span>
+                    Solar Panda
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/world_vision.png"
+                    alt="World Vision"
+                >
+
+                <span>
+                    World Vision
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/freshlife.jfif"
+                    alt="Fresh Life"
+                >
+
+                <span>
+                    Fresh Life
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/logo.png"
+                    alt="AA Kenya"
+                >
+
+                <span>
+                    AA Kenya
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/wisdom_medical_services.png"
+                    alt="Wisdom Medical Services"
+                >
+
+                <span>
+                    Wisdom Medical Services
+                </span>
+
+            </div>
+
+
+            <!-- ================= SET TWO ================= -->
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/Broad Experiential logo.png"
+                    alt="Broad Experiential"
+                >
+
+                <span>
+                    Broad Experiential
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/solarpanda.webp"
+                    alt="Solar Panda"
+                >
+
+                <span>
+                    Solar Panda
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/world_vision.png"
+                    alt="World Vision"
+                >
+
+                <span>
+                    World Vision
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/freshlife.jfif"
+                    alt="Fresh Life"
+                >
+
+                <span>
+                    Fresh Life
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/logo.png"
+                    alt="AA Kenya"
+                >
+
+                <span>
+                    AA Kenya
+                </span>
+
+            </div>
+
+
+            <div class="partner-item">
+
+                <img
+                    src="images/partners/wisdom_medical_services.png"
+                    alt="Wisdom Medical Services"
+                >
+
+                <span>
+                    Wisdom Medical Services
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CALL TO ACTION
+====================================================== -->
+
+<section class="cta-section">
+
+
+    <div class="container">
+
+
+        <div class="cta-grid">
+
+
+            <div>
+
+
+                <div
+                    class="eyebrow"
+                    style="color: var(--secondary);"
+                >
+                    Get involved
+                </div>
+
+
+                <h2>
+                    Help us open more doors for young people.
+                </h2>
+
+
+                <p>
+                    Training institutions, universities,
+                    technology organisations, facilitators and
+                    sponsors can partner with POAK to expand
+                    access to skills and opportunities.
+                </p>
+
+
+            </div>
+
+
+            <div class="cta-buttons">
+
+
+                <a
+                    href="contact.html"
+                    class="cta-button primary"
+                >
+                    Become a partner
+                </a>
+
+
+                <a
+                    href="donate.html"
+                    class="cta-button secondary"
+                >
+                    Support the programme
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+
+    <div class="container">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-about">
+
+
+                <img
+                    src="images/logo_POAK.png"
+                    alt="POAK"
+                    class="footer-logo"
+                >
+
+
+                <p>
+                    Fighting poverty across Kenya since 1997.
+                </p>
+
+
+                <p class="founded">
+                    Founded 7th December 1997
+                </p>
+
+
+            </div>
+
+
+            <div class="footer-programs">
+
+
+                <h4>
+                    Programs
+                </h4>
+
+
+                <ul>
+
+
+                    <li>
+
+                        <a href="education-program.html">
+                            Education
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="community-empowerment-program.html">
+                            Community Empowerment
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="peer-program.html">
+                            Peer Program
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <a href="mental-health-nutrition-program.html">
+                            Mental Health & Nutrition
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+
+                <h4>
+                    Contact
+                </h4>
+
+
+                <p>
+                    Nairobi, Kenya
+                </p>
+
+
+                <p>
+                    info@povertyafricakenya.co.ke
+                </p>
+
+
+                <p>
+                    0143709759 / 0777636674
+                </p>
+
+
+            </div>
+
+
+            <div class="footer-newsletter-column">
+
+
+                <h4>
+                    Stay Updated
+                </h4>
+
+
+                <p>
+                    Get our monthly impact stories and news.
+                </p>
+
+
+                <form
+                    class="newsletter-compact"
+                    id="newsletterForm"
+                >
+
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your email"
+                        required
+                        aria-label="Email address"
+                    >
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                        style="
+                            padding: 0.5rem 1rem;
+                            font-size: 0.9rem;
+                        "
+                    >
+                        Subscribe
+                    </button>
+
+
+                </form>
+
+
+                <p
+                    class="form-message"
+                    id="newsletterMessage"
+                ></p>
+
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+
+            <p>
+
+                &copy;
+
+                <span id="currentYear"></span>
+
+                POAK - All rights reserved.
+
+            </p>
+
+
+            <p class="registration">
+                Registered Nonprofit in Kenya
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+<!-- Scroll Top -->
+
+<button
+    class="scroll-top"
+    id="scrollTop"
+    aria-label="Scroll to top"
+></button>
+
+
+<!-- Main JavaScript -->
+
+<script src="js/script.js"></script>
+
+
 </body>
+
 </html>

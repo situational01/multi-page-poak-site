@@ -1,3 +1,107 @@
+// ===== Shared Footer =====
+document.addEventListener('DOMContentLoaded', function() {
+  const footer = document.querySelector('.footer');
+  if (!footer) return;
+
+  footer.innerHTML = `
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-link">
+            <img src="images/logo_POAK.png" alt="POAK - Poverty Africa Kenya" class="footer-logo">
+          </a>
+          <p class="footer-description">
+            Fighting poverty across Kenya by empowering communities,
+            expanding opportunities, and building sustainable pathways out of poverty.
+          </p>
+          <div class="footer-founded">
+            <span class="footer-founded-icon"><i class="fas fa-calendar-alt"></i></span>
+            <div>
+              <small>Established</small>
+              <strong>7th December 1997</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Programs</h4>
+          <span class="footer-heading-line"></span>
+          <ul class="footer-links">
+            <li><a href="education-program.html"><i class="fas fa-chevron-right"></i> Education</a></li>
+            <li><a href="community-empowerment-program.html"><i class="fas fa-chevron-right"></i> Community Empowerment</a></li>
+            <li><a href="peer-program.html"><i class="fas fa-chevron-right"></i> Peer Program</a></li>
+            <li><a href="mental-health-nutrition-program.html"><i class="fas fa-chevron-right"></i> Mental Health &amp; Nutrition</a></li>
+            <li><a href="4k-clubs.html"><i class="fas fa-chevron-right"></i> 4K Clubs for Schools</a></li>
+            <li><a href="4k-smart-farming.html"><i class="fas fa-chevron-right"></i> 4K Smart Farming</a></li>
+            <li><a href="livestock-development.html"><i class="fas fa-chevron-right"></i> Livestock Development</a></li>
+            <li><a href="climate-resilience.html"><i class="fas fa-chevron-right"></i> Climate Resilience</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact Us</h4>
+          <span class="footer-heading-line"></span>
+          <div class="footer-contact-list">
+            <a href="#" class="footer-contact-item">
+              <span class="footer-contact-icon"><i class="fas fa-location-dot"></i></span>
+              <span><small>Our Location</small> Nairobi, Kenya</span>
+            </a>
+            <a href="mailto:info@povertyafricakenya.co.ke" class="footer-contact-item">
+              <span class="footer-contact-icon"><i class="fas fa-envelope"></i></span>
+              <span><small>Email Us</small> info@povertyafricakenya.co.ke</span>
+            </a>
+            <a href="tel:0143709759" class="footer-contact-item">
+              <span class="footer-contact-icon"><i class="fas fa-phone"></i></span>
+              <span><small>Call Us</small> 0143709759</span>
+            </a>
+            <a href="tel:0777636674" class="footer-contact-item">
+              <span class="footer-contact-icon"><i class="fas fa-mobile-screen-button"></i></span>
+              <span><small>Mobile</small> 0777636674</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-newsletter-column">
+          <div class="footer-newsletter-card">
+            <span class="newsletter-icon"><i class="fas fa-paper-plane"></i></span>
+            <h4>Stay Updated</h4>
+            <p>
+              Subscribe for our latest impact stories, community updates,
+              and opportunities to support our work.
+            </p>
+            <form class="newsletter-compact" id="newsletterForm">
+              <div class="newsletter-input-wrap">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+              </div>
+              <button type="submit" class="newsletter-submit">Subscribe</button>
+            </form>
+            <p class="form-message" id="newsletterMessage"></p>
+            <small class="newsletter-note">We respect your inbox. No spam.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; <span id="currentYear"></span> POAK - Poverty Africa Kenya. All rights reserved.</p>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="about.html">About</a>
+          <a href="impact.html">Impact</a>
+          <a href="contact.html">Contact</a>
+          <a href="donate.html" class="footer-donate-link">Donate</a>
+        </div>
+        <div class="footer-registration">
+          <i class="fas fa-circle-check"></i>
+          <span>Registered Nonprofit in Kenya</span>
+        </div>
+      </div>
+    </div>`;
+});
+
 // ===== Animated Number Counter =====
 function initCountUp() {
   // Select all elements that contain numeric stats (extend as needed)

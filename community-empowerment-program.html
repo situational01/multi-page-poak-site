@@ -1,484 +1,1693 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-W0DNL1PP07');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-W0DNL1PP07');
+    </script>
 
-  <!-- SEO Meta Tags -->
-  <title>Community Empowerment Program - POAK Kenya | Financial Literacy & Economic Inclusion</title>
-  <meta name="description" content="POAK's Community Empowerment program provides financial literacy training, VSLA groups, and business support for men and women across Kenya. Join us to build economic resilience.">
-  <meta name="keywords" content="financial literacy Kenya, VSLA groups, community empowerment, economic inclusion Kenya, business training">
-  <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.povertyafricakenya.co.ke/community-empowerment-program.html">
+    <title>Community Empowerment Programme | Poverty Africa - Kenya</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Community Empowerment Program - POAK Kenya">
-  <meta property="og:description" content="Building economic resilience through financial literacy, VSLA groups, and business support for all community members.">
-  <meta property="og:url" content="https://www.povertyafricakenya.co.ke/community-empowerment-program.html">
-  <meta property="og:image" content="https://www.povertyafricakenya.co.ke/images/community-empowerment.jpg">
+    <meta name="description"
+        content="POAK's Community Empowerment Programme supports communities through financial literacy, savings, entrepreneurship and economic opportunities.">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo_POAK.png">
+    <meta name="robots" content="index, follow">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="canonical"
+        href="https://www.povertyafricakenya.co.ke/community-empowerment-program.html">
 
-  <style>
-    /* Override header gradient with a background image via inline style on the section */
-    .program-header {
-      background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-    }
-    .btn-primary {
-      background: #e67e22 !important;
-    }
-    .btn-primary:hover {
-      background: #d35400 !important;
-    }
-    .btn-secondary {
-      color: #e67e22 !important;
-      border-color: #e67e22 !important;
-    }
-    .btn-secondary:hover {
-      background: #e67e22 !important;
-      color: white !important;
-    }
-    .partner-badge {
-      background: #e67e22;
-    }
+    <meta property="og:title"
+        content="Community Empowerment Programme | Poverty Africa - Kenya">
 
-    /* Zoom animation for hero background */
-    .hero-zoom {
-      position: relative;
-      overflow: hidden;
-      background: none !important;
-    }
-    .hero-zoom::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                  url('images/new-images/community_emp.jpg') center/cover no-repeat;
-      z-index: 0;
-      animation: zoomInOut 8s ease-in-out infinite;
-    }
-    .hero-zoom .container {
-      position: relative;
-      z-index: 1;
-    }
-    @keyframes zoomInOut {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
+    <meta property="og:description"
+        content="Building stronger and more economically resilient communities through financial literacy, savings, entrepreneurship and business support.">
 
-    /* Responsive Steps Grid */
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin: 2rem 0;
-    }
+    <meta property="og:url"
+        content="https://www.povertyafricakenya.co.ke/community-empowerment-program.html">
 
-    /* Responsive Program Stats */
-    .program-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    .stat-item {
-      background: var(--bg-light);
-      padding: 1.2rem 1rem;
-      border-radius: 12px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .stat-number {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #e67e22;
-      line-height: 1.2;
-      word-break: break-word;
-    }
-    .stat-item span:last-child {
-      font-size: 0.9rem;
-      color: var(--text-light);
-    }
+    <meta property="og:image"
+        content="https://www.povertyafricakenya.co.ke/images/new-images/community_emp.jpg">
 
-    /* Ensure program detail stacks on small screens */
-    .program-detail {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    .program-main {
-      flex: 2;
-      min-width: 280px;
-    }
-    .program-sidebar {
-      flex: 1;
-      min-width: 250px;
-    }
+    <link rel="icon" type="image/png" href="images/logo_POAK.png">
 
-    /* Responsive typography & spacing */
-    @media (max-width: 768px) {
-      .hero-zoom h1 {
-        font-size: 2.2rem !important;
-      }
-      .hero-zoom p {
-        font-size: 1rem !important;
-      }
-      .steps-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-      }
-      .program-detail h2 {
-        font-size: 1.6rem;
-      }
-      .program-detail h3 {
-        font-size: 1.3rem;
-      }
-      .program-stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .stat-number {
-        font-size: 1.6rem;
-      }
-      .program-header {
-        min-height: 50vh !important;
-      }
-      .section {
-        padding: 2rem 0;
-      }
-    }
+    <link rel="stylesheet" href="css/style.css">
 
-    @media (max-width: 480px) {
-      .hero-zoom h1 {
-        font-size: 1.7rem !important;
-      }
-      .hero-zoom p {
-        font-size: 0.9rem !important;
-      }
-      .steps-grid {
-        grid-template-columns: 1fr !important;
-      }
-      .program-stats {
-        grid-template-columns: 1fr !important;  /* single column on extra small screens */
-      }
-      .stat-number {
-        font-size: 1.4rem;
-      }
-      .program-detail h2 {
-        font-size: 1.4rem;
-      }
-      .program-detail h3 {
-        font-size: 1.2rem;
-      }
-      .btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
-      }
-      .info-card {
-        padding: 1.2rem;
-      }
-      .testimonial {
-        padding: 1.2rem;
-      }
-      .program-header {
-        min-height: 40vh !important;
-        padding: 2rem 0 !important;
-      }
-      .container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-      .program-main, .program-sidebar {
-        min-width: 100%;
-        flex: 1 1 100%;
-      }
-    }
-  </style>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================================
+           PAGE
+        ========================================================= */
+
+        .community-page {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .community-page h1,
+        .community-page h2,
+        .community-page h3,
+        .community-page h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+        }
+
+        .community-page p {
+            color: var(--text-light);
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        .navbar {
+            background: var(--bg);
+            border-bottom: none;
+        }
+
+        .nav-menu > li > a {
+            color: var(--text);
+        }
+
+        .nav-menu > li > a:hover,
+        .nav-menu > li > a.active {
+            color: var(--primary);
+        }
+
+        .donate-btn {
+            background: var(--primary) !important;
+            color: #fff !important;
+            border-radius: 3px !important;
+            padding: 10px 18px !important;
+        }
+
+        .donate-btn:hover {
+            background: var(--primary-dark) !important;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .community-hero {
+            position: relative;
+            min-height: 550px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+            background: var(--footer-bg);
+        }
+
+        .community-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, .82),
+                    rgba(0, 0, 0, .58),
+                    rgba(0, 0, 0, .25)
+                ),
+                url("images/programs/community empowerment.jpeg")
+                center / cover no-repeat;
+        }
+
+        .community-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 760px;
+            padding: 80px 0;
+        }
+
+        .hero-label,
+        .eyebrow {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+        .hero-label {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 7px 12px;
+            background: rgba(255,255,255,.1);
+            border-radius: 3px;
+            color: #fff;
+            font-size: .72rem;
+        }
+
+        .community-hero h1 {
+            margin: 0 0 20px;
+            color: #fff;
+            font-size: clamp(2.5rem, 5vw, 4.3rem);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -.03em;
+        }
+
+        .community-hero p {
+            max-width: 690px;
+            margin: 0;
+            color: rgba(255,255,255,.92);
+            font-size: 1.08rem;
+            line-height: 1.75;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 22px;
+            border-radius: 3px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .8rem;
+            font-weight: 700;
+            transition: .25s ease;
+        }
+
+        .hero-button.primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .hero-button.primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .hero-button.secondary {
+            background: rgba(255,255,255,.1);
+            color: #fff;
+        }
+
+        .hero-button.secondary:hover {
+            background: rgba(255,255,255,.2);
+        }
+
+
+        /* =========================================================
+           SHARED SECTIONS
+        ========================================================= */
+
+        .intro-section,
+        .model-section,
+        .opportunities-section,
+        .vsla-section,
+        .status-section,
+        .business-section,
+        .partners-section,
+        .support-section {
+            padding: 80px 0;
+        }
+
+        .intro-section,
+        .opportunities-section,
+        .status-section,
+        .partners-section {
+            background: var(--bg);
+        }
+
+        .model-section,
+        .business-section,
+        .support-section {
+            background: var(--bg-light);
+        }
+
+        .vsla-section {
+            background: var(--bg-alt);
+        }
+
+        .eyebrow {
+            margin-bottom: 11px;
+            color: var(--primary);
+            font-size: .72rem;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2,
+        .intro-section h2,
+        .opportunities-section h2,
+        .vsla-heading h2,
+        .business-heading h2,
+        .status-layout h2,
+        .partners-header h2 {
+            margin: 0 0 15px;
+            font-size: clamp(1.9rem, 3vw, 2.7rem);
+            line-height: 1.2;
+        }
+
+        .section-heading p,
+        .vsla-heading p,
+        .business-heading p,
+        .partners-header p {
+            margin: 0;
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           INTRO
+        ========================================================= */
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1.4fr .6fr;
+            gap: 65px;
+            align-items: start;
+        }
+
+        .intro-section p {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .intro-note,
+        .community-box,
+        .model-card,
+        .vsla-card,
+        .status-item,
+        .business-item,
+        .partner-item,
+        .support-box {
+            background: var(--card-bg);
+            box-shadow: 0 6px 22px var(--shadow);
+            border: none !important;
+        }
+
+        .intro-note {
+            padding: 28px;
+            border-radius: 4px;
+        }
+
+        .intro-note strong {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .intro-note p {
+            margin: 0;
+            font-size: .9rem;
+        }
+
+
+        /* =========================================================
+           PROGRAMME MODEL
+        ========================================================= */
+
+        .model-grid,
+        .vsla-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .model-card,
+        .vsla-card {
+            padding: 28px 24px;
+            border-radius: 4px;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .model-card:hover,
+        .vsla-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px var(--shadow-hover);
+        }
+
+        .model-number,
+        .vsla-number {
+            display: block;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: .75rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+        }
+
+        .model-card h3,
+        .vsla-card h3 {
+            margin: 0 0 11px;
+            font-size: 1.03rem;
+            line-height: 1.4;
+        }
+
+        .model-card p,
+        .vsla-card p {
+            margin: 0;
+            font-size: .88rem;
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           OPPORTUNITIES
+        ========================================================= */
+
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 65px;
+            align-items: start;
+        }
+
+        .opportunities-section h2 {
+            font-size: 2.2rem;
+        }
+
+        .opportunities-grid > div > p {
+            line-height: 1.8;
+        }
+
+        .opportunity-list {
+            margin: 26px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .opportunity-list li {
+            position: relative;
+            margin-bottom: 16px;
+            padding-left: 18px;
+            color: var(--text-light);
+            line-height: 1.65;
+        }
+
+        .opportunity-list li::before {
+            content: "";
+            position: absolute;
+            top: .72em;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .opportunity-list strong {
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .community-box {
+            padding: 34px;
+            border-radius: 4px;
+        }
+
+        .community-box h3 {
+            margin: 0 0 18px;
+            font-size: 1.3rem;
+        }
+
+        .community-box ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .community-box li {
+            padding: 11px 0;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+
+
+        /* =========================================================
+           STATUS
+        ========================================================= */
+
+        .status-layout {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .status-layout h2 {
+            font-size: 2.2rem;
+        }
+
+        .status-layout p {
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .status-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .status-item {
+            padding: 26px 18px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .status-item strong {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: .95rem;
+        }
+
+        .status-item span {
+            color: var(--text-muted);
+            font-size: .8rem;
+        }
+
+
+        /* =========================================================
+           BUSINESSES
+        ========================================================= */
+
+        .business-heading {
+            max-width: 720px;
+            margin-bottom: 35px;
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .business-item {
+            padding: 20px;
+            border-radius: 4px;
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            font-size: .88rem;
+            font-weight: 600;
+            transition: transform .25s ease;
+        }
+
+        .business-item:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           OUR PARTNERS
+        ========================================================= */
+
+        .partners-section {
+            overflow: hidden;
+        }
+
+        .partners-header {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .partners-header h2 {
+            margin-bottom: 12px;
+        }
+
+        /* Continuous marquee */
+        .partners-marquee {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 8px 0 15px;
+        }
+
+        .partners-track {
+            display: flex;
+            width: max-content;
+            gap: 18px;
+            animation: partnerScroll 28s linear infinite;
+            will-change: transform;
+        }
+
+        .partners-marquee:hover .partners-track {
+            animation-play-state: paused;
+        }
+
+        .partner-item {
+            flex: 0 0 180px;
+            min-height: 145px;
+            padding: 22px 16px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: transform .25s ease;
+        }
+
+        .partner-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .partner-item img {
+            width: 100px;
+            height: 65px;
+            object-fit: contain;
+            margin-bottom: 13px;
+        }
+
+        .partner-item span {
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            font-size: .76rem;
+            font-weight: 600;
+        }
+
+        @keyframes partnerScroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(calc(-50% - 9px));
+            }
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta-section {
+            padding: 85px 0;
+            background: var(--footer-bg);
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: 1.4fr .6fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .cta-section h2 {
+            margin: 0 0 17px;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            line-height: 1.2;
+        }
+
+        .cta-section p {
+            max-width: 700px;
+            margin: 0;
+            color: var(--footer-text);
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .cta-button {
+            padding: 14px 20px;
+            border-radius: 3px;
+            text-align: center;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .8rem;
+            font-weight: 700;
+            transition: .25s ease;
+        }
+
+        .cta-button.primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .cta-button.primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .cta-button.secondary {
+            background: rgba(255,255,255,.1);
+            color: #fff;
+        }
+
+
+        /* =========================================================
+           SUPPORT
+        ========================================================= */
+
+        .support-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 38px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .support-box h2 {
+            margin: 0 0 13px;
+            font-size: 1.9rem;
+        }
+
+        .support-box p {
+            line-height: 1.7;
+        }
+
+        .payment-details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 26px 0;
+        }
+
+        .payment-detail {
+            padding: 17px;
+            background: var(--bg-alt);
+            border-radius: 3px;
+            box-shadow: none;
+        }
+
+        .payment-detail strong {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: .7rem;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+
+        .payment-detail span {
+            color: var(--text);
+            font-size: .85rem;
+        }
+
+        .support-button {
+            display: inline-block;
+            padding: 13px 24px;
+            background: var(--primary);
+            color: #fff;
+            border-radius: 3px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: .8rem;
+            font-weight: 700;
+        }
+
+        .support-button:hover {
+            background: var(--primary-dark);
+        }
+
+
+        /* =========================================================
+           DARK MODE
+        ========================================================= */
+
+        .dark-theme .community-page .intro-note,
+        .dark-theme .community-page .model-card,
+        .dark-theme .community-page .community-box,
+        .dark-theme .community-page .vsla-card,
+        .dark-theme .community-page .status-item,
+        .dark-theme .community-page .business-item,
+        .dark-theme .community-page .partner-item,
+        .dark-theme .community-page .support-box {
+            box-shadow: 0 8px 25px rgba(0,0,0,.25);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .model-grid,
+            .vsla-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .business-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .intro-grid,
+            .opportunities-grid,
+            .status-layout,
+            .cta-grid {
+                grid-template-columns: 1fr;
+                gap: 42px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .community-hero {
+                min-height: 510px;
+            }
+
+            .community-hero-content {
+                padding: 60px 20px;
+            }
+
+            .community-hero p {
+                font-size: 1rem;
+            }
+
+            .intro-section,
+            .model-section,
+            .opportunities-section,
+            .vsla-section,
+            .business-section,
+            .partners-section,
+            .cta-section {
+                padding: 62px 0;
+            }
+
+            .status-section,
+            .support-section {
+                padding: 55px 0;
+            }
+
+            .model-grid,
+            .vsla-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .status-items,
+            .payment-details {
+                grid-template-columns: 1fr;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .support-box {
+                padding: 28px 22px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-button {
+                width: 100%;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .community-hero {
+                min-height: 490px;
+            }
+
+            .community-hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .community-hero-content {
+                padding: 50px 16px;
+            }
+
+            .section-heading h2,
+            .intro-section h2,
+            .opportunities-section h2,
+            .vsla-heading h2,
+            .business-heading h2,
+            .status-layout h2,
+            .partners-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .community-box {
+                padding: 27px 22px;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .partner-item {
+                flex-basis: 160px;
+                min-height: 135px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            .partners-track {
+                animation: none;
+            }
+
+            .model-card,
+            .vsla-card,
+            .business-item,
+            .partner-item {
+                transition: none;
+            }
+        }
+
+    </style>
 </head>
-<body>
-  <!-- Floating Social Links -->
-    <div class="floating-social">
-        <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <img src="images/logo_POAK.png" alt="POAK Logo" class="logo-img">
-        <div class="logo-text">
-          <span class="logo-main">POAK</span>
-          <span class="logo-sub">Poverty Africa - Kenya</span>
-        </div>
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown">
-          <a href="programs.html" class="active">Programs <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="education-program.html">Education</a></li>
-            <li><a href="community-empowerment-program.html" class="active">Community Empowerment</a></li>
-            <li><a href="peer-program.html">Peer Program</a></li>
-            <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-          </ul>
-        </li>
-        <li><a href="impact.html">Impact</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="donate-btn">Donate</a></li>
-        <li class="theme-toggle-container">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-            <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Program Header with responsive text -->
-  <section class="program-header hero-zoom" style="
-    color: white;
-    text-shadow: 2px 2px 12px rgba(0,0,0,0.9);
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    padding: 4rem 0;
-  ">
-    <div class="container">
-      <h1 style="font-weight: 800; font-size: 3rem; line-height: 1.2;">Community Empowerment</h1>
-      <p style="font-size: 1.3rem; font-weight: 400; opacity: 0.95;">Financial literacy & economic inclusion for all</p>
-    </div>
-  </section>
+<body class="community-page">
 
-  <!-- Program Content -->
-  <section class="section">
-    <div class="container">
-      <div class="program-detail">
-        <div class="program-main">
-          <div class="partner-highlight">
-            <span class="partner-badge"><i class="fas fa-chart-line"></i> In Development</span>
-            <h2>Program Vision</h2>
-            <p>
-              POAK is developing a comprehensive Community Empowerment program to help both men and women build financial independence. We are actively planning to launch using the proven <strong>Village Savings and Loan Association (VSLA)</strong> model. Community members will form groups, pool savings, and provide small loans to each other to start or expand small businesses. Financial literacy training will be at the core of the program.
-            </p>
-          </div>
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
-          <h3>Planned Offerings</h3>
-          <ul>
-            <li><i class="fas fa-check-circle"></i> <strong>VSLA Groups</strong> – Men and women saving together, accessing small loans (planned)</li>
-            <li><i class="fas fa-check-circle"></i> <strong>Financial Literacy Training</strong> – Budgeting, saving, debt management, and investment basics (planned)</li>
-            <li><i class="fas fa-check-circle"></i> <strong>Business Training</strong> – Marketing, record‑keeping, and business planning (planned)</li>
-            <li><i class="fas fa-check-circle"></i> <strong>Startup Support</strong> – Seed capital and equipment for new businesses (planned)</li>
-            <li><i class="fas fa-check-circle"></i> <strong>Market Linkages</strong> – Connecting entrepreneurs to markets and customers (planned)</li>
-            <li><i class="fas fa-check-circle"></i> <strong>Leadership Development</strong> – Training community leaders to sustain the program (planned)</li>
-          </ul>
+    <nav class="navbar">
 
-          <h3>How VSLA Will Work</h3>
-          <div class="steps-grid">
-            <div class="step" style="background: var(--bg-light); padding: 1rem; border-radius: 12px; text-align: center;">
-              <span class="step-number" style="display: inline-block; width: 40px; height: 40px; background: #e67e22; color: white; border-radius: 50%; line-height: 40px; font-weight: bold; margin-bottom: 0.5rem;">1</span>
-              <h4 style="margin-bottom: 0.3rem;">Form a Group</h4>
-              <p style="font-size: 0.85rem;">15-25 people meet weekly, contributing a small amount to a shared fund.</p>
-            </div>
-            <div class="step" style="background: var(--bg-light); padding: 1rem; border-radius: 12px; text-align: center;">
-              <span class="step-number" style="display: inline-block; width: 40px; height: 40px; background: #e67e22; color: white; border-radius: 50%; line-height: 40px; font-weight: bold; margin-bottom: 0.5rem;">2</span>
-              <h4 style="margin-bottom: 0.3rem;">Save Together</h4>
-              <p style="font-size: 0.85rem;">Savings accumulate over 9-12 months, typically 100-500 KES per week.</p>
-            </div>
-            <div class="step" style="background: var(--bg-light); padding: 1rem; border-radius: 12px; text-align: center;">
-              <span class="step-number" style="display: inline-block; width: 40px; height: 40px; background: #e67e22; color: white; border-radius: 50%; line-height: 40px; font-weight: bold; margin-bottom: 0.5rem;">3</span>
-              <h4 style="margin-bottom: 0.3rem;">Access Loans</h4>
-              <p style="font-size: 0.85rem;">Members borrow from the group fund at low interest to start or grow a business.</p>
-            </div>
-            <div class="step" style="background: var(--bg-light); padding: 1rem; border-radius: 12px; text-align: center;">
-              <span class="step-number" style="display: inline-block; width: 40px; height: 40px; background: #e67e22; color: white; border-radius: 50%; line-height: 40px; font-weight: bold; margin-bottom: 0.5rem;">4</span>
-              <h4 style="margin-bottom: 0.3rem;">Share Profits</h4>
-              <p style="font-size: 0.85rem;">At year end, profits are shared equally among all members.</p>
-            </div>
-          </div>
+        <div class="nav-container">
 
-          <h3>Program Status</h3>
-          <div class="program-stats">
-            <div class="stat-item">
-              <span class="stat-number">Planned</span>
-              <span>People to Empower</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">Coming</span>
-              <span>VSLA Groups</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">In Development</span>
-              <span>Training Modules</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">Seeking</span>
-              <span>Funding Partners</span>
-            </div>
-          </div>
+            <a href="index.html" class="logo">
+                <img src="images/logo_POAK.png"
+                    alt="POAK Logo"
+                    class="logo-img">
 
-          <h3>Our Vision for Success</h3>
-          <div class="testimonial">
-            <i class="fas fa-quote-left"></i>
-            <p>"We envision a future where thousands of community members across Kenya have the financial knowledge, savings discipline, and business support to build sustainable livelihoods and break the cycle of poverty."</p>
-            <p class="author">- POAK Team</p>
-          </div>
+                <div class="logo-text">
+                    <span class="logo-main">POAK</span>
+                    <span class="logo-sub">Poverty Africa - Kenya</span>
+                </div>
+            </a>
 
-          <h3>Businesses We Plan to Support</h3>
-          <div class="business-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0;">
-            <span class="tag" style="background: var(--bg-light); padding: 0.3rem 0.8rem; border-radius: 30px;">Tailoring</span>
-            <span class="tag" style="background: var(--bg-light); padding: 0.3rem 0.8rem; border-radius: 30px;">Food Vending</span>
-            <span class="tag" style="background: var(--bg-light); padding: 0.3rem 0.8rem; border-radius: 30px;">Soap Making</span>
-            <span class="tag" style="background: var(--bg-light); padding: 0.3rem 0.8rem; border-radius: 30px;">Poultry</span>
-            <span class="tag" style="background: var(--bg-light); padding: 0.3rem 0.8rem; border-radius: 30px;">Bakery</span>
-            <span class="tag" style="background: var(--bg-light); padding: 0.3rem 0.8rem; border-radius: 30px;">Hairdressing</span>
-            <span class="tag" style="background: var(--bg-light); padding: 0.3rem 0.8rem; border-radius: 30px;">Carpentry</span>
-            <span class="tag" style="background: var(--bg-light); padding: 0.3rem 0.8rem; border-radius: 30px;">And more...</span>
-          </div>
+            <button class="hamburger"
+                id="hamburger"
+                aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+                <li class="dropdown">
+
+                    <a href="programs.html" class="active">
+                        Programs
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                     <ul class="dropdown-menu">
+                        <li><a href="education-program.html">Education</a></li>
+                        <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
+                        <li><a href="peer-program.html">Peer Program</a></li>
+                        <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
+                        <li><a href="4k-clubs.html">4K Clubs for Schools</a></li>
+                        <li><a href="4k-smart-farming.html">4K Smart Farming</a></li>
+                        <li><a href="livestock-development.html">Livestock Development</a></li>
+                        <li><a href="climate-resilience.html">Climate Resilience in Agriculture</a></li>
+                    </ul>
+
+                </li>
+
+                <li><a href="impact.html">Impact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+                <li>
+                    <a href="donate.html" class="donate-btn">
+                        Donate
+                    </a>
+                </li>
+
+                <li class="theme-toggle-container">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
+
+            </ul>
+
         </div>
 
-        <div class="program-sidebar">
-          <div class="info-card">
-            <h4>Be the First to Know</h4>
-            <p><strong>Program status:</strong> Under development. No active groups yet.</p>
-            <p><strong>Next steps:</strong> Register your interest below to receive updates when we launch.</p>
-            <a href="#" class="btn btn-primary">Register Interest</a>
-            <p style="font-size: 0.8rem; margin-top: 0.8rem;">We'll notify you when groups form and training begins.</p>
-          </div>
+    </nav>
 
-          <div class="info-card">
-            <h4>Partner With Us</h4>
-            <p>Are you an organization, business, or individual who wants to support community economic empowerment? Partner with POAK to help shape this program.</p>
-            <a href="contact.html" class="btn btn-secondary">Become a Partner</a>
-          </div>
 
-          <div class="info-card">
-            <h4>Support This Initiative</h4>
-            <p class="mpesa-highlight">
-              <strong>M-PESA PayBill:</strong> 600100
-            </p>
-            <p>Account: 0100011857657</p>
-            <p class="small">Account Name: "Broad Experiential Limited"</p>
-            <a href="donate.html" class="btn btn-secondary">Donate to Fund Launch</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-      <!-- Partners Section - Full Width with Scroll -->
-<section class="partners-section">
-    <div class="container">
-        <h2 class="section-title">Our Partners</h2>
-    </div>
-    <div class="partners-scroll">
-        <div class="partners-track" id="partnersTrack">
-            <!-- Partner 1 -->
-            <div class="partner-item">
-                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
-                <span>Broad Experiential</span>
+    <section class="community-hero">
+
+        <div class="container">
+
+            <div class="community-hero-content">
+
+                <span class="hero-label">
+                    Community Empowerment Programme
+                </span>
+
+                <h1>
+                    Building stronger, more resilient communities.
+                </h1>
+
+                <p>
+                    POAK is developing practical pathways that help
+                    communities strengthen financial knowledge,
+                    savings, entrepreneurship and access to economic
+                    opportunities.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="#opportunities"
+                        class="hero-button primary">
+                        Explore the programme
+                    </a>
+
+                    <a href="contact.html"
+                        class="hero-button secondary">
+                        Partner with POAK
+                    </a>
+
+                </div>
+
             </div>
-            <!-- Partner 2 -->
-            <div class="partner-item">
-                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
-                <span>Solar Panda</span>
-            </div>
-            <!-- Partner 3 -->
-            <div class="partner-item">
-                <img src="images/partners/world_vision.png" alt="World Vision">
-                <span>World Vision</span>
-            </div>
-            <!-- Partner 4 -->
-            <div class="partner-item">
-                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
-                <span>Fresh Life</span>
-            </div>
-            <!-- Partner 5 -->
-            <div class="partner-item">
-                <img src="images/partners/logo.png" alt="AA Kenya">
-                <span>AA Kenya</span>
-            </div>
-            <!-- Partner 6 -->
-            <div class="partner-item">
-                <img src="images/partners/wisdom_medical_services.png" alt="Wisdom Medical Services">
-                <span>Wisdom Medical Services</span>
-            </div>
+
         </div>
-    </div>
-</section>
+
+    </section>
 
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-about">
-          <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
-          <p>Fighting poverty across Kenya since 1997.</p>
-          <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
-        </div>
-        <div class="footer-programs">
-          <h4>Programs</h4>
-          <ul>
-            <li><a href="education-program.html">Education</a></li>
-            <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-            <li><a href="peer-program.html">Peer Program</a></li>
-            <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact</h4>
-          <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-          <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-          <p><i class="fas fa-phone"></i> 0143709759 / 0777636674</p>
-        </div>
-        <div class="footer-newsletter-column">
-          <h4>Stay Updated</h4>
-          <p>Get our monthly impact stories and news.</p>
-          <form class="newsletter-compact" id="newsletterForm">
-            <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-            <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
-          </form>
-          <p class="form-message" id="newsletterMessage"></p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
-        <p class="registration">Registered Nonprofit in Kenya</p>
-      </div>
-    </div>
-  </footer>
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
 
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+    <section class="intro-section">
 
-  <script src="js/script.js"></script>
+        <div class="container">
+
+            <div class="intro-grid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        Our approach
+                    </div>
+
+                    <h2>
+                        Supporting people to build stronger livelihoods.
+                    </h2>
+
+                    <p>
+                        POAK's Community Empowerment Programme is
+                        designed to help men and women strengthen
+                        their ability to manage money, save, develop
+                        businesses and access economic opportunities.
+                    </p>
+
+                    <p>
+                        The programme will combine financial literacy,
+                        community savings groups, entrepreneurship,
+                        business development and market linkages.
+                    </p>
+
+                </div>
+
+                <div class="intro-note">
+
+                    <strong>Programme status</strong>
+
+                    <p>
+                        The programme is currently under development.
+                        POAK is seeking partners, technical support
+                        and resources to establish it in selected
+                        communities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         HOW IT WORKS
+    ====================================================== -->
+
+    <section class="model-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="eyebrow">
+                    How it works
+                </div>
+
+                <h2>
+                    From knowledge to economic opportunity.
+                </h2>
+
+                <p>
+                    A practical approach combining financial knowledge,
+                    savings, entrepreneurship and access to markets.
+                </p>
+
+            </div>
+
+            <div class="model-grid">
+
+                <article class="model-card">
+                    <span class="model-number">01</span>
+                    <h3>Build financial knowledge</h3>
+                    <p>
+                        Practical guidance on budgeting, saving,
+                        responsible borrowing and basic investment.
+                    </p>
+                </article>
+
+                <article class="model-card">
+                    <span class="model-number">02</span>
+                    <h3>Strengthen savings</h3>
+                    <p>
+                        Community savings groups encourage regular
+                        saving and access to group-based financial support.
+                    </p>
+                </article>
+
+                <article class="model-card">
+                    <span class="model-number">03</span>
+                    <h3>Support enterprise</h3>
+                    <p>
+                        Business planning, record keeping, marketing
+                        and practical enterprise development skills.
+                    </p>
+                </article>
+
+                <article class="model-card">
+                    <span class="model-number">04</span>
+                    <h3>Connect to opportunity</h3>
+                    <p>
+                        Linking entrepreneurs with markets, partners,
+                        resources and other economic opportunities.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROGRAMME FOCUS
+    ====================================================== -->
+
+    <section class="opportunities-section" id="opportunities">
+
+        <div class="container">
+
+            <div class="opportunities-grid">
+
+                <div>
+
+                    <div class="eyebrow">
+                        Programme focus
+                    </div>
+
+                    <h2>
+                        What communities can gain
+                    </h2>
+
+                    <p>
+                        The programme focuses on practical needs that
+                        affect household economic resilience and
+                        sustainable livelihoods.
+                    </p>
+
+                    <ul class="opportunity-list">
+
+                        <li>
+                            <strong>Financial literacy</strong>
+                            to support informed financial decisions.
+                        </li>
+
+                        <li>
+                            <strong>Savings and small loans</strong>
+                            through community-based savings groups.
+                        </li>
+
+                        <li>
+                            <strong>Entrepreneurship training</strong>
+                            covering planning, marketing and record keeping.
+                        </li>
+
+                        <li>
+                            <strong>Business development</strong>
+                            for people starting or expanding enterprises.
+                        </li>
+
+                        <li>
+                            <strong>Market linkages</strong>
+                            to help entrepreneurs reach customers.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="community-box">
+
+                    <h3>
+                        Areas of planned support
+                    </h3>
+
+                    <ul>
+                        <li>Household financial management</li>
+                        <li>Community savings and lending</li>
+                        <li>Small business development</li>
+                        <li>Entrepreneurship and self-employment</li>
+                        <li>Market access and business linkages</li>
+                        <li>Leadership and community participation</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         VSLA
+    ====================================================== -->
+
+    <section class="vsla-section">
+
+        <div class="container">
+
+            <div class="vsla-heading section-heading">
+
+                <div class="eyebrow">
+                    Community savings
+                </div>
+
+                <h2>
+                    A practical approach to collective financial resilience.
+                </h2>
+
+                <p>
+                    POAK plans to use the Village Savings and Loan
+                    Association (VSLA) model to strengthen savings,
+                    access to small loans and community-led economic activity.
+                </p>
+
+            </div>
+
+            <div class="vsla-grid">
+
+                <article class="vsla-card">
+                    <span class="vsla-number">01</span>
+                    <h3>Form a group</h3>
+                    <p>
+                        Community members come together around shared
+                        savings and economic development goals.
+                    </p>
+                </article>
+
+                <article class="vsla-card">
+                    <span class="vsla-number">02</span>
+                    <h3>Save regularly</h3>
+                    <p>
+                        Members make agreed contributions that build
+                        a shared fund and encourage saving.
+                    </p>
+                </article>
+
+                <article class="vsla-card">
+                    <span class="vsla-number">03</span>
+                    <h3>Access group loans</h3>
+                    <p>
+                        Members may access group funds for needs or
+                        income-generating activities.
+                    </p>
+                </article>
+
+                <article class="vsla-card">
+                    <span class="vsla-number">04</span>
+                    <h3>Reinvest and grow</h3>
+                    <p>
+                        Savings and business income can help strengthen
+                        livelihoods and financial resilience.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         STATUS
+    ====================================================== -->
+
+    <section class="status-section">
+
+        <div class="container">
+
+            <div class="status-layout">
+
+                <div>
+
+                    <div class="eyebrow">
+                        Where we are now
+                    </div>
+
+                    <h2>
+                        Building the programme.
+                    </h2>
+
+                    <p>
+                        POAK is developing the programme model,
+                        identifying implementation communities and
+                        building partnerships for technical, financial
+                        and enterprise development support.
+                    </p>
+
+                </div>
+
+                <div class="status-items">
+
+                    <div class="status-item">
+                        <strong>Planned</strong>
+                        <span>Community groups</span>
+                    </div>
+
+                    <div class="status-item">
+                        <strong>In Development</strong>
+                        <span>Training modules</span>
+                    </div>
+
+                    <div class="status-item">
+                        <strong>Seeking</strong>
+                        <span>Funding partners</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ENTERPRISE
+    ====================================================== -->
+
+    <section class="business-section">
+
+        <div class="container">
+
+            <div class="business-heading">
+
+                <div class="eyebrow">
+                    Enterprise development
+                </div>
+
+                <h2>
+                    Businesses we aim to support.
+                </h2>
+
+                <p>
+                    Depending on community needs and available
+                    resources, the programme may support a range
+                    of small businesses and income-generating activities.
+                </p>
+
+            </div>
+
+            <div class="business-grid">
+
+                <div class="business-item">Tailoring</div>
+                <div class="business-item">Food Vending</div>
+                <div class="business-item">Soap Making</div>
+                <div class="business-item">Poultry</div>
+                <div class="business-item">Bakery</div>
+                <div class="business-item">Hairdressing</div>
+                <div class="business-item">Carpentry</div>
+                <div class="business-item">Other Local Enterprises</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OUR PARTNERS
+    ====================================================== -->
+
+    <section class="partners-section">
+
+        <div class="container">
+
+            <div class="partners-header">
+
+                <div class="eyebrow">
+                    Our network
+                </div>
+
+                <h2>OUR PARTNERS</h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="partners-marquee">
+
+            <div class="partners-track">
+
+                <!-- Set 1 -->
+
+                <div class="partner-item">
+                    <img src="images/Broad Experiential logo.png"
+                        alt="Broad Experiential">
+                    <span>Broad Experiential</span>
+                </div>
+
+                <div class="partner-item">
+                    <img src="images/partners/solarpanda.webp"
+                        alt="Solar Panda">
+                    <span>Solar Panda</span>
+                </div>
+
+                <div class="partner-item">
+                    <img src="images/partners/world_vision.png"
+                        alt="World Vision">
+                    <span>World Vision</span>
+                </div>
+
+                <div class="partner-item">
+                    <img src="images/partners/freshlife.jfif"
+                        alt="Fresh Life">
+                    <span>Fresh Life</span>
+                </div>
+
+                <div class="partner-item">
+                    <img src="images/partners/logo.png"
+                        alt="AA Kenya">
+                    <span>AA Kenya</span>
+                </div>
+
+                <div class="partner-item">
+                    <img src="images/partners/wisdom_medical_services.png"
+                        alt="Wisdom Medical Services">
+                    <span>Wisdom Medical Services</span>
+                </div>
+
+
+                <!-- Set 2 - duplicate for seamless animation -->
+
+                <div class="partner-item" aria-hidden="true">
+                    <img src="images/Broad Experiential logo.png"
+                        alt="">
+                    <span>Broad Experiential</span>
+                </div>
+
+                <div class="partner-item" aria-hidden="true">
+                    <img src="images/partners/solarpanda.webp"
+                        alt="">
+                    <span>Solar Panda</span>
+                </div>
+
+                <div class="partner-item" aria-hidden="true">
+                    <img src="images/partners/world_vision.png"
+                        alt="">
+                    <span>World Vision</span>
+                </div>
+
+                <div class="partner-item" aria-hidden="true">
+                    <img src="images/partners/freshlife.jfif"
+                        alt="">
+                    <span>Fresh Life</span>
+                </div>
+
+                <div class="partner-item" aria-hidden="true">
+                    <img src="images/partners/logo.png"
+                        alt="">
+                    <span>AA Kenya</span>
+                </div>
+
+                <div class="partner-item" aria-hidden="true">
+                    <img src="images/partners/wisdom_medical_services.png"
+                        alt="">
+                    <span>Wisdom Medical Services</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <div class="cta-grid">
+
+                <div>
+
+                    <div class="eyebrow"
+                        style="color: var(--secondary);">
+                        Get involved
+                    </div>
+
+                    <h2>
+                        Help communities build stronger livelihoods.
+                    </h2>
+
+                    <p>
+                        Whether you are a financial institution,
+                        business, training organisation, development
+                        partner or sponsor, your partnership can help
+                        create practical economic opportunities.
+                    </p>
+
+                </div>
+
+                <div class="cta-buttons">
+
+                    <a href="contact.html"
+                        class="cta-button primary">
+                        Become a partner
+                    </a>
+
+                    <a href="donate.html"
+                        class="cta-button secondary">
+                        Support the programme
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-about">
+
+                    <img src="images/logo_POAK.png"
+                        alt="POAK"
+                        class="footer-logo">
+
+                    <p>
+                        Fighting poverty across Kenya since 1997.
+                    </p>
+
+                    <p class="founded">
+                        Founded 7th December 1997
+                    </p>
+
+                </div>
+
+
+                <div class="footer-programs">
+
+                    <h4>Programs</h4>
+
+                    <ul>
+
+                        <li>
+                            <a href="education-program.html">
+                                Education
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="community-empowerment-program.html">
+                                Community Empowerment
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="peer-program.html">
+                                Peer Program
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mental-health-nutrition-program.html">
+                                Mental Health & Nutrition
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <h4>Contact</h4>
+
+                    <p>Nairobi, Kenya</p>
+                    <p>info@povertyafricakenya.co.ke</p>
+                    <p>0143709759 / 0777636674</p>
+
+                </div>
+
+
+                <div class="footer-newsletter-column">
+
+                    <h4>Stay Updated</h4>
+
+                    <p>
+                        Get our monthly impact stories and news.
+                    </p>
+
+                    <form class="newsletter-compact"
+                        id="newsletterForm">
+
+                        <input type="email"
+                            name="email"
+                            placeholder="Your email"
+                            required
+                            aria-label="Email address">
+
+                        <button type="submit"
+                            class="btn btn-primary"
+                            style="padding:.5rem 1rem;font-size:.9rem;">
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                    <p class="form-message"
+                        id="newsletterMessage"></p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy;
+                    <span id="currentYear"></span>
+                    POAK - All rights reserved.
+                </p>
+
+                <p class="registration">
+                    Registered Nonprofit in Kenya
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Scroll Top -->
+
+    <button class="scroll-top"
+        id="scrollTop"
+        aria-label="Scroll to top">
+    </button>
+
+
+    <!-- Main JavaScript -->
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

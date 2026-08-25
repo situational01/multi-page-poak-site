@@ -1,678 +1,2855 @@
+```html
 <!doctype html>
 <html lang="en">
-  <head>
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W0DNL1PP07');
-</script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W0DNL1PP07');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Our Impact - POAK Kenya | Fighting Poverty Since 1997</title>
+
     <meta
-      name="description"
-      content="See the impact of POAK's work in Kenya: 1,500+ Kenyans empowered, 13 communities reached, 5 counties served, founded in 1997."
-    />
-    <link rel="icon" type="image/png" href="images/logo_POAK.png" />
-    <link rel="stylesheet" href="css/style.css" />
+        name="description"
+        content="Discover the impact of Poverty Africa Kenya's work across communities in Kenya through education, community empowerment, youth development, mental health, nutrition and climate-smart agriculture."
+    >
+
+    <link rel="icon" type="image/png" href="images/logo_POAK.png">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <style>
-      /* Floating social tooltips (same as other pages) */
-      .floating-social a {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.2s ease, background 0.2s ease;
-      }
-      .floating-social a:hover::after {
-        content: attr(aria-label);
-        position: absolute;
-        right: 100%;
-        margin-right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #1e2a3a;
-        color: #ffffff;
-        padding: 6px 12px;
-        border-radius: 32px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        font-family: 'Open Sans', sans-serif;
-        letter-spacing: 0.3px;
-        white-space: nowrap;
-        z-index: 1000;
-        pointer-events: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(2px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        line-height: 1.2;
-      }
-      .floating-social a:hover::before {
-        content: '';
-        position: absolute;
-        right: 100%;
-        margin-right: 4px;
-        top: 50%;
-        transform: translateY(-50%);
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent transparent transparent #1e2a3a;
-        z-index: 1000;
-        pointer-events: none;
-      }
-      .floating-social a:hover {
-        transform: scale(1.05);
-      }
-      @media (max-width: 640px) {
-        .floating-social a:hover::after {
-          font-size: 0.7rem;
-          padding: 4px 8px;
-          margin-right: 8px;
-        }
-        .floating-social a:hover::before {
-          margin-right: 2px;
-          border-width: 4px;
-        }
-      }
 
-      /* WhatsApp Chat Button */
-      .whatsapp-chat-btn {
-        position: fixed;
-        bottom: 25px;
-        right: 30px;
-        z-index: 999;
-        background-color: #25D366;
-        color: #ffffff;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        font-size: 28px;
-        text-decoration: none;
-      }
-      .whatsapp-chat-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-      }
-      .whatsapp-chat-btn:hover::after {
-        content: attr(aria-label);
-        position: absolute;
-        right: 70px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #1e2a3a;
-        color: #ffffff;
-        padding: 6px 12px;
-        border-radius: 32px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        font-family: 'Open Sans', sans-serif;
-        letter-spacing: 0.3px;
-        white-space: nowrap;
-        z-index: 1000;
-        pointer-events: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(2px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        line-height: 1.2;
-      }
-      .whatsapp-chat-btn:hover::before {
-        content: '';
-        position: absolute;
-        right: 62px;
-        top: 50%;
-        transform: translateY(-50%);
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent transparent transparent #1e2a3a;
-        z-index: 1000;
-        pointer-events: none;
-      }
-      @media (max-width: 640px) {
-        .whatsapp-chat-btn {
-          width: 50px;
-          height: 50px;
-          bottom: 20px;
-          right: 20px;
-          font-size: 24px;
-        }
-        .whatsapp-chat-btn:hover::after {
-          font-size: 0.7rem;
-          padding: 4px 8px;
-          right: 60px;
-        }
-        .whatsapp-chat-btn:hover::before {
-          right: 52px;
-          border-width: 4px;
-        }
-      }
+        /* =========================================================
+           IMPACT PAGE
+           POAK BRAND PALETTE
+           RED + CHARCOAL + NEUTRALS
+           NO BLUE / NO GREEN
+        ========================================================= */
 
-      /* Responsive tweaks for impact page */
-      @media (max-width: 768px) {
-        .impact-hero-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
+        .impact-page {
+            --impact-red: #e74c3c;
+            --impact-red-dark: #c0392b;
+            --impact-dark: #1f7c33;
+            --impact-dark-soft: #1f7f2c;
+            --impact-muted: #6b7280;
+            --impact-light: #f7f8fa;
+            --impact-border: rgba(44, 62, 80, 0.10);
+            --impact-shadow: 0 12px 35px rgba(30, 42, 58, 0.08);
         }
+
+        /* =========================================================
+           PAGE HEADER
+        ========================================================= */
+
+        .impact-page .impact-hero {
+            min-height: 76vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(16, 24, 35, 0.88) 0%,
+                    rgba(16, 24, 35, 0.72) 48%,
+                    rgba(16, 24, 35, 0.38) 100%
+                ),
+                url("images/new-images/programs_hero.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .impact-page .impact-hero::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 5px;
+            background: var(--impact-red);
+        }
+
+        .impact-hero-content {
+            max-width: 760px;
+            color: #ffffff;
+            position: relative;
+            z-index: 2;
+            padding: 90px 0;
+        }
+
+        .impact-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .impact-eyebrow::before {
+            content: "";
+            width: 36px;
+            height: 3px;
+            background: var(--impact-red);
+            border-radius: 10px;
+        }
+
+        .impact-hero h1 {
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(2.8rem, 6vw, 5.3rem);
+            line-height: 1.02;
+            font-weight: 800;
+            margin: 0 0 24px;
+            color: #ffffff;
+        }
+
+        .impact-hero h1 span {
+            color: #ffffff;
+        }
+
+        .impact-hero-text {
+            max-width: 650px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.90);
+            margin: 0 0 32px;
+        }
+
+        .impact-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .impact-hero-actions a {
+            text-decoration: none;
+        }
+
+        .impact-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 24px;
+            border-radius: 7px;
+            background: var(--impact-red);
+            color: #ffffff !important;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .impact-btn-primary:hover {
+            background: var(--impact-red-dark);
+            transform: translateY(-2px);
+        }
+
+        .impact-btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 23px;
+            border: 1px solid rgba(255,255,255,0.45);
+            border-radius: 7px;
+            color: #ffffff !important;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .impact-btn-outline:hover {
+            background: #ffffff;
+            color: var(--impact-dark) !important;
+            border-color: #ffffff;
+        }
+
+        /* =========================================================
+           IMPACT NUMBERS
+        ========================================================= */
+
+        .impact-summary {
+            position: relative;
+            margin-top: -70px;
+            z-index: 5;
+        }
+
+        .impact-summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: var(--card-bg, #ffffff);
+            border-radius: 12px;
+            box-shadow: 0 18px 45px rgba(30, 42, 58, 0.13);
+            overflow: hidden;
+        }
+
+        .impact-stat {
+            padding: 34px 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .impact-stat:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 25%;
+            width: 1px;
+            height: 50%;
+            background: var(--impact-border);
+        }
+
+        .impact-stat-number {
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            line-height: 1;
+            color: var(--impact-red);
+            margin-bottom: 10px;
+        }
+
+        .impact-stat:nth-child(2) .impact-stat-number,
+        .impact-stat:nth-child(3) .impact-stat-number,
+        .impact-stat:nth-child(4) .impact-stat-number {
+            color: var(--impact-dark);
+        }
+
+        .impact-stat-label {
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text, #2c3e50);
+            margin: 0 0 7px;
+        }
+
+        .impact-stat-detail {
+            display: block;
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.78rem;
+            line-height: 1.5;
+            color: var(--muted, #6b7280);
+        }
+
+        /* =========================================================
+           SECTION INTRO
+        ========================================================= */
+
+        .impact-page .impact-section {
+            padding: 90px 0;
+        }
+
+        .impact-section-intro {
+            max-width: 760px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .impact-section-kicker {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--impact-red);
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+
+        .impact-section-title {
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2;
+            font-weight: 800;
+            color: var(--text, #2c3e50);
+            margin: 0 0 17px;
+        }
+
+        .impact-section-intro p {
+            font-family: "Open Sans", sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--muted, #6b7280);
+            margin: 0;
+        }
+
+        /* =========================================================
+           PROGRAM IMPACT
+        ========================================================= */
+
         .program-impact-grid {
-          grid-template-columns: repeat(2, 1fr);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
         }
+
+        .program-impact-card {
+            position: relative;
+            padding: 34px;
+            background: var(--card-bg, #ffffff);
+            border: 1px solid var(--border, rgba(44,62,80,0.10));
+            border-radius: 12px;
+            box-shadow: 0 7px 25px rgba(30,42,58,0.05);
+            overflow: hidden;
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .program-impact-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--impact-red);
+        }
+
+        .program-impact-card:nth-child(even)::before {
+            background: var(--impact-dark);
+        }
+
+        .program-impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px rgba(30,42,58,0.10);
+            border-color: rgba(231,76,60,0.20);
+        }
+
+        .program-card-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 26px;
+        }
+
+        .program-card-heading {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .program-icon {
+            width: 52px;
+            height: 52px;
+            flex: 0 0 52px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: rgba(231,76,60,0.08);
+            color: var(--impact-red);
+            font-size: 20px;
+        }
+
+        .program-impact-card:nth-child(even) .program-icon {
+            background: rgba(44,62,80,0.07);
+            color: var(--impact-dark);
+        }
+
+        .program-card-heading h3 {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.3rem;
+            line-height: 1.25;
+            font-weight: 800;
+            color: var(--text, #2c3e50);
+        }
+
+        .program-card-heading span {
+            display: block;
+            margin-top: 5px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.78rem;
+            color: var(--muted, #6b7280);
+        }
+
+        .program-description {
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--muted, #6b7280);
+            margin: 0 0 25px;
+        }
+
+        .program-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 27px;
+        }
+
+        .program-stat {
+            padding: 17px 10px;
+            border-radius: 8px;
+            background: var(--bg-light, #f7f8fa);
+            text-align: center;
+        }
+
+        .program-stat-number {
+            display: block;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--impact-red);
+            line-height: 1.15;
+            margin-bottom: 6px;
+        }
+
+        .program-impact-card:nth-child(even) .program-stat-number {
+            color: var(--impact-dark);
+        }
+
+        .program-stat-label {
+            display: block;
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.68rem;
+            line-height: 1.3;
+            color: var(--muted, #6b7280);
+        }
+
+        .program-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--impact-red);
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .program-impact-card:nth-child(even) .program-link {
+            color: var(--impact-dark);
+        }
+
+        .program-link:hover {
+            gap: 12px;
+        }
+
+        /* =========================================================
+           IMPACT STORY
+        ========================================================= */
+
+        .impact-story-section {
+            background: var(--bg-light, #f7f8fa);
+        }
+
+        .impact-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .impact-story-image {
+            position: relative;
+        }
+
+        .impact-story-image img {
+            display: block;
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 18px 45px rgba(30,42,58,0.12);
+        }
+
+        .impact-story-image::after {
+            content: "";
+            position: absolute;
+            left: -15px;
+            bottom: -15px;
+            width: 100px;
+            height: 100px;
+            border-left: 5px solid var(--impact-red);
+            border-bottom: 5px solid var(--impact-red);
+            border-radius: 0 0 0 8px;
+            z-index: -1;
+        }
+
+        .impact-story-content .impact-section-kicker {
+            text-align: left;
+        }
+
+        .impact-story-content h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+            line-height: 1.2;
+            font-weight: 800;
+            color: var(--text, #2c3e50);
+            margin: 0 0 20px;
+        }
+
+        .impact-story-content p {
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.96rem;
+            line-height: 1.85;
+            color: var(--muted, #6b7280);
+            margin: 0 0 18px;
+        }
+
+        .impact-story-highlight {
+            margin-top: 28px;
+            padding: 22px 24px;
+            border-left: 4px solid var(--impact-red);
+            background: var(--card-bg, #ffffff);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .impact-story-highlight p {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.65;
+            font-weight: 600;
+            color: var(--text, #2c3e50);
+        }
+
+        /* =========================================================
+           WHERE WE WORK
+        ========================================================= */
+
+        .counties-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .county-item {
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px 14px;
+            background: var(--card-bg, #ffffff);
+            border: 1px solid var(--border, rgba(44,62,80,0.10));
+            border-radius: 9px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text, #2c3e50);
+            transition: 0.25s ease;
+        }
+
+        .county-item:hover {
+            transform: translateY(-3px);
+            border-color: var(--impact-red);
+            color: var(--impact-red);
+            box-shadow: 0 10px 25px rgba(30,42,58,0.07);
+        }
+
+        /* =========================================================
+           WHO WE SERVE
+        ========================================================= */
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .target-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 21px 20px;
+            background: var(--card-bg, #ffffff);
+            border: 1px solid var(--border, rgba(44,62,80,0.10));
+            border-radius: 9px;
+            transition: 0.25s ease;
+        }
+
+        .target-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(30,42,58,0.07);
+            border-color: rgba(231,76,60,0.18);
+        }
+
+        .target-item i {
+            width: 39px;
+            height: 39px;
+            flex: 0 0 39px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(231,76,60,0.08);
+            color: var(--impact-red);
+            font-size: 15px;
+        }
+
+        .target-item span {
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.83rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--text, #2c3e50);
+        }
+
+        /* =========================================================
+           STORIES
+        ========================================================= */
+
         .stories-grid {
-          grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
-        .counties-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-        .target-grid {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
 
-      @media (max-width: 480px) {
-        .impact-hero-grid {
-          grid-template-columns: 1fr;
+        .story-card {
+            overflow: hidden;
+            background: var(--card-bg, #ffffff);
+            border: 1px solid var(--border, rgba(44,62,80,0.10));
+            border-radius: 12px;
+            box-shadow: 0 7px 25px rgba(30,42,58,0.05);
+            transition: 0.3s ease;
         }
-        .program-impact-grid {
-          grid-template-columns: 1fr;
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px rgba(30,42,58,0.10);
         }
-        .counties-grid {
-          grid-template-columns: repeat(2, 1fr);
+
+        .story-card img {
+            display: block;
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
         }
-        .target-grid {
-          grid-template-columns: repeat(2, 1fr);
+
+        .story-content {
+            padding: 27px;
         }
-        .impact-hero-card {
-          padding: 1.2rem;
+
+        .story-category {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--impact-red);
         }
-        .impact-hero-number {
-          font-size: 2.5rem;
+
+        .story-content h3 {
+            margin: 0 0 13px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.25rem;
+            line-height: 1.35;
+            color: var(--text, #2c3e50);
         }
-        .program-impact-card h3 {
-          font-size: 1.3rem;
+
+        .story-content p {
+            margin: 0 0 20px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.88rem;
+            line-height: 1.75;
+            color: var(--muted, #6b7280);
         }
-        .stat-number-large {
-          font-size: 1.8rem;
+
+        .story-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--impact-red);
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-decoration: none;
         }
-      }
+
+        /* =========================================================
+           REPORT CTA
+        ========================================================= */
+
+        .impact-report {
+            background: var(--impact-dark);
+            border-radius: 13px;
+            padding: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .impact-report::after {
+            content: "";
+            position: absolute;
+            width: 260px;
+            height: 260px;
+            border: 55px solid rgba(255,255,255,0.035);
+            border-radius: 50%;
+            right: -80px;
+            top: -100px;
+        }
+
+        .impact-report-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .impact-report h2 {
+            margin: 0 0 12px;
+            color: #ffffff;
+            font-family: "Montserrat", sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .impact-report p {
+            max-width: 650px;
+            margin: 0;
+            color: rgba(255,255,255,0.75);
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .impact-report-action {
+            flex-shrink: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* =========================================================
+           DONOR CTA
+        ========================================================= */
+
+        .donor-cta {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--impact-red),
+                    var(--impact-red-dark)
+                );
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .donor-cta::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 60px solid rgba(255,255,255,0.06);
+            border-radius: 50%;
+            left: -130px;
+            bottom: -180px;
+        }
+
+        .donor-cta-inner {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .donor-cta h2 {
+            margin: 0 0 15px;
+            font-family: "Montserrat", sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .donor-cta p {
+            max-width: 700px;
+            margin: 0 auto 28px;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .donor-cta .impact-btn-outline {
+            border-color: rgba(255,255,255,0.65);
+        }
+
+        /* =========================================================
+           PARTNERS
+        ========================================================= */
+
+        .impact-page .partners-section {
+            width: 100%;
+            background: var(--bg-light, #f7f8fa);
+            padding: 75px 0;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .impact-page .partners-section .section-title {
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 38px;
+            color: var(--text, #2c3e50);
+        }
+
+        .impact-page .partners-section .section-title::after {
+            content: "";
+            display: block;
+            width: 45px;
+            height: 3px;
+            background: var(--impact-red);
+            margin: 13px auto 0;
+            border-radius: 10px;
+        }
+
+        .partners-scroll {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        .partners-track {
+            display: flex;
+            gap: 22px;
+            width: max-content;
+            animation: impactPartnerScroll 30s linear infinite;
+        }
+
+        .partners-scroll:hover .partners-track {
+            animation-play-state: paused;
+        }
+
+        .partner-item {
+            flex: 0 0 205px;
+            min-height: 165px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 24px 18px;
+            background: var(--card-bg, #ffffff);
+            border: 1px solid var(--border);
+            border-radius: 11px;
+            transition: 0.25s ease;
+        }
+
+        .partner-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px var(--shadow, rgba(0,0,0,0.08));
+            border-color: rgba(231,76,60,0.25);
+        }
+
+        .partner-item img {
+            width: 88px;
+            height: 75px;
+            object-fit: contain;
+        }
+
+        .partner-item span {
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text, #2c3e50);
+        }
+
+        @keyframes impactPartnerScroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* =========================================================
+           FLOATING SOCIAL LINKS
+        ========================================================= */
+
+        .impact-page .floating-social a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .impact-page .floating-social a:hover {
+            transform: scale(1.06);
+        }
+
+        .impact-page .floating-social a:hover::after {
+            content: attr(aria-label);
+            position: absolute;
+            right: 100%;
+            margin-right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1e2a3a;
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 32px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            font-family: "Open Sans", sans-serif;
+            white-space: nowrap;
+            z-index: 1000;
+            pointer-events: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .impact-page .floating-social a:hover::before {
+            content: "";
+            position: absolute;
+            right: 100%;
+            margin-right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent #1e2a3a;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        /* =========================================================
+           WHATSAPP
+        ========================================================= */
+
+        .impact-page .whatsapp-chat-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 30px;
+            z-index: 999;
+            background-color: #25D366;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 28px;
+            text-decoration: none;
+        }
+
+        .impact-page .whatsapp-chat-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 7px 18px rgba(0,0,0,0.28);
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .impact-summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .impact-stat:nth-child(2)::after {
+                display: none;
+            }
+
+            .counties-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .target-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .impact-story-grid {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .impact-page .impact-hero {
+                min-height: 70vh;
+                background-position: center;
+            }
+
+            .impact-hero-content {
+                padding: 80px 0 110px;
+            }
+
+            .impact-hero h1 {
+                font-size: clamp(2.5rem, 11vw, 4rem);
+            }
+
+            .impact-hero-text {
+                font-size: 1rem;
+            }
+
+            .impact-summary {
+                margin-top: -55px;
+            }
+
+            .impact-summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .impact-stat {
+                padding: 27px 18px;
+            }
+
+            .impact-stat:nth-child(odd)::after {
+                display: block;
+            }
+
+            .impact-stat:nth-child(even)::after {
+                display: none;
+            }
+
+            .impact-page .impact-section {
+                padding: 70px 0;
+            }
+
+            .program-impact-grid,
+            .stories-grid,
+            .impact-story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-story-image img {
+                height: 390px;
+            }
+
+            .impact-report {
+                padding: 38px 28px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .counties-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .target-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .impact-hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .impact-hero-actions a {
+                width: 100%;
+            }
+
+            .impact-summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-stat:not(:last-child)::after {
+                right: 15%;
+                left: 15%;
+                top: auto;
+                bottom: 0;
+                width: 70%;
+                height: 1px;
+            }
+
+            .impact-stat:nth-child(2)::after {
+                display: block;
+            }
+
+            .impact-stat-number {
+                font-size: 2.4rem;
+            }
+
+            .program-impact-card {
+                padding: 27px 23px;
+            }
+
+            .program-stats {
+                gap: 7px;
+            }
+
+            .program-stat {
+                padding: 14px 7px;
+            }
+
+            .program-stat-number {
+                font-size: 1.2rem;
+            }
+
+            .program-stat-label {
+                font-size: 0.62rem;
+            }
+
+            .impact-story-image img {
+                height: 300px;
+            }
+
+            .impact-story-image::after {
+                width: 70px;
+                height: 70px;
+                left: -8px;
+                bottom: -8px;
+            }
+
+            .counties-grid,
+            .target-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-report {
+                padding: 32px 23px;
+            }
+
+            .impact-report h2 {
+                font-size: 1.5rem;
+            }
+
+            .partner-item {
+                flex-basis: 175px;
+                min-height: 145px;
+            }
+
+            .impact-page .whatsapp-chat-btn {
+                width: 52px;
+                height: 52px;
+                right: 18px;
+                bottom: 18px;
+                font-size: 23px;
+            }
+
+            .impact-page .floating-social a:hover::after {
+                font-size: 0.7rem;
+                padding: 4px 8px;
+                margin-right: 8px;
+            }
+
+            .impact-page .floating-social a:hover::before {
+                margin-right: 2px;
+                border-width: 4px;
+            }
+        }
+
+        /* =========================================================
+           DARK THEME
+        ========================================================= */
+
+        .dark-theme .impact-page .impact-summary-grid,
+        .dark-theme .impact-page .program-impact-card,
+        .dark-theme .impact-page .county-item,
+        .dark-theme .impact-page .target-item,
+        .dark-theme .impact-page .story-card,
+        .dark-theme .impact-page .impact-story-highlight,
+        .dark-theme .impact-page .partner-item {
+            box-shadow: none;
+        }
+
+        .dark-theme .impact-page .program-stat {
+            background: rgba(255,255,255,0.035);
+        }
+
+        .dark-theme .impact-page .impact-story-section,
+        .dark-theme .impact-page .partners-section {
+            background: var(--bg-alt, #1e2a3a);
+        }
+
+        .dark-theme .impact-page .impact-summary-grid {
+            border: 1px solid var(--border);
+        }
+
     </style>
-  </head>
-  <body>
-  <!-- Floating Social Links (Right Center) with enhanced hover tooltips -->
+
+</head>
+
+<body class="impact-page">
+
+    <!-- =========================================================
+         FLOATING SOCIAL LINKS
+    ========================================================= -->
+
     <div class="floating-social">
-        <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="index.html" class="logo">
-          <img src="images/logo_POAK.png" alt="POAK Logo" class="logo-img" />
-          <div class="logo-text">
-            <span class="logo-main">POAK</span>
-            <span class="logo-sub">Poverty Africa - Kenya</span>
-          </div>
+
+        <a
+            href="https://www.facebook.com/profile.php?id=61588395929911"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+        >
+            <i class="fab fa-facebook-f"></i>
         </a>
-        <button class="hamburger" id="hamburger">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown">
-          <a href="programs.html">Programs <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="education-program.html">Education</a></li>
-            <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-            <li><a href="peer-program.html">Peer Program</a></li>
-            <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-          </ul>
-        </li>
-          <li><a href="impact.html" class="active">Impact</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <!-- <li><a href="calendar.html" class="active">Calendar</a></li> -->
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="donate.html" class="donate-btn">Donate</a></li>
-          <li class="theme-toggle-container">
-            <button class="theme-toggle" id="themeToggle">
-              <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+
+        <a
+            href="https://www.instagram.com/povertyafricakenya/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+        >
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a
+            href="https://www.linkedin.com/company/poverty-africa-kenya-poak/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+        >
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a
+            href="https://www.tiktok.com/@povertyafricakenya"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+        >
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+    </div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+
+                <img
+                    src="images/logo_POAK.png"
+                    alt="POAK Logo"
+                    class="logo-img"
+                >
+
+                <div class="logo-text">
+                    <span class="logo-main">POAK</span>
+                    <span class="logo-sub">Poverty Africa - Kenya</span>
+                </div>
+
+            </a>
+
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-          </li>
-        </ul>
-      </div>
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li class="dropdown">
+
+                    <a href="programs.html">
+                        Programs
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="education-program.html">
+                                Education
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="community-empowerment-program.html">
+                                Community Empowerment
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="peer-program.html">
+                                Peer Program
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mental-health-nutrition-program.html">
+                                Mental Health & Nutrition
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="4k-clubs.html">
+                                4K Clubs for Schools
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="4k-smart-farming.html">
+                                4K Smart Farming
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livestock-development.html">
+                                Livestock Development
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="climate-resilience.html">
+                                Climate Resilience in Agriculture
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="impact.html" class="active">
+                        Impact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="donate.html" class="donate-btn">
+                        Donate
+                    </a>
+                </li>
+
+                <li class="theme-toggle-container">
+
+                    <button
+                        class="theme-toggle"
+                        id="themeToggle"
+                        aria-label="Toggle dark mode"
+                    >
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </div>
+
     </nav>
 
-    <!-- Header with full-cover image, no cropping -->
-    <section class="page-header" style="
-    background-color: #1a1a1a;
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-        url('images/new-images/programs_hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    padding: 4rem 0;
-">
-    <div class="container">
-        <h1>Our Impact</h1>
-        <p>28+ years of fighting poverty in Kenya</p>
-    </div>
-</section>
 
-    <!-- Key Impact Numbers -->
-    <section class="section">
-      <div class="container">
-        <div class="impact-hero-grid">
-          <div class="impact-hero-card">
-            <div class="impact-hero-number">1,500+</div>
-            <p class="impact-hero-label">Kenyans Empowered</p>
-            <span class="impact-hero-desc"
-              >Directly supported through our programs</span
-            >
-          </div>
-          <div class="impact-hero-card">
-            <div class="impact-hero-number">13</div>
-            <p class="impact-hero-label">Communities Reached</p>
-            <span class="impact-hero-desc">Across 5 counties in Kenya</span>
-          </div>
-          <div class="impact-hero-card">
-            <div class="impact-hero-number">5</div>
-            <p class="impact-hero-label">Counties Served</p>
-            <span class="impact-hero-desc"
-              >Nairobi, Kisumu, Busia, Makueni, Kiambu</span
-            >
-          </div>
-          <div class="impact-hero-card">
-            <div class="impact-hero-number">1997</div>
-            <p class="impact-hero-label">Year Founded</p>
-            <span class="impact-hero-desc">28+ Years of Service</span>
-          </div>
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <header class="impact-hero">
+
+        <div class="container">
+
+            <div class="impact-hero-content">
+
+                <span class="impact-eyebrow">
+                    Our Impact
+                </span>
+
+                <h1>
+                    Turning commitment<br>
+                    into <span>lasting impact.</span>
+                </h1>
+
+                <p class="impact-hero-text">
+                    For more than 28 years, Poverty Africa Kenya has worked
+                    alongside communities to create opportunities, strengthen
+                    livelihoods and help people build more secure futures.
+                </p>
+
+                <div class="impact-hero-actions">
+
+                    <a
+                        href="#impact-programs"
+                        class="impact-btn-primary"
+                    >
+                        Explore Our Impact
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+
+                    <a
+                        href="donate.html"
+                        class="impact-btn-outline"
+                    >
+                        Support Our Work
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="years-badge-large">
-          <span>28+ Years of Service</span>
+    </header>
+
+
+    <!-- =========================================================
+         KEY NUMBERS
+    ========================================================= -->
+
+    <section class="impact-summary">
+
+        <div class="container">
+
+            <div class="impact-summary-grid">
+
+                <div class="impact-stat">
+
+                    <div class="impact-stat-number">
+                        1,500+
+                    </div>
+
+                    <p class="impact-stat-label">
+                        Kenyans Empowered
+                    </p>
+
+                    <span class="impact-stat-detail">
+                        People directly supported through our programs
+                    </span>
+
+                </div>
+
+                <div class="impact-stat">
+
+                    <div class="impact-stat-number">
+                        13
+                    </div>
+
+                    <p class="impact-stat-label">
+                        Communities Reached
+                    </p>
+
+                    <span class="impact-stat-detail">
+                        Working with communities across Kenya
+                    </span>
+
+                </div>
+
+                <div class="impact-stat">
+
+                    <div class="impact-stat-number">
+                        5
+                    </div>
+
+                    <p class="impact-stat-label">
+                        Counties Served
+                    </p>
+
+                    <span class="impact-stat-detail">
+                        Nairobi, Kisumu, Busia, Makueni & Kiambu
+                    </span>
+
+                </div>
+
+                <div class="impact-stat">
+
+                    <div class="impact-stat-number">
+                        28+
+                    </div>
+
+                    <p class="impact-stat-label">
+                        Years of Service
+                    </p>
+
+                    <span class="impact-stat-detail">
+                        Founded on 7 December 1997
+                    </span>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
     </section>
 
-   <!-- Program-Specific Impact (ALIGNED WITH CURRENT PROGRAMS) -->
-<section class="section bg-light">
-    <div class="container">
-        <h2 class="section-title">Impact by Program</h2>
-        <div class="section-line"></div>
-        
-        <div class="program-impact-grid">
-            <!-- Program 1 - Education -->
-            <div class="program-impact-card">
-                <div class="card-icon-wrapper">
-                    <div class="program-icon-circle" style="background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 86, 179, 0.1));">
-                        <i class="fas fa-graduation-cap" style="color: #0066cc;"></i>
-                    </div>
-                </div>
-                <h3>Education</h3>
-                <div class="program-stats-container">
-                    <div class="stat-item">
-                        <span class="stat-number-large">400+</span>
-                        <span class="stat-label-small">Students Supported</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number-large">85%</span>
-                        <span class="stat-label-small">School Retention</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number-large">8</span>
-                        <span class="stat-label-small">Partner Schools</span>
-                    </div>
-                </div>
-                <div class="program-description">
-                    <p>Providing scholarships, learning materials, and mentorship to keep children in school.</p>
-                </div>
-                <a href="education-program.html" class="impact-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+
+    <!-- =========================================================
+         PROGRAM IMPACT
+    ========================================================= -->
+
+    <section
+        class="impact-section"
+        id="impact-programs"
+    >
+
+        <div class="container">
+
+            <div class="impact-section-intro">
+
+                <span class="impact-section-kicker">
+                    What We Are Achieving
+                </span>
+
+                <h2 class="impact-section-title">
+                    Impact by Program
+                </h2>
+
+                <p>
+                    Our programs respond to practical challenges facing
+                    children, young people, women and vulnerable households,
+                    while creating pathways toward greater opportunity and
+                    resilience.
+                </p>
+
             </div>
-            
-            <!-- Program 2 - Community Empowerment -->
-            <div class="program-impact-card">
-                <div class="card-icon-wrapper">
-                    <div class="program-icon-circle" style="background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(33, 136, 56, 0.1));">
-                        <i class="fas fa-users" style="color: #28a745;"></i>
+
+
+            <div class="program-impact-grid">
+
+
+                <!-- =====================================================
+                     EDUCATION
+                ====================================================== -->
+
+                <article class="program-impact-card">
+
+                    <div class="program-card-top">
+
+                        <div class="program-card-heading">
+
+                            <div class="program-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+
+                            <div>
+                                <h3>Education</h3>
+
+                                <span>
+                                    Creating pathways to opportunity
+                                </span>
+                            </div>
+
+                        </div>
+
                     </div>
-                </div>
-                <h3>Community Empowerment</h3>
-                <div class="program-stats-container">
-                    <div class="stat-item">
-                        <span class="stat-number-large">80</span>
-                        <span class="stat-label-small">VSLA Groups</span>
+
+                    <p class="program-description">
+                        Supporting children with access to education,
+                        learning resources and mentorship that help them
+                        remain engaged in school and prepare for the future.
+                    </p>
+
+                    <div class="program-stats">
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">400+</span>
+                            <span class="program-stat-label">
+                                Students Supported
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">85%</span>
+                            <span class="program-stat-label">
+                                School Retention
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">8</span>
+                            <span class="program-stat-label">
+                                Partner Schools
+                            </span>
+                        </div>
+
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number-large">1,500+</span>
-                        <span class="stat-label-small">Members</span>
+
+                    <a
+                        href="education-program.html"
+                        class="program-link"
+                    >
+                        Explore Education
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- =====================================================
+                     COMMUNITY EMPOWERMENT
+                ====================================================== -->
+
+                <article class="program-impact-card">
+
+                    <div class="program-card-top">
+
+                        <div class="program-card-heading">
+
+                            <div class="program-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+
+                            <div>
+                                <h3>Community Empowerment</h3>
+
+                                <span>
+                                    Strengthening household livelihoods
+                                </span>
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number-large">KSh 3.2M</span>
-                        <span class="stat-label-small">Savings Mobilized</span>
+
+                    <p class="program-description">
+                        Building financial independence through savings
+                        groups, livelihood training and community-led
+                        economic initiatives.
+                    </p>
+
+                    <div class="program-stats">
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">80</span>
+                            <span class="program-stat-label">
+                                VSLA Groups
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">1,500+</span>
+                            <span class="program-stat-label">
+                                Members
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">KSh 3.2M</span>
+                            <span class="program-stat-label">
+                                Savings Mobilized
+                            </span>
+                        </div>
+
                     </div>
-                </div>
-                <div class="program-description">
-                    <p>Building financial independence through savings groups and livelihood training.</p>
-                </div>
-                <a href="community-empowerment-program.html" class="impact-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+
+                    <a
+                        href="community-empowerment-program.html"
+                        class="program-link"
+                    >
+                        Explore Community Work
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- =====================================================
+                     PEER PROGRAM
+                ====================================================== -->
+
+                <article class="program-impact-card">
+
+                    <div class="program-card-top">
+
+                        <div class="program-card-heading">
+
+                            <div class="program-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+
+                            <div>
+                                <h3>Peer Program</h3>
+
+                                <span>
+                                    Young people leading change
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="program-description">
+                        Equipping young people with life skills, leadership
+                        abilities and knowledge so they can support and
+                        influence positive change among their peers.
+                    </p>
+
+                    <div class="program-stats">
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">300+</span>
+                            <span class="program-stat-label">
+                                Peer Educators
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">25</span>
+                            <span class="program-stat-label">
+                                Active Clubs
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">92%</span>
+                            <span class="program-stat-label">
+                                Positive Behavior Change
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="peer-program.html"
+                        class="program-link"
+                    >
+                        Explore Peer Program
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- =====================================================
+                     MENTAL HEALTH & NUTRITION
+                ====================================================== -->
+
+                <article class="program-impact-card">
+
+                    <div class="program-card-top">
+
+                        <div class="program-card-heading">
+
+                            <div class="program-icon">
+                                <i class="fas fa-heart-pulse"></i>
+                            </div>
+
+                            <div>
+                                <h3>Mental Health & Nutrition</h3>
+
+                                <span>
+                                    Supporting healthier communities
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="program-description">
+                        Providing mental health support, community awareness
+                        and nutrition education to people experiencing
+                        vulnerability and social or economic challenges.
+                    </p>
+
+                    <div class="program-stats">
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">3+</span>
+                            <span class="program-stat-label">
+                                Counseling Sessions
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">7+</span>
+                            <span class="program-stat-label">
+                                Support Groups
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">50+</span>
+                            <span class="program-stat-label">
+                                Nutrition Packages
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="mental-health-nutrition-program.html"
+                        class="program-link"
+                    >
+                        Explore Program
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- =====================================================
+                     4K CLUBS FOR SCHOOLS
+                ====================================================== -->
+
+                <article class="program-impact-card">
+
+                    <div class="program-card-top">
+
+                        <div class="program-card-heading">
+
+                            <div class="program-icon">
+                                <i class="fas fa-school"></i>
+                            </div>
+
+                            <div>
+                                <h3>4K Clubs for Schools</h3>
+
+                                <span>
+                                    Building agricultural skills in schools
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="program-description">
+                        Supporting school-based 4K Clubs to introduce learners
+                        to practical agriculture, food production,
+                        environmental stewardship and entrepreneurship.
+                    </p>
+
+                    <div class="program-stats">
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">4K</span>
+                            <span class="program-stat-label">
+                                Club Approach
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">4</span>
+                            <span class="program-stat-label">
+                                Programme Areas
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">Youth</span>
+                            <span class="program-stat-label">
+                                Future Farmers
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="4k-clubs.html"
+                        class="program-link"
+                    >
+                        Explore 4K Clubs
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- =====================================================
+                     4K SMART FARMING
+                ====================================================== -->
+
+                <article class="program-impact-card">
+
+                    <div class="program-card-top">
+
+                        <div class="program-card-heading">
+
+                            <div class="program-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+
+                            <div>
+                                <h3>4K Smart Farming</h3>
+
+                                <span>
+                                    Practical climate-smart agriculture
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="program-description">
+                        Promoting practical and climate-smart farming methods
+                        that improve food production, strengthen household
+                        resilience and support sustainable livelihoods.
+                    </p>
+
+                    <div class="program-stats">
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">2</span>
+                            <span class="program-stat-label">
+                                Pilot Areas
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">Smart</span>
+                            <span class="program-stat-label">
+                                Farming Practices
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">Food</span>
+                            <span class="program-stat-label">
+                                Production Focus
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="4k-smart-farming.html"
+                        class="program-link"
+                    >
+                        Explore Smart Farming
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- =====================================================
+                     LIVESTOCK DEVELOPMENT
+                ====================================================== -->
+
+                <article class="program-impact-card">
+
+                    <div class="program-card-top">
+
+                        <div class="program-card-heading">
+
+                            <div class="program-icon">
+                                <i class="fas fa-cow"></i>
+                            </div>
+
+                            <div>
+                                <h3>Livestock Development</h3>
+
+                                <span>
+                                    Strengthening rural livelihoods
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="program-description">
+                        Supporting households to improve livestock production,
+                        animal management and income opportunities through
+                        practical knowledge and community-based approaches.
+                    </p>
+
+                    <div class="program-stats">
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">2</span>
+                            <span class="program-stat-label">
+                                Pilot Areas
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">Rural</span>
+                            <span class="program-stat-label">
+                                Communities
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">Income</span>
+                            <span class="program-stat-label">
+                                Livelihood Focus
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="livestock-development.html"
+                        class="program-link"
+                    >
+                        Explore Livestock Work
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
+                <!-- =====================================================
+                     CLIMATE RESILIENCE IN AGRICULTURE
+                ====================================================== -->
+
+                <article class="program-impact-card">
+
+                    <div class="program-card-top">
+
+                        <div class="program-card-heading">
+
+                            <div class="program-icon">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+
+                            <div>
+                                <h3>Climate Resilience in Agriculture</h3>
+
+                                <span>
+                                    Helping farmers adapt and thrive
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="program-description">
+                        Helping farming communities adapt to changing climate
+                        conditions through resilient crops, improved farming
+                        practices, water conservation and better planning.
+                    </p>
+
+                    <div class="program-stats">
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">2</span>
+                            <span class="program-stat-label">
+                                Pilot Areas
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">Climate</span>
+                            <span class="program-stat-label">
+                                Adaptation Focus
+                            </span>
+                        </div>
+
+                        <div class="program-stat">
+                            <span class="program-stat-number">Resilient</span>
+                            <span class="program-stat-label">
+                                Farming Systems
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="climate-resilience.html"
+                        class="program-link"
+                    >
+                        Explore Climate Work
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </article>
+
+
             </div>
-            
-            <!-- Program 3 - Peer Program -->
-            <div class="program-impact-card">
-                <div class="card-icon-wrapper">
-                    <div class="program-icon-circle" style="background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(224, 168, 0, 0.1));">
-                        <i class="fas fa-comments" style="color: #ffc107;"></i>
-                    </div>
-                </div>
-                <h3>Peer Program</h3>
-                <div class="program-stats-container">
-                    <div class="stat-item">
-                        <span class="stat-number-large">300+</span>
-                        <span class="stat-label-small">Peer Educators</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number-large">25</span>
-                        <span class="stat-label-small">Active Clubs</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number-large">92%</span>
-                        <span class="stat-label-small">Positive Behavior Change</span>
-                    </div>
-                </div>
-                <div class="program-description">
-                    <p>Youth-led mentorship promoting life skills, leadership, and reproductive health.</p>
-                </div>
-                <a href="peer-program.html" class="impact-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            
-            <!-- Program 4 - Mental Health & Nutrition -->
-            <div class="program-impact-card">
-                <div class="card-icon-wrapper">
-                    <div class="program-icon-circle" style="background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(200, 35, 51, 0.1));">
-                        <i class="fas fa-heartbeat" style="color: #dc3545;"></i>
-                    </div>
-                </div>
-                <h3>Mental Health & Nutrition</h3>
-                <div class="program-stats-container">
-                    <div class="stat-item">
-                        <span class="stat-number-large">3+</span>
-                        <span class="stat-label-small">Counseling Sessions</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number-large">7+</span>
-                        <span class="stat-label-small">Support Groups</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number-large">50+</span>
-                        <span class="stat-label-small">Nutrition Packages Distributed</span>
-                    </div>
-                </div>
-                <div class="program-description">
-                    <p>Providing mental health support and nutrition education to vulnerable communities.</p>
-                </div>
-                <a href="mental-health-nutrition-program.html" class="impact-btn">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
+
         </div>
-    </div>
-</section>
 
-    <!-- Success Stories -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Blog</h2>
-        <div class="section-line"></div>
-
-        <div class="stories-grid">
-          <div class="story-card">
-            <img
-              src="images/women-program.jpg"
-              alt="Mary's tailoring business"
-              onerror="
-                this.src =
-                  'https://via.placeholder.com/400x300?text=Mary%27s+Story'
-              "
-            />
-            <div class="story-content">
-              <span class="story-category">Sanitary Pad Drive</span>
-              <h3>Pad Drive Initiative in Kiambiu</h3>
-              <p>
-                Before this drive, I used pieces of an old mattress. I would stay home from school for a week every month because I was afraid of leaking and being laughed at. Now I have pads and I know how to take care of myself. I feel like a normal girl again.
-              </p>
-              <a href="blog-post.html?id=1" class="story-link"
-                >Read Full Story →</a
-              >
-            </div>
-          </div>
-
-          <div class="story-card">
-            <img
-              src="images/blog/stress awareness month.png"
-              alt="David working as developer"
-              onerror="
-                this.src =
-                  'https://via.placeholder.com/400x300?text=David%27s+Story'
-              "
-            />
-            <div class="story-content">
-              <span class="story-category">Self Awareness month</span>
-              <h3>Self Awareness Month: Managing Stress & Mental Wellness</h3>
-              <p>
-                Learn practical tips to stay stress-free and build emotional resilience.
-              </p>
-              <a href="blog-post.html?id=2" class="story-link"
-                >Read Full Story →</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <a href="blog.html" class="btn btn-secondary">Read More Stories</a>
-        </div>
-      </div>
     </section>
 
-    <!-- Where We Work -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Where We Work</h2>
-        <div class="section-line"></div>
-        <p class="section-subtitle">
-          Serving communities across 5 counties in Kenya
-        </p>
 
-        <div class="counties-grid">
-          <div class="county-item">Nairobi</div>
-          <div class="county-item">Kisumu</div>
-          <div class="county-item">Busia</div>
-          <div class="county-item">Makueni</div>
-          <div class="county-item">Kiambu</div>
+    <!-- =========================================================
+         IMPACT STORY
+    ========================================================= -->
+
+    <section class="impact-section impact-story-section">
+
+        <div class="container">
+
+            <div class="impact-story-grid">
+
+                <div class="impact-story-image">
+
+                    <img
+                        src="images/women-program.jpg"
+                        alt="Community members participating in a POAK program"
+                        onerror="this.style.display='none';"
+                    >
+
+                </div>
+
+                <div class="impact-story-content">
+
+                    <span class="impact-section-kicker">
+                        Impact Beyond Numbers
+                    </span>
+
+                    <h2>
+                        Change is measured in people, not just statistics.
+                    </h2>
+
+                    <p>
+                        At POAK, we believe meaningful development happens
+                        when communities have the knowledge, resources and
+                        opportunities to shape their own futures.
+                    </p>
+
+                    <p>
+                        From supporting children to remain in school to
+                        strengthening household livelihoods, improving food
+                        production and creating spaces for young people to
+                        lead, our work focuses on practical change that can
+                        continue beyond individual projects.
+                    </p>
+
+                    <div class="impact-story-highlight">
+
+                        <p>
+                            We work with communities — not simply for them —
+                            because lasting change is strongest when people
+                            have ownership of the solutions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
     </section>
 
-    <!-- Target Population -->
-    <section class="section bg-light">
-      <div class="container">
-        <h2 class="section-title">Who We Serve</h2>
-        <div class="section-line"></div>
 
-        <div class="target-grid">
-          <div class="target-item">
-            <i class="fas fa-user-graduate"></i>
-            <span>Unemployed youth</span>
-          </div>
-          <div class="target-item">
-            <i class="fas fa-female"></i>
-            <span>Women & single mothers</span>
-          </div>
-          <div class="target-item">
-            <i class="fas fa-hands-helping"></i>
-            <span>Widows & orphans</span>
-          </div>
-          <div class="target-item">
-            <i class="fas fa-wheelchair"></i>
-            <span>Persons with disabilities</span>
-          </div>
-          <div class="target-item">
-            <i class="fas fa-home"></i>
-            <span>Informal settlements</span>
-          </div>
-          <div class="target-item">
-            <i class="fas fa-mountain"></i>
-            <span>Rural communities</span>
-          </div>
+    <!-- =========================================================
+         STORIES
+    ========================================================= -->
+
+    <section class="impact-section">
+
+        <div class="container">
+
+            <div class="impact-section-intro">
+
+                <span class="impact-section-kicker">
+                    Stories From Our Work
+                </span>
+
+                <h2 class="impact-section-title">
+                    Stories Behind the Impact
+                </h2>
+
+                <p>
+                    Numbers show scale. Stories show what that change means
+                    in people's everyday lives.
+                </p>
+
+            </div>
+
+            <div class="stories-grid">
+
+                <article class="story-card">
+
+                    <img
+                        src="images/women-program.jpg"
+                        alt="POAK sanitary pad drive in Kiambiu"
+                        onerror="this.style.display='none';"
+                    >
+
+                    <div class="story-content">
+
+                        <span class="story-category">
+                            Sanitary Pad Drive
+                        </span>
+
+                        <h3>
+                            Pad Drive Initiative in Kiambiu
+                        </h3>
+
+                        <p>
+                            A community initiative supporting girls with
+                            menstrual health resources alongside life skills
+                            and awareness activities.
+                        </p>
+
+                        <a
+                            href="blog-post.html?id=1"
+                            class="story-link"
+                        >
+                            Read Full Story
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="story-card">
+
+                    <img
+                        src="images/blog/stress awareness month.png"
+                        alt="Self Awareness Month and mental wellness"
+                        onerror="this.style.display='none';"
+                    >
+
+                    <div class="story-content">
+
+                        <span class="story-category">
+                            Self Awareness Month
+                        </span>
+
+                        <h3>
+                            Managing Stress & Mental Wellness
+                        </h3>
+
+                        <p>
+                            Practical conversations and activities helping
+                            people understand stress, emotional wellbeing
+                            and healthier ways of responding to life's
+                            challenges.
+                        </p>
+
+                        <a
+                            href="blog-post.html?id=2"
+                            class="story-link"
+                        >
+                            Read Full Story
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <div class="text-center" style="margin-top: 35px;">
+
+                <a
+                    href="blog.html"
+                    class="btn btn-secondary"
+                >
+                    View All Stories
+                </a>
+
+            </div>
+
         </div>
-      </div>
+
     </section>
 
-    <!-- Annual Report CTA -->
-    <section class="section">
-      <div class="container">
-        <div class="report-card">
-          <div class="report-icon">
-            <i class="fas fa-file-alt"></i>
-          </div>
-          <h3>Download Our Annual Impact Report</h3>
-          <p>
-            Get detailed statistics, success stories, and financial information
-            from our programs.
-          </p>
-          <a href="#" class="btn btn-primary">Download PDF (2.5 MB)</a>
+
+    <!-- =========================================================
+         WHERE WE WORK
+    ========================================================= -->
+
+    <section class="impact-section">
+
+        <div class="container">
+
+            <div class="impact-section-intro">
+
+                <span class="impact-section-kicker">
+                    Our Reach
+                </span>
+
+                <h2 class="impact-section-title">
+                    Where We Work
+                </h2>
+
+                <p>
+                    Our work reaches communities across five counties in
+                    Kenya, responding to local priorities and needs.
+                </p>
+
+            </div>
+
+            <div class="counties-grid">
+
+                <div class="county-item">
+                    Nairobi
+                </div>
+
+                <div class="county-item">
+                    Kisumu
+                </div>
+
+                <div class="county-item">
+                    Busia
+                </div>
+
+                <div class="county-item">
+                    Makueni
+                </div>
+
+                <div class="county-item">
+                    Kiambu
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
     </section>
 
-    <!-- Call to Action -->
-    <section class="section cta-section">
-      <div class="container">
-        <div class="cta-box">
-          <h2>Support Our Work</h2>
-          <p>
-            Your donation helps us continue making an impact in Kenya. 100% of
-            funds support our programs.
-          </p>
-          <a href="donate.html" class="btn btn-primary">Donate via M-PESA</a>
+
+    <!-- =========================================================
+         WHO WE SERVE
+    ========================================================= -->
+
+    <section class="impact-section impact-story-section">
+
+        <div class="container">
+
+            <div class="impact-section-intro">
+
+                <span class="impact-section-kicker">
+                    People At The Centre
+                </span>
+
+                <h2 class="impact-section-title">
+                    Who We Serve
+                </h2>
+
+                <p>
+                    We prioritize people and communities facing barriers to
+                    opportunity, inclusion and economic security.
+                </p>
+
+            </div>
+
+            <div class="target-grid">
+
+                <div class="target-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Unemployed youth</span>
+                </div>
+
+                <div class="target-item">
+                    <i class="fas fa-person-dress"></i>
+                    <span>Women & single mothers</span>
+                </div>
+
+                <div class="target-item">
+                    <i class="fas fa-hands-helping"></i>
+                    <span>Widows & orphans</span>
+                </div>
+
+                <div class="target-item">
+                    <i class="fas fa-wheelchair"></i>
+                    <span>Persons with disabilities</span>
+                </div>
+
+                <div class="target-item">
+                    <i class="fas fa-house"></i>
+                    <span>Informal settlements</span>
+                </div>
+
+                <div class="target-item">
+                    <i class="fas fa-mountain"></i>
+                    <span>Rural communities</span>
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
     </section>
 
-        <!-- Partners Section - Full Width with Scroll -->
-<section class="partners-section">
-    <div class="container">
-        <h2 class="section-title">Our Partners</h2>
-    </div>
-    <div class="partners-scroll">
-        <div class="partners-track" id="partnersTrack">
-            <!-- Partner 1 -->
-            <div class="partner-item">
-                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
-                <span>Broad Experiential</span>
-            </div>
-            <!-- Partner 2 -->
-            <div class="partner-item">
-                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
-                <span>Solar Panda</span>
-            </div>
-            <!-- Partner 3 -->
-            <div class="partner-item">
-                <img src="images/partners/world_vision.png" alt="World Vision">
-                <span>World Vision</span>
-            </div>
-            <!-- Partner 4 -->
-            <div class="partner-item">
-                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
-                <span>Fresh Life</span>
-            </div>
-            <!-- Partner 5 -->
-            <div class="partner-item">
-                <img src="images/partners/logo.png" alt="AA Kenya">
-                <span>AA Kenya</span>
-            </div>
-            <!-- Partner 6 -->
-            <div class="partner-item">
-                <img src="images/partners/wisdom_medical_services.png" alt="Wisdom Medical Services">
-                <span>Wisdom Medical Services</span>
-            </div>
-        </div>
-    </div>
-</section>
 
+    <!-- =========================================================
+         ANNUAL REPORT
+    ========================================================= -->
 
-  <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-about">
-                <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
-                <p>Fighting poverty across Kenya since 1997.</p>
-                <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
+    <section class="impact-section">
+
+        <div class="container">
+
+            <div class="impact-report">
+
+                <div class="impact-report-content">
+
+                    <h2>
+                        Want to understand our work in more detail?
+                    </h2>
+
+                    <p>
+                        Access our impact reporting for more information
+                        about our programs, achievements, communities and
+                        the people we serve.
+                    </p>
+
+                </div>
+
+                <div class="impact-report-action">
+
+                    <a
+                        href="#"
+                        class="impact-btn-primary"
+                    >
+                        <i class="fas fa-file-pdf"></i>
+                        Download Impact Report
+                    </a>
+
+                </div>
+
             </div>
-            
-            <div class="footer-programs">
-                <h4>Programs</h4>
-          <ul>
-            <li><a href="education-program.html">Education</a></li>
-            <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-            <li><a href="peer-program.html">Peer Program</a></li>
-            <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-          </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-                <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                <p><i class="fas fa-phone"></i> 0143709759 / 0777636674</p>
-               
-            </div>
-            <!-- NEWSLETTER COLUMN (compact) -->
-            <div class="footer-newsletter-column">
-                <h4>Stay Updated</h4>
-                <p>Get our monthly impact stories and news.</p>
-                <form class="newsletter-compact" id="newsletterForm">
-                    <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                    <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
-                </form>
-                <p class="form-message" id="newsletterMessage"></p>
-            </div>
+
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
-            <p class="registration">Registered Nonprofit in Kenya</p>
-        </div>
-    </div>
-</footer>
+    </section>
 
-    <button class="scroll-top" id="scrollTop">
-      <i class="fas fa-arrow-up"></i>
+
+    <!-- =========================================================
+         DONOR CTA
+    ========================================================= -->
+
+    <section class="impact-section donor-cta">
+
+        <div class="container">
+
+            <div class="donor-cta-inner">
+
+                <h2>
+                    Help us reach more communities.
+                </h2>
+
+                <p>
+                    Your support helps POAK continue investing in education,
+                    livelihoods, youth development, health and resilient
+                    communities across Kenya.
+                </p>
+
+                <a
+                    href="donate.html"
+                    class="impact-btn-outline"
+                >
+                    Support POAK
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         PARTNERS
+    ========================================================= -->
+
+    <section class="partners-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Our Partners
+            </h2>
+
+        </div>
+
+        <div class="partners-scroll">
+
+            <div class="partners-track" id="partnersTrack">
+
+                <div class="partner-item">
+                    <img
+                        src="images/Broad Experiential logo.png"
+                        alt="Broad Experiential"
+                    >
+                    <span>Broad Experiential</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/solarpanda.webp"
+                        alt="Solar Panda"
+                    >
+                    <span>Solar Panda</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/world_vision.png"
+                        alt="World Vision"
+                    >
+                    <span>World Vision</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/freshlife.jfif"
+                        alt="Fresh Life"
+                    >
+                    <span>Fresh Life</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/logo.png"
+                        alt="AA Kenya"
+                    >
+                    <span>AA Kenya</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/wisdom_medical_services.png"
+                        alt="Wisdom Medical Services"
+                    >
+                    <span>Wisdom Medical Services</span>
+                </div>
+
+
+                <!-- Duplicate set for continuous animation -->
+
+                <div class="partner-item">
+                    <img
+                        src="images/Broad Experiential logo.png"
+                        alt="Broad Experiential"
+                    >
+                    <span>Broad Experiential</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/solarpanda.webp"
+                        alt="Solar Panda"
+                    >
+                    <span>Solar Panda</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/world_vision.png"
+                        alt="World Vision"
+                    >
+                    <span>World Vision</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/freshlife.jfif"
+                        alt="Fresh Life"
+                    >
+                    <span>Fresh Life</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/logo.png"
+                        alt="AA Kenya"
+                    >
+                    <span>AA Kenya</span>
+                </div>
+
+                <div class="partner-item">
+                    <img
+                        src="images/partners/wisdom_medical_services.png"
+                        alt="Wisdom Medical Services"
+                    >
+                    <span>Wisdom Medical Services</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-about">
+
+                    <img
+                        src="images/logo_POAK.png"
+                        alt="POAK"
+                        class="footer-logo"
+                    >
+
+                    <p>
+                        Fighting poverty across Kenya since 1997.
+                    </p>
+
+                    <p class="founded">
+                        <i class="fas fa-calendar-alt"></i>
+                        Founded 7th December 1997
+                    </p>
+
+                </div>
+
+
+                <div class="footer-programs">
+
+                    <h4>
+                        Programs
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            <a href="education-program.html">
+                                Education
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="community-empowerment-program.html">
+                                Community Empowerment
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="peer-program.html">
+                                Peer Program
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mental-health-nutrition-program.html">
+                                Mental Health & Nutrition
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="4k-clubs.html">
+                                4K Clubs for Schools
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="4k-smart-farming.html">
+                                4K Smart Farming
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livestock-development.html">
+                                Livestock Development
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="climate-resilience.html">
+                                Climate Resilience
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Nairobi, Kenya
+                    </p>
+
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        info@povertyafricakenya.co.ke
+                    </p>
+
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        0143709759 / 0777636674
+                    </p>
+
+                </div>
+
+
+                <div class="footer-newsletter-column">
+
+                    <h4>
+                        Stay Updated
+                    </h4>
+
+                    <p>
+                        Get our monthly impact stories and news.
+                    </p>
+
+                    <form
+                        class="newsletter-compact"
+                        id="newsletterForm"
+                    >
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your email"
+                            required
+                            aria-label="Email address"
+                        >
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                    <p
+                        class="form-message"
+                        id="newsletterMessage"
+                    ></p>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy;
+                    <span id="currentYear"></span>
+                    POAK - All rights reserved.
+                </p>
+
+                <p class="registration">
+                    Registered Nonprofit in Kenya
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         SCROLL TOP
+    ========================================================= -->
+
+    <button
+        class="scroll-top"
+        id="scrollTop"
+        aria-label="Scroll to top"
+    >
+        <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- WhatsApp Chat Button -->
-    <a href="https://wa.me/254777636674" class="whatsapp-chat-btn" target="_blank" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
+
+    <!-- =========================================================
+         WHATSAPP
+    ========================================================= -->
+
+    <a
+        href="https://wa.me/254777636674"
+        class="whatsapp-chat-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        title="Chat with us on WhatsApp"
+    >
         <i class="fab fa-whatsapp"></i>
     </a>
 
+
+    <!-- =========================================================
+         SITE JAVASCRIPT
+    ========================================================= -->
+
     <script src="js/script.js"></script>
-  </body>
+
+
+    <!-- Impact page year fallback -->
+
+    <script>
+
+        const yearElement =
+            document.getElementById("currentYear");
+
+        if (yearElement) {
+            yearElement.textContent =
+                new Date().getFullYear();
+        }
+
+    </script>
+
+</body>
 </html>

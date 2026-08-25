@@ -1,51 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'G-W0DNL1PP07');
     </script>
+
+    <!-- SEO -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    
-    <!-- SEO Meta Tags -->
-    <title>POAK - Poverty Africa Kenya | Fighting Poverty in Kenya Since 1997</title>
-    <meta name="description" content="POAK is a registered Kenyan nonprofit fighting poverty since 1997. Support our programs in Education, Community Empowerment, Peer Mentorship, Mental Health & Nutrition. Donate via M-PESA PayBill 600100.">
-    <meta name="keywords" content="poverty Kenya, nonprofit Kenya, charity Kenya, donate Kenya, M-PESA PayBill 600100, financial literacy Kenya, peer mentorship, mental health Kenya">
-    <meta name="author" content="POAK - Poverty Africa Kenya">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.povertyafricakenya.co.ke/">
-    
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+
+    <title>
+        POAK - Poverty Africa Kenya | Fighting Poverty in Kenya Since 1997
+    </title>
+
+    <meta
+        name="description"
+        content="POAK is a registered Kenyan nonprofit fighting poverty since 1997 through education, community empowerment, peer mentorship, mental health, nutrition and climate-smart agriculture.">
+
+    <meta
+        name="keywords"
+        content="poverty Kenya, nonprofit Kenya, charity Kenya, donate Kenya, POAK, Poverty Africa Kenya, financial literacy Kenya, peer mentorship, mental health Kenya">
+
+    <meta
+        name="author"
+        content="POAK - Poverty Africa Kenya">
+
+    <meta
+        name="robots"
+        content="index, follow">
+
+    <!-- Canonical -->
+    <link
+        rel="canonical"
+        href="https://www.povertyafricakenya.co.ke/">
+
     <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.povertyafricakenya.co.ke/">
-    <meta property="og:title" content="POAK - Poverty Africa Kenya">
-    <meta property="og:description" content="Empowering communities through Education, Financial Literacy, Peer Support, and Mental Health & Nutrition.">
-    <meta property="og:image" content="https://www.povertyafricakenya.co.ke/images/logo_POAK.png">
-    
+    <meta
+        property="og:type"
+        content="website">
+
+    <meta
+        property="og:url"
+        content="https://www.povertyafricakenya.co.ke/">
+
+    <meta
+        property="og:title"
+        content="POAK - Poverty Africa Kenya">
+
+    <meta
+        property="og:description"
+        content="Empowering communities through education, financial literacy, peer support, mental health, nutrition and sustainable development.">
+
+    <meta
+        property="og:image"
+        content="https://www.povertyafricakenya.co.ke/images/logo_POAK.png">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/logo_POAK.png">
-    
-    <!-- CSS with cache-busting version -->
-    <link rel="stylesheet" href="css/style.css?v=20260814">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/logo_POAK.png">
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css?v=20260825">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+
+
     <style>
-        /* ---------- Floating Social Icons Tooltips ---------- */
+
+        /* =========================================================
+           FLOATING SOCIAL ICONS
+           ========================================================= */
+
         .floating-social a {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: transform 0.2s ease, background 0.2s ease;
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
         }
-        
+
         .floating-social a:hover::after {
             content: attr(aria-label);
             position: absolute;
@@ -53,708 +114,2968 @@
             margin-right: 12px;
             top: 50%;
             transform: translateY(-50%);
+
             background: #1e2a3a;
             color: #ffffff;
+
             padding: 6px 12px;
             border-radius: 32px;
+
             font-size: 0.8rem;
             font-weight: 600;
             font-family: 'Open Sans', sans-serif;
-            letter-spacing: 0.3px;
+
             white-space: nowrap;
+
             z-index: 1000;
             pointer-events: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            backdrop-filter: blur(2px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            line-height: 1.2;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.15);
+
+            border: 1px solid rgba(255,255,255,0.15);
         }
-        
+
         .floating-social a:hover::before {
             content: '';
+
             position: absolute;
             right: 100%;
             margin-right: 4px;
             top: 50%;
+
             transform: translateY(-50%);
+
             border-width: 5px;
             border-style: solid;
-            border-color: transparent transparent transparent #1e2a3a;
+
+            border-color:
+                transparent
+                transparent
+                transparent
+                #1e2a3a;
+
             z-index: 1000;
-            pointer-events: none;
         }
-        
+
         .floating-social a:hover {
             transform: scale(1.05);
         }
-        
-        @media (max-width: 640px) {
-            .floating-social a:hover::after {
-                font-size: 0.7rem;
-                padding: 4px 8px;
-                margin-right: 8px;
-            }
-            .floating-social a:hover::before {
-                margin-right: 2px;
-                border-width: 4px;
-            }
-        }
 
-        /* ---------- WhatsApp Chat Button ---------- */
+
+        /* =========================================================
+           WHATSAPP
+           ========================================================= */
+
         .whatsapp-chat-btn {
             position: fixed;
+
             bottom: 25px;
             right: 30px;
+
             z-index: 999;
+
             background-color: #25D366;
             color: #ffffff;
+
             border-radius: 50%;
+
             width: 60px;
             height: 60px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.2);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
             font-size: 28px;
             text-decoration: none;
         }
 
         .whatsapp-chat-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+
+            box-shadow:
+                0 6px 16px rgba(0,0,0,0.3);
         }
 
         .whatsapp-chat-btn:hover::after {
             content: attr(aria-label);
+
             position: absolute;
             right: 70px;
             top: 50%;
+
             transform: translateY(-50%);
+
             background: #1e2a3a;
             color: #ffffff;
+
             padding: 6px 12px;
             border-radius: 32px;
+
             font-size: 0.8rem;
             font-weight: 600;
-            font-family: 'Open Sans', sans-serif;
-            letter-spacing: 0.3px;
+
             white-space: nowrap;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.15);
+
             z-index: 1000;
-            pointer-events: none;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            backdrop-filter: blur(2px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            line-height: 1.2;
         }
 
         .whatsapp-chat-btn:hover::before {
             content: '';
+
             position: absolute;
+
             right: 62px;
             top: 50%;
+
             transform: translateY(-50%);
+
             border-width: 5px;
             border-style: solid;
-            border-color: transparent transparent transparent #1e2a3a;
-            z-index: 1000;
+
+            border-color:
+                transparent
+                transparent
+                transparent
+                #1e2a3a;
+        }
+
+
+        /* =========================================================
+           IMPACT SECTION
+           ========================================================= */
+
+        .impact-bg-section {
+            position: relative;
+
+            padding: 6rem 0;
+
+            background:
+                linear-gradient(
+                    rgba(18, 23, 28, 0.88),
+                    rgba(18, 23, 28, 0.92)
+                ),
+                url('images/new-images/impact_home.jpg')
+                center center / cover no-repeat;
+
+            color: #ffffff;
+
+            overflow: hidden;
+        }
+
+
+        /* subtle overlay texture */
+
+        .impact-bg-section::after {
+            content: '';
+
+            position: absolute;
+
+            width: 420px;
+            height: 420px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(255,255,255,0.06);
+
+            right: -180px;
+            top: -170px;
+
             pointer-events: none;
         }
 
-        @media (max-width: 640px) {
-            .whatsapp-chat-btn {
-                width: 50px;
-                height: 50px;
-                bottom: 20px;
-                right: 20px;
-                font-size: 24px;
-            }
-            .whatsapp-chat-btn:hover::after {
-                font-size: 0.7rem;
-                padding: 4px 8px;
-                right: 60px;
-            }
-            .whatsapp-chat-btn:hover::before {
-                right: 52px;
-                border-width: 4px;
-            }
-        }
 
-        /* ---------- Impact Section with Background Image ---------- */
-        .impact-bg-section {
+        .impact-bg-section .container {
             position: relative;
-            background: url('images/new-images/impact_home.jpg') center/cover no-repeat;
+            z-index: 2;
+        }
+
+
+        .impact-bg-section .section-title {
             color: #ffffff;
-            padding: 5rem 0;
-            z-index: 1;
+            margin-bottom: 0.6rem;
         }
 
-        .impact-bg-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.65);
-            z-index: -1;
+
+        .impact-bg-section .section-line {
+            background: rgba(255,255,255,0.8);
+            margin-bottom: 2.5rem;
         }
 
-        .impact-bg-section .section-title,
-        .impact-bg-section .section-line,
-        .impact-bg-section .impact-number,
-        .impact-bg-section .impact-item p,
-        .impact-bg-section .testimonial,
-        .impact-bg-section .testimonial .author,
-        .impact-bg-section .btn-secondary {
-            color: #ffffff;
+
+        /* Impact grid */
+
+        .impact-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 1rem;
+
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
         }
 
-        .impact-bg-section .impact-number {
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-            color: #ffcd3c;
+
+        .impact-item {
+            position: relative;
+
+            padding: 2rem 1.4rem;
+
+            text-align: center;
+
+            background:
+                rgba(255,255,255,0.075);
+
+            border:
+                1px solid rgba(255,255,255,0.13);
+
+            border-radius: 14px;
+
+            backdrop-filter: blur(6px);
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
         }
 
-        .impact-bg-section .impact-item {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(8px);
-            border-radius: 12px;
-            padding: 1.5rem;
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: transform 0.3s;
-        }
-        .impact-bg-section .impact-item:hover {
-            background: rgba(255, 255, 255, 0.2);
+
+        .impact-item:hover {
             transform: translateY(-5px);
+
+            background:
+                rgba(255,255,255,0.11);
+
+            border-color:
+                rgba(255,255,255,0.22);
         }
 
-        .impact-bg-section .testimonial {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(4px);
-            padding: 2rem;
-            border-radius: 12px;
+
+        .impact-number {
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: clamp(2.2rem, 4vw, 3.3rem);
+
+            line-height: 1;
+
+            font-weight: 700;
+
+            letter-spacing: -1px;
+
+            color: #ffffff;
+
+            margin-bottom: 0.75rem;
         }
+
+
+        .impact-item p {
+            margin: 0;
+
+            color:
+                rgba(255,255,255,0.72);
+
+            font-size: 0.85rem;
+
+            line-height: 1.5;
+        }
+
+
+        /* Impact intro */
+
+        .impact-intro {
+            max-width: 650px;
+
+            margin: 0 auto 2.5rem;
+
+            text-align: center;
+
+            color:
+                rgba(255,255,255,0.72);
+
+            font-size: 0.95rem;
+
+            line-height: 1.7;
+        }
+
+
+        /* Testimonial */
+
+        .testimonial {
+            max-width: 780px;
+
+            margin: 2.5rem auto;
+
+            padding: 2.2rem 2.5rem;
+
+            background:
+                rgba(0,0,0,0.25);
+
+            border:
+                1px solid rgba(255,255,255,0.1);
+
+            border-radius: 14px;
+
+            text-align: center;
+
+            backdrop-filter: blur(5px);
+        }
+
+
+        .testimonial > i {
+            font-size: 1.4rem;
+
+            color:
+                rgba(255,255,255,0.55);
+
+            margin-bottom: 1rem;
+        }
+
+
+        .testimonial p:first-of-type {
+            max-width: 650px;
+
+            margin:
+                0 auto 1rem;
+
+            color: #ffffff;
+
+            font-size: 1rem;
+
+            line-height: 1.8;
+
+            font-style: italic;
+        }
+
+
+        .testimonial .author {
+            margin: 0;
+
+            color:
+                rgba(255,255,255,0.5);
+
+            font-size: 0.78rem;
+        }
+
+
+        /* Impact button */
 
         .impact-bg-section .btn-secondary {
-            border-color: #ffffff;
+            display: inline-block;
+
             color: #ffffff;
-            background: rgba(255,255,255,0.1);
+
+            border:
+                1px solid rgba(255,255,255,0.5);
+
+            background:
+                rgba(255,255,255,0.04);
+
+            border-radius: 5px;
+
+            padding: 0.8rem 1.6rem;
+
+            text-decoration: none;
+
+            transition:
+                background 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.25s ease;
         }
+
+
         .impact-bg-section .btn-secondary:hover {
-            background: rgba(255,255,255,0.2);
+            background:
+                rgba(255,255,255,0.12);
+
+            border-color: #ffffff;
+
+            transform: translateY(-2px);
         }
 
 
-        /* ========== REFINED "SUPPORT OUR MISSION" (CTA) SECTION ========== */
+        /* =========================================================
+           SUPPORT CTA
+           ========================================================= */
+
         .cta-refined-section {
-            padding: 3rem 0;
-            background: linear-gradient(135deg, #000000 0%, #979797 100%);
+            padding: 4.5rem 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f4f4f2 0%,
+                    #e8e8e6 100%
+                );
         }
-        
+
+
         .cta-refined-section .cta-box {
             max-width: 700px;
+
             margin: 0 auto;
+
             background: #ffffff;
-            border-radius: 32px;
-            padding: 2.2rem 2rem;
+
+            border-radius: 20px;
+
+            padding: 2.5rem 2rem;
+
             text-align: center;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
-            border: 1px solid rgba(44, 122, 77, 0.15);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+            box-shadow:
+                0 12px 35px rgba(0,0,0,0.07);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
         }
-        
+
+
         .cta-refined-section .cta-box:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 32px rgba(0, 0, 0, 0.08);
-            border-color: rgba(44, 122, 77, 0.3);
+
+            box-shadow:
+                0 18px 40px rgba(0,0,0,0.09);
         }
-        
+
+
         .cta-refined-section .cta-box h2 {
+            color: #1e252a;
+
             font-size: 1.8rem;
-            font-weight: 600;
-            color: #1e2a2f;
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.3px;
+
+            margin-bottom: 0.7rem;
         }
-        
+
+
         .cta-refined-section .cta-box p {
-            font-size: 1rem;
-            color: #4b5b5f;
-            line-height: 1.5;
-            margin-bottom: 1.8rem;
-            max-width: 480px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 500px;
+
+            margin:
+                0 auto 1.6rem;
+
+            color: #596168;
+
+            line-height: 1.7;
+
+            font-size: 0.92rem;
         }
-        
+
+
         .cta-refined-section .btn-primary {
-            background: #2c7a4d;
-            border: none;
-            padding: 0.8rem 2rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border-radius: 48px;
-            color: white;
-            transition: all 0.25s ease;
             display: inline-block;
+
+            background: var(--primary);
+
+            color: #ffffff;
+
+            padding:
+                0.8rem 1.8rem;
+
+            border-radius: 5px;
+
             text-decoration: none;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+            font-weight: 600;
+
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
         }
-        
+
+
         .cta-refined-section .btn-primary:hover {
-            background: #1f6140;
             transform: translateY(-2px);
-            box-shadow: 0 8px 18px rgba(44, 122, 77, 0.2);
+            opacity: 0.9;
         }
-        
-        @media (max-width: 640px) {
-            .cta-refined-section .cta-box {
-                padding: 1.6rem 1.2rem;
+
+
+        /* =========================================================
+           PARTNERS
+           ========================================================= */
+
+        .partners-section {
+            padding: 4.5rem 0;
+
+            background: var(--bg);
+        }
+
+
+        .partners-section .section-title {
+            text-align: center;
+
+            font-size: 1.2rem;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .partners-scroll {
+            width: 100%;
+
+            overflow: hidden;
+
+            margin-top: 2rem;
+        }
+
+
+        .partners-track {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 4rem;
+
+            flex-wrap: wrap;
+
+            padding:
+                0 2rem;
+        }
+
+
+        .partner-item {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 0.7rem;
+
+            min-width: 130px;
+
+            opacity: 0.75;
+
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .partner-item:hover {
+            opacity: 1;
+
+            transform: translateY(-3px);
+        }
+
+
+        .partner-item img {
+            width: 90px;
+            height: 55px;
+
+            object-fit: contain;
+        }
+
+
+        .partner-item span {
+            font-size: 0.7rem;
+
+            color: var(--text-muted);
+
+            text-align: center;
+        }
+
+
+        /* =========================================================
+           REFINED FOOTER
+           ========================================================= */
+
+        .footer {
+            position: relative;
+
+            background: #151a20;
+
+            color: #ffffff;
+
+            padding: 5rem 0 0;
+
+            overflow: hidden;
+        }
+
+
+        .footer::before {
+            content: '';
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border:
+                1px solid rgba(255,255,255,0.035);
+
+            border-radius: 50%;
+
+            top: -300px;
+            right: -150px;
+
+            pointer-events: none;
+        }
+
+
+        .footer::after {
+            content: '';
+
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border:
+                1px solid rgba(255,255,255,0.025);
+
+            border-radius: 50%;
+
+            bottom: -200px;
+            left: -100px;
+
+            pointer-events: none;
+        }
+
+
+        .footer .container {
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .footer-main {
+            display: grid;
+
+            grid-template-columns:
+                1.35fr
+                1fr
+                1fr
+                1.25fr;
+
+            gap: 4rem;
+
+            align-items: start;
+        }
+
+
+        /* Brand */
+
+        .footer-brand {
+            max-width: 340px;
+        }
+
+
+        .footer-brand-link {
+            display: inline-flex;
+
+            text-decoration: none;
+        }
+
+
+        .footer-logo {
+            width: 125px;
+
+            height: auto;
+
+            object-fit: contain;
+
+            margin-bottom: 1.3rem;
+
+            filter:
+                brightness(0)
+                invert(1);
+        }
+
+
+        .footer-description {
+            color:
+                rgba(255,255,255,0.68);
+
+            font-size: 0.9rem;
+
+            line-height: 1.75;
+
+            margin:
+                0 0 1.5rem;
+        }
+
+
+        .footer-founded {
+            display: flex;
+
+            align-items: center;
+
+            gap: 0.85rem;
+
+            padding: 0.9rem 1rem;
+
+            background:
+                rgba(255,255,255,0.045);
+
+            border:
+                1px solid rgba(255,255,255,0.08);
+
+            border-radius: 10px;
+
+            max-width: 280px;
+        }
+
+
+        .footer-founded-icon {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 9px;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            color: #ffffff;
+
+            font-size: 0.9rem;
+        }
+
+
+        .footer-founded small {
+            display: block;
+
+            color:
+                rgba(255,255,255,0.48);
+
+            font-size: 0.7rem;
+
+            margin-bottom: 2px;
+        }
+
+
+        .footer-founded strong {
+            display: block;
+
+            color: #ffffff;
+
+            font-size: 0.8rem;
+
+            font-weight: 600;
+        }
+
+
+        /* Columns */
+
+        .footer-column h4,
+        .footer-newsletter-card h4 {
+            color: #ffffff;
+
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            margin:
+                0 0 0.6rem;
+        }
+
+
+        .footer-heading-line {
+            display: block;
+
+            width: 30px;
+            height: 2px;
+
+            background: #ffffff;
+
+            border-radius: 5px;
+
+            margin-bottom: 1.3rem;
+        }
+
+
+        /* Program links */
+
+        .footer-links {
+            list-style: none;
+
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .footer-links li {
+            margin-bottom: 0.65rem;
+        }
+
+
+        .footer-links a {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 0.55rem;
+
+            color:
+                rgba(255,255,255,0.63);
+
+            text-decoration: none;
+
+            font-size: 0.83rem;
+
+            transition:
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        .footer-links a i {
+            font-size: 0.55rem;
+
+            color:
+                rgba(255,255,255,0.4);
+        }
+
+
+        .footer-links a:hover {
+            color: #ffffff;
+
+            transform: translateX(3px);
+        }
+
+
+        /* Contact */
+
+        .footer-contact-list {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0.85rem;
+        }
+
+
+        .footer-contact-item {
+            display: flex;
+
+            align-items: center;
+
+            gap: 0.8rem;
+
+            color:
+                rgba(255,255,255,0.68);
+
+            text-decoration: none;
+
+            font-size: 0.8rem;
+
+            line-height: 1.4;
+
+            transition:
+                color 0.2s ease;
+        }
+
+
+        .footer-contact-item:hover {
+            color: #ffffff;
+        }
+
+
+        .footer-contact-icon {
+            flex: 0 0 36px;
+
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 9px;
+
+            background:
+                rgba(255,255,255,0.055);
+
+            border:
+                1px solid rgba(255,255,255,0.07);
+
+            color: #ffffff;
+
+            font-size: 0.8rem;
+        }
+
+
+        .footer-contact-item small {
+            display: block;
+
+            color:
+                rgba(255,255,255,0.4);
+
+            font-size: 0.67rem;
+
+            margin-bottom: 1px;
+        }
+
+
+        /* Newsletter */
+
+        .footer-newsletter-card {
+            padding: 1.5rem;
+
+            background:
+                rgba(255,255,255,0.055);
+
+            border:
+                1px solid rgba(255,255,255,0.1);
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.12);
+        }
+
+
+        .newsletter-icon {
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 1rem;
+
+            border-radius: 9px;
+
+            background:
+                rgba(255,255,255,0.08);
+
+            color: #ffffff;
+        }
+
+
+        .footer-newsletter-card > p {
+            color:
+                rgba(255,255,255,0.58);
+
+            font-size: 0.78rem;
+
+            line-height: 1.6;
+
+            margin-bottom: 1.1rem;
+        }
+
+
+        .newsletter-compact {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0.65rem;
+        }
+
+
+        .newsletter-input-wrap {
+            position: relative;
+        }
+
+
+        .newsletter-input-wrap i {
+            position: absolute;
+
+            left: 13px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color:
+                rgba(255,255,255,0.4);
+
+            font-size: 0.75rem;
+        }
+
+
+        .newsletter-input-wrap input {
+            width: 100%;
+
+            box-sizing: border-box;
+
+            padding:
+                0.78rem
+                0.8rem
+                0.78rem
+                2.2rem;
+
+            background:
+                rgba(255,255,255,0.07);
+
+            border:
+                1px solid rgba(255,255,255,0.12);
+
+            border-radius: 8px;
+
+            color: #ffffff;
+
+            font-family: inherit;
+
+            font-size: 0.78rem;
+
+            outline: none;
+        }
+
+
+        .newsletter-input-wrap input::placeholder {
+            color:
+                rgba(255,255,255,0.4);
+        }
+
+
+        .newsletter-input-wrap input:focus {
+            border-color:
+                rgba(255,255,255,0.35);
+
+            background:
+                rgba(255,255,255,0.1);
+        }
+
+
+        .newsletter-submit {
+            width: 100%;
+
+            padding:
+                0.75rem 1rem;
+
+            background: #ffffff;
+
+            color: #151a20;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-family: inherit;
+
+            font-size: 0.78rem;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+        }
+
+
+        .newsletter-submit:hover {
+            background: #eeeeee;
+
+            transform: translateY(-1px);
+        }
+
+
+        .newsletter-note {
+            display: block;
+
+            margin-top: 0.8rem;
+
+            color:
+                rgba(255,255,255,0.35);
+
+            font-size: 0.65rem;
+        }
+
+
+        .footer-newsletter-card .form-message {
+            min-height: 15px;
+
+            margin:
+                0.5rem 0 0;
+
+            font-size: 0.72rem;
+        }
+
+
+        /* Divider */
+
+        .footer-divider {
+            width: 100%;
+
+            height: 1px;
+
+            margin:
+                3.5rem 0
+                1.5rem;
+
+            background:
+                rgba(255,255,255,0.09);
+        }
+
+
+        /* Bottom */
+
+        .footer-bottom {
+            display: grid;
+
+            grid-template-columns:
+                1fr auto 1fr;
+
+            align-items: center;
+
+            gap: 1.5rem;
+
+            padding-bottom: 1.5rem;
+        }
+
+
+        .footer-copyright p {
+            margin: 0;
+
+            color:
+                rgba(255,255,255,0.42);
+
+            font-size: 0.72rem;
+        }
+
+
+        .footer-bottom-links {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 1.2rem;
+        }
+
+
+        .footer-bottom-links a {
+            color:
+                rgba(255,255,255,0.48);
+
+            text-decoration: none;
+
+            font-size: 0.72rem;
+
+            transition:
+                color 0.2s ease;
+        }
+
+
+        .footer-bottom-links a:hover {
+            color: #ffffff;
+        }
+
+
+        .footer-bottom-links
+        .footer-donate-link {
+            color: #ffffff;
+
+            font-weight: 700;
+        }
+
+
+        .footer-registration {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            gap: 0.4rem;
+
+            color:
+                rgba(255,255,255,0.42);
+
+            font-size: 0.7rem;
+
+            text-align: right;
+        }
+
+
+        .footer-registration i {
+            color:
+                rgba(255,255,255,0.55);
+
+            font-size: 0.7rem;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 1050px) {
+
+            .footer-main {
+                grid-template-columns:
+                    1.2fr 1fr 1fr;
+
+                gap: 3rem;
             }
-            .cta-refined-section .cta-box h2 {
-                font-size: 1.5rem;
+
+            .footer-newsletter-column {
+                grid-column: 1 / -1;
+
+                max-width: 480px;
             }
-            .cta-refined-section .cta-box p {
-                font-size: 0.9rem;
+
+            .footer-bottom {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .footer-bottom-links {
+                order: -1;
+            }
+
+            .footer-registration {
+                justify-content: center;
+            }
+
+            .impact-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
         }
+
+
+        @media (max-width: 700px) {
+
+            .impact-bg-section {
+                padding: 4.5rem 0;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+
+                gap: 0.8rem;
+            }
+
+            .impact-item {
+                padding: 1.5rem;
+            }
+
+            .testimonial {
+                padding:
+                    1.7rem 1.3rem;
+            }
+
+            .footer {
+                padding-top: 4rem;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+
+                gap: 2.5rem;
+            }
+
+            .footer-brand {
+                max-width: 100%;
+            }
+
+            .footer-logo {
+                width: 110px;
+            }
+
+            .footer-newsletter-column {
+                max-width: none;
+            }
+
+            .footer-divider {
+                margin-top: 2.5rem;
+            }
+
+            .footer-bottom {
+                padding-bottom: 1.3rem;
+            }
+
+            .footer-bottom-links {
+                flex-wrap: wrap;
+
+                gap:
+                    0.8rem 1rem;
+            }
+
+            .partners-track {
+                gap: 2rem;
+            }
+
+        }
+
+
+        @media (max-width: 420px) {
+
+            .impact-number {
+                font-size: 2.3rem;
+            }
+
+            .footer {
+                padding-top: 3.5rem;
+            }
+
+            .footer-main {
+                gap: 2.2rem;
+            }
+
+            .footer-founded {
+                max-width: 100%;
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- Popup Modal - Viatu Drive Poster -->
-<div class="popup-overlay" id="popupOverlay">
-    <div class="popup-modal">
-        <button class="popup-close" id="popupClose" aria-label="Close popup">×</button>
-        <img src="images/e-shot - Viatu Drive-01.jpg" alt="Viatu Drive - Donate Shoes">
-    </div>
-</div>
 
-    <!-- Floating Social Links -->
-    <div class="floating-social">
-        <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-    
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="images/logo_POAK.png" alt="POAK Logo" class="logo-img">
-                <div class="logo-text">
-                    <span class="logo-main">POAK</span>
-                    <span class="logo-sub">Poverty Africa - Kenya</span>
-                </div>
-            </a>
+    <!-- =========================================================
+         POPUP
+         ========================================================= -->
 
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <div
+        class="popup-overlay"
+        id="popupOverlay">
+
+        <div class="popup-modal">
+
+            <button
+                class="popup-close"
+                id="popupClose"
+                aria-label="Close popup">
+
+                ×
+
             </button>
 
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li class="dropdown">
-                    <a href="programs.html">Programs <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="education-program.html">Education</a></li>
-                        <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-                        <li><a href="peer-program.html">Peer Program</a></li>
-                        <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-                    </ul>
-                </li>
-                <li><a href="impact.html">Impact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="donate.html" class="donate-btn">Donate</a></li>
-                <li class="theme-toggle-container">
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                        <i class="fas fa-moon"></i>
-                        <i class="fas fa-sun"></i>
-                    </button>
-                </li>
-            </ul>
+            <img
+                src="images/e-shot - Viatu Drive-01.jpg"
+                alt="Viatu Drive - Donate Shoes">
+
         </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         FLOATING SOCIAL LINKS
+         ========================================================= -->
+
+    <div class="floating-social">
+
+        <a
+            href="https://www.facebook.com/profile.php?id=61588395929911"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook">
+
+            <i class="fab fa-facebook-f"></i>
+
+        </a>
+
+        <a
+            href="https://www.instagram.com/povertyafricakenya/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram">
+
+            <i class="fab fa-instagram"></i>
+
+        </a>
+
+        <a
+            href="https://www.linkedin.com/company/poverty-africa-kenya-poak/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn">
+
+            <i class="fab fa-linkedin-in"></i>
+
+        </a>
+
+        <a
+            href="https://www.tiktok.com/@povertyafricakenya"
+            target="_blank"
+            rel="noopener"
+            aria-label="TikTok">
+
+            <i class="fab fa-tiktok"></i>
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a
+                href="index.html"
+                class="logo">
+
+                <img
+                    src="images/logo_POAK.png"
+                    alt="POAK Logo"
+                    class="logo-img">
+
+                <div class="logo-text">
+
+                    <span class="logo-main">
+                        POAK
+                    </span>
+
+                    <span class="logo-sub">
+                        Poverty Africa - Kenya
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Toggle menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+
+            <ul
+                class="nav-menu"
+                id="navMenu">
+
+                <li>
+                    <a
+                        href="index.html"
+                        class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+
+                <li class="dropdown">
+
+                    <a href="programs.html">
+
+                        Programs
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a href="education-program.html">
+                                Education
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="community-empowerment-program.html">
+                                Community Empowerment
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="peer-program.html">
+                                Peer Program
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mental-health-nutrition-program.html">
+                                Mental Health & Nutrition
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="4k-clubs.html">
+                                4K Clubs for Schools
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="4k-smart-farming.html">
+                                4K Smart Farming
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livestock-development.html">
+                                Livestock Development
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="climate-resilience.html">
+                                Climate Resilience in Agriculture
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li>
+                    <a href="impact.html">
+                        Impact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog.html">
+                        Blog
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="donate.html"
+                        class="donate-btn">
+                        Donate
+                    </a>
+                </li>
+
+
+                <li class="theme-toggle-container">
+
+                    <button
+                        class="theme-toggle"
+                        id="themeToggle"
+                        aria-label="Toggle dark mode">
+
+                        <i class="fas fa-moon"></i>
+
+                        <i class="fas fa-sun"></i>
+
+                    </button>
+
+                </li>
+
+            </ul>
+
+        </div>
+
     </nav>
 
-    <!-- Hero Section -->
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+
     <section class="hero">
+
         <div class="hero-overlay">
+
             <div class="container">
+
                 <div class="hero-content">
-                    <img src="images/logo_POAK.png" alt="POAK Logo" class="hero-logo">
-                    <h1>POAK</h1>
-                    <p class="hero-tagline">Poverty Africa - Kenya</p>
-                    <p class="hero-text">Community-centered nonprofit fighting poverty across Kenya since 1997.</p>
+
+                    <img
+                        src="images/logo_POAK.png"
+                        alt="POAK Logo"
+                        class="hero-logo">
+
+                    <h1>
+                        POAK
+                    </h1>
+
+                    <p class="hero-tagline">
+                        Poverty Africa - Kenya
+                    </p>
+
+                    <p class="hero-text">
+                        Community-centered nonprofit fighting
+                        poverty across Kenya since 1997.
+                    </p>
+
+
                     <div class="hero-buttons">
-                        <a href="donate.html" class="btn btn-primary">Donate via M-PESA</a>
-                        <a href="about.html" class="btn btn-secondary">Our Story</a>
+
+                        <a
+                            href="donate.html"
+                            class="btn btn-primary">
+
+                            Support Our Mission
+
+                        </a>
+
+
+                        <a
+                            href="about.html"
+                            class="btn btn-secondary">
+
+                            Our Story
+
+                        </a>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- About Preview -->
+
+    <!-- =========================================================
+         ABOUT PREVIEW
+         ========================================================= -->
+
     <section class="section">
+
         <div class="container">
-            <h2 class="section-title">Who We Are</h2>
+
+            <h2 class="section-title">
+                Who We Are
+            </h2>
+
             <div class="section-line"></div>
+
+
             <div class="about-grid">
+
                 <div class="about-text">
-                    <p><span class="highlight">POAK (Poverty Africa - Kenya)</span> is a community-centered nonprofit organization fighting poverty across Kenya. We empower vulnerable communities through sustainable development initiatives, capacity building, and strategic partnerships.</p>
-                    <p>Founded in 1997, we've spent over 28 years working alongside Kenyan communities to create lasting change and improve living standards.</p>
+
+                    <p>
+
+                        <span class="highlight">
+                            POAK (Poverty Africa - Kenya)
+                        </span>
+
+                        is a community-centered nonprofit
+                        organization fighting poverty across Kenya.
+                        We empower vulnerable communities through
+                        sustainable development initiatives,
+                        capacity building, and strategic partnerships.
+
+                    </p>
+
+
+                    <p>
+
+                        Founded in 1997, we've spent over 28 years
+                        working alongside Kenyan communities to create
+                        lasting change and improve living standards.
+
+                    </p>
+
+
                     <div class="founded-badge">
+
                         <div class="founded-icon">
+
                             <i class="fas fa-calendar-alt"></i>
+
                         </div>
+
                         <div class="founded-text">
-                            <span class="founded-label">Founded on</span>
-                            <strong>7th December 1997</strong>
+
+                            <span class="founded-label">
+                                Founded on
+                            </span>
+
+                            <strong>
+                                7th December 1997
+                            </strong>
+
                         </div>
+
                     </div>
-                    <a href="about.html" class="btn btn-secondary">Read Our Story</a>
+
+
+                    <a
+                        href="about.html"
+                        class="btn btn-secondary">
+
+                        Read Our Story
+
+                    </a>
+
                 </div>
+
+
                 <div class="about-image">
-                    <img src="images/about_page.jpg" alt="Kenyan community">
-                    <span class="image-caption">Board of Directors + Team</span>
+
+                    <img
+                        src="images/about_page.jpg"
+                        alt="Kenyan community">
+
+                    <span class="image-caption">
+                        Board of Directors + Team
+                    </span>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Programs Section - Clean Minimal Cards -->
-<section class="programs-natural-section">
-    <div class="container">
-        <h2 class="section-title">Our Programs</h2>
-        <div class="section-line"></div>
-        <p class="section-subtitle">Empowering communities through sustainable initiatives</p>
-        
-        <div class="programs-grid">
-            <!-- Program 1: Education -->
-            <div class="program-card">
-                <div class="program-card-image">
-                    <img src="images/programs/education.jpg" alt="Education Program">
-                </div>
-                <div class="program-card-content">
-                    <h3>Education</h3>
-                    <p>Digital skills training and scholarship support to unlock learning and career opportunities.</p>
-                    <a href="education-program.html" class="btn-learn">Learn More</a>
-                </div>
-            </div>
 
-            <!-- Program 2: Community Empowerment -->
-            <div class="program-card">
-                <div class="program-card-image">
-                    <img src="images/programs/community empowerment.jpeg" alt="Community Empowerment">
-                </div>
-                <div class="program-card-content">
-                    <h3>Community Empowerment</h3>
-                    <p>Financial literacy and economic empowerment for sustainable livelihoods.</p>
-                    <a href="community-empowerment-program.html" class="btn-learn">Learn More</a>
-                </div>
-            </div>
+    <!-- =========================================================
+         PROGRAMS
+         ========================================================= -->
 
-            <!-- Program 3: Peer Program -->
-            <div class="program-card">
-                <div class="program-card-image">
-                    <img src="images/programs/youth leadership.jpg" alt="Peer Program">
-                </div>
-                <div class="program-card-content">
-                    <h3>Peer Program</h3>
-                    <p>Mentorship, safe spaces, and life skills development for youth.</p>
-                    <a href="peer-program.html" class="btn-learn">Learn More</a>
-                </div>
-            </div>
+    <section class="programs-natural-section">
 
-            <!-- Program 4: Mental Health & Nutrition -->
-            <div class="program-card">
-                <div class="program-card-image">
-                    <img src="images/programs/mental_health.jpg" alt="Mental Health & Nutrition">
-                </div>
-                <div class="program-card-content">
-                    <h3>Mental Health & Nutrition</h3>
-                    <p>Holistic wellness combining mental health support and nutrition education.</p>
-                    <a href="mental-health-nutrition-program.html" class="btn-learn">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Program 5: 4K Club for Schools -->
-            <div class="program-card">
-                <div class="program-card-image">
-                    <img src="images/programs/4k for schools.png" alt="4K Club for Schools">
-                </div>
-                <div class="program-card-content">
-                    <h3>4K Club for Schools</h3>
-                    <p>Agriculture, entrepreneurship, environmental stewardship, and climate resilience.</p>
-                    <a href="#" class="btn-learn">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Program 6: 4K Smart Farming -->
-            <div class="program-card">
-                <div class="program-card-image">
-                    <img src="images/programs/4k smart farming.png" alt="4K Smart Farming">
-                </div>
-                <div class="program-card-content">
-                    <h3>4K Smart Farming</h3>
-                    <p>Food security through practical and environmentally responsible farming.</p>
-                    <a href="#" class="btn-learn">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Program 7: Livestock Development -->
-            <div class="program-card">
-                <div class="program-card-image">
-                    <img src="images/programs/livestock.jpg" alt="Livestock Development">
-                </div>
-                <div class="program-card-content">
-                    <h3>Livestock Development</h3>
-                    <p>Sustainable livestock enterprises that contribute to household resilience.</p>
-                    <a href="#" class="btn-learn">Learn More</a>
-                </div>
-            </div>
-
-            <!-- Program 8: Climate Resilience -->
-            <div class="program-card">
-                <div class="program-card-image">
-                    <img src="images/programs/climate resilience.jpg" alt="Climate Resilience">
-                </div>
-                <div class="program-card-content">
-                    <h3>Climate Resilience</h3>
-                    <p>Climate adaptation, environmental conservation, and disaster risk reduction.</p>
-                    <a href="#" class="btn-learn">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center">
-            <a href="programs.html" class="btn-primary">View All Programs</a>
-        </div>
-    </div>
-</section>
-
-    <!-- Impact Preview (with authentic background image) -->
-    <section class="section impact-bg-section">
         <div class="container">
-            <h2 class="section-title">Our Impact</h2>
+
+            <h2 class="section-title">
+                Our Programs
+            </h2>
+
             <div class="section-line"></div>
-            <div class="impact-grid">
-                <div class="impact-item">
-                    <div class="impact-number">1,500+</div>
-                    <p>Kenyans Empowered</p>
+
+            <p class="section-subtitle">
+                Empowering communities through sustainable initiatives
+            </p>
+
+
+            <div class="programs-grid">
+
+
+                <div class="program-card">
+
+                    <div class="program-card-image">
+
+                        <img
+                            src="images/programs/education.jpg"
+                            alt="Education Program">
+
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h3>
+                            Education
+                        </h3>
+
+                        <p>
+                            Digital skills training and scholarship
+                            support to unlock learning and career
+                            opportunities.
+                        </p>
+
+                        <a
+                            href="education-program.html"
+                            class="btn-learn">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
                 </div>
-                <div class="impact-item">
-                    <div class="impact-number">13</div>
-                    <p>Communities Reached</p>
+
+
+                <div class="program-card">
+
+                    <div class="program-card-image">
+
+                        <img
+                            src="images/programs/community empowerment.jpeg"
+                            alt="Community Empowerment">
+
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h3>
+                            Community Empowerment
+                        </h3>
+
+                        <p>
+                            Financial literacy and economic
+                            empowerment for sustainable livelihoods.
+                        </p>
+
+                        <a
+                            href="community-empowerment-program.html"
+                            class="btn-learn">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
                 </div>
-                <div class="impact-item">
-                    <div class="impact-number">5</div>
-                    <p>Counties Served</p>
+
+
+                <div class="program-card">
+
+                    <div class="program-card-image">
+
+                        <img
+                            src="images/programs/youth leadership.jpg"
+                            alt="Peer Program">
+
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h3>
+                            Peer Program
+                        </h3>
+
+                        <p>
+                            Mentorship, safe spaces, and life skills
+                            development for youth.
+                        </p>
+
+                        <a
+                            href="peer-program.html"
+                            class="btn-learn">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
                 </div>
-                <div class="impact-item">
-                    <div class="impact-number">15</div>
-                    <p>Schools Reached</p>
+
+
+                <div class="program-card">
+
+                    <div class="program-card-image">
+
+                        <img
+                            src="images/programs/mental_health.jpg"
+                            alt="Mental Health & Nutrition">
+
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h3>
+                            Mental Health & Nutrition
+                        </h3>
+
+                        <p>
+                            Holistic wellness combining mental health
+                            support and nutrition education.
+                        </p>
+
+                        <a
+                            href="mental-health-nutrition-program.html"
+                            class="btn-learn">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
                 </div>
+
+
+                <div class="program-card">
+
+                    <div class="program-card-image">
+
+                        <img
+                            src="images/programs/4k for schools.png"
+                            alt="4K Club for Schools">
+
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h3>
+                            4K Club for Schools
+                        </h3>
+
+                        <p>
+                            Agriculture, entrepreneurship,
+                            environmental stewardship, and climate
+                            resilience.
+                        </p>
+
+                        <a
+                            href="4k-clubs.html"
+                            class="btn-learn">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="program-card">
+
+                    <div class="program-card-image">
+
+                        <img
+                            src="images/programs/4k smart farming.png"
+                            alt="4K Smart Farming">
+
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h3>
+                            4K Smart Farming
+                        </h3>
+
+                        <p>
+                            Food security through practical and
+                            environmentally responsible farming.
+                        </p>
+
+                        <a
+                            href="4k-smart-farming.html"
+                            class="btn-learn">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="program-card">
+
+                    <div class="program-card-image">
+
+                        <img
+                            src="images/programs/livestock.jpg"
+                            alt="Livestock Development">
+
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h3>
+                            Livestock Development
+                        </h3>
+
+                        <p>
+                            Sustainable livestock enterprises that
+                            contribute to household resilience.
+                        </p>
+
+                        <a
+                            href="livestock-development.html"
+                            class="btn-learn">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="program-card">
+
+                    <div class="program-card-image">
+
+                        <img
+                            src="images/programs/climate resilience.jpg"
+                            alt="Climate Resilience">
+
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h3>
+                            Climate Resilience
+                        </h3>
+
+                        <p>
+                            Climate adaptation, environmental
+                            conservation, and disaster risk reduction.
+                        </p>
+
+                        <a
+                            href="climate-resilience.html"
+                            class="btn-learn">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
-            
-            <div class="testimonial">
-                <i class="fas fa-quote-left"></i>
-                <p>"POAK's Girls for Girls program helped me stay in school. The sanitary pads and mental health workshops changed my life."</p>
-                <p class="author">— Anonymous, Nairobi</p>
-            </div>
+
+
             <div class="text-center">
-                <a href="impact.html" class="btn btn-secondary">View Full Impact</a>
+
+                <a
+                    href="programs.html"
+                    class="btn-primary">
+
+                    View All Programs
+
+                </a>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Support Our Mission Section - Refined & Natural -->
+
+    <!-- =========================================================
+         IMPACT
+         ========================================================= -->
+
+    <section class="section impact-bg-section">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Our Impact
+            </h2>
+
+            <div class="section-line"></div>
+
+
+            <p class="impact-intro">
+
+                For more than two decades, POAK has worked alongside
+                communities to create practical opportunities,
+                strengthen resilience, and improve lives across Kenya.
+
+            </p>
+
+
+            <div class="impact-grid">
+
+
+                <div class="impact-item">
+
+                    <div class="impact-number">
+                        1,500+
+                    </div>
+
+                    <p>
+                        Kenyans Empowered
+                    </p>
+
+                </div>
+
+
+                <div class="impact-item">
+
+                    <div class="impact-number">
+                        13
+                    </div>
+
+                    <p>
+                        Communities Reached
+                    </p>
+
+                </div>
+
+
+                <div class="impact-item">
+
+                    <div class="impact-number">
+                        5
+                    </div>
+
+                    <p>
+                        Counties Served
+                    </p>
+
+                </div>
+
+
+                <div class="impact-item">
+
+                    <div class="impact-number">
+                        15
+                    </div>
+
+                    <p>
+                        Schools Reached
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <i class="fas fa-quote-left"></i>
+
+                <p>
+
+                    "POAK's Girls for Girls program helped me stay
+                    in school. The sanitary pads and mental health
+                    workshops changed my life."
+
+                </p>
+
+                <p class="author">
+                    — Anonymous, Nairobi
+                </p>
+
+            </div>
+
+
+            <div class="text-center">
+
+                <a
+                    href="impact.html"
+                    class="btn btn-secondary">
+
+                    View Full Impact
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SUPPORT OUR MISSION
+         ========================================================= -->
+
     <section class="cta-refined-section">
+
         <div class="container">
+
             <div class="cta-box">
-                <h2>Support Our Mission</h2>
-                <p>Your donation helps us fight poverty across Kenya. 100% of funds support our programs.</p>
-                <a href="donate.html" class="btn-primary">Donate to POAK</a>
+
+                <h2>
+                    Support Our Mission
+                </h2>
+
+                <p>
+
+                    Your donation helps us fight poverty across Kenya
+                    and expand opportunities for communities that need
+                    them most.
+
+                </p>
+
+                <a
+                    href="donate.html"
+                    class="btn-primary">
+
+                    Donate to POAK
+
+                </a>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- Partners Section - Full Width with Scroll -->
-<section class="partners-section">
-    <div class="container">
-        <h2 class="section-title">Our Partners</h2>
-    </div>
-    <div class="partners-scroll">
-        <div class="partners-track" id="partnersTrack">
-            <!-- Partner 1 -->
-            <div class="partner-item">
-                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
-                <span>Broad Experiential</span>
-            </div>
-            <!-- Partner 2 -->
-            <div class="partner-item">
-                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
-                <span>Solar Panda</span>
-            </div>
-            <!-- Partner 3 -->
-            <div class="partner-item">
-                <img src="images/partners/world_vision.png" alt="World Vision">
-                <span>World Vision</span>
-            </div>
-            <!-- Partner 4 -->
-            <div class="partner-item">
-                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
-                <span>Fresh Life</span>
-            </div>
-            <!-- Partner 5 -->
-            <div class="partner-item">
-                <img src="images/partners/logo.png" alt="AA Kenya">
-                <span>AA Kenya</span>
-            </div>
-            <!-- Partner 6 -->
-            <div class="partner-item">
-                <img src="images/partners/wisdom_medical_services.png" alt="Wisdom Medical Services">
-                <span>Wisdom Medical Services</span>
-            </div>
-        </div>
-    </div>
-</section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- =========================================================
+         PARTNERS
+         ========================================================= -->
+
+    <section class="partners-section">
+
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
-                    <p>Fighting poverty across Kenya since 1997.</p>
-                    <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
+
+            <h2 class="section-title">
+                OUR PARTNERS
+            </h2>
+
+        </div>
+
+
+        <div class="partners-scroll">
+
+            <div
+                class="partners-track"
+                id="partnersTrack">
+
+
+                <div class="partner-item">
+
+                    <img
+                        src="images/Broad Experiential logo.png"
+                        alt="Broad Experiential">
+
+                    <span>
+                        Broad Experiential
+                    </span>
+
                 </div>
-                
-                <div class="footer-programs">
-                    <h4>Programs</h4>
-                    <ul>
-                        <li><a href="education-program.html">Education</a></li>
-                        <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-                        <li><a href="peer-program.html">Peer Program</a></li>
-                        <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-                    </ul>
+
+
+                <div class="partner-item">
+
+                    <img
+                        src="images/partners/solarpanda.webp"
+                        alt="Solar Panda">
+
+                    <span>
+                        Solar Panda
+                    </span>
+
                 </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-                    <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                    <p><i class="fas fa-phone"></i> 0143709759 / 0777636674</p>
+
+
+                <div class="partner-item">
+
+                    <img
+                        src="images/partners/world_vision.png"
+                        alt="World Vision">
+
+                    <span>
+                        World Vision
+                    </span>
+
                 </div>
-                <div class="footer-newsletter-column">
-                    <h4>Stay Updated</h4>
-                    <p>Get our monthly impact stories and news.</p>
-                    <form class="newsletter-compact" id="newsletterForm">
-                        <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                        <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
-                    </form>
-                    <p class="form-message" id="newsletterMessage"></p>
+
+
+                <div class="partner-item">
+
+                    <img
+                        src="images/partners/freshlife.jfif"
+                        alt="Fresh Life">
+
+                    <span>
+                        Fresh Life
+                    </span>
+
                 </div>
+
+
+                <div class="partner-item">
+
+                    <img
+                        src="images/partners/logo.png"
+                        alt="AA Kenya">
+
+                    <span>
+                        AA Kenya
+                    </span>
+
+                </div>
+
+
+                <div class="partner-item">
+
+                    <img
+                        src="images/partners/wisdom_medical_services.png"
+                        alt="Wisdom Medical Services">
+
+                    <span>
+                        Wisdom Medical Services
+                    </span>
+
+                </div>
+
             </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+
+                <!-- Brand -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="index.html"
+                        class="footer-brand-link">
+
+                        <img
+                            src="images/logo_POAK.png"
+                            alt="POAK - Poverty Africa Kenya"
+                            class="footer-logo">
+
+                    </a>
+
+
+                    <p class="footer-description">
+
+                        Fighting poverty across Kenya by empowering
+                        communities, expanding opportunities, and
+                        building sustainable pathways out of poverty.
+
+                    </p>
+
+
+                    <div class="footer-founded">
+
+                        <span class="footer-founded-icon">
+
+                            <i class="fas fa-calendar-alt"></i>
+
+                        </span>
+
+
+                        <div>
+
+                            <small>
+                                Established
+                            </small>
+
+                            <strong>
+                                7th December 1997
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Programs -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Our Programs
+                    </h4>
+
+                    <span class="footer-heading-line"></span>
+
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="education-program.html">
+                                <i class="fas fa-chevron-right"></i>
+                                Education
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="community-empowerment-program.html">
+                                <i class="fas fa-chevron-right"></i>
+                                Community Empowerment
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="peer-program.html">
+                                <i class="fas fa-chevron-right"></i>
+                                Peer Program
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mental-health-nutrition-program.html">
+                                <i class="fas fa-chevron-right"></i>
+                                Mental Health & Nutrition
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="4k-clubs.html">
+                                <i class="fas fa-chevron-right"></i>
+                                4K Clubs for Schools
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="4k-smart-farming.html">
+                                <i class="fas fa-chevron-right"></i>
+                                4K Smart Farming
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livestock-development.html">
+                                <i class="fas fa-chevron-right"></i>
+                                Livestock Development
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="climate-resilience.html">
+                                <i class="fas fa-chevron-right"></i>
+                                Climate Resilience
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contact -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Contact Us
+                    </h4>
+
+                    <span class="footer-heading-line"></span>
+
+
+                    <div class="footer-contact-list">
+
+
+                        <a
+                            href="#"
+                            class="footer-contact-item">
+
+                            <span class="footer-contact-icon">
+
+                                <i class="fas fa-location-dot"></i>
+
+                            </span>
+
+                            <span>
+
+                                <small>
+                                    Our Location
+                                </small>
+
+                                Nairobi, Kenya
+
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="mailto:info@povertyafricakenya.co.ke"
+                            class="footer-contact-item">
+
+                            <span class="footer-contact-icon">
+
+                                <i class="fas fa-envelope"></i>
+
+                            </span>
+
+                            <span>
+
+                                <small>
+                                    Email Us
+                                </small>
+
+                                info@povertyafricakenya.co.ke
+
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="tel:0143709759"
+                            class="footer-contact-item">
+
+                            <span class="footer-contact-icon">
+
+                                <i class="fas fa-phone"></i>
+
+                            </span>
+
+                            <span>
+
+                                <small>
+                                    Call Us
+                                </small>
+
+                                0143709759
+
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="tel:0777636674"
+                            class="footer-contact-item">
+
+                            <span class="footer-contact-icon">
+
+                                <i class="fas fa-mobile-screen-button"></i>
+
+                            </span>
+
+                            <span>
+
+                                <small>
+                                    Mobile
+                                </small>
+
+                                0777636674
+
+                            </span>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- Newsletter -->
+
+                <div class="footer-newsletter-column">
+
+                    <div class="footer-newsletter-card">
+
+                        <span class="newsletter-icon">
+
+                            <i class="fas fa-paper-plane"></i>
+
+                        </span>
+
+
+                        <h4>
+                            Stay Updated
+                        </h4>
+
+
+                        <p>
+
+                            Subscribe for our latest impact stories,
+                            community updates, and opportunities to
+                            support our work.
+
+                        </p>
+
+
+                        <form
+                            class="newsletter-compact"
+                            id="newsletterForm">
+
+
+                            <div class="newsletter-input-wrap">
+
+                                <i class="fas fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Your email address"
+                                    required
+                                    aria-label="Email address">
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="newsletter-submit">
+
+                                Subscribe
+
+                            </button>
+
+                        </form>
+
+
+                        <p
+                            class="form-message"
+                            id="newsletterMessage">
+                        </p>
+
+
+                        <small class="newsletter-note">
+
+                            We respect your inbox. No spam.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Divider -->
+
+            <div class="footer-divider"></div>
+
+
+            <!-- Bottom -->
 
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
-                <p class="registration">Registered Nonprofit in Kenya</p>
+
+
+                <div class="footer-copyright">
+
+                    <p>
+
+                        &copy;
+
+                        <span id="currentYear"></span>
+
+                        POAK - Poverty Africa Kenya.
+                        All rights reserved.
+
+                    </p>
+
+                </div>
+
+
+                <div class="footer-bottom-links">
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="impact.html">
+                        Impact
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a
+                        href="donate.html"
+                        class="footer-donate-link">
+
+                        Donate
+
+                    </a>
+
+                </div>
+
+
+                <div class="footer-registration">
+
+                    <i class="fas fa-circle-check"></i>
+
+                    <span>
+                        Registered Nonprofit in Kenya
+                    </span>
+
+                </div>
+
             </div>
+
         </div>
+
     </footer>
 
-    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
 
-    <!-- WhatsApp Chat Button -->
-    <a href="https://wa.me/254777636674" class="whatsapp-chat-btn" target="_blank" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
+    <!-- Scroll Top -->
+
+    <button
+        class="scroll-top"
+        id="scrollTop"
+        aria-label="Back to top">
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- WhatsApp -->
+
+    <a
+        href="https://wa.me/254777636674"
+        class="whatsapp-chat-btn"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with us on WhatsApp"
+        title="Chat with us on WhatsApp">
+
         <i class="fab fa-whatsapp"></i>
+
     </a>
 
-    <!-- Cache-busting script: forces browser to load fresh JS -->
-    <script src="js/script.js?v=20260814"></script>
-    
-    <!-- Additional cache-clearing mechanism using service worker and meta tags -->
+
+    <!-- Main JS -->
+
+    <script src="js/script.js?v=20260825"></script>
+
+
+    <!-- =========================================================
+         ADDITIONAL PAGE SCRIPT
+         ========================================================= -->
+
     <script>
-        (function() {
-            // 1. Set a version in localStorage to track updates
-            const VERSION = '20260814';
-            const storedVersion = localStorage.getItem('poak_version');
-            
+
+        (function () {
+
+            const VERSION = '20260825';
+
+            const storedVersion =
+                localStorage.getItem('poak_version');
+
+
+            /* Cache handling */
+
             if (storedVersion !== VERSION) {
-                // Clear any cached resources by reloading with a cache-busting param
-                localStorage.setItem('poak_version', VERSION);
-                
-                // 2. Clear service worker caches if any (future-proof)
+
+                localStorage.setItem(
+                    'poak_version',
+                    VERSION
+                );
+
+
                 if ('caches' in window) {
-                    caches.keys().then(function(names) {
-                        for (let name of names) {
-                            if (name.includes('poak') || name.includes('poverty')) {
+
+                    caches.keys().then(function (names) {
+
+                        names.forEach(function (name) {
+
+                            if (
+                                name.includes('poak') ||
+                                name.includes('poverty')
+                            ) {
+
                                 caches.delete(name);
+
                             }
-                        }
+
+                        });
+
                     });
+
                 }
-                
-                // 3. Force reload of images and assets by appending timestamp to them
-                // We'll do this by adding a timestamp to all image URLs
-                const images = document.querySelectorAll('img');
-                const timestamp = Date.now();
-                images.forEach(function(img) {
-                    // Only add to our own images, not external ones
-                    if (img.src && img.src.includes('images/') && !img.src.includes('?')) {
-                        img.src = img.src + '?v=' + timestamp;
+
+
+                const images =
+                    document.querySelectorAll('img');
+
+                const timestamp =
+                    Date.now();
+
+
+                images.forEach(function (img) {
+
+                    if (
+                        img.src &&
+                        img.src.includes('images/') &&
+                        !img.src.includes('?')
+                    ) {
+
+                        img.src =
+                            img.src +
+                            '?v=' +
+                            timestamp;
+
                     }
+
                 });
-                
-                // 4. Also refresh CSS links if they were loaded without version
-                const links = document.querySelectorAll('link[rel="stylesheet"]');
-                links.forEach(function(link) {
-                    if (link.href && link.href.includes('style.css') && !link.href.includes('v=')) {
-                        link.href = link.href + '?v=' + VERSION;
+
+
+                const links =
+                    document.querySelectorAll(
+                        'link[rel="stylesheet"]'
+                    );
+
+
+                links.forEach(function (link) {
+
+                    if (
+                        link.href &&
+                        link.href.includes('style.css') &&
+                        !link.href.includes('v=')
+                    ) {
+
+                        link.href =
+                            link.href +
+                            '?v=' +
+                            VERSION;
+
                     }
+
                 });
+
             }
-            
-            // 5. Update year in footer
-            const yearSpan = document.getElementById('currentYear');
-            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-            
-            // 6. Newsletter form handler
-            const newsletterForm = document.getElementById('newsletterForm');
-            const newsletterMsg = document.getElementById('newsletterMessage');
+
+
+            /* Current year */
+
+            const yearSpan =
+                document.getElementById('currentYear');
+
+
+            if (yearSpan) {
+
+                yearSpan.textContent =
+                    new Date().getFullYear();
+
+            }
+
+
+            /* Newsletter */
+
+            const newsletterForm =
+                document.getElementById(
+                    'newsletterForm'
+                );
+
+
+            const newsletterMsg =
+                document.getElementById(
+                    'newsletterMessage'
+                );
+
+
             if (newsletterForm) {
-                newsletterForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const emailInput = newsletterForm.querySelector('input[type="email"]');
-                    const email = emailInput.value.trim();
-                    if (email && email.includes('@')) {
-                        newsletterMsg.textContent = ' Thanks for subscribing! You\'ll hear from us soon.';
-                        newsletterMsg.style.color = '#2e7d32';
-                        newsletterMsg.style.fontSize = '0.8rem';
-                        newsletterMsg.style.marginTop = '8px';
-                        emailInput.value = '';
-                        setTimeout(() => { newsletterMsg.textContent = ''; }, 4000);
-                    } else {
-                        newsletterMsg.textContent = 'Please enter a valid email address.';
-                        newsletterMsg.style.color = '#c62828';
-                        setTimeout(() => { newsletterMsg.textContent = ''; }, 3000);
+
+                newsletterForm.addEventListener(
+                    'submit',
+                    function (e) {
+
+                        e.preventDefault();
+
+
+                        const emailInput =
+                            newsletterForm.querySelector(
+                                'input[type="email"]'
+                            );
+
+
+                        const email =
+                            emailInput.value.trim();
+
+
+                        if (
+                            email &&
+                            email.includes('@')
+                        ) {
+
+                            newsletterMsg.textContent =
+                                "Thanks for subscribing! You'll hear from us soon.";
+
+                            newsletterMsg.style.color =
+                                '#ffffff';
+
+                            newsletterMsg.style.fontSize =
+                                '0.72rem';
+
+                            emailInput.value = '';
+
+
+                            setTimeout(function () {
+
+                                newsletterMsg.textContent =
+                                    '';
+
+                            }, 4000);
+
+
+                        } else {
+
+                            newsletterMsg.textContent =
+                                'Please enter a valid email address.';
+
+                            newsletterMsg.style.color =
+                                '#ffb4b4';
+
+
+                            setTimeout(function () {
+
+                                newsletterMsg.textContent =
+                                    '';
+
+                            }, 3000);
+
+                        }
+
                     }
-                });
+                );
+
             }
+
         })();
+
     </script>
-    
-    <!-- Fallback: if the page is loaded from cache, force reload -->
+
+
+    <!-- Cache fallback -->
+
     <noscript>
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
+
+        <meta
+            http-equiv="Cache-Control"
+            content="no-cache, no-store, must-revalidate">
+
+        <meta
+            http-equiv="Pragma"
+            content="no-cache">
+
+        <meta
+            http-equiv="Expires"
+            content="0">
+
     </noscript>
+
+
 </body>
+
 </html>

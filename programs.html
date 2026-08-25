@@ -1,320 +1,930 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-W0DNL1PP07');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-W0DNL1PP07');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Programs - POAK Kenya | Education, Empowerment, Peer Support, Health & Nutrition</title>
-    <meta name="description" content="POAK's four core programs: Education (digital skills & scholarships), Community Empowerment (financial literacy), Peer Program (Boys for Boys & Girls for Girls), and Mental Health & Nutrition Wellness.">
+
+    <title>Our Programs - POAK Kenya | Poverty Africa - Kenya</title>
+
+    <meta name="description" content="Explore Poverty Africa - Kenya's programs in education, community empowerment, youth development, mental health, agriculture, climate resilience and livelihoods.">
+
     <link rel="icon" type="image/png" href="images/logo_POAK.png">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* =========================================================
+           PROGRAM CARDS
+        ========================================================= */
+
+        .programs-grid-full {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 32px;
+            align-items: stretch;
+        }
+
+        .program-card-large {
+            background: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid #e7e7e7;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            padding: 0;
+        }
+
+        .program-card-large:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.11);
+        }
+
+        /* Remove old icon */
+        .program-icon-large {
+            display: none;
+        }
+
+        /* Program image */
+        .program-card-image {
+            width: 100%;
+            height: 245px;
+            overflow: hidden;
+            background: #eeeeee;
+            flex-shrink: 0;
+        }
+
+        .program-card-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.45s ease;
+        }
+
+        .program-card-large:hover .program-card-image img {
+            transform: scale(1.03);
+        }
+
+        /* Card content */
+        .program-card-content {
+            padding: 28px 30px 30px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            text-align: left;
+        }
+
+        .program-card-content h2 {
+            margin: 0 0 14px;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.45rem;
+            line-height: 1.3;
+            color: #080808;
+        }
+        /* Dark theme */
+body.dark-theme .program-card-content h2 {
+    color: #ffffff;
+}
+
+        .program-card-content p {
+            margin: 0 0 25px;
+            text-align: left;
+            color: #555555;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.97rem;
+            line-height: 1.75;
+        }
+
+        /* Button area */
+        .program-actions {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 5px;
+        }
+
+        .program-actions .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 145px;
+            padding: 11px 24px;
+            border-radius: 2px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.25s ease;
+        }
+
+        .program-actions .btn-primary {
+            background: #0b6b45;
+            color: #ffffff;
+            border: 1px solid #0b6b45;
+        }
+
+        .program-actions .btn-primary:hover {
+            background: #084f34;
+            border-color: #084f34;
+            transform: translateY(-1px);
+        }
+
+        /* Hide old elements if they exist */
+        .program-features,
+        .program-stats-small {
+            display: none;
+        }
+
+        /* =========================================================
+           RESPONSIVE PROGRAM CARDS
+        ========================================================= */
+
+        @media (max-width: 900px) {
+            .programs-grid-full {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .program-card-image {
+                height: 260px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .program-card-image {
+                height: 220px;
+            }
+
+            .program-card-content {
+                padding: 24px 22px 26px;
+            }
+
+            .program-card-content h2 {
+                font-size: 1.3rem;
+            }
+
+            .program-card-content p {
+                font-size: 0.94rem;
+                line-height: 1.7;
+            }
+
+            .program-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Floating Social Links (Right Center) with enhanced hover tooltips -->
+
+    <!-- Floating Social Links -->
     <div class="floating-social">
-        <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61588395929911"
+           target="_blank"
+           aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/povertyafricakenya/"
+           target="_blank"
+           aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/"
+           target="_blank"
+           aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc"
+           target="_blank"
+           aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
     </div>
+
 
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
+
             <a href="index.html" class="logo">
-                <img src="images/logo_POAK.png" alt="POAK Logo" class="logo-img">
+                <img src="images/logo_POAK.png"
+                     alt="POAK Logo"
+                     class="logo-img">
+
                 <div class="logo-text">
                     <span class="logo-main">POAK</span>
                     <span class="logo-sub">Poverty Africa - Kenya</span>
                 </div>
             </a>
+
             <button class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
+
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
                 <li class="dropdown">
-                    <a href="programs.html" class="active">Programs <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
+                    <a href="programs.html" class="active">
+                        Programs
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+ <ul class="dropdown-menu">
                         <li><a href="education-program.html">Education</a></li>
                         <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
                         <li><a href="peer-program.html">Peer Program</a></li>
                         <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
+                        <li><a href="4k-clubs.html">4K Clubs for Schools</a></li>
+                        <li><a href="4k-smart-farming.html">4K Smart Farming</a></li>
+                        <li><a href="livestock-development.html">Livestock Development</a></li>
+                        <li><a href="climate-resilience.html">Climate Resilience in Agriculture</a></li>
                     </ul>
                 </li>
-                <li><a href="impact.html">Impact</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <!-- <li><a href="calendar.html" class="active">Calendar</a></li> -->
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="donate.html" class="donate-btn">Donate</a></li>
+
+                <li>
+                    <a href="impact.html">Impact</a>
+                </li>
+
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="donate.html" class="donate-btn">Donate</a>
+                </li>
+
                 <li class="theme-toggle-container">
                     <button class="theme-toggle" id="themeToggle">
-                        <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
                     </button>
                 </li>
+
             </ul>
         </div>
     </nav>
 
-<!-- Header with width 100% auto to cover the whole section and show everyone -->
-<section class="page-header" style="
-    background-color: #1a1a1a; /* dark fallback */
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-        url('images/new-images/programs_hero.jpg');
-    background-size: 100% auto;      /* full width, no cropping */
-    background-position: center center;
-    background-repeat: no-repeat;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    padding: 4rem 0;
-">
-    <div class="container">
-        <h1>Our Programs</h1>
-        <p>Explore the ways we are addressing poverty in Kenya</p>
-    </div>
-</section>
 
-    <!-- Programs Overview -->
-    <section class="section">
+    <!-- Page Header -->
+    <section class="page-header"
+        style="
+            background-color: #1a1a1a;
+            background-image:
+                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('images/new-images/programs_hero.jpg');
+            background-size: 100% auto;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 0;
+        ">
+
         <div class="container">
-            <div class="programs-grid-full">
-                <!-- Program 1 - Education (In Development / Seeking Partners) -->
-                <div class="program-card-large">
-                    <div class="program-icon-large">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h2>Education</h2>
-                    <p>We are building a network of trusted training partners to offer digital skills and connect learners to scholarships. Once launched, this program will provide certification, internship placements, and career guidance. Register your interest to be notified when opportunities become available.</p>
-                    <ul class="program-features">
-                        <li><i class="fas fa-check-circle"></i> Digital Literacy & Coding</li>
-                        <li><i class="fas fa-check-circle"></i> Scholarship Connections</li>
-                        <li><i class="fas fa-check-circle"></i> Internship Placements (Planned)</li>
-                        <li><i class="fas fa-check-circle"></i> Career Mentorship (Planned)</li>
-                    </ul>
-                    <div class="program-stats-small">
-                        <span>Seeking Partners</span>
-                        <span>Register Interest</span>
-                        <span>Coming Soon</span>
-                    </div>
-                    <div class="program-actions">
-                        <a href="education-program.html" class="btn btn-primary">Learn More</a>
-                        <a href="donate.html" class="btn btn-secondary">Support the Launch</a>
-                    </div>
-                </div>
-
-                <!-- Program 2 - Community Empowerment (In Development) -->
-                <div class="program-card-large">
-                    <div class="program-icon-large">
-                        <i class="fas fa-chalkboard-user"></i>
-                    </div>
-                    <h2>Community Empowerment</h2>
-                    <p>Financial literacy and economic empowerment for both men and women. We are developing VSLA savings groups, small business training, and access to micro‑loans. Join our waitlist to be the first to know when groups form and training begins.</p>
-                    <ul class="program-features">
-                        <li><i class="fas fa-check-circle"></i> VSLA Groups (Planned)</li>
-                        <li><i class="fas fa-check-circle"></i> Business Training (Planned)</li>
-                        <li><i class="fas fa-check-circle"></i> Market Linkages (Planned)</li>
-                        <li><i class="fas fa-check-circle"></i> Financial Literacy (Planned)</li>
-                    </ul>
-                    <div class="program-stats-small">
-                        <span>Planned</span>
-                        <span>Seeking Partners</span>
-                        <span>Register Interest</span>
-                    </div>
-                    <div class="program-actions">
-                        <a href="community-empowerment-program.html" class="btn btn-primary">Learn More</a>
-                        <a href="donate.html" class="btn btn-secondary">Support the Launch</a>
-                    </div>
-                </div>
-
-                <!-- Program 3 - Peer Program (Active) -->
-                <div class="program-card-large">
-                    <div class="program-icon-large" style="color: #e84393;">
-                        <i class="fas fa-hand-holding-heart"></i>
-                    </div>
-                    <h2>Peer Program</h2>
-                    <p>Boys for Boys & Girls for Girls – creating safe spaces, mentorship, and life skills training. We address period poverty for girls and provide mental wellness support for both genders through peer‑led groups.</p>
-                    <ul class="program-features">
-                        <li><i class="fas fa-check-circle"></i> Sanitary Pad Distribution</li>
-                        <li><i class="fas fa-check-circle"></i> Menstrual Health Education</li>
-                        <li><i class="fas fa-check-circle"></i> Boys Mentorship Circles</li>
-                        <li><i class="fas fa-check-circle"></i> Peer Counseling Training</li>
-                    </ul>
-                    <div class="program-stats-small">
-                        <span>150+ Girls</span>
-                        <span>80+ Boys</span>
-                        <span>12 Schools</span>
-                    </div>
-                    <div class="program-actions">
-                        <a href="peer-program.html" class="btn btn-primary">Learn More</a>
-                        <a href="donate.html" class="btn btn-secondary">Support This Program</a>
-                    </div>
-                </div>
-
-                <!-- Program 4 - Mental Health & Nutrition Wellness (Active) -->
-                <div class="program-card-large">
-                    <div class="program-icon-large">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h2>Mental Health & Nutrition</h2>
-                    <p>Holistic wellness combining mental health support and nutrition education. We offer maternal mental health screening, youth peer support groups, and community‑based nutrition workshops.</p>
-                    <ul class="program-features">
-                        <li><i class="fas fa-check-circle"></i> Maternal Mental Health Screening</li>
-                        <li><i class="fas fa-check-circle"></i> Youth Peer Support Groups</li>
-                        <li><i class="fas fa-check-circle"></i> Nutrition Education Workshops</li>
-                        <li><i class="fas fa-check-circle"></i> CHV Training on Mental Health</li>
-                    </ul>
-                    <div class="program-stats-small">
-                        <span>60+ Sessions</span>
-                        <span>20 Support Groups</span>
-                        <span>30 Peer Counselors</span>
-                    </div>
-                    <div class="program-actions">
-                        <a href="mental-health-nutrition-program.html" class="btn btn-primary">Learn More</a>
-                        <a href="donate.html" class="btn btn-secondary">Support This Program</a>
-                    </div>
-                </div>
-            </div>
+            <h1>Our Programs</h1>
+            <p>
+                Explore the ways we are addressing poverty and creating
+                opportunities for communities across Kenya.
+            </p>
         </div>
+
     </section>
 
-    <!-- Why Our Programs Work Section -->
-    <section class="section bg-light">
+
+    <!-- =========================================================
+         PROGRAMS
+    ========================================================== -->
+
+    <section class="section">
+
         <div class="container">
-            <h2 class="section-title">Why Our Programs Work</h2>
+
+            <div class="programs-grid-full">
+
+
+                <!-- PROGRAM 1 -->
+                <div class="program-card-large">
+
+                    <div class="program-card-image">
+                        <img src="images/programs/education.jpg"
+                             alt="Education and digital skills programme">
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h2>Education</h2>
+
+                        <p>
+                            We support young people with access to digital
+                            skills, learning opportunities, scholarships and
+                            career guidance. The programme connects learners
+                            with opportunities that can help them build
+                            practical skills and prepare for the future.
+                        </p>
+
+                        <div class="program-actions">
+                            <a href="education-program.html"
+                               class="btn btn-primary">
+                                Learn More
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PROGRAM 2 -->
+                <div class="program-card-large">
+
+                    <div class="program-card-image">
+                        <img src="images/programs/community empowerment.jpeg"
+                             alt="Community empowerment programme">
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h2>Community Empowerment</h2>
+
+                        <p>
+                            We work with communities to strengthen financial
+                            literacy, entrepreneurship and household
+                            livelihoods. Through savings groups, business
+                            training and market linkages, communities are
+                            supported to build more sustainable sources of
+                            income.
+                        </p>
+
+                        <div class="program-actions">
+                            <a href="community-empowerment-program.html"
+                               class="btn btn-primary">
+                                Learn More
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PROGRAM 3 -->
+                <div class="program-card-large">
+
+                    <div class="program-card-image">
+                        <img src="images/programs/youth leadership.jpg"
+                             alt="Peer mentorship programme">
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h2>Peer Program</h2>
+
+                        <p>
+                            Our peer programme creates safe spaces where
+                            young people can access mentorship, life skills
+                            and peer support. The programme also addresses
+                            period poverty and promotes positive wellbeing
+                            among boys and girls.
+                        </p>
+
+                        <div class="program-actions">
+                            <a href="peer-program.html"
+                               class="btn btn-primary">
+                                Learn More
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PROGRAM 4 -->
+                <div class="program-card-large">
+
+                    <div class="program-card-image">
+                        <img src="images/programs/mental_health.jpg"
+                             alt="Mental health and nutrition programme">
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h2>Mental Health & Nutrition</h2>
+
+                        <p>
+                            We promote holistic wellbeing through mental
+                            health awareness, peer support and nutrition
+                            education. The programme works with young people,
+                            mothers, caregivers and community health actors
+                            to strengthen healthier communities.
+                        </p>
+
+                        <div class="program-actions">
+                            <a href="mental-health-nutrition-program.html"
+                               class="btn btn-primary">
+                                Learn More
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PROGRAM 5 -->
+                <div class="program-card-large">
+
+                    <div class="program-card-image">
+                        <img src="images/programs/4k for schools.png"
+                             alt="Students participating in a 4K Club agriculture programme">
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h2>4K Clubs for Schools & Institutions</h2>
+
+                        <p>
+                            The 4K Clubs programme introduces learners to
+                            practical agriculture, environmental stewardship,
+                            entrepreneurship and nutrition. Through school
+                            demonstration farms and hands-on learning,
+                            students develop practical agricultural skills
+                            and an interest in sustainable food systems.
+                        </p>
+
+                        <div class="program-actions">
+                            <a href="4k-clubs-program.html"
+                               class="btn btn-primary">
+                                Learn More
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PROGRAM 6 -->
+                <div class="program-card-large">
+
+                    <div class="program-card-image">
+                        <img src="images/programs/4k smart farming.png"
+                             alt="Community smart farming programme">
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h2>4K Smart Farming for Community</h2>
+
+                        <p>
+                            We support rural households to improve food
+                            production and livelihoods through climate-smart
+                            farming practices. Communities are introduced to
+                            practical, affordable and environmentally
+                            responsible approaches suited to local conditions.
+                        </p>
+
+                        <div class="program-actions">
+                            <a href="smart-farming-program.html"
+                               class="btn btn-primary">
+                                Learn More
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PROGRAM 7 -->
+                <div class="program-card-large">
+
+                    <div class="program-card-image">
+                        <img src="images/programs/livestock.jpg"
+                             alt="Community livestock farming programme">
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h2>Livestock Farming</h2>
+
+                        <p>
+                            The livestock programme supports households to
+                            strengthen livestock production as a pathway to
+                            improved food security and household income.
+                            Farmers receive practical knowledge on animal
+                            husbandry, feeding, production and sustainable
+                            livestock management.
+                        </p>
+
+                        <div class="program-actions">
+                            <a href="livestock-farming-program.html"
+                               class="btn btn-primary">
+                                Learn More
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- PROGRAM 8 -->
+                <div class="program-card-large">
+
+                    <div class="program-card-image">
+                        <img src="images/programs/climate resilience.jpg"
+                             alt="Climate resilient agriculture programme">
+                    </div>
+
+                    <div class="program-card-content">
+
+                        <h2>Climate-Resilient Agriculture</h2>
+
+                        <p>
+                            We help farming communities adapt to changing
+                            climate conditions by promoting resilient crops,
+                            responsible water management, sustainable land
+                            practices and climate-smart agricultural
+                            techniques that strengthen long-term food
+                            security.
+                        </p>
+
+                        <div class="program-actions">
+                            <a href="climate-resilience-program.html"
+                               class="btn btn-primary">
+                                Learn More
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         WHY OUR PROGRAMS WORK
+    ========================================================== -->
+
+    <section class="section bg-light">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Why Our Programs Work
+            </h2>
+
             <div class="section-line"></div>
+
             <div class="approach-grid">
+
                 <div class="approach-card">
+
                     <div class="approach-icon">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
+
                     <h3>Community-Led</h3>
-                    <p>All programs are designed with input from the communities we serve, ensuring relevance and sustainability.</p>
+
+                    <p>
+                        All programs are designed with input from the
+                        communities we serve, ensuring relevance and
+                        sustainability.
+                    </p>
+
                 </div>
+
+
                 <div class="approach-card">
+
                     <div class="approach-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
+
                     <h3>Data-Driven</h3>
-                    <p>We continuously monitor and evaluate our programs to ensure maximum impact and effectiveness.</p>
+
+                    <p>
+                        We continuously monitor and evaluate our programs
+                        to ensure maximum impact and effectiveness.
+                    </p>
+
                 </div>
+
+
                 <div class="approach-card">
+
                     <div class="approach-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
+
                     <h3>Partnership-Based</h3>
-                    <p>We work with local governments, businesses, and other NGOs to amplify our impact.</p>
+
+                    <p>
+                        We work with local governments, businesses and
+                        other organisations to amplify our impact.
+                    </p>
+
                 </div>
+
+
                 <div class="approach-card">
+
                     <div class="approach-icon">
                         <i class="fas fa-leaf"></i>
                     </div>
+
                     <h3>Sustainable</h3>
-                    <p>Our programs build local capacity and create lasting change that continues long after we leave.</p>
+
+                    <p>
+                        Our programs build local capacity and create
+                        lasting change that continues beyond individual
+                        projects.
+                    </p>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-        <!-- Partners Section - Full Width with Scroll -->
-<section class="partners-section">
-    <div class="container">
-        <h2 class="section-title">Our Partners</h2>
-    </div>
-    <div class="partners-scroll">
-        <div class="partners-track" id="partnersTrack">
-            <!-- Partner 1 -->
-            <div class="partner-item">
-                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
-                <span>Broad Experiential</span>
-            </div>
-            <!-- Partner 2 -->
-            <div class="partner-item">
-                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
-                <span>Solar Panda</span>
-            </div>
-            <!-- Partner 3 -->
-            <div class="partner-item">
-                <img src="images/partners/world_vision.png" alt="World Vision">
-                <span>World Vision</span>
-            </div>
-            <!-- Partner 4 -->
-            <div class="partner-item">
-                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
-                <span>Fresh Life</span>
-            </div>
-            <!-- Partner 5 -->
-            <div class="partner-item">
-                <img src="images/partners/logo.png" alt="AA Kenya">
-                <span>AA Kenya</span>
-            </div>
-            <!-- Partner 6 -->
-            <div class="partner-item">
-                <img src="images/partners/wisdom_medical_services.png" alt="Wisdom Medical Services">
-                <span>Wisdom Medical Services</span>
-            </div>
-        </div>
-    </div>
-</section>
 
+    <!-- =========================================================
+         PARTNERS
+    ========================================================== -->
 
-    <!-- Footer -->
-    <footer class="footer">
+    <section class="partners-section">
+
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
-                    <p>Fighting poverty across Kenya since 1997.</p>
-                    <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
+
+            <h2 class="section-title">
+                Our Partners
+            </h2>
+
+        </div>
+
+
+        <div class="partners-scroll">
+
+            <div class="partners-track" id="partnersTrack">
+
+                <div class="partner-item">
+                    <img src="images/Broad Experiential logo.png"
+                         alt="Broad Experiential">
+                    <span>Broad Experiential</span>
                 </div>
-                
-                <div class="footer-programs">
-                    <h4>Programs</h4>
-                    <ul>
-                        <li><a href="education-program.html">Education</a></li>
-                        <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-                        <li><a href="peer-program.html">Peer Program</a></li>
-                        <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-                    </ul>
+
+                <div class="partner-item">
+                    <img src="images/partners/solarpanda.webp"
+                         alt="Solar Panda">
+                    <span>Solar Panda</span>
                 </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-                    <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                    <p><i class="fas fa-phone"></i> 0143709759 / 0777636674</p>
+
+                <div class="partner-item">
+                    <img src="images/partners/world_vision.png"
+                         alt="World Vision">
+                    <span>World Vision</span>
                 </div>
-                <!-- NEWSLETTER COLUMN (compact) -->
-                <div class="footer-newsletter-column">
-                    <h4>Stay Updated</h4>
-                    <p>Get our monthly impact stories and news.</p>
-                    <form class="newsletter-compact" id="newsletterForm">
-                        <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                        <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
-                    </form>
-                    <p class="form-message" id="newsletterMessage"></p>
+
+                <div class="partner-item">
+                    <img src="images/partners/freshlife.jfif"
+                         alt="Fresh Life">
+                    <span>Fresh Life</span>
                 </div>
+
+                <div class="partner-item">
+                    <img src="images/partners/logo.png"
+                         alt="AA Kenya">
+                    <span>AA Kenya</span>
+                </div>
+
+                <div class="partner-item">
+                    <img src="images/partners/wisdom_medical_services.png"
+                         alt="Wisdom Medical Services">
+                    <span>Wisdom Medical Services</span>
+                </div>
+
             </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-about">
+
+                    <img src="images/logo_POAK.png"
+                         alt="POAK"
+                         class="footer-logo">
+
+                    <p>
+                        Fighting poverty across Kenya since 1997.
+                    </p>
+
+                    <p class="founded">
+                        <i class="fas fa-calendar-alt"></i>
+                        Founded 7th December 1997
+                    </p>
+
+                </div>
+
+
+                <div class="footer-programs">
+
+                    <h4>Programs</h4>
+
+                    <ul>
+
+                        <li>
+                            <a href="education-program.html">
+                                Education
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="community-empowerment-program.html">
+                                Community Empowerment
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="peer-program.html">
+                                Peer Program
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="mental-health-nutrition-program.html">
+                                Mental Health & Nutrition
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="4k-clubs-program.html">
+                                4K Clubs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="smart-farming-program.html">
+                                Smart Farming
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="livestock-farming-program.html">
+                                Livestock Farming
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="climate-resilience-program.html">
+                                Climate-Resilient Agriculture
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-contact">
+
+                    <h4>Contact</h4>
+
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        Nairobi, Kenya
+                    </p>
+
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        info@povertyafricakenya.co.ke
+                    </p>
+
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        0143709759 / 0777636674
+                    </p>
+
+                </div>
+
+
+                <div class="footer-newsletter-column">
+
+                    <h4>Stay Updated</h4>
+
+                    <p>
+                        Get our monthly impact stories and news.
+                    </p>
+
+                    <form class="newsletter-compact"
+                          id="newsletterForm">
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Your email"
+                            required
+                            aria-label="Email address">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                            style="
+                                padding: 0.5rem 1rem;
+                                font-size: 0.9rem;
+                            ">
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                    <p
+                        class="form-message"
+                        id="newsletterMessage">
+                    </p>
+
+                </div>
+
+            </div>
+
 
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
-                <p class="registration">Registered Nonprofit in Kenya</p>
+
+                <p>
+                    &copy;
+                    <span id="currentYear"></span>
+                    POAK - All rights reserved.
+                </p>
+
+                <p class="registration">
+                    Registered Nonprofit in Kenya
+                </p>
+
             </div>
+
         </div>
+
     </footer>
 
-    <button class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Scroll Top -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
     <script src="js/script.js"></script>
+
 </body>
 </html>
