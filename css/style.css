@@ -6718,3 +6718,1647 @@ body.dark-theme .newsletter-compact input::placeholder,
         height: 32px !important;
     }
 }
+
+
+/* =========================================================
+   PAGE BASE
+   ========================================================= */
+
+.mental-health-page {
+    background: var(--bg);
+    color: var(--text);
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.mental-health-page *,
+.mental-health-page *::before,
+.mental-health-page *::after {
+    box-sizing: border-box;
+}
+
+.mental-health-page .container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   COLOUR VARIABLES
+   ========================================================= */
+
+:root {
+    --primary: #e74c3c;
+    --primary-dark: #c0392b;
+
+    --secondary: #2ecc71;
+    --secondary-dark: #27ae60;
+
+    --accent: #3498db;
+    --girls: #e84393;
+
+    --bg: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-alt: #f1f3f4;
+
+    --text: #2c3e50;
+    --text-light: #555555;
+    --text-muted: #7f8c8d;
+
+    --border: #e0e0e0;
+    --card-bg: #ffffff;
+
+    --shadow: rgba(0, 0, 0, 0.08);
+    --shadow-hover: rgba(0, 0, 0, 0.12);
+
+    --footer-bg: #2c3e50;
+    --footer-text: #bdc3c7;
+
+    --bg-input: #ffffff;
+}
+
+
+/* =========================================================
+   DARK THEME VARIABLES
+   ========================================================= */
+
+.dark-theme {
+    --bg: #1a1a1a;
+    --bg-light: #2d2d2d;
+    --bg-alt: #333333;
+
+    --text: #f0f0f0;
+    --text-light: #cccccc;
+    --text-muted: #aaaaaa;
+
+    --border: #444444;
+    --card-bg: #2d2d2d;
+
+    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow-hover: rgba(0, 0, 0, 0.4);
+
+    --footer-bg: #111111;
+    --footer-text: #888888;
+
+    --bg-input: #2d2d2d;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.mental-health-page h1,
+.mental-health-page h2,
+.mental-health-page h3,
+.mental-health-page h4 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--text);
+}
+
+.mental-health-page p {
+    font-family: "Open Sans", sans-serif;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.mental-health-page a {
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.mental-health-page .navbar {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 12px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.mental-health-page .nav-container {
+    min-height: 78px;
+}
+
+.mental-health-page .logo {
+    color: var(--text);
+}
+
+.mental-health-page .logo-main {
+    color: var(--primary);
+}
+
+.mental-health-page .logo-sub {
+    color: var(--text-muted);
+}
+
+.mental-health-page .nav-menu > li > a {
+    color: var(--text);
+}
+
+.mental-health-page .nav-menu > li > a:hover,
+.mental-health-page .nav-menu > li > a.active {
+    color: var(--primary);
+}
+
+.mental-health-page .nav-menu > li > a::after {
+    background: var(--primary);
+}
+
+
+/* =========================================================
+   DROPDOWN
+   ========================================================= */
+
+.mental-health-page .dropdown-menu {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 35px var(--shadow-hover);
+}
+
+.mental-health-page .dropdown-menu li a {
+    color: var(--text);
+}
+
+.mental-health-page .dropdown-menu li a:hover,
+.mental-health-page .dropdown-menu li a.active {
+    background: var(--bg-light);
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   DONATE BUTTON
+   ========================================================= */
+
+.mental-health-page .donate-btn {
+    background: var(--primary);
+    color: #ffffff !important;
+}
+
+.mental-health-page .donate-btn:hover {
+    background: var(--primary-dark);
+}
+
+
+/* =========================================================
+   THEME TOGGLE
+   ========================================================= */
+
+.mental-health-page .theme-toggle {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.mental-health-page .theme-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.mental-health-page .hamburger span {
+    background: var(--text);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.mental-health-hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.68) 0%,
+            rgba(0, 0, 0, 0.52) 45%,
+            rgba(0, 0, 0, 0.28) 100%
+        ),
+        url("../images/programs/mental_health.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO DECORATIVE SHAPES
+   ========================================================= */
+
+.mental-health-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(231, 76, 60, 0.07);
+
+    top: -170px;
+    right: -100px;
+
+    pointer-events: none;
+}
+
+.mental-health-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    border: 45px solid rgba(46, 204, 113, 0.06);
+
+    bottom: -120px;
+    left: -80px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.mental-health-hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding: 65px 0;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 14px;
+    margin-bottom: 18px;
+
+    border-left: 4px solid var(--primary);
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: var(--primary);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.mental-health-hero h1 {
+    margin: 0 0 20px;
+
+    max-width: 780px;
+
+    font-size: clamp(2.7rem, 5.5vw, 4.8rem);
+
+    line-height: 1.02;
+
+    font-weight: 800;
+
+    letter-spacing: -0.04em;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO PARAGRAPH
+   ========================================================= */
+
+.mental-health-hero p {
+    max-width: 680px;
+
+    margin: 0 0 28px;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border: 2px solid transparent;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.88rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+.hero-button.primary {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.hero-button.primary:hover {
+    background: var(--primary-dark);
+}
+
+.hero-button.secondary {
+    background: transparent;
+
+    border-color: #ffffff;
+
+    color: #ffffff;
+}
+
+.hero-button.secondary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   GENERAL SECTION STYLING
+   ========================================================= */
+
+.intro-section,
+.model-section,
+.opportunities-section {
+    position: relative;
+
+    padding: 100px 0;
+
+    background: var(--bg);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.model-section {
+    background: var(--bg-light);
+}
+
+.opportunities-section {
+    background: var(--bg);
+}
+
+
+/* =========================================================
+   SECTION SEPARATORS
+   ========================================================= */
+
+.intro-section + .model-section,
+.model-section + .opportunities-section,
+.opportunities-section + .intro-section {
+    border-top: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.eyebrow {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: var(--primary);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.76rem;
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+.eyebrow::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 28px;
+    height: 2px;
+
+    margin-right: 10px;
+
+    vertical-align: middle;
+
+    background: var(--primary);
+}
+
+
+/* =========================================================
+   INTRO GRID
+   ========================================================= */
+
+.intro-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.6fr)
+        minmax(280px, 0.8fr);
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.intro-grid h2 {
+    max-width: 760px;
+
+    margin: 0 0 25px;
+
+    font-size: clamp(2rem, 4vw, 3.1rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+}
+
+.intro-grid p {
+    max-width: 780px;
+
+    margin: 0 0 18px;
+}
+
+
+/* =========================================================
+   INTRO NOTE
+   ========================================================= */
+
+.intro-note {
+    position: relative;
+
+    padding: 34px;
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    border-top: 4px solid var(--secondary);
+
+    box-shadow: 0 12px 35px var(--shadow);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.intro-note:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 18px 42px var(--shadow-hover);
+}
+
+.intro-note strong {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--secondary-dark);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 1.1rem;
+}
+
+.dark-theme .intro-note strong {
+    color: var(--secondary);
+}
+
+.intro-note p {
+    margin: 0;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+    max-width: 780px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading .eyebrow::before {
+    display: none;
+}
+
+.section-heading h2 {
+    margin: 0 0 18px;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+.section-heading p {
+    margin: 0;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   MODEL GRID
+   ========================================================= */
+
+.model-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   MODEL CARDS
+   ========================================================= */
+
+.model-card {
+    position: relative;
+
+    min-height: 285px;
+
+    padding: 32px 28px;
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 8px 25px var(--shadow);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.model-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: var(--primary);
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition: transform 0.3s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--border);
+
+    box-shadow: 0 18px 40px var(--shadow-hover);
+}
+
+.model-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* =========================================================
+   MODEL CARD ACCENT COLORS
+   ========================================================= */
+
+.model-card:nth-child(2)::before {
+    background: var(--secondary);
+}
+
+.model-card:nth-child(3)::before {
+    background: var(--accent);
+}
+
+.model-card:nth-child(4)::before {
+    background: var(--girls);
+}
+
+
+/* =========================================================
+   MODEL NUMBER
+   ========================================================= */
+
+.model-number {
+    display: block;
+
+    margin-bottom: 30px;
+
+    color: var(--text-muted);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.78rem;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   MODEL CARD TEXT
+   ========================================================= */
+
+.model-card h3 {
+    margin: 0 0 14px;
+
+    font-size: 1.2rem;
+
+    line-height: 1.3;
+}
+
+.model-card p {
+    margin: 0;
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   OPPORTUNITIES GRID
+   ========================================================= */
+
+.opportunities-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(280px, 0.75fr);
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.opportunities-grid h2 {
+    margin: 0 0 20px;
+
+    font-size: clamp(2rem, 4vw, 3.1rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+.opportunities-grid > div > p {
+    max-width: 760px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   OPPORTUNITY LIST
+   ========================================================= */
+
+.opportunity-list {
+    list-style: none;
+
+    margin: 30px 0 0;
+
+    padding: 0;
+}
+
+.opportunity-list li {
+    position: relative;
+
+    padding: 0 0 20px 32px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-light);
+
+    line-height: 1.75;
+}
+
+.opportunity-list li::before {
+    content: "";
+
+    position: absolute;
+
+    top: 9px;
+    left: 0;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+}
+
+.opportunity-list li strong {
+    color: var(--text);
+
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* =========================================================
+   LEARNER / SUPPORT BOX
+   ========================================================= */
+
+.learner-box {
+    padding: 35px;
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 12px 35px var(--shadow);
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.learner-box:hover {
+    box-shadow: 0 18px 42px var(--shadow-hover);
+}
+
+.learner-box h3 {
+    margin: 0 0 25px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 1.2rem;
+}
+
+.learner-box ul {
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+.learner-box li {
+    position: relative;
+
+    padding: 11px 0 11px 24px;
+
+    color: var(--text-light);
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 0.92rem;
+}
+
+.learner-box li:last-child {
+    border-bottom: none;
+}
+
+.learner-box li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--secondary);
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PARTNERS
+   ========================================================= */
+
+.partners-section {
+    padding: 75px 0;
+
+    background: var(--bg-light);
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+    overflow: hidden;
+}
+
+.partners-header {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.partners-header h2 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+
+/* =========================================================
+   PARTNER TRACK
+   ========================================================= */
+
+.partners-scroll {
+    width: 100%;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.partners-track {
+    display: flex;
+
+    width: max-content;
+
+    animation: partnerScroll 35s linear infinite;
+}
+
+.partners-track:hover {
+    animation-play-state: paused;
+}
+
+.partner-item {
+    min-width: 190px;
+
+    margin-right: 25px;
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    background: var(--card-bg);
+
+    border: 1px solid var(--border);
+
+    box-shadow: 0 6px 20px var(--shadow);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.partner-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 14px 30px var(--shadow-hover);
+}
+
+.partner-item img {
+    width: 90px;
+    height: 60px;
+
+    object-fit: contain;
+
+    filter: none;
+
+    transition: transform 0.3s ease;
+}
+
+.partner-item:hover img {
+    transform: scale(1.05);
+}
+
+.partner-item span {
+    color: var(--text-muted);
+
+    font-family: "Open Sans", sans-serif;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   PARTNER ANIMATION
+   ========================================================= */
+
+@keyframes partnerScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =========================================================
+   CALL TO ACTION
+   ========================================================= */
+
+.cta-section {
+    position: relative;
+
+    padding: 90px 0;
+
+    background: var(--primary);
+
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    border: 70px solid rgba(255, 255, 255, 0.07);
+
+    right: -180px;
+    top: -170px;
+}
+
+.cta-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    left: -120px;
+    bottom: -130px;
+}
+
+.cta-grid {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(280px, 0.7fr);
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   CTA TEXT
+   ========================================================= */
+
+.cta-section .eyebrow {
+    color: #ffffff !important;
+}
+
+.cta-section .eyebrow::before {
+    background: #ffffff;
+}
+
+.cta-section h2 {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    line-height: 1.15;
+}
+
+.cta-section p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+   ========================================================= */
+
+.cta-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+.cta-button {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 52px;
+
+    padding: 0 24px;
+
+    border: 2px solid transparent;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+.cta-button.primary {
+    background: #ffffff;
+
+    color: var(--primary);
+}
+
+.cta-button.primary:hover {
+    background: var(--bg-light);
+}
+
+.cta-button.secondary {
+    background: transparent;
+
+    border-color: rgba(255, 255, 255, 0.7);
+
+    color: #ffffff;
+}
+
+.cta-button.secondary:hover {
+    background: #ffffff;
+
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.mental-health-page .footer {
+    background: var(--footer-bg);
+
+    color: var(--footer-text);
+
+    border-top: 1px solid var(--border);
+}
+
+.mental-health-page .footer h4 {
+    color: #ffffff;
+}
+
+.mental-health-page .footer p {
+    color: var(--footer-text);
+}
+
+.mental-health-page .footer a {
+    color: var(--footer-text);
+}
+
+.mental-health-page .footer a:hover {
+    color: #ffffff;
+}
+
+.mental-health-page .footer-logo {
+    max-width: 150px;
+}
+
+.mental-health-page .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   NEWSLETTER
+   ========================================================= */
+
+.mental-health-page .newsletter-compact {
+    display: flex;
+
+    gap: 8px;
+}
+
+.mental-health-page .newsletter-compact input {
+    min-width: 0;
+
+    flex: 1;
+
+    padding: 11px 13px;
+
+    background: var(--bg-input);
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+    outline: none;
+}
+
+.mental-health-page .newsletter-compact input::placeholder {
+    color: var(--text-muted);
+}
+
+.mental-health-page .newsletter-compact input:focus {
+    border-color: var(--accent);
+}
+
+.mental-health-page .newsletter-compact button {
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.mental-health-page .newsletter-compact button:hover {
+    background: var(--primary-dark);
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+   ========================================================= */
+
+.mental-health-page .form-message {
+    margin-top: 10px;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   SCROLL TOP
+   ========================================================= */
+
+.mental-health-page .scroll-top {
+    background: var(--primary);
+
+    color: #ffffff;
+
+    border: none;
+
+    box-shadow: 0 8px 25px var(--shadow-hover);
+
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.mental-health-page .scroll-top:hover {
+    background: var(--primary-dark);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   DARK THEME — HERO
+   ========================================================= */
+
+.dark-theme .mental-health-hero {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.78) 0%,
+            rgba(20, 20, 20, 0.68) 50%,
+            rgba(20, 20, 20, 0.45) 100%
+        ),
+        url("../images/programs/mental_health.jpg");
+}
+
+.dark-theme .mental-health-hero::before {
+    background: rgba(231, 76, 60, 0.09);
+}
+
+.dark-theme .mental-health-hero::after {
+    border-color: rgba(46, 204, 113, 0.08);
+}
+
+.dark-theme .hero-label {
+    background: var(--card-bg);
+
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   DARK THEME — CARDS
+   ========================================================= */
+
+.dark-theme .model-card,
+.dark-theme .intro-note,
+.dark-theme .learner-box,
+.dark-theme .partner-item {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.dark-theme .model-card:hover,
+.dark-theme .intro-note:hover,
+.dark-theme .learner-box:hover,
+.dark-theme .partner-item:hover {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme .partners-section {
+    background: var(--bg-alt);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .model-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-grid,
+    .opportunities-grid,
+    .cta-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .intro-note,
+    .learner-box {
+        max-width: 650px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .mental-health-page .container {
+        width: min(100% - 30px, 1180px);
+    }
+
+
+    /* -----------------------------------------
+       HERO
+       ----------------------------------------- */
+
+    .mental-health-hero {
+        min-height: 460px;
+
+        align-items: center;
+    }
+
+    .mental-health-hero-content {
+        padding: 55px 0;
+    }
+
+    .mental-health-hero h1 {
+        font-size: clamp(2.5rem, 11vw, 3.7rem);
+
+        line-height: 1.04;
+
+        margin-bottom: 18px;
+    }
+
+    .mental-health-hero p {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+    }
+
+    .hero-label {
+        font-size: 0.68rem;
+
+        padding: 6px 12px;
+
+        margin-bottom: 16px;
+    }
+
+    .hero-button {
+        min-height: 46px;
+
+        padding: 0 19px;
+
+        font-size: 0.84rem;
+    }
+
+
+    /* -----------------------------------------
+       SECTIONS
+       ----------------------------------------- */
+
+    .intro-section,
+    .model-section,
+    .opportunities-section {
+        padding: 70px 0;
+    }
+
+
+    /* -----------------------------------------
+       CARDS
+       ----------------------------------------- */
+
+    .model-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .model-card {
+        min-height: auto;
+    }
+
+
+    /* -----------------------------------------
+       INTRO
+       ----------------------------------------- */
+
+    .intro-grid,
+    .opportunities-grid {
+        gap: 35px;
+    }
+
+
+    /* -----------------------------------------
+       CTA
+       ----------------------------------------- */
+
+    .cta-section {
+        padding: 70px 0;
+    }
+
+    .cta-grid {
+        gap: 35px;
+    }
+
+
+    /* -----------------------------------------
+       PARTNERS
+       ----------------------------------------- */
+
+    .partners-section {
+        padding: 60px 0;
+    }
+
+    .partner-item {
+        min-width: 165px;
+    }
+
+
+    /* -----------------------------------------
+       NEWSLETTER
+       ----------------------------------------- */
+
+    .mental-health-page .newsletter-compact {
+        flex-direction: column;
+    }
+
+    .mental-health-page .newsletter-compact button {
+        min-height: 44px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .mental-health-page .container {
+        width: calc(100% - 24px);
+    }
+
+
+    /* -----------------------------------------
+       HERO
+       ----------------------------------------- */
+
+    .mental-health-hero {
+        min-height: 430px;
+    }
+
+    .mental-health-hero-content {
+        padding: 48px 0;
+    }
+
+    .mental-health-hero h1 {
+        font-size: clamp(2.3rem, 12vw, 3.2rem);
+    }
+
+
+    /* -----------------------------------------
+       HERO BUTTONS
+       ----------------------------------------- */
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------
+       SECTIONS
+       ----------------------------------------- */
+
+    .intro-section,
+    .model-section,
+    .opportunities-section {
+        padding: 55px 0;
+    }
+
+
+    /* -----------------------------------------
+       CARDS
+       ----------------------------------------- */
+
+    .intro-note,
+    .learner-box,
+    .model-card {
+        padding: 25px;
+    }
+
+
+    /* -----------------------------------------
+       OPPORTUNITY LIST
+       ----------------------------------------- */
+
+    .opportunity-list li {
+        padding-left: 27px;
+    }
+
+
+    /* -----------------------------------------
+       CTA
+       ----------------------------------------- */
+
+    .cta-buttons {
+        width: 100%;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .mental-health-page *,
+    .mental-health-page *::before,
+    .mental-health-page *::after {
+
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
