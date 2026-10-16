@@ -172,10 +172,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const themeToggle = document.getElementById("themeToggle");
   const body = document.body;
   const root = document.documentElement;
-  let savedTheme = null;
+  // Always default to light on each new page load.
+  // Clear legacy theme preferences so they cannot restore dark mode.
   try {
-    savedTheme =
-      localStorage.getItem("poak_theme") || localStorage.getItem("poak-theme");
+    localStorage.removeItem("poak_theme");
+    localStorage.removeItem("poak-theme");
   } catch (e) {}
   function setTheme(theme) {
     body.classList.toggle("dark-theme", theme === "dark");
@@ -195,19 +196,12 @@ document.addEventListener("DOMContentLoaded", function () {
         theme === "dark" ? "#0b0b0c" : "#ffffff",
       );
   }
-  const initialTheme =
-    savedTheme === "dark" || savedTheme === "light"
-      ? savedTheme
-      : root.getAttribute("data-theme") || "light";
-  setTheme(initialTheme);
+  setTheme("light");
   if (themeToggle)
     themeToggle.addEventListener("click", () => {
       const next =
         root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       setTheme(next);
-      try {
-        localStorage.setItem("poak_theme", next);
-      } catch (e) {}
     });
 
   // ===== HAMBURGER MENU & MOBILE DROPDOWNS (FIXED) =====
