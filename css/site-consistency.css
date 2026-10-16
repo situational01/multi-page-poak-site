@@ -1,0 +1,42 @@
+/* POAK interior pages — shared editorial design layer.
+   Uses the existing brand tokens and leaves page-specific functionality intact. */
+:root{--poak-radius:5px;--poak-rule:var(--border);}
+body.poak-interior{background:var(--bg);color:var(--text);font-family:"Open Sans",sans-serif;line-height:1.72;}
+body.poak-interior h1,body.poak-interior h2,body.poak-interior h3,body.poak-interior h4{font-family:"Montserrat",sans-serif;letter-spacing:-.025em;}
+body.poak-interior p{line-height:1.78;}
+body.poak-interior .container{max-width:1200px;}
+body.poak-interior .navbar{background:var(--bg);border-bottom:1px solid var(--border);box-shadow:0 1px 5px var(--shadow);}
+body.poak-interior .nav-menu>li>a{font-weight:600;}
+body.poak-interior .donate-btn{background:var(--secondary)!important;color:#fff!important;border-radius:4px!important;padding:10px 18px!important;}
+body.poak-interior .donate-btn:hover{background:var(--secondary-dark)!important;color:#fff!important;}
+body.poak-interior :is(.btn,.btn-primary,.btn-secondary,.btn-outline,.btn-learn,.read-more,.newsletter-submit){border-radius:4px;}
+body.poak-interior :is(.section,.blog-posts,.programs-section,.page-section){scroll-margin-top:85px;}
+body.poak-interior .section{padding-top:clamp(55px,6vw,92px);padding-bottom:clamp(55px,6vw,92px);}
+body.poak-interior .section-title{font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:-.035em;}
+body.poak-interior .section-line{width:55px;height:3px;border-radius:0;background:var(--secondary);}
+body.poak-interior .page-header{background:linear-gradient(110deg, #19241f, #344339);padding:125px 0 72px;}
+body.poak-interior .page-header h1,body.poak-interior .page-header p{color:#fff;}
+body.poak-interior :is(.program-card,.program-card-large,.blog-card,.feature-card,.stat-card,.impact-card,.value-card,.service-card,.team-card,.event-card){border-radius:5px;}
+body.poak-interior :is(.program-card,.program-card-large,.blog-card,.feature-card,.stat-card,.impact-card,.value-card,.service-card,.team-card,.event-card){box-shadow:0 3px 14px var(--shadow);}
+body.poak-interior :is(.program-card,.program-card-large,.blog-card,.feature-card,.stat-card,.impact-card,.value-card,.service-card,.team-card,.event-card):hover{box-shadow:0 10px 26px var(--shadow-hover);}
+body.poak-interior :is(.program-card,.program-card-large,.blog-card,.feature-card,.stat-card,.impact-card,.value-card,.service-card,.team-card,.event-card) img{object-fit:cover;}
+body.poak-interior :is(.fourk-hero,.smart-hero,.education-hero,.community-hero,.climate-hero,.livestock-hero,.peer-hero,.impact-hero,.mental-health-hero){isolation:isolate;}
+body.poak-interior .floating-social{position:fixed!important;top:50%!important;right:0!important;left:auto!important;bottom:auto!important;transform:translateY(-50%)!important;z-index:900!important;display:flex!important;flex-direction:column!important;gap:0!important;width:43px!important;padding:8px 5px!important;background:var(--card-bg)!important;border:1px solid var(--border)!important;border-right:0!important;border-radius:6px 0 0 6px!important;box-shadow:0 3px 14px var(--shadow)!important;backdrop-filter:none!important;}
+body.poak-interior .floating-social a{display:flex!important;align-items:center!important;justify-content:center!important;width:32px!important;min-width:32px!important;height:38px!important;min-height:38px!important;padding:0!important;margin:0!important;background:transparent!important;color:var(--text-light)!important;border:0!important;border-radius:3px!important;box-shadow:none!important;text-decoration:none!important;font-size:16px!important;transform:none!important;transition:color .18s,background .18s!important;}
+body.poak-interior .floating-social a:hover{color:var(--secondary)!important;background:var(--bg-light)!important;transform:none!important;}
+body.poak-interior .floating-social a::before,body.poak-interior .floating-social a::after{display:none!important;content:none!important;}
+body.poak-interior :is(a,button,input,select,textarea):focus-visible{outline:3px solid var(--secondary);outline-offset:3px;}
+body.poak-interior .footer{background:#151a20;color:#fff;}
+body.poak-interior .whatsapp-chat-btn{border-radius:6px;}
+body.poak-interior .scroll-top{border-radius:4px;}
+/* Some legacy pages force white cards and text irrespective of theme. */
+body.poak-interior.dark-theme :is(.program-card-large,.blog-card,.stat-card,.feature-card,.service-card,.value-card,.event-card){background:var(--card-bg)!important;border-color:var(--border)!important;}
+body.poak-interior.dark-theme :is(.program-card-large,.blog-card,.stat-card,.feature-card,.service-card,.value-card,.event-card) :is(h2,h3,h4){color:var(--text)!important;}
+body.poak-interior.dark-theme :is(.program-card-large,.blog-card,.stat-card,.feature-card,.service-card,.value-card,.event-card) p{color:var(--text-light)!important;}
+@media(max-width:991px){body.poak-interior .nav-menu{z-index:1002;}body.poak-interior .navbar{z-index:1100;}}
+@media(max-width:768px){body.poak-interior .floating-social{display:none!important;}body.poak-interior .page-header{padding:110px 0 55px;}}
+@media(prefers-reduced-motion:reduce){body.poak-interior *,body.poak-interior *::before,body.poak-interior *::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;}}
+/* About page has an independent html[data-theme] implementation; sync it with the site. */
+html[data-theme="dark"] body.poak-about{--bg:#1a1a1a;--bg-light:#2d2d2d;--bg-alt:#333;--text:#f0f0f0;--text-light:#ccc;--text-muted:#aaa;--border:#444;--card-bg:#2d2d2d;--shadow:rgba(0,0,0,.3);--shadow-hover:rgba(0,0,0,.4);}
+body.poak-about .floating-social{background:var(--card-bg, #fff)!important;}
+body.poak-about .site-nav{border-bottom:1px solid var(--border, #ddd);}

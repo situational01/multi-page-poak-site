@@ -1,0 +1,78 @@
+/* POAK homepage: documentary-inspired, warm, human styling. Original brand variables retained. */
+.home-page{--home-radius:4px;}
+.home-page .home-hero{position:relative;min-height:680px;background:#28362c;overflow:hidden}
+.home-page .home-hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 49%;filter:saturate(.85) contrast(1.08)}
+.home-page .home-hero .hero-overlay{position:relative;z-index:1;min-height:680px;background:linear-gradient(90deg,rgba(16,24,19,.94) 0%,rgba(16,24,19,.79) 48%,rgba(16,24,19,.26) 100%);padding:95px 0 90px;}
+.home-page .home-hero-layout{grid-template-columns:minmax(0,1.4fr) minmax(260px,.58fr);gap:8vw;}
+.home-page .home-eyebrow{letter-spacing:.045em;text-transform:none;font-size:.9rem;color:#efeee5;margin-bottom:24px;font-weight:600;}
+.home-page .home-dot{display:none}
+.home-page .home-hero h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(3.2rem,5.25vw,5.7rem);font-weight:700;letter-spacing:-.025em;line-height:1.1;max-width:720px}
+.home-page .home-hero h1 span{color:#78d49b}
+.home-page .home-hero .hero-text{font-size:1.13rem;line-height:1.75;max-width:620px;color:#f1eee7}
+.home-page .home-hero-proof{border-left:3px solid var(--secondary);padding-left:17px;color:#f4f1e8;font-size:.92rem;letter-spacing:.015em}
+.home-page .home-hero-card{background:#f6f3eb;border:0;border-top:5px solid var(--primary);border-radius:2px;backdrop-filter:none;box-shadow:11px 14px 0 rgba(10,19,14,.35);transform:rotate(1deg);padding:30px 26px}
+.home-page .home-hero-card-top{font-family:Georgia,serif;font-size:1.05rem;color:#293c32}
+.home-page .home-hero-card>strong{color:#263a2f}
+.home-page .home-hero .btn,.home-page .home-cta-actions .btn{border-radius:3px;box-shadow:none}
+.home-page .home-hero .btn-primary{background:var(--primary);color:white}
+.home-page .home-section-kicker{letter-spacing:.1em}
+.home-page .home-about-section .section-title,.home-page .programs-natural-section .section-title,.home-page .cta-refined-section h2{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.015em}
+.home-page .home-about-section .about-image,.home-page .programs-natural-section .program-card,.home-page .impact-bg-section .impact-item{border-radius:3px;box-shadow:none}
+.home-page .programs-natural-section .program-card{border:1px solid var(--border);border-bottom:3px solid var(--secondary);}
+.home-page .programs-natural-section .program-card:hover{box-shadow:6px 7px 0 var(--shadow);transform:translateY(-2px)}
+.home-page .programs-natural-section .program-card-image img{filter:saturate(.86);}
+.home-page .programs-natural-section .program-card:hover img{transform:none}
+.home-page .impact-bg-section .testimonial{border-radius:2px;box-shadow:none;background:rgba(0,0,0,.38)}
+.home-page .cta-refined-section{background:var(--bg-light)!important}
+.home-page .cta-refined-section .cta-box{background:var(--card-bg)!important;border:1px solid var(--border);border-left:5px solid var(--primary);border-radius:3px;box-shadow:8px 8px 0 var(--shadow)}
+.home-page .cta-refined-section .cta-box h2{color:var(--text)!important}
+.home-page .cta-refined-section .cta-box p{color:var(--text-light)!important}
+.home-page .cta-refined-section .cta-box .btn-primary{border-radius:3px}
+.home-page .cta-refined-section .cta-box .btn-secondary{border-radius:3px}
+.home-page .floating-social{gap:5px!important}
+.home-page .floating-social a{width:38px!important;height:38px;min-width:38px;min-height:38px;padding:0;border-radius:4px!important;display:grid;place-items:center;font-size:15px}
+.home-page .floating-social a::after,.home-page .floating-social a::before,.home-page .whatsapp-chat-btn::after,.home-page .whatsapp-chat-btn::before{display:none!important}
+.home-page .whatsapp-chat-btn{width:55px;height:55px;border-radius:6px;padding:0;font-size:26px}
+.home-page .scroll-top{width:42px;height:42px;padding:0;border-radius:4px;font-size:17px}
+
+
+.home-page .footer-contact-item,.home-page .footer-links a{gap:.65rem}
+
+.home-page .footer-newsletter-card{border-radius:3px}
+.home-page a:focus-visible,.home-page button:focus-visible{outline:3px solid var(--secondary);outline-offset:4px}
+@media(max-width:991px){.home-page .home-hero-layout{grid-template-columns:1fr}.home-page .home-hero .hero-overlay{background:linear-gradient(90deg,rgba(16,24,19,.94),rgba(16,24,19,.58))}.home-page .home-hero-card{max-width:390px;transform:none}}
+@media(max-width:650px){.home-page .home-hero .hero-overlay{padding:62px 0}.home-page .home-hero h1{font-size:clamp(2.65rem,10vw,4.1rem)}.home-page .home-hero-photo{object-position:62% center}.home-page .floating-social{display:none!important}}
+
+/* Contextual original icons restored; natural typography and photographic hero remain. */
+.home-page .floating-social a i,.home-page .whatsapp-chat-btn i{line-height:1}
+
+
+/* Refined social rail — no floating capsule or stacked grey tiles. */
+.home-page .floating-social {
+  position:fixed!important;right:0!important;top:50%!important;
+  transform:translateY(-50%)!important;z-index:900!important;
+  display:flex!important;flex-direction:column!important;gap:0!important;
+  padding:8px 5px!important;width:43px!important;
+  border:1px solid var(--border)!important;border-right:0!important;
+  border-radius:6px 0 0 6px!important;
+  background:var(--card-bg)!important;
+  box-shadow:0 3px 14px var(--shadow)!important;
+  backdrop-filter:none!important;
+}
+.home-page .floating-social a,
+.dark-theme.home-page .floating-social a {
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  width:32px!important;min-width:32px!important;height:38px!important;min-height:38px!important;
+  margin:0!important;padding:0!important;
+  background:transparent!important;border:0!important;border-radius:3px!important;
+  box-shadow:none!important;color:var(--text-light)!important;
+  font-size:16px!important;transform:none!important;
+  text-decoration:none!important;transition:color .18s,background .18s!important;
+}
+.home-page .floating-social a:hover,
+.dark-theme.home-page .floating-social a:hover {
+  color:var(--secondary)!important;background:var(--bg-light)!important;transform:none!important;
+}
+.home-page .floating-social a:focus-visible {outline:2px solid var(--secondary)!important;outline-offset:1px!important;}
+.home-page .floating-social a::before,.home-page .floating-social a::after{display:none!important;}
+@media(max-width:768px){.home-page .floating-social{display:none!important;}}

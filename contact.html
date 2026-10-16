@@ -1,443 +1,317 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-  <head> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
-    <script>
+<head>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-W0DNL1PP07"></script>
+<script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-W0DNL1PP07');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-W0DNL1PP07");
     </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact POAK - Poverty Africa Kenya | Get in Touch</title>
-    <meta
-      name="description"
-      content="Contact POAK (Poverty Africa Kenya). Reach us by phone, email, or visit our Nairobi office. We'd love to hear from you."
-    />
-    <link rel="icon" type="image/png" href="images/logo_POAK.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      /* Floating social tooltips (same as other pages) */
-      .floating-social a {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.2s ease, background 0.2s ease;
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-18474594094"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-      .floating-social a:hover::after {
-        content: attr(aria-label);
-        position: absolute;
-        right: 100%;
-        margin-right: 12px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #1e2a3a;
-        color: #ffffff;
-        padding: 6px 12px;
-        border-radius: 32px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        font-family: 'Open Sans', sans-serif;
-        letter-spacing: 0.3px;
-        white-space: nowrap;
-        z-index: 1000;
-        pointer-events: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(2px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        line-height: 1.2;
-      }
-      .floating-social a:hover::before {
-        content: '';
-        position: absolute;
-        right: 100%;
-        margin-right: 4px;
-        top: 50%;
-        transform: translateY(-50%);
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent transparent transparent #1e2a3a;
-        z-index: 1000;
-        pointer-events: none;
-      }
-      .floating-social a:hover {
-        transform: scale(1.05);
-      }
-      @media (max-width: 640px) {
-        .floating-social a:hover::after {
-          font-size: 0.7rem;
-          padding: 4px 8px;
-          margin-right: 8px;
-        }
-        .floating-social a:hover::before {
-          margin-right: 2px;
-          border-width: 4px;
-        }
-      }
+      gtag("js", new Date());
 
-      /* WhatsApp Chat Button */
-      .whatsapp-chat-btn {
-        position: fixed;
-        bottom: 25px;
-        right: 30px;
-        z-index: 999;
-        background-color: #25D366;
-        color: #ffffff;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        font-size: 28px;
-        text-decoration: none;
-      }
-      .whatsapp-chat-btn:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-      }
-      .whatsapp-chat-btn:hover::after {
-        content: attr(aria-label);
-        position: absolute;
-        right: 70px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #1e2a3a;
-        color: #ffffff;
-        padding: 6px 12px;
-        border-radius: 32px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        font-family: 'Open Sans', sans-serif;
-        letter-spacing: 0.3px;
-        white-space: nowrap;
-        z-index: 1000;
-        pointer-events: none;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(2px);
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        line-height: 1.2;
-      }
-      .whatsapp-chat-btn:hover::before {
-        content: '';
-        position: absolute;
-        right: 62px;
-        top: 50%;
-        transform: translateY(-50%);
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent transparent transparent #1e2a3a;
-        z-index: 1000;
-        pointer-events: none;
-      }
-      @media (max-width: 640px) {
-        .whatsapp-chat-btn {
-          width: 50px;
-          height: 50px;
-          bottom: 20px;
-          right: 20px;
-          font-size: 24px;
-        }
-        .whatsapp-chat-btn:hover::after {
-          font-size: 0.7rem;
-          padding: 4px 8px;
-          right: 60px;
-        }
-        .whatsapp-chat-btn:hover::before {
-          right: 52px;
-          border-width: 4px;
-        }
-      }
+      gtag("config", "AW-18474594094");
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact POAK - Poverty Africa Kenya | Get in Touch</title>
+<meta content="Contact POAK (Poverty Africa Kenya). Reach us by phone, email, or visit our Nairobi office. We'd love to hear from you." name="description"/>
+<link href="images/logo_POAK.png" rel="icon" type="image/png"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<script id="mcjs">
+      !(function (c, h, i, m, p) {
+        ((m = c.createElement(h)),
+          (p = c.getElementsByTagName(h)[0]),
+          (m.async = 1),
+          (m.src = i),
+          p.parentNode.insertBefore(m, p));
+      })(
+        document,
+        "script",
+        "https://chimpstatic.com/mcjs-connected/js/users/f1f568826b40acc1eea8aa07f/d6737ec5f8e40982a13d5d7ca.js",
+      );
+    </script>
 
-      /* Map link button */
-      .map-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: #e8f0fe;
-        color: #1a73e8;
-        padding: 0.8rem 1.4rem;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background 0.3s, color 0.3s;
-        margin-top: 1rem;
-      }
-      .map-link:hover {
-        background: #1a73e8;
-        color: white;
-      }
-      .map-link i {
-        font-size: 1.2rem;
-      }
 
-      /* Google Maps Embed Container */
-      .map-container {
-        position: relative;
-        width: 100%;
-        padding-top: 56.25%; /* 16:9 aspect ratio */
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        margin-top: 1.5rem;
-      }
-      .map-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-    </style>
-  </head>
-  <body>
-  <!-- Floating Social Links (Right Center) with enhanced hover tooltips -->
-    <div class="floating-social">
-        <a href="https://www.facebook.com/profile.php?id=61588395929911" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/povertyafricakenya/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.tiktok.com/@povertyafricakenya?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-    </div>
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="index.html" class="logo">
-          <img src="images/logo_POAK.png" alt="POAK Logo" class="logo-img" />
-          <div class="logo-text">
-            <span class="logo-main">POAK</span>
-            <span class="logo-sub">Poverty Africa - Kenya</span>
-          </div>
-        </a>
-        <button class="hamburger" id="hamburger">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown">
-          <a href="programs.html" class="active">Programs <i class="fas fa-chevron-down"></i></a>
-           <ul class="dropdown-menu">
-                        <li><a href="education-program.html">Education</a></li>
-                        <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-                        <li><a href="peer-program.html">Peer Program</a></li>
-                        <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-                        <li><a href="4k-clubs.html">4K Clubs for Schools</a></li>
-                        <li><a href="4k-smart-farming.html">4K Smart Farming</a></li>
-                        <li><a href="livestock-development.html">Livestock Development</a></li>
-                        <li><a href="climate-resilience.html">Climate Resilience in Agriculture</a></li>
-                    </ul>
-        </li>
-          <li><a href="impact.html">Impact</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <!-- <li><a href="calendar.html" class="active">Calendar</a></li> -->
-          <li><a href="contact.html" class="active">Contact</a></li>
-          <li><a href="donate.html" class="donate-btn">Donate</a></li>
-          <li class="theme-toggle-container">
-            <button class="theme-toggle" id="themeToggle">
-              <i class="fas fa-moon"></i><i class="fas fa-sun"></i>
-            </button>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="page-header">
-      <div class="container">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-form">
-            <h2>Send a Message</h2>
-            <!-- Web3Forms – works instantly, no email confirmation needed -->
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-              <!-- Your Web3Forms access key (already set) -->
-              <input type="hidden" name="access_key" value="84e6ff71-67e3-4804-9200-ad7d56928dc7">
-              <input type="hidden" name="botcheck" value="false">
-              
-              <input type="text" name="name" placeholder="Your Name" required />
-              <input type="email" name="email" placeholder="Your Email" required />
-              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-              <button type="submit" class="btn btn-primary" id="submitBtn">Send</button>
-              <div id="formStatus" style="margin-top: 15px; font-size: 0.9rem;"></div>
-            </form>
-          </div>
-          <div class="contact-info">
-            <h2>Get in Touch</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-            <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-            <p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
-            <p><i class="fas fa-map-marker-alt"></i> P.O BOX 46433-00100</p>
-           
-            <!-- Embedded Google Maps with dropped pin -->
-            <div class="map-container">
-              <!-- This query will drop a pin at the organization's location -->
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2861.7693587190597!2d36.8799036!3d-1.2828644999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1324a9bd91c5%3A0xe9d1358e77f2ac78!2sPoverty%20Africa%20-%20Kenya!5e1!3m2!1sen!2ske!4v1778844168639!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
-                allowfullscreen 
-                loading="lazy">
-              </iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-        <!-- Partners Section - Full Width with Scroll -->
-<section class="partners-section">
-    <div class="container">
-        <h2 class="section-title">OUR PARTNERS</h2>
-    </div>
-    <div class="partners-scroll">
-        <div class="partners-track" id="partnersTrack">
-            <!-- Partner 1 -->
-            <div class="partner-item">
-                <img src="images/Broad Experiential logo.png" alt="Broad Experiential">
-                <span>Broad Experiential</span>
-            </div>
-            <!-- Partner 2 -->
-            <div class="partner-item">
-                <img src="images/partners/solarpanda.webp" alt="Solar Panda">
-                <span>Solar Panda</span>
-            </div>
-            <!-- Partner 3 -->
-            <div class="partner-item">
-                <img src="images/partners/world_vision.png" alt="World Vision">
-                <span>World Vision</span>
-            </div>
-            <!-- Partner 4 -->
-            <div class="partner-item">
-                <img src="images/partners/freshlife.jfif" alt="Fresh Life">
-                <span>Fresh Life</span>
-            </div>
-            <!-- Partner 5 -->
-            <div class="partner-item">
-                <img src="images/partners/logo.png" alt="AA Kenya">
-                <span>AA Kenya</span>
-            </div>
-            <!-- Partner 6 -->
-              <div class="partner-item">
-                  <img src="images/partners/wisdom_medical_services.png" alt="Wisdom Medical Services">
-                  <span>Wisdom Medical Services</span>
-              </div>
-        </div>
-    </div>
+</head>
+<body class="poak-interior poak-unified page-contact">
+<!-- Floating Social Links (Right Center) with enhanced hover tooltips -->
+<div aria-label="POAK social media" class="floating-social">
+<a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61588395929911" rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
+<a aria-label="Instagram" href="https://www.instagram.com/povertyafricakenya/" rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+<a aria-label="LinkedIn" href="https://www.linkedin.com/company/poverty-africa-kenya-poak/" rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>
+<a aria-label="TikTok" href="https://www.tiktok.com/@povertyafricakenya" rel="noopener noreferrer" target="_blank"><i aria-hidden="true" class="fab fa-tiktok"></i></a>
+</div>
+<nav class="navbar">
+<div class="nav-container">
+<a class="logo" href="index.html">
+<img alt="POAK Logo" class="logo-img" src="images/logo_POAK.png"/>
+<div class="logo-text">
+<span class="logo-main"> POAK </span>
+<span class="logo-sub"> Poverty Africa - Kenya </span>
+</div>
+</a>
+<button aria-label="Toggle menu" class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<ul class="nav-menu" id="navMenu">
+<li>
+<a class="" href="index.html"> Home </a>
+</li>
+<li>
+<a href="about.html"> About </a>
+</li>
+<li class="dropdown">
+<a href="programs.html">
+              Programs <i aria-hidden="true" class="fas fa-chevron-down"></i>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a href="education-program.html"> Education </a>
+</li>
+<li>
+<a href="community-empowerment-program.html">
+                  Community Empowerment
+                </a>
+</li>
+<li>
+<a href="peer-program.html"> Peer Program </a>
+</li>
+<li>
+<a href="mental-health-nutrition-program.html">
+                  Mental Health &amp; Nutrition
+                </a>
+</li>
+<li>
+<a href="4k-clubs.html"> 4K Clubs for Schools </a>
+</li>
+<li>
+<a href="4k-smart-farming.html"> 4K Smart Farming </a>
+</li>
+<li>
+<a href="livestock-development.html"> Livestock Development </a>
+</li>
+<li>
+<a href="climate-resilience.html">
+                  Climate Resilience in Agriculture
+                </a>
+</li>
+</ul>
+</li>
+<li>
+<a href="impact.html"> Impact </a>
+</li>
+<li>
+<a href="blog.html"> Blog </a>
+</li>
+<li>
+<a aria-current="page" class="active" href="contact.html"> Contact </a>
+</li>
+<li>
+<a class="donate-btn" href="donate.html"> Donate </a>
+</li>
+<li class="theme-toggle-container">
+<button aria-label="Switch to dark theme" class="theme-toggle" id="themeToggle" type="button">Dark</button>
+</li>
+</ul>
+</div>
+</nav>
+<section class="page-header">
+<div class="container">
+<h1>Contact Us</h1>
+<p>We'd love to hear from you</p>
+</div>
 </section>
-
-
-  <!-- Footer -->
+<section class="section">
+<div class="container">
+<div class="contact-grid">
+<div class="contact-form">
+<h2>Send a Message</h2>
+<!-- Web3Forms – works instantly, no email confirmation needed -->
+<form action="https://api.web3forms.com/submit" id="contactForm" method="POST">
+<!-- Your Web3Forms access key (already set) -->
+<input name="access_key" type="hidden" value="84e6ff71-67e3-4804-9200-ad7d56928dc7"/>
+<input name="botcheck" type="hidden" value="false"/>
+<input name="name" placeholder="Your Name" required="" type="text"/>
+<input name="email" placeholder="Your Email" required="" type="email"/>
+<textarea name="message" placeholder="Your Message" required="" rows="5"></textarea>
+<button class="btn btn-primary" id="submitBtn" type="submit">
+                Send
+              </button>
+<div id="formStatus" style="margin-top: 15px; font-size: 0.9rem"></div>
+</form>
+</div>
+<div class="contact-info">
+<h2>Get in Touch</h2>
+<p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+<p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
+<p><i class="fas fa-phone"></i> 020-2636674 / 0777636674</p>
+<p><i class="fas fa-map-marker-alt"></i> P.O BOX 46433-00100</p>
+<!-- Embedded Google Maps with dropped pin -->
+<div class="map-container">
+<!-- This query will drop a pin at the organization's location -->
+<iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2861.7693587190597!2d36.8799036!3d-1.2828644999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1324a9bd91c5%3A0xe9d1358e77f2ac78!2sPoverty%20Africa%20-%20Kenya!5e1!3m2!1sen!2ske!4v1778844168639!5m2!1sen!2ske" style="border: 0" width="600">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners Section - Full Width with Scroll -->
+<section class="partners-section">
+<div class="container">
+<h2 class="section-title">OUR PARTNERS</h2>
+</div>
+<div class="partners-scroll">
+<div class="partners-track" id="partnersTrack">
+<!-- Partner 1 -->
+<div class="partner-item">
+<img alt="Broad Experiential" src="images/Broad Experiential logo.png"/>
+<span>Broad Experiential</span>
+</div>
+<!-- Partner 2 -->
+<div class="partner-item">
+<img alt="Solar Panda" src="images/partners/solarpanda.webp"/>
+<span>Solar Panda</span>
+</div>
+<!-- Partner 3 -->
+<div class="partner-item">
+<img alt="World Vision" src="images/partners/world_vision.png"/>
+<span>World Vision</span>
+</div>
+<!-- Partner 4 -->
+<div class="partner-item">
+<img alt="Fresh Life" src="images/partners/freshlife.jfif"/>
+<span>Fresh Life</span>
+</div>
+<!-- Partner 5 -->
+<div class="partner-item">
+<img alt="AA Kenya" src="images/partners/logo.png"/>
+<span>AA Kenya</span>
+</div>
+<!-- Partner 6 -->
+<div class="partner-item">
+<img alt="Wisdom Medical Services" src="images/partners/wisdom_medical_services.png"/>
+<span>Wisdom Medical Services</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
 <footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-about">
-                <img src="images/logo_POAK.png" alt="POAK" class="footer-logo">
-                <p>Fighting poverty across Kenya since 1997.</p>
-                <p class="founded"><i class="fas fa-calendar-alt"></i> Founded 7th December 1997</p>
-            </div>
-            
-            <div class="footer-programs">
-                 <h4>Programs</h4>
-          <ul>
-            <li><a href="education-program.html">Education</a></li>
-            <li><a href="community-empowerment-program.html">Community Empowerment</a></li>
-            <li><a href="peer-program.html">Peer Program</a></li>
-            <li><a href="mental-health-nutrition-program.html">Mental Health & Nutrition</a></li>
-          </ul>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact</h4>
-                <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
-                <p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
-                <p><i class="fas fa-phone"></i> 0143709759 / 0777636674</p>
-               
-            </div>
-            <!-- NEWSLETTER COLUMN (compact) -->
-            <div class="footer-newsletter-column">
-                <h4>Stay Updated</h4>
-                <p>Get our monthly impact stories and news.</p>
-                <form class="newsletter-compact" id="newsletterForm">
-                    <input type="email" name="email" placeholder="Your email" required aria-label="Email address">
-                    <button type="submit" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Subscribe</button>
-                </form>
-                <p class="form-message" id="newsletterMessage"></p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; <span id="currentYear"></span> POAK - All rights reserved.</p>
-            <p class="registration">Registered Nonprofit in Kenya</p>
-        </div>
-    </div>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-about">
+<img alt="POAK" class="footer-logo" src="images/logo_POAK.png"/>
+<p>Fighting poverty across Kenya since 1997.</p>
+<p class="founded">
+<i class="fas fa-calendar-alt"></i> Founded 7th December 1997
+            </p>
+</div>
+<div class="footer-programs">
+<h4>Programs</h4>
+<ul>
+<li><a href="education-program.html">Education</a></li>
+<li>
+<a href="community-empowerment-program.html">Community Empowerment</a>
+</li>
+<li><a href="peer-program.html">Peer Program</a></li>
+<li>
+<a href="mental-health-nutrition-program.html">Mental Health &amp; Nutrition</a>
+</li>
+</ul>
+</div>
+<div class="footer-contact">
+<h4>Contact</h4>
+<p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+<p><i class="fas fa-envelope"></i> info@povertyafricakenya.co.ke</p>
+<p><i class="fas fa-phone"></i> 0143709759 / 0777636674</p>
+</div>
+<!-- NEWSLETTER COLUMN (compact) -->
+<div class="footer-newsletter-column">
+<h4>Stay Updated</h4>
+<p>Get our monthly impact stories and news.</p>
+<form class="newsletter-compact" id="newsletterForm">
+<input aria-label="Email address" name="email" placeholder="Your email" required="" type="email"/>
+<button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem" type="submit">
+                Subscribe
+              </button>
+</form>
+<p class="form-message" id="newsletterMessage"></p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>
+            © <span id="currentYear"></span> POAK - All rights reserved.
+          </p>
+<p class="registration">Registered Nonprofit in Kenya</p>
+</div>
+</div>
 </footer>
-    <button class="scroll-top" id="scrollTop">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+<button class="scroll-top" id="scrollTop">
+<i class="fas fa-arrow-up"></i>
+</button>
+<!-- WhatsApp Chat Button (floating, responsive) -->
+<a aria-label="Chat with us on WhatsApp" class="whatsapp-chat-btn" href="https://wa.me/254777636674" rel="noopener" target="_blank" title="Chat with us on WhatsApp"><i aria-hidden="true" class="fab fa-whatsapp"></i></a>
+<script src="js/script.js"></script>
+<!-- Web3Forms AJAX submission (corrected) -->
+<script>
+      const form = document.getElementById("contactForm");
+      const statusDiv = document.getElementById("formStatus");
+      const submitBtn = document.getElementById("submitBtn");
 
-    <!-- WhatsApp Chat Button (floating, responsive) -->
-    <a href="https://wa.me/254777636674" class="whatsapp-chat-btn" target="_blank" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <script src="js/script.js"></script>
-  
-    <!-- Web3Forms AJAX submission (corrected) -->
-    <script>
-      const form = document.getElementById('contactForm');
-      const statusDiv = document.getElementById('formStatus');
-      const submitBtn = document.getElementById('submitBtn');
-
-      form.addEventListener('submit', async (e) => {
+      form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
         // Show sending state
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-        statusDiv.textContent = '';
-        statusDiv.style.color = '';
+        submitBtn.textContent = "Sending...";
+        statusDiv.textContent = "";
+        statusDiv.style.color = "";
 
         const formData = new FormData(form);
-         formData.append("access_key", "84e6ff71-67e3-4804-9200-ad7d56928dc7");
+        formData.append("access_key", "84e6ff71-67e3-4804-9200-ad7d56928dc7");
 
         try {
-          const response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            body: formData
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
           });
 
           const result = await response.json();
 
           if (response.ok && result.success) {
-            statusDiv.textContent = 'Thank you! Your message has been sent. We’ll get back to you soon.';
-            statusDiv.style.color = 'green';
+            statusDiv.textContent =
+              "Thank you! Your message has been sent. We’ll get back to you soon.";
+            statusDiv.style.color = "green";
             form.reset();
           } else {
-            throw new Error(result.message || 'Submission failed');
+            throw new Error(result.message || "Submission failed");
           }
         } catch (error) {
           console.error(error);
-          statusDiv.textContent = 'Oops! Something went wrong. Please email us directly at info@povertyafricakenya.co.ke';
-          statusDiv.style.color = 'red';
+          statusDiv.textContent =
+            "Oops! Something went wrong. Please email us directly at info@povertyafricakenya.co.ke";
+          statusDiv.style.color = "red";
         } finally {
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Send';
+          submitBtn.textContent = "Send";
         }
       });
     </script>
-  </body>
+</body>
 </html>

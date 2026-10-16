@@ -1,6 +1,6 @@
 // ===== Shared Footer =====
-document.addEventListener('DOMContentLoaded', function() {
-  const footer = document.querySelector('.footer');
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector(".footer");
   if (!footer) return;
 
   footer.innerHTML = `
@@ -106,26 +106,26 @@ document.addEventListener('DOMContentLoaded', function() {
 function initCountUp() {
   // Select all elements that contain numeric stats (extend as needed)
   const statElements = document.querySelectorAll(
-    '.impact-number, .impact-hero-number, .stat-number, .stat-number-large, .program-stats .stat-number, .blog-stats .stat-value, .stat-number-highlight'
+    ".impact-number, .impact-hero-number, .stat-number, .stat-number-large, .program-stats .stat-number, .blog-stats .stat-value, .stat-number-highlight",
   );
 
   if (!statElements.length) return;
 
   const observer = new IntersectionObserver(
     (entries, observer) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const el = entry.target;
           // Prevent multiple animations
-          if (el.dataset.counted === 'true') return;
-          el.dataset.counted = 'true';
+          if (el.dataset.counted === "true") return;
+          el.dataset.counted = "true";
 
           // Extract target number and suffix
           const originalText = el.textContent.trim();
           const match = originalText.match(/^([\d,]+)(.*)/); // captures number (with commas) and the rest
           if (!match) return;
 
-          const numberStr = match[1].replace(/,/g, '');
+          const numberStr = match[1].replace(/,/g, "");
           const suffix = match[2]; // e.g., "+", "%", " KSh", etc.
           const target = parseInt(numberStr, 10);
 
@@ -135,13 +135,13 @@ function initCountUp() {
         }
       });
     },
-    { threshold: 0.3 } // trigger when 30% of element is visible
+    { threshold: 0.3 }, // trigger when 30% of element is visible
   );
 
-  statElements.forEach(el => observer.observe(el));
+  statElements.forEach((el) => observer.observe(el));
 }
 
-function animateValue(element, start, end, duration, suffix = '') {
+function animateValue(element, start, end, duration, suffix = "") {
   let startTimestamp = null;
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp;
@@ -156,7 +156,7 @@ function animateValue(element, start, end, duration, suffix = '') {
 }
 
 // Start the counter observer after DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   initCountUp();
 });
 
@@ -168,26 +168,47 @@ document.addEventListener("DOMContentLoaded", function () {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // ===== DARK THEME TOGGLE =====
+  // ===== SHARED THEME (HOME + ABOUT) =====
   const themeToggle = document.getElementById("themeToggle");
   const body = document.body;
-
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
-  const savedTheme = localStorage.getItem("poak-theme");
-
-  if (savedTheme === "dark" || (!savedTheme && prefersDark.matches)) {
-    body.classList.add("dark-theme");
-  }
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", () => {
-      body.classList.toggle("dark-theme");
-      localStorage.setItem(
-        "poak-theme",
-        body.classList.contains("dark-theme") ? "dark" : "light"
+  const root = document.documentElement;
+  let savedTheme = null;
+  try {
+    savedTheme =
+      localStorage.getItem("poak_theme") || localStorage.getItem("poak-theme");
+  } catch (e) {}
+  function setTheme(theme) {
+    body.classList.toggle("dark-theme", theme === "dark");
+    root.setAttribute("data-theme", theme);
+    if (themeToggle) {
+      const next = theme === "dark" ? "Light" : "Dark";
+      themeToggle.textContent = next;
+      themeToggle.setAttribute(
+        "aria-label",
+        "Switch to " + next.toLowerCase() + " theme",
       );
-    });
+    }
+    const themeMeta = document.getElementById("themeColor");
+    if (themeMeta)
+      themeMeta.setAttribute(
+        "content",
+        theme === "dark" ? "#0b0b0c" : "#ffffff",
+      );
   }
+  const initialTheme =
+    savedTheme === "dark" || savedTheme === "light"
+      ? savedTheme
+      : root.getAttribute("data-theme") || "light";
+  setTheme(initialTheme);
+  if (themeToggle)
+    themeToggle.addEventListener("click", () => {
+      const next =
+        root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      setTheme(next);
+      try {
+        localStorage.setItem("poak_theme", next);
+      } catch (e) {}
+    });
 
   // ===== HAMBURGER MENU & MOBILE DROPDOWNS (FIXED) =====
   const hamburger = document.getElementById("hamburger");
@@ -201,7 +222,9 @@ document.addEventListener("DOMContentLoaded", function () {
       e.stopPropagation();
       this.classList.toggle("active");
       navMenu.classList.toggle("active");
-      bodyEl.style.overflow = navMenu.classList.contains("active") ? "hidden" : "";
+      bodyEl.style.overflow = navMenu.classList.contains("active")
+        ? "hidden"
+        : "";
     });
 
     // Handle clicks on all nav links
@@ -209,7 +232,8 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.forEach((link) => {
       link.addEventListener("click", function (e) {
         const parentLi = this.closest("li");
-        const isDropdownToggle = parentLi && parentLi.classList.contains("dropdown");
+        const isDropdownToggle =
+          parentLi && parentLi.classList.contains("dropdown");
 
         // If it's a dropdown toggle (e.g., "Programs"), do NOT close the menu
         if (isDropdownToggle) {
@@ -268,7 +292,8 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", function () {
       if (window.innerWidth > 991) {
         if (navMenu.classList.contains("active")) {
-          hamburger.classList.remove("active");''
+          hamburger.classList.remove("active");
+          ("");
           navMenu.classList.remove("active");
           bodyEl.style.overflow = "";
         }
@@ -282,7 +307,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ===== ACTIVE NAV LINK =====
   function setActiveNavLink() {
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const currentPage =
+      window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll(".nav-menu a");
 
     navLinks.forEach((link) => {
@@ -293,7 +319,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    const activeDropdownLink = document.querySelector(".dropdown-menu a.active");
+    const activeDropdownLink = document.querySelector(
+      ".dropdown-menu a.active",
+    );
     if (activeDropdownLink) {
       const parentDropdown = activeDropdownLink.closest(".dropdown");
       if (parentDropdown) {
@@ -416,139 +444,155 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // ===== NEWSLETTER SUBSCRIPTION (Google Sheets Integration) =====
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('newsletterForm');
-    const messageEl = document.getElementById('newsletterMessage');
-    
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkTC3rruLZFcHGEW0lP7KP3QcMLgLA4CVM3ufmyYJXHrIwXqp_h3yBMI-qeu00zDRaaw/exec';
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const emailInput = form.querySelector('input[type="email"]');
-            const email = emailInput.value.trim();
-            
-            if (!email) {
-                showMessage('Please enter your email address.', 'error');
-                return;
-            }
-            if (!isValidEmail(email)) {
-                showMessage('Please enter a valid email address.', 'error');
-                return;
-            }
-            
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.textContent;
-            submitBtn.textContent = 'Subscribing...';
-            submitBtn.disabled = true;
-            
-            fetch(GOOGLE_SCRIPT_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: email })
-            })
-            .then(() => {
-                showMessage('Thank you! You are now subscribed.', 'success');
-                emailInput.value = '';
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showMessage('Something went wrong. Please try again.', 'error');
-            })
-            .finally(() => {
-                submitBtn.textContent = originalBtnText;
-                submitBtn.disabled = false;
-            });
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("newsletterForm");
+  const messageEl = document.getElementById("newsletterMessage");
+
+  const GOOGLE_SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbxkTC3rruLZFcHGEW0lP7KP3QcMLgLA4CVM3ufmyYJXHrIwXqp_h3yBMI-qeu00zDRaaw/exec";
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const emailInput = form.querySelector('input[type="email"]');
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        showMessage("Please enter your email address.", "error");
+        return;
+      }
+      if (!isValidEmail(email)) {
+        showMessage("Please enter a valid email address.", "error");
+        return;
+      }
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = "Subscribing...";
+      submitBtn.disabled = true;
+
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email }),
+      })
+        .then(() => {
+          showMessage("Thank you! You are now subscribed.", "success");
+          emailInput.value = "";
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          showMessage("Something went wrong. Please try again.", "error");
+        })
+        .finally(() => {
+          submitBtn.textContent = originalBtnText;
+          submitBtn.disabled = false;
         });
-    }
-    
-    function showMessage(text, type) {
-        messageEl.textContent = text;
-        messageEl.className = 'form-message ' + type;
-    }
-    
-    function isValidEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
+    });
+  }
+
+  function showMessage(text, type) {
+    messageEl.textContent = text;
+    messageEl.className = "form-message " + type;
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
 });
 
 // Same enhanced script as before but compact-friendly
-document.addEventListener('DOMContentLoaded', function() {
-  const cards = document.querySelectorAll('.podcast-section.compact .podcast-card');
-  cards.forEach(card => {
-    const audio = card.querySelector('.podcast-audio');
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(
+    ".podcast-section.compact .podcast-card",
+  );
+  cards.forEach((card) => {
+    const audio = card.querySelector(".podcast-audio");
     if (!audio) return;
 
-    const playBtn = card.querySelector('.play-pause-btn');
-    const skipBack = card.querySelector('.skip-back-btn');
-    const skipFwd = card.querySelector('.skip-forward-btn');
-    const progressBar = card.querySelector('.progress-bar');
-    const progressContainer = card.querySelector('.progress-bar-container');
-    const timeCurrent = card.querySelector('.time-current');
-    const timeDuration = card.querySelector('.time-duration');
-    const volumeSlider = card.querySelector('.volume-slider');
-    const volumeIcon = card.querySelector('.volume-icon');
-    const speedSelect = card.querySelector('.playback-speed');
-    const downloadLink = card.querySelector('.download-episode');
+    const playBtn = card.querySelector(".play-pause-btn");
+    const skipBack = card.querySelector(".skip-back-btn");
+    const skipFwd = card.querySelector(".skip-forward-btn");
+    const progressBar = card.querySelector(".progress-bar");
+    const progressContainer = card.querySelector(".progress-bar-container");
+    const timeCurrent = card.querySelector(".time-current");
+    const timeDuration = card.querySelector(".time-duration");
+    const volumeSlider = card.querySelector(".volume-slider");
+    const volumeIcon = card.querySelector(".volume-icon");
+    const speedSelect = card.querySelector(".playback-speed");
+    const downloadLink = card.querySelector(".download-episode");
 
     function formatTime(sec) {
-      if (isNaN(sec)) return '0:00';
+      if (isNaN(sec)) return "0:00";
       const mins = Math.floor(sec / 60);
       const secs = Math.floor(sec % 60);
-      return `${mins}:${secs < 10 ? '0' + secs : secs}`;
+      return `${mins}:${secs < 10 ? "0" + secs : secs}`;
     }
 
-    audio.addEventListener('timeupdate', () => {
+    audio.addEventListener("timeupdate", () => {
       const percent = (audio.currentTime / audio.duration) * 100;
-      progressBar.style.width = percent + '%';
+      progressBar.style.width = percent + "%";
       timeCurrent.textContent = formatTime(audio.currentTime);
     });
-    audio.addEventListener('loadedmetadata', () => {
+    audio.addEventListener("loadedmetadata", () => {
       timeDuration.textContent = formatTime(audio.duration);
-      if (downloadLink && audio.currentSrc) downloadLink.href = audio.currentSrc;
+      if (downloadLink && audio.currentSrc)
+        downloadLink.href = audio.currentSrc;
     });
-    playBtn.addEventListener('click', () => {
+    playBtn.addEventListener("click", () => {
       if (audio.paused) {
-        document.querySelectorAll('.podcast-audio').forEach(other => {
+        document.querySelectorAll(".podcast-audio").forEach((other) => {
           if (other !== audio && !other.paused) {
             other.pause();
-            const otherBtn = other.closest('.podcast-card').querySelector('.play-pause-btn');
-            if (otherBtn) otherBtn.innerHTML = '<i class="fas fa-play"></i>';
+            const otherBtn = other
+              .closest(".podcast-card")
+              .querySelector(".play-pause-btn");
+            if (otherBtn) otherBtn.innerHTML = "";
           }
         });
         audio.play();
-        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+        playBtn.innerHTML = "";
       } else {
         audio.pause();
-        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+        playBtn.innerHTML = "";
       }
     });
-    if (skipBack) skipBack.addEventListener('click', () => { audio.currentTime = Math.max(0, audio.currentTime - 10); });
-    if (skipFwd) skipFwd.addEventListener('click', () => { audio.currentTime = Math.min(audio.duration, audio.currentTime + 10); });
+    if (skipBack)
+      skipBack.addEventListener("click", () => {
+        audio.currentTime = Math.max(0, audio.currentTime - 10);
+      });
+    if (skipFwd)
+      skipFwd.addEventListener("click", () => {
+        audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+      });
     if (progressContainer) {
-      progressContainer.addEventListener('click', (e) => {
+      progressContainer.addEventListener("click", (e) => {
         const rect = progressContainer.getBoundingClientRect();
         const percent = (e.clientX - rect.left) / rect.width;
         audio.currentTime = percent * audio.duration;
       });
     }
     if (volumeSlider) {
-      volumeSlider.addEventListener('input', (e) => {
+      volumeSlider.addEventListener("input", (e) => {
         audio.volume = e.target.value;
-        if (audio.volume === 0) volumeIcon.className = 'fas fa-volume-off volume-icon';
-        else if (audio.volume < 0.5) volumeIcon.className = 'fas fa-volume-down volume-icon';
-        else volumeIcon.className = 'fas fa-volume-up volume-icon';
+        if (audio.volume === 0)
+          volumeIcon.className = "fas fa-volume-off volume-icon";
+        else if (audio.volume < 0.5)
+          volumeIcon.className = "fas fa-volume-down volume-icon";
+        else volumeIcon.className = "fas fa-volume-up volume-icon";
       });
     }
     if (speedSelect) {
-      speedSelect.addEventListener('change', (e) => { audio.playbackRate = parseFloat(e.target.value); });
+      speedSelect.addEventListener("change", (e) => {
+        audio.playbackRate = parseFloat(e.target.value);
+      });
     }
-    audio.addEventListener('ended', () => {
-      playBtn.innerHTML = '<i class="fas fa-play"></i>';
-      progressBar.style.width = '0%';
-      timeCurrent.textContent = '0:00';
+    audio.addEventListener("ended", () => {
+      playBtn.innerHTML = "";
+      progressBar.style.width = "0%";
+      timeCurrent.textContent = "0:00";
     });
   });
 });
@@ -557,68 +601,67 @@ document.addEventListener('DOMContentLoaded', function() {
 // PARTNERS SCROLL - Duplicate items for seamless loop
 // ========================================
 
-(function() {
-    const track = document.getElementById('partnersTrack');
-    if (!track) return;
-    
-    // Clone all partner items and add them to the track
-    const items = track.querySelectorAll('.partner-item');
-    
-    items.forEach(item => {
-        const clone = item.cloneNode(true);
-        clone.className = 'partner-item-duplicate';
-        track.appendChild(clone);
-    });
-    
-    // Optional: Adjust animation duration based on number of items
-    const totalItems = track.children.length;
-    if (totalItems > 0) {
-        // Speed up or slow down based on number of partners
-        const duration = Math.max(15, totalItems * 3);
-        track.style.animationDuration = duration + 's';
-    }
+(function () {
+  const track = document.getElementById("partnersTrack");
+  if (!track) return;
+
+  // Clone all partner items and add them to the track
+  const items = track.querySelectorAll(".partner-item");
+
+  items.forEach((item) => {
+    const clone = item.cloneNode(true);
+    clone.className = "partner-item-duplicate";
+    track.appendChild(clone);
+  });
+
+  // Optional: Adjust animation duration based on number of items
+  const totalItems = track.children.length;
+  if (totalItems > 0) {
+    // Speed up or slow down based on number of partners
+    const duration = Math.max(15, totalItems * 3);
+    track.style.animationDuration = duration + "s";
+  }
 })();
 
 // ========================================
 // POPUP MODAL - VIATU DRIVE
 // ========================================
 
-(function() {
-    const overlay = document.getElementById('popupOverlay');
-    const closeBtn = document.getElementById('popupClose');
-    
-    // Check if user has already seen the popup in this session
-    const hasSeenPopup = sessionStorage.getItem('viatuPopupSeen');
-    
-    // Show popup after 1 second (only if not seen this session)
-    if (!hasSeenPopup) {
-        setTimeout(function() {
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }, 1000);
-    }
-    
-    function closePopup() {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-        sessionStorage.setItem('viatuPopupSeen', 'true');
-    }
-    
-    // Close on X button
-    closeBtn.addEventListener('click', closePopup);
-    
-    // Close on clicking outside the poster
-    overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) {
-            closePopup();
-        }
-    });
-    
-    // Close on ESC key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && overlay.classList.contains('active')) {
-            closePopup();
-        }
-    });
-})();
+(function () {
+  const overlay = document.getElementById("popupOverlay");
+  const closeBtn = document.getElementById("popupClose");
 
+  // Check if user has already seen the popup in this session
+  const hasSeenPopup = sessionStorage.getItem("viatuPopupSeen");
+
+  // Show popup after 1 second (only if not seen this session)
+  if (!hasSeenPopup) {
+    setTimeout(function () {
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }, 1000);
+  }
+
+  function closePopup() {
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
+    sessionStorage.setItem("viatuPopupSeen", "true");
+  }
+
+  // Close on X button
+  closeBtn.addEventListener("click", closePopup);
+
+  // Close on clicking outside the poster
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) {
+      closePopup();
+    }
+  });
+
+  // Close on ESC key
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && overlay.classList.contains("active")) {
+      closePopup();
+    }
+  });
+})();
