@@ -21131,3 +21131,9 @@ body.page-impact .target-item {
     padding-top: 22px;
   }
 }
+
+/* Homepage: eliminate the blank strip between navbar and hero.
+   Sticky navigation stays in document flow, so the hero starts at its edge. */
+body.home-page { padding-top: 0 !important; }
+body.home-page > .navbar { position: sticky !important; top: 0; margin-bottom: 0 !important; }
+body.home-page > .navbar + .home-hero { margin-top: 0 !important; padding-top: 0 !important; }

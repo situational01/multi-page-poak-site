@@ -1,1 +1,3 @@
-POAK unified website pages. All shared and page-specific CSS is in css/style.css. Shared JS in js/script.js, journey carousel in js/journey.js. Keep your existing images/ folder when deploying. The original mental-health-nutrition.css file was not provided; any rules exclusive to that file cannot be bundled.
+Fixed the homepage navigation-to-hero gap in css/style.css.
+Keep your existing images/ and js/ directories in place; they were not supplied.
+Replace index.html and css/style.css in your website. The two other CSS files are included unchanged.
