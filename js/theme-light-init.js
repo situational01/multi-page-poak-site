@@ -1,14 +1,15 @@
-/* POAK: Force light mode at the start of every page navigation.
-   Load this in <head> before styles and other theme scripts. */
+/* POAK: Restore the saved theme before styles load to prevent a light-mode flash.
+   Include this in <head> before the stylesheets and the main script. */
 (function () {
-  document.documentElement.setAttribute("data-theme", "light");
-  document.documentElement.classList.remove("dark-theme");
+  let theme = "light";
   try {
-    localStorage.removeItem("poak_theme");
-    localStorage.removeItem("poak-theme");
+    const saved = localStorage.getItem("poak_theme") || localStorage.getItem("poak-theme");
+    if (saved === "dark" || saved === "light") theme = saved;
   } catch (e) {}
+
+  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.classList.toggle("dark-theme", theme === "dark");
   document.addEventListener("DOMContentLoaded", function () {
-    document.body.classList.remove("dark-theme");
-    document.documentElement.setAttribute("data-theme", "light");
+    document.body.classList.toggle("dark-theme", theme === "dark");
   });
 })();

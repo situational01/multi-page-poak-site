@@ -21134,6 +21134,340 @@ body.page-impact .target-item {
 
 /* Homepage: eliminate the blank strip between navbar and hero.
    Sticky navigation stays in document flow, so the hero starts at its edge. */
-body.home-page { padding-top: 0 !important; }
-body.home-page > .navbar { position: sticky !important; top: 0; margin-bottom: 0 !important; }
-body.home-page > .navbar + .home-hero { margin-top: 0 !important; padding-top: 0 !important; }
+body.home-page {
+  padding-top: 0 !important;
+}
+body.home-page > .navbar {
+  position: sticky !important;
+  top: 0;
+  margin-bottom: 0 !important;
+}
+body.home-page > .navbar + .home-hero {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* ============================================================
+   Mobile controls: compact, readable buttons across POAK pages
+   Keeps desktop sizing and all existing theme colours intact.
+   ============================================================ */
+@media (max-width: 600px) {
+  /* Content actions should follow their label, not fill the card. */
+  body :is(
+    .btn, .btn-primary, .btn-secondary, .btn-outline,
+    .hero-button, .cta-button, .support-button, .partner-button,
+    .impact-btn, .impact-btn-outline, .read-more
+  ) {
+    box-sizing: border-box;
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 44px;
+    padding: 11px 20px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.35 !important;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    vertical-align: middle;
+  }
+
+  /* Main buttons and links are centered inside the donation cards. */
+  body.page-donate .donate-card :is(.btn, .btn-primary, a.btn),
+  body.page-donate [class*="donation-card"] :is(.btn, .btn-primary, a.btn),
+  body.page-donate [class*="mchanga"] :is(.btn, .btn-primary, a.btn) {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    max-width: min(100%, 270px) !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Keep the navigation and form actions separate from card CTAs. */
+  body .navbar .donate-btn {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+  body :is(.newsletter-compact, .newsletter, .newsletter-form) button,
+  body :is(.newsletter-compact, .newsletter, .newsletter-form) .btn {
+    width: auto !important;
+    flex-shrink: 0;
+  }
+
+  /* Allow multiple actions to wrap gracefully on narrow displays. */
+  body :is(.hero-buttons, .program-actions, .cta-buttons, .action-buttons) {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  body :is(.btn, .btn-primary, .btn-secondary, .btn-outline,
+           .hero-button, .cta-button, .support-button, .partner-button,
+           .impact-btn, .impact-btn-outline) {
+    padding: 10px 15px !important;
+    font-size: 0.86rem !important;
+  }
+}
+
+/* ============================================================
+   POAK MOBILE ACTIONS — unified final override (all pages)
+   Prevent legacy mobile flex-column and 100%-width rules from
+   turning CTAs into oversized full-width banners.
+   ============================================================ */
+@media (max-width: 650px) {
+  /* Action groups: align by content size, not stretched flex items. */
+  body :is(.hero-buttons, .home-cta-actions, .cta-buttons, .action-buttons,
+           .program-actions, .hero-actions, .donate-actions, .button-group,
+           .cta-actions, .support-actions) {
+    align-items: center !important;
+    justify-content: center;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+
+  /* The homepage hero should remain left-aligned with its copy. */
+  body.home-page .home-hero .hero-buttons {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Applies to all site CTA variants, including the homepage pair. */
+  body :is(.hero-buttons, .home-cta-actions, .cta-buttons, .action-buttons,
+           .program-actions, .hero-actions, .donate-actions, .button-group,
+           .cta-actions, .support-actions) > :is(a, button, .btn),
+  body :is(a.btn, button.btn, a.hero-button, a.cta-button,
+           a.support-button, a.partner-button, a.impact-btn,
+           a.impact-btn-outline) {
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    align-self: auto !important;
+    flex: 0 1 auto !important;
+    width: fit-content !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: 44px;
+    height: auto !important;
+    padding: 11px 20px !important;
+    font-size: 0.9rem !important;
+    line-height: 1.35 !important;
+    text-align: center;
+    white-space: normal !important;
+  }
+
+  /* Standalone card CTAs should stay centered without filling cards. */
+  body :is(.donate-card, .program-card-large, .program-card,
+           .partner-cta, .info-card, .cta-box) a.btn {
+    max-width: 100% !important;
+    width: fit-content !important;
+  }
+
+  /* Buttons that are form controls or navigation must retain their
+     own structural behavior. */
+  body .navbar .nav-menu > li > a,
+  body .navbar .dropdown-menu a {
+    display: block !important;
+  }
+}
+
+@media (max-width: 380px) {
+  body :is(.hero-buttons, .home-cta-actions, .cta-buttons, .action-buttons,
+           .program-actions, .hero-actions, .donate-actions, .cta-actions) > :is(a, button, .btn),
+  body :is(a.btn, button.btn, a.hero-button, a.cta-button,
+           a.support-button, a.partner-button, a.impact-btn,
+           a.impact-btn-outline) {
+    padding: 10px 16px !important;
+    font-size: 0.86rem !important;
+  }
+}
+
+/* ============================================================
+   Footer newsletter: mobile-friendly subscribe actions
+   Buttons remain compact even when the form stacks vertically.
+   ============================================================ */
+@media (max-width: 650px) {
+  body .newsletter-row,
+  body .newsletter-compact,
+  body .newsletter-form {
+    max-width: 100%;
+  }
+
+  body .newsletter-row,
+  body.poak-about .newsletter-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  body .newsletter-row > :is(input, input[type="email"]),
+  body .newsletter-compact > :is(input, input[type="email"]),
+  body .newsletter-form > :is(input, input[type="email"]) {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  body :is(.newsletter-row, .newsletter-compact, .newsletter-form) > :is(button, .btn),
+  body.poak-about .newsletter-row > button,
+  body .newsletter-compact button {
+    box-sizing: border-box !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: flex-start !important;
+    flex: 0 0 auto !important;
+    width: fit-content !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 44px;
+    padding: 10px 22px !important;
+    font-size: 0.88rem !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+}
+
+/* Homepage: compact "Our work in numbers" panel on phones */
+@media (max-width: 650px) {
+  body.home-page .home-hero-card {
+    width: 100%;
+    max-width: 370px;
+    margin-inline: auto;
+    padding: 20px 22px !important;
+    border-radius: 12px;
+  }
+  body.home-page .home-hero-card-top {
+    margin-bottom: 12px;
+    font-size: 0.82rem;
+    gap: 8px;
+  }
+  body.home-page .home-hero-card > strong {
+    font-size: clamp(2.5rem, 9vw, 3.2rem);
+    line-height: 1.06;
+  }
+  body.home-page .home-hero-card-label {
+    font-size: 0.84rem;
+  }
+  body.home-page .home-mini-stats {
+    gap: 8px;
+    margin: 16px 0 !important;
+    padding: 13px 0 !important;
+  }
+  body.home-page .home-mini-stats b {
+    font-size: 1.15rem !important;
+  }
+  body.home-page .home-mini-stats span {
+    font-size: 0.67rem;
+  }
+  body.home-page .home-hero-card > a {
+    font-size: 0.82rem;
+    line-height: 1.35;
+  }
+}
+@media (max-width: 380px) {
+  body.home-page .home-hero-card {
+    max-width: 100%;
+    padding: 17px 18px !important;
+  }
+}
+
+/* ============================================================
+   HOME — truly compact mobile hero and impact panel
+   Added after previous mobile rules so dimensions take priority.
+   Desktop and existing theme styling are left untouched.
+   ============================================================ */
+@media (min-width: 651px) and (max-width: 991px) {
+  body.home-page .home-hero,
+  body.home-page .home-hero .hero-overlay {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  body.home-page .home-hero .hero-overlay {
+    padding: 56px 0 52px !important;
+  }
+  body.home-page .home-hero-layout { gap: 26px !important; }
+  body.home-page .home-hero-card { max-width: 340px !important; }
+}
+@media (max-width: 650px) {
+  body.home-page .home-hero {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+  body.home-page .home-hero .hero-overlay {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 34px 0 38px !important;
+  }
+  body.home-page .home-hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 22px !important;
+    align-items: start;
+  }
+  body.home-page .home-hero .hero-content {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  body.home-page .home-eyebrow { margin-bottom: 10px !important; }
+  body.home-page .home-hero h1 {
+    font-size: clamp(2.15rem, 8vw, 3rem) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 12px !important;
+  }
+  body.home-page .home-hero .hero-text {
+    font-size: 0.96rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 16px !important;
+  }
+  body.home-page .home-hero .hero-buttons { gap: 10px !important; }
+  body.home-page .home-hero-proof { margin-top: 13px !important; }
+
+  body.home-page .home-hero-card {
+    box-sizing: border-box !important;
+    width: min(100%, 290px) !important;
+    max-width: 290px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: 16px 18px !important;
+    transform: none !important;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.16) !important;
+  }
+  body.home-page .home-hero-card-top {
+    font-size: 0.86rem !important;
+    margin-bottom: 8px !important;
+    gap: 6px !important;
+  }
+  body.home-page .home-hero-card > strong {
+    font-size: 2.5rem !important;
+    line-height: 1 !important;
+    letter-spacing: -0.035em !important;
+    margin-bottom: 3px !important;
+  }
+  body.home-page .home-hero-card-label { font-size: 0.78rem !important; }
+  body.home-page .home-mini-stats {
+    gap: 7px !important;
+    margin: 11px 0 !important;
+    padding: 9px 0 !important;
+  }
+  body.home-page .home-mini-stats div { gap: 2px !important; }
+  body.home-page .home-mini-stats b { font-size: 1rem !important; line-height: 1.1 !important; }
+  body.home-page .home-mini-stats span { font-size: 0.63rem !important; line-height: 1.25 !important; }
+  body.home-page .home-hero-card > a {
+    font-size: 0.76rem !important;
+    line-height: 1.3 !important;
+  }
+}
+@media (max-width: 360px) {
+  body.home-page .home-hero .hero-overlay { padding: 26px 0 30px !important; }
+  body.home-page .home-hero-card { width: min(100%, 270px) !important; max-width: 270px !important; }
+}

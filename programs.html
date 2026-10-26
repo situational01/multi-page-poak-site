@@ -33,6 +33,75 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
 
 
+<style>
+/* Why Our Programs Work: understated, editorial-style cards. */
+.page-programs .approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.page-programs .approach-grid .approach-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-height: 190px;
+  padding: clamp(1.5rem, 2.7vw, 2.2rem);
+  border-radius: 10px;
+  border: 1px solid rgba(33, 43, 50, .13);
+  background: #fff;
+  color: #25313a;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, .035);
+  transform: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.page-programs .approach-grid .approach-card:hover {
+  transform: none;
+  border-color: rgba(33, 43, 50, .25);
+  box-shadow: 0 7px 22px rgba(0, 0, 0, .06);
+}
+.page-programs .approach-grid .approach-card h3 {
+  margin: 0 0 .8rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: inherit;
+}
+.page-programs .approach-grid .approach-card p {
+  margin: 0;
+  max-width: 48ch;
+  font-size: .98rem;
+  line-height: 1.75;
+  color: inherit;
+  opacity: .83;
+}
+/* Respect the existing theme switch, irrespective of whether it sets a
+   class or a data-theme attribute on the root or body. */
+:is(html.dark, html.dark-mode, html[data-theme="dark"],
+    body.dark, body.dark-mode, body[data-theme="dark"],
+    body.theme-dark) .page-programs .approach-grid .approach-card,
+body.page-programs:is(.dark, .dark-mode, .theme-dark, [data-theme="dark"]) .approach-grid .approach-card {
+  background: #22282e;
+  border-color: rgba(255, 255, 255, .15);
+  color: #f1f3f5;
+  box-shadow: none;
+}
+:is(html.dark, html.dark-mode, html[data-theme="dark"],
+    body.dark, body.dark-mode, body[data-theme="dark"],
+    body.theme-dark) .page-programs .approach-grid .approach-card:hover,
+body.page-programs:is(.dark, .dark-mode, .theme-dark, [data-theme="dark"]) .approach-grid .approach-card:hover {
+  border-color: rgba(255, 255, 255, .3);
+}
+@media (max-width: 700px) {
+  .page-programs .approach-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .page-programs .approach-grid .approach-card { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-programs .approach-grid .approach-card { transition: none; }
+}
+</style>
 </head>
 <body class="poak-interior poak-unified page-programs">
 <!-- Floating Social Links -->
@@ -125,15 +194,15 @@
         background-image:
           linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
           url("images/new-images/programs_hero.jpg");
-        background-size: 100% auto;
+        background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
         color: white;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-        min-height: 80vh;
+        min-height: 42vh;
         display: flex;
         align-items: center;
-        padding: 4rem 0;
+        padding: 2.5rem 0;
       '>
 <div class="container">
 <h1>Our Programs</h1>
@@ -321,9 +390,6 @@
 <div class="section-line"></div>
 <div class="approach-grid">
 <div class="approach-card">
-<div class="approach-icon">
-<i class="fas fa-hand-holding-heart"></i>
-</div>
 <h3>Community-Led</h3>
 <p>
               All programs are designed with input from the communities we
@@ -331,9 +397,6 @@
             </p>
 </div>
 <div class="approach-card">
-<div class="approach-icon">
-<i class="fas fa-chart-line"></i>
-</div>
 <h3>Data-Driven</h3>
 <p>
               We continuously monitor and evaluate our programs to ensure
@@ -341,9 +404,6 @@
             </p>
 </div>
 <div class="approach-card">
-<div class="approach-icon">
-<i class="fas fa-handshake"></i>
-</div>
 <h3>Partnership-Based</h3>
 <p>
               We work with local governments, businesses and other organisations
@@ -351,9 +411,6 @@
             </p>
 </div>
 <div class="approach-card">
-<div class="approach-icon">
-<i class="fas fa-leaf"></i>
-</div>
 <h3>Sustainable</h3>
 <p>
               Our programs build local capacity and create lasting change that
@@ -391,6 +448,10 @@
 <div class="partner-item">
 <img alt="AA Kenya" src="images/partners/logo.png"/>
 <span>AA Kenya</span>
+</div>
+<div class="partner-item">
+<img alt="The SOL Foundation" src="images/partners/the-sol-foundation.jpeg"/>
+<span>The SOL Foundation</span>
 </div>
 <div class="partner-item">
 <img alt="Wisdom Medical Services" src="images/partners/wisdom_medical_services.png"/>
