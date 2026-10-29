@@ -78,26 +78,89 @@
     />
     <style>
       /* About-page partners: same scrolling structure as the donation page. */
-      .about-partners { padding: 4rem 0; overflow: hidden; background: transparent; }
-      .about-partners .partners-scroll { overflow: hidden; width: 100%; margin-top: 1.75rem; }
-      .about-partners .partners-track { display: flex; width: max-content; animation: aboutPartnersScroll 32s linear infinite; }
-      .about-partners .partners-set { display: flex; flex: 0 0 auto; align-items: center; gap: 2rem; padding-right: 2rem; }
-      .about-partners .partner-item { display: flex; flex: 0 0 190px; width: 190px; flex-direction: column; align-items: center; justify-content: center; gap: 0.85rem; text-align: center; }
-      .about-partners .partner-item img { display: block; width: 150px; height: 90px; object-fit: contain; filter: none !important; opacity: 1 !important; mix-blend-mode: normal; transition: transform 200ms ease; }
-      .about-partners .partner-item span { font-size: 0.9rem; line-height: 1.4; color: inherit; }
-      .about-partners .partner-item:hover img { transform: scale(1.04); }
+      .about-partners {
+        padding: 4rem 0;
+        overflow: hidden;
+        background: transparent;
+      }
+      .about-partners .partners-scroll {
+        overflow: hidden;
+        width: 100%;
+        margin-top: 1.75rem;
+      }
+      .about-partners .partners-track {
+        display: flex;
+        width: max-content;
+        animation: aboutPartnersScroll 32s linear infinite;
+      }
+      .about-partners .partners-set {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        gap: 2rem;
+        padding-right: 2rem;
+      }
+      .about-partners .partner-item {
+        display: flex;
+        flex: 0 0 190px;
+        width: 190px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.85rem;
+        text-align: center;
+      }
+      .about-partners .partner-item img {
+        display: block;
+        width: 150px;
+        height: 90px;
+        object-fit: contain;
+        filter: none !important;
+        opacity: 1 !important;
+        mix-blend-mode: normal;
+        transition: transform 200ms ease;
+      }
+      .about-partners .partner-item span {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: inherit;
+      }
+      .about-partners .partner-item:hover img {
+        transform: scale(1.04);
+      }
       .about-partners .partners-scroll:hover .partners-track,
-      .about-partners .partners-scroll:focus-within .partners-track { animation-play-state: paused; }
-      @keyframes aboutPartnersScroll { to { transform: translateX(-50%); } }
+      .about-partners .partners-scroll:focus-within .partners-track {
+        animation-play-state: paused;
+      }
+      @keyframes aboutPartnersScroll {
+        to {
+          transform: translateX(-50%);
+        }
+      }
       @media (max-width: 600px) {
-        .about-partners { padding: 3rem 0; }
-        .about-partners .partners-set { gap: 1rem; padding-right: 1rem; }
-        .about-partners .partner-item { flex-basis: 150px; width: 150px; }
-        .about-partners .partner-item img { width: 120px; height: 75px; }
+        .about-partners {
+          padding: 3rem 0;
+        }
+        .about-partners .partners-set {
+          gap: 1rem;
+          padding-right: 1rem;
+        }
+        .about-partners .partner-item {
+          flex-basis: 150px;
+          width: 150px;
+        }
+        .about-partners .partner-item img {
+          width: 120px;
+          height: 75px;
+        }
       }
       @media (prefers-reduced-motion: reduce) {
-        .about-partners .partners-track { animation: none; }
-        .about-partners .partners-scroll { overflow-x: auto; }
+        .about-partners .partners-track {
+          animation: none;
+        }
+        .about-partners .partners-scroll {
+          overflow-x: auto;
+        }
       }
     </style>
   </head>
@@ -218,7 +281,6 @@
       </div>
     </nav>
     <main id="main">
-
       <!-- Our Story -->
       <section aria-labelledby="story-title" class="section">
         <div class="wrap story-grid">
@@ -265,8 +327,8 @@
           <div class="co-founder-message">
             <figure class="co-founder-image">
               <img
-                alt="Eng. Edwin Liyai"
-                src="images/co-founder/eng.Edwin_Liyai.jpeg"
+                alt="Muhindi Vugutza"
+                src="images/co-founder/co_founder.jpeg"
               />
             </figure>
             <div>
@@ -281,7 +343,7 @@
                 renew our commitment to a Kenya free from poverty."
               </p>
               <div class="message-author">
-                <h4>Eng. Edwin Liyai</h4>
+                <h4>Muhindi Vugutza</h4>
                 <p>Co-founder</p>
               </div>
             </div>
@@ -439,6 +501,18 @@
               <div class="team-info">
                 <h3>Sheilla Muhindi</h3>
                 <p class="team-title">Programs Manager</p>
+              </div>
+            </div>
+            <div class="team-card">
+              <figure class="team-image">
+                <img
+                  alt="Eng Edwin Liyai"
+                  src="images/co-founder/eng.Edwin_Liyai.jpeg"
+                />
+              </figure>
+              <div class="team-info">
+                <h3>Eng. Edwin Liyai</h3>
+                <p class="team-title">Community Engineer</p>
               </div>
             </div>
             <div class="team-card">
@@ -633,7 +707,10 @@
         </div>
       </section>
       <!-- Partners: full-colour, seamlessly scrolling logos -->
-      <section aria-labelledby="partners-title" class="partners-section about-partners">
+      <section
+        aria-labelledby="partners-title"
+        class="partners-section about-partners"
+      >
         <div class="wrap">
           <h2 class="section-title" id="partners-title">Our partners</h2>
           <div class="section-line"></div>
@@ -642,61 +719,117 @@
           <div class="partners-track" id="partnersTrack">
             <div class="partners-set">
               <div class="partner-item">
-                <img src="images/Broad Experiential logo.png" alt="Broad Experiential" loading="lazy" />
+                <img
+                  src="images/Broad Experiential logo.png"
+                  alt="Broad Experiential"
+                  loading="lazy"
+                />
                 <span>Broad Experiential</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/solarpanda.webp" alt="Solar Panda" loading="lazy" />
+                <img
+                  src="images/partners/solarpanda.webp"
+                  alt="Solar Panda"
+                  loading="lazy"
+                />
                 <span>Solar Panda</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/world_vision.png" alt="World Vision" loading="lazy" />
+                <img
+                  src="images/partners/world_vision.png"
+                  alt="World Vision"
+                  loading="lazy"
+                />
                 <span>World Vision</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/freshlife.jfif" alt="Fresh Life" loading="lazy" />
+                <img
+                  src="images/partners/freshlife.jfif"
+                  alt="Fresh Life"
+                  loading="lazy"
+                />
                 <span>Fresh Life</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/logo.png" alt="AA Kenya" loading="lazy" />
+                <img
+                  src="images/partners/logo.png"
+                  alt="AA Kenya"
+                  loading="lazy"
+                />
                 <span>AA Kenya</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/the-sol-foundation.jpeg" alt="The SOL Foundation" loading="lazy" />
+                <img
+                  src="images/partners/the-sol-foundation.jpeg"
+                  alt="The SOL Foundation"
+                  loading="lazy"
+                />
                 <span>The SOL Foundation</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/wisdom_medical_services.png" alt="Wisdom Medical Services" loading="lazy" />
+                <img
+                  src="images/partners/wisdom_medical_services.png"
+                  alt="Wisdom Medical Services"
+                  loading="lazy"
+                />
                 <span>Wisdom Medical Services</span>
               </div>
             </div>
             <div class="partners-set" aria-hidden="true">
               <div class="partner-item">
-                <img src="images/Broad Experiential logo.png" alt="Broad Experiential" loading="lazy" />
+                <img
+                  src="images/Broad Experiential logo.png"
+                  alt="Broad Experiential"
+                  loading="lazy"
+                />
                 <span>Broad Experiential</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/solarpanda.webp" alt="Solar Panda" loading="lazy" />
+                <img
+                  src="images/partners/solarpanda.webp"
+                  alt="Solar Panda"
+                  loading="lazy"
+                />
                 <span>Solar Panda</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/world_vision.png" alt="World Vision" loading="lazy" />
+                <img
+                  src="images/partners/world_vision.png"
+                  alt="World Vision"
+                  loading="lazy"
+                />
                 <span>World Vision</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/freshlife.jfif" alt="Fresh Life" loading="lazy" />
+                <img
+                  src="images/partners/freshlife.jfif"
+                  alt="Fresh Life"
+                  loading="lazy"
+                />
                 <span>Fresh Life</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/logo.png" alt="AA Kenya" loading="lazy" />
+                <img
+                  src="images/partners/logo.png"
+                  alt="AA Kenya"
+                  loading="lazy"
+                />
                 <span>AA Kenya</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/the-sol-foundation.jpeg" alt="The SOL Foundation" loading="lazy" />
+                <img
+                  src="images/partners/the-sol-foundation.jpeg"
+                  alt="The SOL Foundation"
+                  loading="lazy"
+                />
                 <span>The SOL Foundation</span>
               </div>
               <div class="partner-item">
-                <img src="images/partners/wisdom_medical_services.png" alt="Wisdom Medical Services" loading="lazy" />
+                <img
+                  src="images/partners/wisdom_medical_services.png"
+                  alt="Wisdom Medical Services"
+                  loading="lazy"
+                />
                 <span>Wisdom Medical Services</span>
               </div>
             </div>
